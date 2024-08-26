@@ -1,0 +1,134 @@
+Add-Type -AssemblyName System.Windows.Forms
+
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+
+Function Send-Keys {
+    param (
+        [string]$keys
+    )
+    [System.Windows.Forms.SendKeys]::SendWait($keys)
+    Start-Sleep -Milliseconds 300 # Add a small delay between keystrokes
+}
+
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+
+Send-Keys "{^}UNIT DOSE"
+Send-Keys "{ENTER}"
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "PICK"
+Send-Keys "{ENTER}"
+
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T@1830"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T@1835"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T@1840"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T@1845"
+Send-Keys "{ENTER}"
+
+#SEATTLE
+#SEATTLE
+#SEATTLE
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1E"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0030"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1W"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0035"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 3"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0040"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 4"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0045"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 7"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0050"
+Send-Keys "{ENTER}"

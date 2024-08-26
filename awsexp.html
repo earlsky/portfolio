@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Exp</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* color fonts in Upcoming Projects*/
+        .healthcare {
+            color: rgb(55, 198, 255);
+        }
+        .finance {
+            color: rgb(97, 255, 202);
+        }
+        .games {
+            color: rgb(255, 88, 88);
+        }
+
+        /* TABLE STYLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(131, 131, 131);
+            padding: 2px;
+            text-align: center;
+        }
+
+        /* 2ND TABLE STYLE */
+        thead > tr > th {
+            background-color: #034965;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class='nav-btn'>HOME</a>
+        <a href="roomexp.html" class="nav-btn">Room Exp</a>
+        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
+        <a href="queueeveshift.html" class="nav-btn">Queue</a>
+        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
+        <a href="schedule.html" class="nav-btn">Schedule</a>
+    </nav>
+
+    <section>
+        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
+        <p><i>This is a simplified table for seasoned <abbr title="Anesthesia Work Station">AWS</abbr> tech as info is missing</i></p>
+    </section>
+
+    <br>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>MED</b></td>
+                    <td>AWS1</td>
+                    <td>AWS2</td>
+                    <td>AWS3</td>
+                    <td>AWS4</td>
+                    <td>AWS5</td>
+                    <td>AWS6</td>
+                    <td>AWS7</td>
+                    <td>AWS8</td>
+                    <td>AWS10</td>
+                    <td>GI_AWS</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ePHED💉</td>
+                    <td 1></td>
+                    <td 2></td>
+                    <td 3></td>
+                    <td 4></td>
+                    <td 5></td>
+                    <td 6></td>
+                    <td 7></td>
+                    <td 8></td>
+                    <td 10></td>
+                    <td GI></td>
+                </tr>
+                <tr>
+                    <td>PHENYL💉</td>
+                    <td 1></td>
+                    <td 2>10/23</td>
+                    <td 3></td>
+                    <td 4></td>
+                    <td 5></td>
+                    <td 6></td>
+                    <td 7></td>
+                    <td 8></td>
+                    <td 10>10/23</td>
+                    <td GI></td>
+                </tr>
+                <tr>
+                    <td>roCU▽</td>
+                    <td 1>9/15</td>
+                    <td 2>9/16</td>
+                    <td 3>9/30</td>
+                    <td 4>10/1</td>
+                    <td 5>9/22</td>
+                    <td 6>9/22</td>
+                    <td 7>9/22</td>
+                    <td 8>10/1</td>
+                    <td 10>9/16</td>
+                    <td GI>9/27</td>
+                </tr>
+                <tr>
+                    <td>SUCC💉</td>
+                    <td 1>8/16</td>
+                    <td 2>8/16</td>
+                    <td 3></td>
+                    <td 4></td>
+                    <td 5>8/16</td>
+                    <td 6>8/16</td>
+                    <td 7>8/16</td>
+                    <td 8>8/16</td>
+                    <td 10>9/12</td>
+                    <td GI>8/16</td>
+                </tr>
+                <tr>
+                    <td>SUCC▽</td>
+                    <td 1 style="background-color: #b02525;">8/12</td>
+                    <td 2 style="background-color: #b02525;">8/14</td>
+                    <td 3 style="background-color: #b02525;">8/14</td>
+                    <td 4 style="background-color: #b02525;">8/14</td>
+                    <td 5 style="background-color: #b02525;">8/14</td>
+                    <td 6 style="background-color: #b02525;">8/14</td>
+                    <td 7 style="background-color: #b02525;">8/14</td>
+                    <td 8 style="background-color: #b02525;">8/14</td>
+                    <td 10 style="background-color: #b02525;">8/12</td>
+                    <td GI style="background-color: #b02525;">8/12</td>
+                </tr>
+                <tr>
+                    <td>VASO▽</td>
+                    <td 1>11/30</td>
+                    <td 2>11/30</td>
+                    <td 3>9/30</td>
+                    <td 4>9/30</td>
+                    <td 5>9/30</td>
+                    <td 6>2/28/25</td>
+                    <td 7>9/30</td>
+                    <td 8>12/30</td>
+                    <td 10>11/30</td>
+                    <td GI>11/30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <h3>Exp Calculator</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="">Medication</th>
+                    <th class="">Storage</th>
+                    <th class="">Exp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="med">roCUROnium</td>
+                    <td class="storage">60 days</td>
+                    <td class="days"></td>
+                </tr>
+                <tr>
+                    <td class="med">VASOpressin</td>
+                    <td class="storage">365 days</td>
+                    <td class="days"></td>
+                </tr>
+                <tr>
+                    <td class="med">SUCCinylcholine</td>
+                    <td class="storage">14 days</td>
+                    <td class="days"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the second table's rows in the table body
+        const rows = document.querySelectorAll("main table:nth-of-type(2) tbody tr");
+
+        rows.forEach(row => {
+            const storageTd = row.querySelector(".storage");
+            const daysTd = row.querySelector(".days");
+
+            // Extract the number of days from the storageTd text content
+            const storageText = storageTd.textContent;
+            console.log(`Storage Text: ${storageText}`); // Debugging
+
+            const daysMatch = storageText.match(/(\d+)\s*days/);
+
+            if (daysMatch) {
+                const days = parseInt(daysMatch[1], 10);
+                console.log(`Days: ${days}`); // Debugging
+
+                // Calculate the date 'days' from today
+                const today = new Date();
+                const futureDate = new Date(today);
+                futureDate.setDate(today.getDate() + days);
+
+                // Format the future date as desired (e.g., "July 21, 2024")
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const futureDateString = futureDate.toLocaleDateString(undefined, options);
+                console.log(`Future Date String: ${futureDateString}`); // Debugging
+
+                // Set the text content of the third td to the future date
+                daysTd.textContent = futureDateString;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

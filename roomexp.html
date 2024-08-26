@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Exp</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            color: white;
+        }
+        table {
+            width: 100%;
+            max-width: 450px; /* Set maximum width */
+            border-collapse: collapse;
+            margin: 0 auto 20px; /* Center table and add bottom margin */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 4px;
+            text-align: center;
+        }
+        th {
+            background-color: #034965;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Earl's Portfolio🏎️💨</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class='nav-btn'>HOME</a>
+        
+        <a href="roomexp.html" class="nav-btn">Room Exp</a>
+        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
+        <a href="queueeveshift.html" class="nav-btn">Queue</a>
+        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
+        <a href="schedule.html" class="nav-btn">Schedule</a>
+        <!-- <a href="#" class='nav-btn'>VancDoseCalcTBD</a>
+        <a href="#" class='nav-btn'>AnesWorkStationTBD</a>
+        <a href="#" class='nav-btn'>HazardDrugListTBD</a> -->
+    </nav> 
+
+    <section>
+        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
+            <p><i>This table automatically displays the expiration date once med has been 
+            taken out of the freezer/fridge and in room temperature</i></p>
+    </section>
+    
+    <main>
+        <table class=""><thead>
+            <tr><th>IVP (Baxter)</th></tr>
+            <tr>
+                <th class="">Medication</th>
+                <th class="">Storage</th>
+                <th class="">Exp</th>
+            </tr></thead>
+        <tbody>
+            <tr>
+                <td class="med">cefAZOLIN</td>
+                <td class="storage">30 days</td>
+                <td class="days"></td>
+            </tr>
+            <tr>
+                <td class="med">cefEPIME</td>
+                <td class="storage">7 days</td>
+                <td class="days"></td>
+            </tr>
+            <tr>
+                <td class="med">cefTRIAXone</td>
+                <td class="storage">21 days</td>
+                <td class="days"></td>
+            </tr>
+            <tr>
+                <td class="med">VANComycin</td>
+                <td class="storage">30 days</td>
+                <td class="days"></td>
+            </tr>
+            <tr>
+                <td class="med">ZOSYN</td>
+                <td class="storage">14 days</td>
+                <td class="days"></td>
+            </tr>
+        </tbody>
+        </table>
+
+<br>
+
+        <table class=""><thead>
+            <tr><th>AWS</th></tr>
+                <tr>
+                    <th class="">Medication</th>
+                    <th class="">Storage</th>
+                    <th class="">Exp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="med">roCUROnium</td>
+                    <td class="storage">60 days</td>
+                    <td class="days"></td>
+                </tr>
+                <tr>
+                    <td class="med">VASOpressin</td>
+                    <td class="storage">365 days</td>
+                    <td class="days"></td>
+                </tr>
+                <tr>
+                    <td class="med">SUCCinylcholine</td>
+                    <td class="storage">14 days</td>
+                    <td class="days"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all rows in the table body
+        const rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+            const storageTd = row.querySelector(".storage");
+            const daysTd = row.querySelector(".days");
+
+            // Extract the number of days from the storageTd text content
+            const storageText = storageTd.textContent;
+            const daysMatch = storageText.match(/(\d+)\s*days/);
+
+            if (daysMatch) {
+                const days = parseInt(daysMatch[1], 10);
+                
+                // Calculate the date 'days' from today
+                const today = new Date();
+                const futureDate = new Date(today);
+                futureDate.setDate(today.getDate() + days);
+
+                // Format the future date as desired (e.g., "July 21, 2024")
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const futureDateString = futureDate.toLocaleDateString(undefined, options);
+
+                // Set the text content of the third td to the future date
+                daysTd.textContent = futureDateString;
+            }
+        });
+    });
+    
+    </script>
+
+</body>
+</html>

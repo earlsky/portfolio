@@ -1,0 +1,40 @@
+Add-Type -AssemblyName System.Windows.Forms
+
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+
+Function Send-Keys {
+    param (
+        [string]$keys
+    )
+    [System.Windows.Forms.SendKeys]::SendWait($keys)
+    Start-Sleep -Milliseconds 300 # Add a small delay between keystrokes
+}
+
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+
+Send-Keys "{^}iv menu"
+Send-Keys "{ENTER}"
+Send-Keys "central"
+Send-Keys "{ENTER}"
+Send-Keys "ward list"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "1,2,3,4,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0400"
+Send-Keys "{ENTER}"
+Send-Keys "label menu"
+Send-Keys "{ENTER}"
+Send-Keys "scheduled"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "1,2,3,4,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0415"
+Send-Keys "{ENTER}"

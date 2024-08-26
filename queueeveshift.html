@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Eve Shift</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(236, 236, 236);
+        }
+
+        .code-box {
+            text-align: left; /* Align the text inside the box to the left */
+            background-color: #2b2b2b; /* Dark background color */
+            color: #f8f8f2; /* Light text color */
+            padding: 10px; /* Padding inside the box */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            display: inline-block; /* Center the box while maintaining left-aligned text */
+            margin: 20px auto; /* Space around the box */
+        }
+
+        .code-box code {
+            font-family: 'Courier New', Courier, monospace; /* Monospaced font for code */
+            font-size: 14px; /* Font size for code */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Earl's Portfolio🏎️💨</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class='nav-btn'>HOME</a>
+        
+        <a href="roomexp.html" class="nav-btn">Room Exp</a>
+        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
+        <a href="queueeveshift.html" class="nav-btn">Queue</a>
+        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
+        <a href="schedule.html" class="nav-btn">Schedule</a>
+        <!-- <a href="#" class='nav-btn'>VancDoseCalcTBD</a>
+        <a href="#" class='nav-btn'>AnesWorkStationTBD</a>
+        <a href="#" class='nav-btn'>HazardDrugListTBD</a> -->
+    </nav> 
+
+    <section>
+        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
+        <p>Below is the code to run a "macro".</p>
+        <p style="color: #121212; margin:0px">SEC MSG: PWRSHL then CTRL A, C, V (not right-click).</p>
+        <p style="color: #121212; margin:0px">Do NOT click on anything while program is running.</p>
+    </section>
+
+    <main>
+
+        <h3 style="margin:0px">ALL Now - Work Day (Sun-Thurs)</h3>
+        <p><em>When majority of the Hospital is 'open' tomorrow.</em></p>
+
+<br>
+
+        <textarea id="ANWD" name="ANWD" rows="20" cols="50">
+Add-Type -AssemblyName System.Windows.Forms
+
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+
+Function Send-Keys {
+    param (
+        [string]$keys
+    )
+    [System.Windows.Forms.SendKeys]::SendWait($keys)
+    Start-Sleep -Milliseconds 300 # Add a small delay between keystrokes
+}
+
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+
+Send-Keys "{^}UNIT DOSE"
+Send-Keys "{ENTER}"
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "PICK"
+Send-Keys "{ENTER}"
+
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+#====SEA UD MED====#
+#====SEA UD MED====#
+#====SEA UD MED====#
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1E"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0030"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1W"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0035"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 3"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0040"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 4"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0045"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 7"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0050"
+Send-Keys "{ENTER}"
+
+#====IV ON DAY====#
+#====IV ON DAY====#
+#====IV ON DAY====#
+
+Send-Keys "{^}iv menu"
+Send-Keys "{ENTER}"
+Send-Keys "central"
+Send-Keys "{ENTER}"
+Send-Keys "ward list"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "1,2,3,4,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0400"
+Send-Keys "{ENTER}"
+Send-Keys "label menu"
+Send-Keys "{ENTER}"
+Send-Keys "scheduled"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "1,2,3,4,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0415"
+Send-Keys "{ENTER}"
+
+#====DSII====#
+#====DSII====#
+#====DSII====#
+
+Send-Keys "{^}DSII" 
+Send-Keys "{ENTER}"
+Send-Keys "2"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+        </textarea>
+
+        <h3>ALL Now - Non-Work Day (Fri-Sat & Day before Fed Holiday)</h3>
+        <p><em>When majority of the Hospital is 'closed' tomorrow.</em></p>
+
+<br>
+
+        <textarea id="AOF" name="AOF" rows="20" cols="50">
+Add-Type -AssemblyName System.Windows.Forms
+
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+
+Function Send-Keys {
+    param (
+        [string]$keys
+    )
+    [System.Windows.Forms.SendKeys]::SendWait($keys)
+    Start-Sleep -Milliseconds 300 # Add a small delay between keystrokes
+}
+
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+
+Send-Keys "{^}UNIT DOSE"
+Send-Keys "{ENTER}"
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "PICK"
+Send-Keys "{ENTER}"
+
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+
+#====SEA UD MED====#
+#====SEA UD MED====#
+#====SEA UD MED====#
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1E"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0030"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 1W"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0035"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 3"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0040"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 4"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0045"
+Send-Keys "{ENTER}"
+
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE 7"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "T{+}1@0050"
+Send-Keys "{ENTER}"
+
+#====IV OFF DAY====#
+#====IV OFF DAY====#
+#====IV OFF DAY====#
+
+Send-Keys "{^}iv menu"
+Send-Keys "{ENTER}"
+Send-Keys "central"
+Send-Keys "{ENTER}"
+Send-Keys "ward list"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "2,3,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0400"
+Send-Keys "{ENTER}"
+Send-Keys "label menu"
+Send-Keys "{ENTER}"
+Send-Keys "scheduled"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1"
+Send-Keys "{ENTER}"
+Send-Keys "2,3,5"
+Send-Keys "{ENTER}"
+Send-Keys "t{+}1@0415"
+Send-Keys "{ENTER}"
+
+#====DSII====#
+#====DSII====#
+#====DSII====#
+
+Send-Keys "{^}DSII" 
+Send-Keys "{ENTER}"
+Send-Keys "2"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+        </textarea>
+
+
+        <h3>UD Med, DSII again</h3>
+        <p><em>When doing UD and DSII again</em></p>
+
+<br>
+
+        <textarea id="again" name="again" rows="20" cols="50">
+Add-Type -AssemblyName System.Windows.Forms
+ 
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+ 
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+ 
+Function Send-Keys {
+    param (
+        [string]$keys
+    )
+    [System.Windows.Forms.SendKeys]::SendWait($keys)
+    Start-Sleep -Milliseconds 300 # Add a small delay between keystrokes
+}
+ 
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+ 
+Send-Keys "{^}UNIT DOSE"
+Send-Keys "{ENTER}"
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "PICK"
+Send-Keys "{ENTER}"
+ 
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+ 
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+ 
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+ 
+Send-Keys "PICK LIST"
+Send-Keys "{ENTER}"
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "NULL"
+Send-Keys "{ENTER}"
+Send-Keys "Y"
+Send-Keys "{ENTER}"
+Send-Keys "NOW"
+Send-Keys "{ENTER}"
+ 
+#====DSII====#
+#====DSII====#
+#====DSII====#
+ 
+Send-Keys "{^}DSII"
+Send-Keys "{ENTER}"
+Send-Keys "2"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "AL - CLC"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+ 
+Send-Keys "AL - DOM"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+ 
+Send-Keys "MTU"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Start-Sleep -Seconds 5
+ 
+Send-Keys "ZONE OBS"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+Send-Keys "{ENTER}"
+        </textarea>
+
+        <h3>Ward Inspection</h3>
+        <p><em>Place cursor on 1. 'num' placeholder</em></p>
+
+<br>
+
+        <textarea id="WardIns" name="WardIns" rows="20" cols="50">
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.MessageBox]::Show("Click on app to send keystrokes, then OK to continue.", "Information", [System.Windows.Forms.MessageBoxButtons]::OK)
+               
+Start-Sleep -Seconds 5 # wait 5 seconds before executing
+               
+Function Send-Keys {
+    param (
+            [string]$keys
+        )
+        [System.Windows.Forms.SendKeys]::SendWait($keys)
+}
+#Send-Keys “^” simulates CTRL key
+#Send-Keys “+” simulates SHIFT key (ex: Send-Keys “+(abc)” outputs ‘ABC’)
+#Send-Keys “%” simulates ALT key
+ 
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "1"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+Send-Keys "{TAB}"
+ 
+Send-Keys "Cart #: "
+Send-Keys "{ENTER}"
+Send-Keys "Lock #: "
+Send-Keys "{ENTER}"
+Send-Keys "Exp: "
+        </textarea>
+        
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

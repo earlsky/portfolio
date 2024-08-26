@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Information Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px; 
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+
+    <header>
+        <h1>Welcome to Earl's Portfolio🏎️💨</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class='nav-btn'>HOME</a>
+        
+        <a href="roomexp.html" class="nav-btn">Room Exp</a>
+        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
+        <a href="queueeveshift.html" class="nav-btn">Queue</a>
+        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
+        <a href="schedule.html" class="nav-btn">Schedule</a>
+        <!-- <a href="#" class='nav-button'>VancDoseCalcTBD</a>
+        <a href="#" class='nav-button'>AnesWorkStationTBD</a>
+        <a href="#" class='nav-button'>HazardDrugListTBD</a> -->
+    </nav> 
+
+    <section>
+        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
+        <p>This list is streamlined for techs' EVENING shift chemos</p>
+    </section>
+
+<body>
+    <table id="medicationTable">
+        <thead>
+            <tr>
+                <th>MEDICATION</th>
+                <th>TUBING</th>
+                <th>BUD</th>
+                <th>OTHER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        const medicationData = [
+            { medication: "BLEOmycin", tubing: "STD", bud: "🏠 1 d", other: "-" },
+            { medication: "CARBOplatin", tubing: "STD", bud: "🏠 1 d (NS) 🏠 30 h|r (D5W)\n❄️ 30 hr (NS) ❄️ 7 d (D5W)", other: "-" },
+            { medication: "CISplatin", tubing: "STD", bud: "🏠 30 hr", other: "⚠️ Protect from Light ☀️" },
+            { medication: "DACARBAzine", tubing: "STD", bud: "🏠 8 hr ❄️ 1 d", other: "⚠️ Protect from Light ☀️" },
+            { medication: "DOCEtaxel", tubing: "TAX", bud: "🏠 6 hr ❄️ 1 d", other: "⚠️ Protect from Light ☀️" },
+            { medication: "DOXOrubicin", tubing: "STD / EXT", bud: "🏠 2 d ❄️ 8 d", other: "🛑Don't mix LIPOSOMAL version.\n⚠️ Protect from Light ☀️" },
+            { medication: "ETOposide", tubing: "TAX", bud: "🏠 0.2mg/mL = 4 d\n🏠 0.3mg/mL = 2 d\n🏠 0.4mg/mL = 1 d", other: "-" },
+            { medication: "FLUOROURAcil", tubing: "PUMP | EXT", bud: "🎱🏠 4 d | 💉🏠 1 d", other: "-" },
+            { medication: "FOSaprepitant", tubing: "KIT", bud: "❄️", other: "ORANGE ATT + NS100 + MED" },
+            { medication: "GEMcitabine", tubing: "STD", bud: "🏠 1 d", other: "-" },
+            { medication: "IRInotecan", tubing: "STD", bud: "🏠 1 d ❄️ 2 d", other: "⚠️ Protect from Light ☀️" },
+            { medication: "LEUcovorin", tubing: "-", bud: "🏠 1 d ❄️ 7 d", other: "-" },
+            { medication: "METHOtrexate IV dose", tubing: "STD", bud: "🏠 1 d", other: "-" },
+            { medication: "OXAplatin", tubing: "STD", bud: "❄️ 1 d", other: "-" },
+            { medication: "PACLitaxel", tubing: "TAX", bud: "🏠 27 hr", other: "-" },
+            { medication: "VINcristine", tubing: "STD", bud: "🏠 1 d ❄️ 7 d", other: "⚠️ Protect from Light ☀️" }
+        ];
+
+		const tableBody = document.querySelector('#medicationTable tbody');
+
+		medicationData.forEach(med => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+			<td>${med.medication}</td>
+			<td>${med.tubing}</td>
+			<td>${med.bud.replace(/\n/g, '<br>')}</td>
+			<td>${med.other.replace(/\n/g, '<br>')}</td>
+			`;
+		tableBody.appendChild(row);
+	});
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(236, 236, 236);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Dark Mode Background */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* NAVIGATION BUTTON */
+.nav-btn {
+    background-color: #efefef; /* Light background color for contrast */
+    color: #2a2a2a;           /* Dark text color */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;   /* Ensures padding is included in total width/height */
+    width: auto;              /* Default width */
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background-color: #1db0d9; /* Slightly darker light color */
+    color: #000000;            /* Even darker text color for better readability */
+}
+
+/* Focus Effect */
+.nav-btn:focus {
+    outline: 0;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Light shadow for focus indication */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .nav-button, .dropdown-button{
+        padding: 12px 18px;
+        margin: 23px;
+        font-size: 14px;
+        width: 50%;             /* Full width for small screens */
+        text-align: center;      /* Center text on full width */
+    }
+}

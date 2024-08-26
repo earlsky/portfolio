@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #264676;
+        }
+
+        td[contenteditable="true"] {
+            background-color: #282427;
+            cursor: text;
+        }
+
+        .add-row-button, .delete-row-button, .calculate-shifts-button {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .calculate-shifts-button {
+            background-color: blue;
+        }
+
+        .delete-row-button {
+            background-color: #f44336;
+        }
+
+        .selected {
+            background-color: #3f3f3f;
+        }
+
+        .date-column {
+            width: 30px; /* Width of date columns */
+        }
+
+        .summary-table {
+            width: auto; /* Ensure summary table width fits content */
+        }
+
+        .arrow-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .arrow-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .arrow-buttons .up {
+            color: #009c05;
+        }
+
+        .arrow-buttons .down {
+            color: #d90e00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Earl's Portfolio🏎️💨</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class='nav-btn'>HOME</a>
+
+        <!-- <a href="healthcarehome.html" class="nav-btn">HEALTHCARE</a> -->
+        <a href="roomexp.html" class="nav-btn">Room Exp</a>
+        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
+        <a href="queueeveshift.html" class="nav-btn">Queue</a>
+        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
+        <a href="schedule.html" class="nav-btn">Schedule</a>
+        <!-- <a href="#" class="nav-btn">Vancomycin Calculator</a>
+        <a href="#" class="nav-btn">AWS</a>
+        <a href="#" class="nav-btn">Hazard Drug List</a> -->
+
+        <!-- <a href="financehome.html" class="nav-btn">FINANCE</a>
+        <a href="compoundintcalc.html" class="nav-btn">Compound Interest Calculator</a>
+        <a href="militarypaycalc.html" class="nav-btn">Military Pay Calculator</a>
+        <a href="netincomecalc.html" class="nav-btn">Net Income Calculator</a>
+        <a href="autoloancalc.html" class="nav-btn">Auto Loan Calculator</a> -->
+    
+        <!-- <a href="gameshome.html" class="nav-btn">GAMES</a>
+        <a href="snake.html" class="nav-btn">Snake</a>
+        <a href="blackjack.html" class="nav-btn">BlackJack</a>
+        <a href="coinflipperdiceroller.html" class="nav-btn">Coin Flipper & Dice Roller</a>
+        <a href="magiceightball.html" class="nav-btn">Magic Eight Ball</a> -->
+
+    </nav>
+    
+
+    <section>
+        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
+        <p>Below is a Pharmacy Item Locator: It displays where item is located in the pharmacy by using the Search Bar</p>
+        <p style="margin: 0px;">Below is a schedule template.</p>
+        <p style="margin: 0px;">Placeholders in double quotes is editable (ex: <i>"Month", "Name1"...</i>)</p>
+        <p style="margin: 0px;">Under the day of the month columns: Use the following Legend:</p>
+        <p style="margin-top: 5px;"><label style="color:skyblue;">W = Weekends</label> | <label style="color:lightgreen;">E = Evenings</label> | <label style="color:pink;">G = Graveyard</label></p>
+    </section>
+
+    <!-- Main schedule table -->
+    <table id="schedule">
+        <thead>
+            <tr>
+                <!-- Editable header cell for entering the month -->
+                <th contenteditable="true" colspan="32">"Month"</th>
+            </tr>
+            <tr>
+                <!-- Empty header cell for buttons -->
+                <th></th>
+                <!-- Header for names and days 1-31 -->
+                <th>Name</th>
+                <script>
+                    // Generates table headers for days 1 to 31
+                    document.write(Array.from({ length: 31 }, (_, i) => `<th class="date-column">${i + 1}</th>`).join(''));
+                </script>
+            </tr>
+        </thead>
+        <tbody id="schedule-body">
+            <!-- Example rows with up/down arrow buttons and editable name cells -->
+            <tr>
+                <td class="arrow-buttons">
+                    <!-- Button to move the row up -->
+                    <button class="up" onclick="moveRow(this, -1)">&#9650;</button>
+                    <!-- Button to move the row down -->
+                    <button class="down" onclick="moveRow(this, 1)">&#9660;</button>
+                </td>
+                <td contenteditable="true" oninput="updateSummaryName(this)">"Name1"</td>
+                <script>
+                    // Generates table cells for days 1 to 31
+                    document.write(Array.from({ length: 31 }, () => '<td contenteditable="true"></td>').join(''));
+                </script>
+            </tr>
+            <tr>
+                <td class="arrow-buttons">
+                    <!-- Button to move the row up -->
+                    <button class="up" onclick="moveRow(this, -1)">&#9650;</button>
+                    <!-- Button to move the row down -->
+                    <button class="down" onclick="moveRow(this, 1)">&#9660;</button>
+                </td>
+                <td contenteditable="true" oninput="updateSummaryName(this)">"Name2"</td>
+                <script>
+                    // Generates table cells for days 1 to 31
+                    document.write(Array.from({ length: 31 }, () => '<td contenteditable="true"></td>').join(''));
+                </script>
+            </tr>
+            <tr>
+                <td class="arrow-buttons">
+                    <!-- Button to move the row up -->
+                    <button class="up" onclick="moveRow(this, -1)">&#9650;</button>
+                    <!-- Button to move the row down -->
+                    <button class="down" onclick="moveRow(this, 1)">&#9660;</button>
+                </td>
+                <td contenteditable="true" oninput="updateSummaryName(this)">"Name3"</td>
+                <script>
+                    // Generates table cells for days 1 to 31
+                    document.write(Array.from({ length: 31 }, () => '<td contenteditable="true"></td>').join(''));
+                </script>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Buttons for calculating shifts, adding rows, and deleting selected row -->
+    <button onclick="calculateShifts()" class="calculate-shifts-button"><u>C</u>alculate Shifts</button>
+    <button onclick="addRow()" class="add-row-button">Add Row</button>
+    <button onclick="deleteSelectedRow()" class="delete-row-button">Delete Selected Row</button>
+
+    <!-- Summary table for showing totals -->
+    <table id="summary" class="summary-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Weekends</th>
+                <th>Evenings</th>
+                <th>Graveyard</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example summary rows for each person -->
+            <tr>
+                <td class="summary-name">Name1</td>
+                <td class="weekends"></td>
+                <td class="evenings"></td>
+                <td class="graveyard"></td>
+                <td class="total"></td>
+            </tr>
+            <tr>
+                <td class="summary-name">Name2</td>
+                <td class="weekends"></td>
+                <td class="evenings"></td>
+                <td class="graveyard"></td>
+                <td class="total"></td>
+            </tr>
+            <tr>
+                <td class="summary-name">Name3</td>
+                <td class="weekends"></td>
+                <td class="evenings"></td>
+                <td class="graveyard"></td>
+                <td class="total"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Function to move a row up or down
+        function moveRow(button, direction) {
+            const row = button.closest('tr'); // Find the closest row element
+            const tbody = document.getElementById('schedule-body'); // Get the table body
+            const rows = Array.from(tbody.querySelectorAll('tr')); // Convert rows to an array
+            const index = rows.indexOf(row); // Find the index of the current row
+            
+            // Calculate new index based on direction
+            const newIndex = index + direction;
+            
+            // Check if new index is within bounds
+            if (newIndex < 0 || newIndex >= rows.length) return;
+            
+            // Move the row by inserting it before the new index row
+            tbody.insertBefore(row, rows[newIndex]);
+            
+            updateSummaryTable(); // Update the summary table to reflect changes
+        }
+
+        // Function to update the summary table based on the schedule table
+        function updateSummaryTable() {
+            const rows = document.querySelectorAll('#schedule tbody tr'); // Get all schedule rows
+            const summaryRows = document.querySelectorAll('#summary tbody tr'); // Get all summary rows
+
+            // Iterate through schedule rows and update corresponding summary rows
+            rows.forEach((row, rowIndex) => {
+                const cells = row.querySelectorAll('td');
+                const name = cells[1].textContent.trim();
+
+                if (summaryRows[rowIndex]) {
+                    summaryRows[rowIndex].querySelector('.summary-name').textContent = name;
+                }
+            });
+        }
+
+        // Function to calculate shift totals and update the summary table
+        function calculateShifts() {
+            const rows = document.querySelectorAll('#schedule tbody tr');
+            const summaryRows = document.querySelectorAll('#summary tbody tr');
+
+            // Iterate through schedule rows to calculate shift totals
+            rows.forEach((row, rowIndex) => {
+                const cells = row.querySelectorAll('td');
+                const shifts = Array.from(cells).slice(1, 32).map(cell => cell.textContent.trim().toUpperCase());
+                
+                const weekends = shifts.filter(shift => shift === 'W').length;
+                const evenings = shifts.filter(shift => shift === 'E').length;
+                const graveyard = shifts.filter(shift => shift === 'G').length;
+                const total = weekends + evenings + graveyard;
+
+                // Update the corresponding summary row with calculated values
+                const summaryRow = summaryRows[rowIndex];
+                if (summaryRow) {
+                    summaryRow.querySelector('.weekends').textContent = weekends;
+                    summaryRow.querySelector('.evenings').textContent = evenings;
+                    summaryRow.querySelector('.graveyard').textContent = graveyard;
+                    summaryRow.querySelector('.total').textContent = total;
+                }
+            });
+        }
+
+        // Function to add a new row to the schedule and summary tables
+        function addRow() {
+            const scheduleTable = document.getElementById('schedule').getElementsByTagName('tbody')[0];
+            const summaryTable = document.getElementById('summary').getElementsByTagName('tbody')[0];
+            
+            // Create a new row for the schedule table
+            const newScheduleRow = scheduleTable.insertRow();
+            newScheduleRow.setAttribute('onclick', 'selectRow(this)');
+            
+            // Add up/down arrow buttons to the new row
+            const buttonCell = newScheduleRow.insertCell(0);
+            buttonCell.className = 'arrow-buttons';
+            buttonCell.innerHTML = `
+                <button class="up" onclick="moveRow(this, -1)">&#9650;</button>
+                <button class="down" onclick="moveRow(this, 1)">&#9660;</button>
+            `;
+
+            // Add an editable name cell
+            const nameCell = newScheduleRow.insertCell(1);
+            nameCell.contentEditable = 'true';
+            nameCell.textContent = '';
+            nameCell.setAttribute('oninput', 'updateSummaryName(this)');
+
+            // Add cells for days 1 to 31
+            for (let i = 1; i <= 31; i++) {
+                const cell = newScheduleRow.insertCell(i + 1);
+                cell.contentEditable = 'true';
+                cell.textContent = '';
+            }
+
+            // Add empty cells for shift totals
+            newScheduleRow.insertCell(32).className = 'weekends';
+            newScheduleRow.insertCell(33).className = 'evenings';
+            newScheduleRow.insertCell(34).className = 'graveyard';
+            
+            // Create a new row for the summary table
+            const newSummaryRow = summaryTable.insertRow();
+            newSummaryRow.insertCell(0).className = 'summary-name';
+            newSummaryRow.insertCell(1).className = 'weekends';
+            newSummaryRow.insertCell(2).className = 'evenings';
+            newSummaryRow.insertCell(3).className = 'graveyard';
+            newSummaryRow.insertCell(4).className = 'total';
+        }
+
+        // Function to select a row
+        function selectRow(row) {
+            const selected = document.querySelector('.selected');
+            if (selected) {
+                selected.classList.remove('selected');
+            }
+            row.classList.add('selected');
+        }
+
+        // Function to delete the selected row
+        function deleteSelectedRow() {
+            const selected = document.querySelector('.selected');
+            if (selected) {
+                selected.remove();
+                updateSummaryTable(); // Update the summary table after row deletion
+            } else {
+                alert('Please select a row to delete');
+            }
+        }
+
+        // Function to update summary name when name cell is edited
+        function updateSummaryName(cell) {
+            const name = cell.textContent.trim();
+            const rowIndex = Array.from(cell.closest('tbody').querySelectorAll('tr')).indexOf(cell.closest('tr'));
+            const summaryRow = document.querySelectorAll('#summary tbody tr')[rowIndex];
+            if (summaryRow) {
+                summaryRow.querySelector('.summary-name').textContent = name;
+            }
+        }
+
+        // Add an event listener to calculate shifts on Ctrl + C
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'c' && (event.ctrlKey || event.metaKey)) {
+                event.preventDefault();
+                calculateShifts();
+            }
+        });
+    </script>
+</body>
+</html>
