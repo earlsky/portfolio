@@ -1073,6 +1073,7 @@ High durability` },
 Sharding due to high data size or throughput demands.
 Simple GET or PUT requests and queries that a NoSQL database can handle.
 Or, relational database management system (RDBMS) customization.` },
+  { que: "MODULE 8 SECTION 2"},
   { que: "DynamoDB",
     ans: `A fast and flexible NoSQL database service for all applications that need consistent, single-digit-millisecond latency at any scale.` },
   { que: "Core DynamoDB components",
@@ -1081,6 +1082,7 @@ ITEMS are a group of attributes that is uniquely identifiable among all the othe
 ATTRIBUTES are a fundamental data element, something that does not need to be broken down any further.` },
   { que: "DynamoDB supports two different kinds of primary keys",
     ans: `The PARTITION KEY is a simple primary key, which is composed of one attribute called the SORT KEY. The partition key and sort key are also known as the COMPOSITE PRIMARY KEY, which is composed of two attributes.`},
+  { que: "MODULE 8 SECTION 3"},
   { que: "Amazon Redshift",
     ans: "A fast and powerful, fully managed data warehouse that is simple and cost-effective to set up, use, and scale. It enables you to run complex ANALYTIC QUERIES against petabytes of structured data by using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel data processing. Most results come back in seconds." },
   { que: "Amazon Redshift features",
@@ -1089,18 +1091,239 @@ Easily scale with no downtime.
 Columnar storage and parallel processing architectures.
 Automatically and continuously monitors cluster.
 Encryption is built in.` },
+  { que: "MODULE 8 SECTION 4"},
   { que: "Amazon Aurora",
     ans: `MySQL and PostgreSQL compatible relational database that is built for the cloud.
 It combines the PERFORMANCE and AVAILABILITY of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases.
 Using Amazon Aurora can reduce your database costs while improving the RELIABILITY and AVAILABILITY of the database.
-As a fully MANAGED service, Aurora is designed to automate time-consuming tasks like provisioning, patching, backup, recovery, failure detection, and repair.` },
+As a fully MANAGED service, Aurora is designed to automate time-consuming tasks like provisioning, patching, backup, recovery, failure detection, and repair.`},
   { que: "The right DB tool for the right job",
     ans: `Enterprise-class relational database => Amazon RDS
 Fast and flexible NoSQL database service for any scale => Amazon DynamoDB
 Operating system accessor application features that are not supported by AWS database services => Databases on Amazon EC2
-Specific case-driven requirements (machine learning, data warehouse, graphs) => Amazon purpose-built database services.` },
+Specific case-driven requirements (machine learning, data warehouse, graphs) => Amazon purpose-built database services.`},
+  { que: "MODULE 9 SECTION 1"},
   { que: "AWS Well-Architected Framework pillars",
     ans: "Operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability."},
+  { que: "Operational Excellence pillar", 
+    ans: "Focuses on the ability to run and monitor systems to deliver business value, and to continually improve supporting processes and procedures. Key topics include: automating changes, responding to events, and defining standards to manage daily operations"},
+  { que: "There are five design principles for OPERATIONAL EXCELLENCE in the cloud",
+    ans: `Perform operations as code
+Make frequent, small, reversible changes
+Refine operations procedures frequently
+Anticipate failure
+Learn from all operational failures`},
+  { que: "Perform operations as code",
+    ans: "Define your entire workload (that is, applications and infrastructure) as code and update it with code. Implement operations procedures as code and configure them to automatically trigger in response to events. By performing operations as code, you limit human error and enable consistent responses to events."},
+  { que: "Make frequent, small, reversible changes",
+    ans: "Design workloads to enable components to be updated regularly. Make changes in small increments that can be reversed if they fail (without affecting customers when possible)."},
+  { que: "Refine operations procedures frequently",
+    ans: "Look for opportunities to improve operations procedures. Evolve your procedures appropriately as your workloads evolve. Set up regular game days to review all procedures, validate their effectiveness, and ensure that teams are familiar with them"},
+  { que: "Anticipate failure:",
+    ans: "Identify potential sources of failure so that they can be removed or mitigated. Test failure scenarios and validate your understanding of their impact. Test your response procedures to ensure that they are effective and that teams know how to run them. Set up regular game days to test workloads and team responses to simulated events." },
+  { que: "Learn from all operational failures",
+    ans: "Drive improvement through lessons learned from all operational events and failures. Share what is learned across teams and through the entire organization."},
+  { que: "Security pillar:",
+    ans: "Focuses on the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies. Key topics include: protecting confidentiality and integrity of data, identifying and managing who can do what (or privilege management), protecting systems, and establishing controls to detect security events."},
+  { que: "There are seven design principles that can improve SECURITY:",
+    ans: `Implement a strong identity foundation
+Enable traceability
+Apply security at all layers
+Automate security best practices
+Protect data in transit and at rest
+Keep people away from data
+Prepare for security events`},
+  { que: "Implement a strong identity foundation",
+    ans: "Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources. Centralize privilege management and reduce or even eliminate reliance on long-term credentials."},
+  { que: "Enable traceability",
+    ans: "Monitor, alert, and audit actions and changes to your environment in real time. Integrate logs and metrics with systems to automatically respond and take action."},
+  { que: "Apply security at all layers",
+    ans: "Apply defense in depth and apply security controls to all layers of your architecture (for example, edge network, virtual private cloud, subnet, and load balancer; and every instance, operating system, and application)"},
+  { que: "Automate security best practices",
+    ans: "Automate security mechanisms to improve your ability to securely scale more rapidly and cost effectively. Create secure architectures and implement controls that are defined and managed as code in version-controlled templates."},
+  { que: "Protect data in transit and at rest",
+    ans: "Classify your data into sensitivity levels and use mechanisms such as encryption, tokenization, and access control where appropriate."},
+  { que: "Keep people away from data",
+    ans: "To reduce the risk of loss or modification of sensitive data due to human error, create mechanisms and tools to reduce or eliminate the need for direct access or manual processing of data."},
+  { que: "Prepare for security events",
+    ans: "Have an incident management process that aligns with organizational requirements. Run incident response simulations and use tools with automation to increase your speed of detection, investigation, and recovery."},
+  { que: "Reliability pillar",
+    ans: "Focuses on ensuring a workload performs its intended function correctly and consistently when it’s expected to. A resilient workload quickly recovers from failures to meet business and customer demand. Key topics include: designing distributed systems, recovery planning, and handling change."},
+  { que: "There are five design principles that can increase RELIABILITY",
+    ans: `Automatically recover from failure
+Test recovery procedures
+Scale horizontally to increase aggregate workload availability
+Stop guessing capacity
+Manage change in automation`},
+  { que: "Automatically recover from failure",
+    ans: "Monitor systems for key performance indicators and configure your systems to trigger an automated recovery when a threshold is breached. This practice enables automatic notification and failure-tracking, and for automated recovery processes that work around or repair the failure."},
+  { que: "Test recovery procedures",
+    ans: "Test how your systems fail and validate your recovery procedures. Use automation to simulate different failures or to recreate scenarios that led to failures before. This practice can expose failure pathways that you can test and rectify before a real failure scenario."},
+  { que: "Scale horizontally to increase aggregate workload availability",
+    ans: "Replace one large resource with multiple, smaller resources and distribute requests across these smaller resources to reduce the impact of a single point of failure on the overall system"},
+  { que: "Stop guessing capacity",
+    ans: "Monitor demand and system usage, and automate the addition or removal of resources to maintain the optimal level for satisfying demand"},
+  { que: "Manage change in automation",
+    ans: "Use automation to make changes to infrastructure and manage changes in automation"},
+  { que: "Performance Efficiency pillar",
+    ans: "focuses on the ability to use IT and computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes or technologies evolve. Key topics include: selecting the right resource types and sizes based on workload requirements, monitoring performance, and making informed decisions to maintain efficiency as business needs evolve."},
+  { que: "There are five design principles that can improve PERFORMANCE EFFICIENCY",
+    ans: `Democratize advanced technologies
+Go global in minutes
+Use serverless architectures
+Experiment more often
+Consider mechanical sympathy`},
+  { que: "Democratize advanced technologies",
+    ans: "Consume technologies as a service. For example, technologies such as NoSQL databases, media transcoding, and machine learning require expertise that is not evenly dispersed across the technical community. In the cloud, these technologies become services that teams can consume. Consuming technologies enables teams to focus on product development instead of resource provisioning and management."},
+  { que: "Go global in minutes",
+    ans: "Deploy systems in multiple AWS Regions to provide lower latency and a better customer experience at minimal cost."},
+  { que: "Use serverless architectures",
+    ans: "Serverless architectures remove the operational burden of running and maintaining servers to carry out traditional compute activities. Serverless architectures can also lower transactional costs because managed services operate at cloud scale."},
+  { que: "Experiment more often",
+    ans: "Perform comparative testing of different types of instances, storage, or configurations."},
+  { que: "Consider mechanical sympathy",
+    ans: "Use the technology approach that aligns best to what you are trying to achieve. For example, consider your data access patterns when you select approaches for databases or storage."},
+  { que: "Cost Optimization pillar",
+    ans: "Focuses on the ability to avoid unnecessary costs. Key topics include: understanding and controlling where money is being spent, selecting the most appropriate and right number of resource types, analyzing spend over time, and scaling to meeting business needs without overspending."},
+  { que: "There are five design principles that can OPTIMIZE COSTS",
+    ans: `Implement Cloud Financial Management
+Adopt a consumption model
+Measure overall efficiency
+Stop spending money on undifferentiated heavy lifting 
+Analyze and attribute expenditure`},
+  { que: "Implement Cloud Financial Management",
+    ans: "To achieve financial success and accelerate business value realization in the cloud, you need to invest in cloud financial management and cost optimization. You need to build capability through knowledge building, programs, resources, and processes to become a cost-efficient organization."},
+  { que: "Adopt a consumption model",
+    ans: "Pay only for the computing resources that you require. Increase or decrease usage depending on business requirements, not by using elaborate forecasting."},
+  { que: "Measure overall efficiency",
+    ans: "Measure the business output of the workload and the costs that are associated with delivering it. Use this measure to know the gains that you make from increasing output and reducing costs."},
+  { que: "Stop spending money on undifferentiated heavy lifting",
+    ans: "AWS does the heavy lifting of racking, stacking, and powering servers, which means that you can focus on your customers and business projects instead of the IT infrastructure."},
+  { que: "Analyze and attribute expenditure",
+    ans: "The cloud makes it easier to accurately identify system usage and costs, and attribute IT costs to individual workload owners. Having this capability helps you measure return on investment (ROI) and gives workload owners an opportunity to optimize their resources and reduce costs."},
+  { que: "MODULE 9 SECTION 2"},
+  { que: "Reliability",
+    ans: "A measure of your system’s ability to provide functionality when desired by the user. Because 'everything fails, all the time,' you should think of reliability in statistical terms. Reliability is the probability that an entire system will function as intended for a specified period. Note that a system includes all system components, such as hardware, firmware, and software. Failure of system components impacts the availability of the system."},
+  { que: "Availability",
+    ans: "The percentage of time that a system is operating normally or correctly performing the operations expected of it (or normal operation time over total time). Availability is reduced anytime the application isn’t operating normally, including both scheduled and unscheduled interruptions"},
+  { que: "Three factors that determine the overall availability of your application",
+    ans: "Fault tolerance, scalability, recoverabilit"},
+  { que: "Fault tolerance:",
+    ans: "Refers to the BUILT-IN REDUNDANCY of an application's components and the ABILITY OF THE APPLICATION TO REMAIN OPERATIONAL even if some of its components fail. Fault tolerance relies on specialized hardware to detect failure in a system component (such as a processor, memory board, power supply, I/O subsystem, or storage subsystem) and instantaneously switch to a redundant hardware component. The fault-tolerant model does not address software failures, which are the most common reason for downtime."},
+  { que: "Scalability",
+    ans: "The ability of your application to accommodate increases in capacity needs, remain available, and perform within your required standards. It does not guarantee availability, but it contributes to your application's availability."},
+  { que: "Recoverability",
+    ans: "The ability to restore service quickly and without lost data if a disaster makes your components unavailable, or it destroys data."},
+  { que: "MODULE 9 SECTION 3"},
+  { que: "AWS Trusted Advisor",
+    ans: "An online tool that provides real-time guidance to help you provision your resources following AWS best practices."},
+  { que: "AWS Trusted Advisor looks at your entire AWS environment and gives you recommendations in five categories",
+    ans: `Cost Optimization
+Performance
+Security
+Fault Tolerance
+Service Limits`},
+  { que: "Cost Optimization",
+    ans: "AWS Trusted Advisor looks at your resource use and makes recommendations to help you optimize cost by eliminating unused and idle resources, or by making commitments to reserved capacity."},
+  { que: "Performance",
+    ans: "Improve the performance of your service by checking your service limits, ensuring you take advantage of provisioned throughput, and monitoring for over utilized instances"},
+  { que: "Security",
+    ans: "Improve the security of your application by closing gaps, enabling various AWS security features, and examining your permissions."},
+  { que: "Fault Tolerance",
+    ans: "Increase the availability and redundancy of your AWS application by taking advantage of automatic scaling, health checks, Multi-AZ deployments, and backup capabilities."},
+  { que: "Service Limit:",
+    ans: "AWS Trusted Advisor checks for service usage that is more than 80 percent of the service limit. Values are based on a snapshot, so your current usage might differ. Limit and usage data can take up to 24 hours to reflect any changes."},
+  { que: "MODULE 10 SECTION 1"},
+  { que: "Elastic Load Balancing:",
+    ans: "An AWS service that distributes incoming application or network traffic across multiple targets-such as Amazon Elastic Compute Cloud (Amazon EC2) instances, containers, internet protocol (IP) addresses, and Lambda functions-in a single Availability Zone or across multiple Availability Zones. Elastic Load Balancing scales your load balancer as traffic to your application changes over time. It can automatically scale to most workloads."},
+  { que: "Elastic Load Balancing in three types:",
+    ans: `Application Load Balancer
+Network Load Balancer
+Classic Load Balancer`},
+  { que: "Application Load Balancer",
+    ans: "Operates at the application level (Open Systems Interconnection, or OSI, model layer 7). It routes traffic to targets—Amazon Elastic Compute Cloud (Amazon EC2) instances, containers, Internet Protocol (IP) addresses, and Lambda functions—based on the content of the request. It is ideal for advanced load balancing of Hypertext Transfer Protocol (HTTP) and Secure HTTP (HTTPS) traffic. An Application Load Balancer provides advanced request routing that is targeted at delivery of modern application architectures, including microservices and container-based applications. An Application Load Balancer simplifies and improves the security of your application by ensuring that the latest Secure Sockets Layer/Transport Layer Security (SSL/TLS) ciphers and protocols are used at all times."},
+  { que: "Network Load Balancer",
+    ans: "Operates at the network transport level (OSI model layer 4), routing connections to targets—EC2instances, microservices, and containers—based on IP protocol data. It works well for load balancing both Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) traffic. A Network Load Balancer is capable of handling millions of requests per second while maintaining ultra-low latencies. A Network Load Balancer is optimized to handle sudden and volatile network traffic patterns."},
+  { que: "Classic Load Balancer",
+    ans: "Provides basic load balancing across multiple EC2instances, and it operates at both the application level and network transport level. A Classic Load Balancer supports the load balancing of applications that use HTTP, HTTPS, TCP, and SSL. The Classic Load Balancer is an older implementation.  When possible, AWS recommends that you use a dedicated Application Load Balancer or Network Load Balancer."},
+  { que: "Elastic Load Balancing use cases",
+    ans: `Achieve high availability and better fault tolerance for your applications.
+Automatically load balance your containerized applications.
+Automatically scale your applications.
+Use Elastic Load Balancing in your virtual private cloud (VPC).
+Enable hybrid load balancing.
+Invoking Lambda functions over HTTP(S)`},
+  { que: "Achieve high availability and better fault tolerance for your applications",
+    ans: "Elastic Load Balancing balances traffic across healthy targets in multiple Availability Zones. If one or more of your targets in a single Availability Zone are unhealthy, Elastic Load Balancing will route traffic to healthy targets in other Availability Zones. After the targets return to a healthy state, load balancing will automatically resume traffic to them."},
+  { que: "Automatically load balance your containerized applications",
+    ans: "With enhanced container support for Elastic Load Balancing, you can now load balance across multiple ports on the same EC2 instance. You can also take advantage of deep integration with Amazon Elastic Container Service (Amazon ECS), which provides a fully-managed container offering. You only need to register a service with a load balancer, and Amazon ECS transparently manages the registration and de-registration of Docker containers. The load balancer automatically detects the port and dynamically reconfigures itself."},
+  { que: "Automatically scale your applications",
+    ans: "Elastic Load Balancing works with Amazon CloudWatch and Amazon EC2 Auto Scaling to help you scale your applications to the demands of your customers. Amazon CloudWatch alarms can trigger auto scaling for your EC2 instance fleet when the latency of any one of your EC2 instances exceeds a preconfigured threshold. Amazon EC2 Auto Scaling then provisions new instances and your applications will be ready to serve the next customer request. The load balancer will register the EC2 instance and direct traffic to it as needed."},
+  { que: "Use Elastic Load Balancing in your virtual private cloud (VPC)",
+    ans: "You can use Elastic Load Balancing to create a public entry point into your VPC, or to route request traffic between tiers of your application within your VPC. You can assign security groups to your load balancer to control which ports are open to a list of allowed sources. Because Elastic Load Balancing works with your VPC, all your existing network access control lists (network ACLs) and routing tables continue to provide additional network controls. When you create a load balancer in your VPC, you can specify whether the load balancer is public (default) or internal. If you select internal, you do not need to have an internet gateway to reach the load balancer, and the private IP addresses of the load balancer will be used in the load balancer’s Domain Name System (DNS) record."},
+  { que: "Enable hybrid load balancing",
+    ans: "Elastic Load Balancing enables you to load balance across AWS and on-premises resources by using the same load balancer. For example, if you must distribute application traffic across both AWS and on-premises resources, you can register all the resources to the same target group and associate the target group with a load balancer. Alternatively, you can use DNS-based weighted load balancing across AWS and on-premises resources by using two load balancers, with one load balancer for AWS and other load balancer for on-premises resources. You can also use hybrid load balancing to benefit separate applications where one application is in a VPC and the other application is in an on-premises location. Put the VPC targets in one target group and the on-premises targets in another target group, and then use content-based routing to route traffic to each target group."},
+  { que: "Invoking Lambda functions over HTTP(S)",
+    ans: "Elastic Load Balancing supports invoking Lambda functions to serve HTTP(S) requests. This enables users to access serverless applications from any HTTP client, including web browsers. You can register Lambda functions as targets and use the support for content-based routing rules in Application Load Balancers to route requests to different Lambda functions. You can use an Application Load Balancer as a common HTTP endpoint for applications that use servers and serverless computing. You can build an entire website by using Lambda functions, or combine EC2 instances, containers, on-premises servers, and Lambda functions to build applications."},
+  { que: "Features to monitor your load balancers, analyze traffic patterns, and troubleshoot issues with your load balancers and targets",
+    ans: `Amazon CloudWatch metrics
+Access logs
+AWS CloudTrail logs`},
+  { que: "Amazon CloudWatch metrics",
+    ans: "Elastic Load Balancing publishes data points to Amazon CloudWatch for your load balancers and your targets. CloudWatch enables you to retrieve statistics about those data points as an ordered set of time series data, known as metrics. You can use metrics to verify that your system is performing as expected. For example, you can create a CloudWatch alarm to monitor a specified metric and initiate an action (such as sending a notification to an email address) if the metric goes outside what you consider an acceptable range."},
+  { que: "Access logs",
+    ans: "You can use access logs to capture detailed information about the requests that were made to your load balancer and store them as log files in Amazon Simple Storage Service (Amazon S3). You can use these access logs to analyze traffic patterns and to troubleshoot issues with your targets or backend applications."},
+  { que: "AWS CloudTrail logs",
+    ans: "You can use AWS CloudTrail to capture detailed information about the calls that were made to the Elastic Load Balancing application programming interface (API) and store them as log files in Amazon S3. You can use these CloudTrail logs to determine who made the call, what calls were made, when the call was made, the source IP address of where the call came from, and so on."},
+  { que: "MODULE 10 SECTION 2"},
+  { que: "Amazon CloudWatch",
+    ans: "A monitoring and observability service that is built for DevOps engineers, developers, site reliability engineers (SRE), and IT managers. CloudWatch monitors your AWS resources (and the applications that you run on AWS) in real time. You can use CloudWatch to collect and track metrics, which are variables that you can measure for your resources and applications."},
+  { que: "Amazon CloudWatch: set alarms based on a static threshold",
+    ans: `Namespace: A namespace contains the CloudWatch metric that you want, for example, AWS/EC2.
+Metric: A metric is the variable you want to measure, for example, CPU Utilization.
+Statistic: A statistic can be an average, sum, minimum, maximum, sample count, a predefined percentile, or a custom percentile.
+Period: A period is the evaluation period for the alarm. When the alarm is evaluated, each period is aggregated into one data point.
+Conditions: When you specify the conditions for a static threshold, you specify whenever the metric is Greater, Greater or Equal, Lower or Equal, or Lower than the threshold value, and you also specify the threshold value.
+Additional configuration information: This includes the number of data points within the evaluation period that must be breached to trigger the alarm, and how CloudWatch should treat missing data when it evaluates the alarm.
+Actions: You can choose to send a notification to an Amazon SNS topic, or to perform an Amazon EC2 Auto Scaling action or Amazon EC2 action.`},
+  { que: "MODULE 10 SECTION 3"},
+  { que: "Amazon EC2 Auto Scaling",
+    ans: `Helps you maintain application availability.
+Enables you to automatically add or remove EC2 instances according to conditions that you define.
+Detects impaired EC2 instances and unhealthy applications, and replaces the instances without your intervention.
+Provides several scaling options: Manual, scheduled, dynamic or on-demand, and predictive.`},
+  { que: "Auto Scaling group",
+    ans: "A collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. The size of an Auto Scaling group depends on the number of instances you set as the DESIRED capacity. You can adjust its size to meet demand, either manually or by using automatic scaling. "},
+  { que: "Amazon EC2 Auto Scaling: scaling IN vs scaling OUT:",
+    ans: "LAUNCHING instances is referred to as scaling OUT, and TERMINATING instances is referred to as scaling IN"},
+  { que: "Amazon EC2 Auto Scaling options",
+    ans: `Maintain current instance levels at all times.
+Manual scaling.
+Scheduled scaling.
+A more advanced way to scale your resources enables you to define parameters that control the scaling process.
+Predictive scaling.`},
+  { que: "Scaling options: Maintain current instance levels at all time:",
+    ans: "You can configure your Auto Scaling group to maintain a specified number of running instances at all times. To maintain the current instance levels, Amazon EC2 Auto Scaling performs a periodic health check on running instances in an Auto Scaling group. When Amazon EC2 Auto Scaling finds an unhealthy instance, it terminates that instance and launches a new one."},
+  { que: "Scaling options: Manual scaling",
+    ans: "With manual scaling, you specify only the change in the maximum, minimum, or desired capacity of your Auto Scaling group."},
+  { que: "Scaling options: Scheduled scaling:",
+    ans: "With scheduled scaling, scaling actions are performed automatically as a function of date and time. This is useful for predictable workloads when you know exactly when to increase or decrease the number of instances in your group. For example, saythat every week,the traffic to your web application starts to increase on Wednesday, remains high on Thursday, and starts to decrease on Friday."},
+  { que: "Scaling options: A more advanced way to scale your resources enables you to define parameters that control the scaling process:",
+    ans: "For example, you have a web application that currently runs on two instances and you want the CPU utilization of the Auto Scaling group to stay close to 50 percent when the load on the application changes. This option is useful for scaling in response to changing conditions, when you don't know when those conditions will change. Dynamic scaling gives you extra capacity to handle traffic spikes without maintaining an excessive amount of idle resources. You can configure your Auto Scaling group to scale automatically to meet this need."},
+  { que: "Scaling options: Predictive scaling:",
+    ans: "You can use Amazon EC2 Auto Scaling with AWS Auto Scaling to implement predictive scaling, where your capacity scales based on predicted demand. Predictive scaling uses data that is collected from your actual EC2 usage, and the data is further informed by billions of data points that are drawn from our own observations. AWS then uses well-trained machine learning models to predict your expected traffic (and EC2 usage), including daily and weekly patterns. The model needs at least 1 day of historical data to start making predictions. It is re-evaluated every 24 hours to create a forecast for the next 48 hours. The prediction process produces a scaling plan that can drive one or more groups of automatically scaled EC2 instances."},
+  { que: "AWS Auto Scaling",
+    ans: `A separate service that monitors your applications.It automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. The service provides a simple, powerful user interface that enables you to build scaling plans for resources including:
+Amazon EC2 instances and Spot Fleets.
+Amazon Elastic Container Service (Amazon ECS) tasks.
+Amazon DynamoDB tables and indexes.
+Amazon Aurora Replicas.`},
+  { que: "Module 10 Section 3 key takeaways:",
+    ans: `Scaling enables you to respond quickly to changes in resource needs.
+Amazon EC2 Auto Scaling helps you maintain application availability, automatically add or remove EC2 instances according to your workloads.
+An Auto Scaling group is a collection of EC2 instances.
+A launch configuration is an instance configuration template.
+You can implement dynamic scaling with Amazon EC2 Auto Scaling, Amazon CloudWatch, and Elastic Load Balancing.`}
 ];
 
     let currentCard = 0;
