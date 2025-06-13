@@ -76,6 +76,34 @@
       font-size: 1em;
       color: #d0c7c7;
     }
+    .goto-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .goto-section input {
+      width: 60px;
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .goto-section button {
+      padding: 8px 15px;
+      font-size: 0.9em;
+      background: #28a745; /* Green color to distinguish from nav buttons */
+    }
+    .goto-section button:hover:not(:disabled) {
+      background: #1e7e34;
+    }
+    .goto-section label {
+      color: #d0c7c7;
+      font-size: 0.9em;
+    }
     @media (max-width: 600px) {
       .card h2 {
         font-size: 1.2em;
@@ -86,6 +114,13 @@
       button {
         padding: 8px 15px;
         font-size: 0.9em;
+      }
+      .goto-section {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .goto-section input {
+        width: 80px;
       }
     }
   </style>
@@ -100,7 +135,11 @@
       <button onclick="prevCard()" id="prevBtn">Previous</button>
       <button onclick="nextCard()" id="nextBtn">Next</button>
     </div>
-    <div class="counter" id="counter"></div>
+    <div class="counter" id="counter">Card 1 of 1</div>
+    <div class="goto-section">
+      <label for="cardInput">Go to card:</label>
+      <input type="number" id="cardInput" min="1" placeholder="1">
+      <button onclick="goToCard()">Go</button>
   </div>
 
   <script>
@@ -1358,7 +1397,27 @@ You can implement dynamic scaling with Amazon EC2 Auto Scaling, Amazon CloudWatc
         displayCard();
       }
     }
+    function goToCard() {
+      const input = document.getElementById('cardInput');
+      const cardNumber = parseInt(input.value);
+      
+      // Validate the input is within valid range
+      if (cardNumber && cardNumber >= 1 && cardNumber <= flashcards.length) {
+        currentCard = cardNumber - 1; // Convert to 0-based index
+        displayCard();
+        input.value = ''; // Clear the input after successful navigation
+      } else {
+        // Show error message for invalid input
+        alert(`Please enter a valid card number between 1 and ${flashcards.length}`);
+      }
+    }
 
+    // NEW: Allow Enter key to trigger go to card functionality
+    document.getElementById('cardInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        goToCard();
+      }
+    });
     // Initialize the first card
     displayCard();
   </script>
