@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Compression Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #4a5568;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        textarea, button {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        textarea {
+            height: 100px;
+            resize: vertical;
+            font-family: monospace;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .results {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .result-box {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .result-title {
+            font-weight: 700;
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .compressed-output {
+            font-family: monospace;
+            background: #2d3748;
+            color: #68d391;
+            padding: 15px;
+            border-radius: 8px;
+            word-break: break-all;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        
+        .codes-table {
+            font-family: monospace;
+            background: #2d3748;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .codes-table div {
+            padding: 3px 0;
+            border-bottom: 1px solid #4a5568;
+        }
+        
+        .codes-table div:last-child {
+            border-bottom: none;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #718096;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .tree-container {
+            grid-column: 1 / -1;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .results {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌳 Huffman Compression Demo</h1>
+        
+        <div class="input-section">
+            <label for="inputText">Enter text to compress:</label>
+            <textarea id="inputText" placeholder="Type your text here...">hello world</textarea>
+            <button onclick="compressText()">Compress Text</button>
+        </div>
+        
+        <div id="results" style="display: none;">
+            <div class="results">
+                <div class="result-box">
+                    <div class="result-title">📊 Huffman Codes</div>
+                    <div id="codesOutput" class="codes-table"></div>
+                </div>
+                
+                <div class="result-box">
+                    <div class="result-title">🔧 Compressed Output</div>
+                    <div id="compressedOutput" class="compressed-output"></div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="originalSize">0</div>
+                    <div class="stat-label">Original Size (bits)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="compressedSize">0</div>
+                    <div class="stat-label">Compressed Size (bits)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="compressionRatio">0%</div>
+                    <div class="stat-label">Compression Ratio</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="spaceSaved">0%</div>
+                    <div class="stat-label">Space Saved</div>
+                </div>
+            </div>
+            
+            <div class="tree-container">
+                <div class="result-title">🌲 Huffman Tree Visualization</div>
+                <div id="treeOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Node class for Huffman tree
+        class Node {
+            constructor(char, freq, left = null, right = null) {
+                this.char = char;
+                this.freq = freq;
+                this.left = left;
+                this.right = right;
+            }
+        }
+
+        // Priority queue implementation for Huffman algorithm
+        class PriorityQueue {
+            constructor() {
+                this.items = [];
+            }
+            
+            enqueue(item) {
+                this.items.push(item);
+                this.items.sort((a, b) => a.freq - b.freq);
+            }
+            
+            dequeue() {
+                return this.items.shift();
+            }
+            
+            size() {
+                return this.items.length;
+            }
+        }
+
+        // Build frequency table
+        function buildFrequencyTable(text) {
+            const freq = {};
+            for (let char of text) {
+                freq[char] = (freq[char] || 0) + 1;
+            }
+            return freq;
+        }
+
+        // Build Huffman tree (implementation of HuffmanBuildTree)
+        function HuffmanBuildTree(inputString) {
+            const freq = buildFrequencyTable(inputString);
+            const pq = new PriorityQueue();
+            
+            // Create leaf nodes for each character
+            for (let char in freq) {
+                pq.enqueue(new Node(char, freq[char]));
+            }
+            
+            // Handle single character case
+            if (pq.size() === 1) {
+                const single = pq.dequeue();
+                return new Node(null, single.freq, single, null);
+            }
+            
+            // Build tree by combining nodes
+            while (pq.size() > 1) {
+                const left = pq.dequeue();
+                const right = pq.dequeue();
+                const merged = new Node(null, left.freq + right.freq, left, right);
+                pq.enqueue(merged);
+            }
+            
+            return pq.dequeue();
+        }
+
+        // Get compression codes (implementation of HuffmanGetCodes)
+        function HuffmanGetCodes(root, code, codes) {
+            if (!root) return codes;
+            
+            // Leaf node
+            if (root.char !== null) {
+                codes[root.char] = code || '0'; // Handle single character case
+                return codes;
+            }
+            
+            // Traverse left and right
+            HuffmanGetCodes(root.left, code + '0', codes);
+            HuffmanGetCodes(root.right, code + '1', codes);
+            
+            return codes;
+        }
+
+        // Main compression function (your original function)
+        function HuffmanCompress(inputString) {
+            // Build the Huffman tree
+            const root = HuffmanBuildTree(inputString);
+
+            // Get the compression codes from the tree
+            const codes = HuffmanGetCodes(root, "", {});
+            
+            // Build the compressed result
+            let result = "";
+            for (let c of inputString) {
+                result += codes[c];
+            }
+            return { result, codes, root };
+        }
+
+        // Visualize tree structure
+        function visualizeTree(node, depth = 0, prefix = 'Root: ') {
+            if (!node) return '';
+            
+            let result = '  '.repeat(depth) + prefix;
+            
+            if (node.char !== null) {
+                // Leaf node
+                result += `'${node.char}' (${node.freq})\n`;
+            } else {
+                // Internal node
+                result += `Internal (${node.freq})\n`;
+                if (node.left) {
+                    result += visualizeTree(node.left, depth + 1, '├─0─ ');
+                }
+                if (node.right) {
+                    result += visualizeTree(node.right, depth + 1, '└─1─ ');
+                }
+            }
+            
+            return result;
+        }
+
+        // Main compression function called by button
+        function compressText() {
+            const inputText = document.getElementById('inputText').value;
+            
+            if (!inputText) {
+                alert('Please enter some text to compress!');
+                return;
+            }
+            
+            try {
+                const { result, codes, root } = HuffmanCompress(inputText);
+                
+                // Display codes
+                let codesHtml = '';
+                for (let char in codes) {
+                    const displayChar = char === ' ' ? '(space)' : char;
+                    codesHtml += `<div>'${displayChar}' → ${codes[char]}</div>`;
+                }
+                document.getElementById('codesOutput').innerHTML = codesHtml;
+                
+                // Display compressed output
+                document.getElementById('compressedOutput').textContent = result;
+                
+                // Calculate statistics
+                const originalSize = inputText.length * 8; // 8 bits per character
+                const compressedSize = result.length;
+                const compressionRatio = ((compressedSize / originalSize) * 100).toFixed(1);
+                const spaceSaved = (100 - compressionRatio).toFixed(1);
+                
+                document.getElementById('originalSize').textContent = originalSize;
+                document.getElementById('compressedSize').textContent = compressedSize;
+                document.getElementById('compressionRatio').textContent = compressionRatio + '%';
+                document.getElementById('spaceSaved').textContent = spaceSaved + '%';
+                
+                // Display tree visualization
+                const treeVisualization = visualizeTree(root);
+                document.getElementById('treeOutput').innerHTML = `<pre style="font-family: monospace; line-height: 1.6;">${treeVisualization}</pre>`;
+                
+                // Show results
+                document.getElementById('results').style.display = 'block';
+                
+            } catch (error) {
+                alert('Error during compression: ' + error.message);
+            }
+        }
+
+        // Auto-compress the default text on page load
+        window.onload = function() {
+            compressText();
+        };
+    </script>
+</body>
