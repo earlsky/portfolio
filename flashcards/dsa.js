@@ -1,4 +1,7 @@
 const flashcards = [
+    { que: "GeeksForGeeks Linear Data Structure",
+        ans: "https://www.geeksforgeeks.org/dsa/introduction-to-linear-data-structures/"
+    },
     { que: "Record",
         ans: "the data structure that stores subitems, often called fields, with a name associated with each subitem." 
     },
@@ -433,58 +436,98 @@ GetLength(list) returns 2`
     { que: "AVL tree",
         ans: `a BST with a height balance property and specific operations to rebalance the tree when a node is inserted or removed. 
         This section discusses the balance property; another section discusses the operations. 
-        A BST is height balanced if for any node, the heights of the node's left and right subtrees differ by only 0 or 1.`
+        A BST is HEIGHT BALANCED if for any node, the heights of the node's left and right subtrees differ by only 0 or 1.`
     },
-    { que: "",
-        ans: ""
+    { que: "Red-black tree",
+        ans: `a BST with two node types, namely red and black, and supporting operations that ensure the tree is balanced when a node is inserted or removed. 
+        The below red-black tree's requirements ensure that a tree with N nodes will have a height of O(log N).
+        Every node is colored either red or black.
+        The root node is black.
+        A red node's children cannot be red.
+        A null child is considered to be a black leaf node.
+        All paths from a node to any null leaf descendant node must have the same number of black nodes.`
     },
-    { que: "",
-        ans: ""
+    { que: "Max-heap",
+        ans: `a complete binary tree that maintains the simple property that a node's key is greater than or equal to the node's children's keys. 
+        (Actually, a max-heap may be any tree, but is commonly a binary tree). 
+        Because x ≥ y and y ≥ z implies x ≥ z, the property results in a node's key being greater than or equal to all the node's descendants' keys. 
+        Therefore, a max-heap's root always has the maximum key in the entire tree.`
     },
-    { que: "",
-        ans: ""
+    { que: "Max-heap insert and remove operations",
+        ans: `An INSERT into a max-heap starts by inserting the node in the tree's last level, and then swapping the node with its parent until no max-heap property violation occurs. 
+        Inserts fill a level (left-to-right) before adding another level, so the tree's height is always the minimum possible. 
+        The upward movement of a node in a max-heap is called PERCOLATING.
+        A REMOVE from a max-heap is always a removal of the root, and is done by replacing the root with the last level's last node, and swapping that node with its greatest child until no max-heap property violation occurs. 
+        Because upon completion that node will occupy another node's location (which was swapped upwards), the tree height remains the minimum possible.`
     },
-    { que: "",
-        ans: ""
+    { que: "Min-heap",
+        ans: "Similar to a max-heap, but a node's key is less than or equal to its children's keys."
     },
-    { que: "",
-        ans: ""
+    { que: "Heaps using arrays",
+        ans: `Heaps are typically stored using arrays. 
+        Given a tree representation of a heap, the heap's array form is produced by traversing the tree's levels from left to right and top to bottom. 
+        The root node is always the entry at index 0 in the array, the root's left child is the entry at index 1, the root's right child is the entry at index 2, and so on.`
     },
-    { que: "",
-        ans: ""
+    { que: "Parent and child indices for HEAP example:",
+        ans: `Node index: Parent index -> Child indices...
+        0: n/a -> 1,2
+        1: 0 -> 3,4
+        2: 0 -> 5,6
+        3: 1 -> 7,8
+        4: 1 -> 9,10
+        5: 2 -> 11,12
+        i: (i-1)/2 -> 2*i+1, 2*i+2`
     },
-    { que: "",
-        ans: ""
+    { que: "Heapsort",
+        ans: `a sorting algorithm that takes advantage of a max-heap's properties by repeatedly removing the max and building a sorted array in reverse order. 
+        An array of unsorted values must first be converted into a heap.`
     },
-    { que: "",
-        ans: ""
+    { que: "Heapify operation",
+        ans: `used to turn an array into a heap. 
+        Since leaf nodes already satisfy the max heap property, heapifying to build a max-heap is achieved by percolating down on every non-leaf node in reverse order.`
     },
-    { que: "",
-        ans: ""
+    { que: "Priority queue abstract data type (ADT)",
+        ans: "a queue where each item has a priority, and items with higher priority are closer to the front of the queue than items with lower priority."
     },
-    { que: "",
-        ans: ""
+    { que: "priority queue ENQUEUE operation",
+        ans: "inserts an item such that the item is closer to the front than all items of lower priority, and closer to the end than all items of equal or higher priority."
     },
-    { que: "",
-        ans: ""
+    { que: "priority queue DEQUEUE operation",
+        ans: "removes and returns the item at the front of the queue, which has the highest priority."
     },
-    { que: "",
-        ans: ""
+    { que: "Common priority queue operations",
+        ans: `Operation: Description = ex: PQueue: 42,61,98 (front->42)
+        Enqueue(PQueue, x): Inserts x after all equal or higher priority items = 
+        Enqueue(PQueue, 87). PQueue: 42, 61, 87, 98
+        
+        Dequeue(PQueue): Returns and removes the item at the front of PQueue =
+        Dequeue(PQueue) returns 42. PQueue: 61, 98
+        
+        Peek(PQueue): Returns but does not remove the item at the front of PQueue =
+        Peek(PQueue) returns 42. PQueue: 42, 61, 98
+        
+        IsEmpty(PQueue): Returns true if PQueue has no items =
+        IsEmpty(PQueue) returns false.
+        
+        GetLength(PQueue): Returns the number of items in PQueue =
+        GetLength(PQueue) returns 3.`
     },
-    { que: "",
-        ans: ""
+    { que: "Treap",
+        ans: `uses a main key that maintains a binary search tree ordering property, and a secondary key generated randomly (often called "priority") during insertions that maintains a heap property. 
+        The combination usually keeps the tree balanced. 
+        The word "treap" is a mix of tree and heap.`
     },
-    { que: "",
-        ans: ""
+    { que: "Treap SEARCH",
+        ans: "the same as a BST search using the main key, since the treap is a BST."
     },
-    { que: "",
-        ans: ""
+    { que: "Treap INSERT",
+        ans: "A treap insert initially inserts a node as in a BST using the main key, then assigns a random priority to the node, and percolates the node up until the heap property is not violated. In a heap, a node is moved up via a swap with the node's parent. In a treap, a node is moved up via a rotation at the parent. Unlike a swap, a rotation maintains the BST property."
     },
-    { que: "",
-        ans: ""
+    { que: "Treap DELETE",
+        ans: "can be done by setting the node's priority such that the node should be a leaf (-∞ for a max-heap), percolating the node down using rotations until the node is a leaf, and then removing the node."
     },
-    { que: "",
-        ans: ""
+    { que: "Set abstract data type (ADT)",
+        ans: "a collection of distinct elements."
     },
     { que: "",
         ans: ""
