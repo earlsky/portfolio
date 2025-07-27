@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InptPharmSea</title>
+    <title>Earl's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* color fonts in Upcoming Projects*/
+
         .healthcare {
             color: rgb(55, 198, 255);
         }
@@ -16,83 +16,172 @@
         .games {
             color: rgb(255, 88, 88);
         }
+        .education {
+            color: rgb(255, 255, 88);
+        }
+        .personal {
+            color: rgb(255, 88, 255);
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropbtn {
+            background-color: #222;
+            color: white;
+            padding: 10px 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn a {
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #444;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Earl's Portfolio🏎️💨</h1>
+        <h1>Earl's Portfolio 🏎️💨</h1>
     </header>
 
     <nav>
         <a href="index.html" class='nav-btn'>HOME</a>
 
-        <!-- <a href="healthcarehome.html" class="nav-btn">HEALTHCARE</a> -->
-        <a href="roomexp.html" class="nav-btn">Room Exp</a>
-        <a href="evechemolist.html" class="nav-btn">ChemoList</a>
-        <a href="queueeveshift.html" class="nav-btn">Queue</a>
-        <a href="itemlocator.html" class="nav-btn">Item Locator</a>
-        <a href="schedule.html" class="nav-btn">Schedule</a>
-        <a href="flashcards.html" class="nav-btn">Flashcards</a>
-        <!-- <a href="#" class="nav-btn">Vancomycin Calculator</a>
-        <a href="#" class="nav-btn">AWS</a>
-        <a href="#" class="nav-btn">Hazard Drug List</a> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">Healthcare</a></button>
+            <div class="dropdown-content">
+                <a href="awsexp.html">AWS Expiration</a>
+                <a href="roomexp.html">BAXTER IVP Expiration</a>
+                <a href="evechemolist.html">Eve Chemo List</a>
+                <a href="itemlocator.html">SEA Inpt Drug Locator</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="vancomycin.html">Vancomycin Calculator</a>
+                <a href="hazarddruglist.html">Hazard Drug List</a>
+                <a href="top200drugs.html">Top 100 Most Used Drugs</a>
+                <a href="tpnelectrolytescalc.html">TPN Calculator</a>
+            </div>
+        </div>
 
-        <!-- <a href="financehome.html" class="nav-btn">FINANCE</a>
-        <a href="compoundintcalc.html" class="nav-btn">Compound Interest Calculator</a>
-        <a href="militarypaycalc.html" class="nav-btn">Military Pay Calculator</a>
-        <a href="netincomecalc.html" class="nav-btn">Net Income Calculator</a>
-        <a href="autoloancalc.html" class="nav-btn">Auto Loan Calculator</a> -->
-    
-        <!-- <a href="gameshome.html" class="nav-btn">GAMES</a>
-        <a href="snake.html" class="nav-btn">Snake</a>
-        <a href="blackjack.html" class="nav-btn">BlackJack</a>
-        <a href="coinflipperdiceroller.html" class="nav-btn">Coin Flipper & Dice Roller</a>
-        <a href="magiceightball.html" class="nav-btn">Magic Eight Ball</a> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">Education</a></button>
+            <div class="dropdown-content">
+                <a href="flashcards.html">Flashcards</a>
+                <a href="#">#</a>
+            </div>
+        </div>
 
+        <div class="dropdown">
+            <button class="dropbtn"><a href="financehome.html">Finance</a></button>
+            <div class="dropdown-content">
+                <a href="compoundintcalc.html">Compound Interest Calculator</a>
+                <a href="militarypaycalc.html">Military Pay Calculator</a>
+                <a href="netincomecalc.html">Net Income Calculator</a>
+                <a href="autoloancalc.html">Auto Loan Calculator</a>
+                <a href="mortgagecalc.html">Mortgage Calculator</a>
+                <a href="creditcardcalc.html">Credit Card Calculator</a>
+                <a href="budgetcalc.html">Budget Calculator</a>
+                <a href="retirementcalc.html">Retirement Calculator</a>
+                <a href="investmentcalc.html">Investment Calculator</a>
+                <a href="taxcalc.html">Tax Calculator</a>
+                <a href="savingscalc.html">Savings Calculator</a>
+                <a href="expensecalc.html">Expense Calculator</a>
+                <a href="loanrepaymentcalc.html">Loan Repayment Calculator</a>
+                <a href="financialblog.html">Financial Blog</a>
+                <a href="financialachievements.html">Financial Achievements</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href="gameshome.html">Games</a></button>
+            <div class="dropdown-content">
+                <a href="snake.html">Snake</a>
+                <a href="blackjack.html">BlackJack</a>
+                <a href="coinflipperdiceroller.html">Coin Flipper & Dice Roller</a>
+                <a href="magiceightball.html">Magic Eight Ball</a>
+                <a href="tictactoe.html">Tic Tac Toe</a>
+                <a href="rockpaperscissors.html">Rock Paper Scissors</a>
+                <a href="minesweeper.html">Minesweeper</a>
+                <a href="2048.html">2048</a>
+                <a href="sudoku.html">Sudoku</a>
+                <a href="connectfour.html">Connect Four</a>
+                <a href="chess.html">Chess</a>
+                <a href="checkers.html">Checkers</a>
+                <a href="solitaire.html">Solitaire</a>
+                <a href="hangman.html">Hangman</a>
+                <a href="wordsearch.html">Word Search</a>
+                <a href="puzzle.html">Puzzle</a>
+                <a href="memorygame.html">Memory Game</a>
+                <a href="whackamole.html">Whack-a-Mole</a>
+                <a href="flappybird.html">Flappy Bird</a>
+                <a href="platformer.html">Platformer</a>
+                <a href="racinggame.html">Racing Game</a>
+                <a href="spaceinvaders.html">Space Invaders</a>
+                <a href="platformer2.html">Platformer 2</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="personalhome.html">Personal Home</a>
+                <a href="personalblog.html">Personal Blog</a>
+                <a href="personalprojects.html">Personal Projects</a>
+                <a href="personalresume.html">Personal Resume</a>
+                <a href="personalportfolio.html">Personal Portfolio</a>
+                <a href="personalfinance.html">Personal Finance</a>
+                <a href="personalhealth.html">Personal Health</a>
+                <a href="personalfitness.html">Personal Fitness</a>
+                <a href="personaltravel.html">Personal Travel</a>
+                <a href="personalhobbies.html">Personal Hobbies</a>
+                <a href="personalinterests.html">Personal Interests</a>
+                <a href="personalachievements.html">Personal Achievements</a>
+                <a href="#">About Me</a>
+                <a href="#">Contact</a>
+                <a href="terminalvis.html">TerminalVis</a>
+            </div>
+        </div>
     </nav>
-    
 
     <section>
-        <p>Disclaimer: Use at your own risk, not reviewed and tested for accuracy🙈</p>
         <img src="./assets/redcharlie-mugDbuNnbd0-unsplash_Large.jpeg" width="300px">
         <blockquote><em>If one does not fail at times, then one has not challenged himself. -Porsche</em></blockquote>
     </section>
 
 <br>
 
-    <main>
-        <!-- <h2><em>Upcoming Projects:</em></h2> -->
-
-<br>
-
-        <!-- <h3 class="healthcare"><u>HEALTHCARE</u></h3>
-        <p class="healthcare">AWS Templates & Automatic Expiration Dater</p>
-        <p class="healthcare">VANComycin Dosage Calculator</p>
-        <p class="healthcare">TPN Electrolytes Calculator</p>
-        <p class="healthcare">Hazard Drug List</p>
-        <p class="healthcare">Top 200 Most Used Drugs List</p> -->
-
-<br>
-        <!-- <h3 class="finance"><u>FINANCE</u></h3>
-        <p class="finance">Compound Interest Calculator</p>
-        <p class="finance">Military Pay Calculator</p>
-        <p class="finance">Net Income Calculator</p>
-        <p class="finance">Auto Loan Calculator</p> -->
-
-<br>
-
-        <!-- <h3 class="games"><u>GAMES</u><h3>
-        <p class="games">Snake</p>
-        <p class="games">BlackJack</p>
-        <p class="games">Coin Flipper & Dice Roller</p>
-        <p class="games">Magic Eight Ball</p> -->
-
-    </main>
-
-    <footer>
-        <a href="awsexp.html" class="nav-hidden" style="background-color: #1b1b1b; color: #121212; margin-bottom: auto">AWS Exp</a>
-        <a href="terminalvis.html" class="nav-hidden" style="background-color: #1b1b1b; color: #121212; margin-bottom: auto">TerminalVis</a>
-    </footer>
+<footer>
+    <p>© 2025 Earl's Portfolio. All rights reserved.</p>
+    <p>Contact: <a href="mailto:earls.portfolio@example.com" style="color: lightblue;">earls.portfolio@notRealEmail.com</a></p>
+</footer>
 
 </body>
 </html>
