@@ -825,14 +825,15 @@ GetLength(list) returns 2`
     },
     { que: "Selection sort",
         ans: `a sorting algorithm that treats the input as two parts, sorted and unsorted, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part.
-        Best, Avg, Worst: O(n^2)`
+        Avg, Worst: O(n^2)`
     },
     { que: "Insertion sort",
         ans: `a sorting algorithm that treats the input as two parts, sorted and unsorted, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part.
-        Best: O(n), Avg, Worst: O(n^2)`
+        Avg, Worst: O(n^2)`
     },
     { que: "Shell sort",
-        ans: "a sorting algorithm that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algorithm. Shell sort uses gap values to determine the number of interleaved lists."
+        ans: `a sorting algorithm that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algorithm. Shell sort uses gap values to determine the number of interleaved lists.
+        Ave:, Worst: O(nlogn)^2)`
     },
     { que: "Shell sort - gap value",
         ans: "a positive integer representing the distance between elements in an interleaved list. For each interleaved list, if an element is at index i, the next element is at index i + gap value."
@@ -840,7 +841,7 @@ GetLength(list) returns 2`
     { que: "Quicksort",
         ans: `sorting algorithm that repeatedly partitions the input into low and high parts (each unsorted), and then recursively sorts each of those parts. 
         To partition the input, quicksort chooses a pivot to divide the data into low and high parts.
-        Best, Avg: O(nlogn), Worst: O(n^2)`
+        Avg: O(nlogn), Worst: O(n^2)`
     },
     { que: "Quicksort - pivot",
         ans: `can be any value within the array, commonly the value of the middle array element. 
@@ -854,15 +855,17 @@ GetLength(list) returns 2`
     },
     { que: "Merge sort",
         ans: `a sorting algorithm that divides a list into two halves, recursively sorts each half, and then merges the sorted halves to produce a sorted list. 
-        The recursive partitioning continues until a list of one element is reached, as a list of one element is already sorted.`
+        The recursive partitioning continues until a list of one element is reached, as a list of one element is already sorted.
+        Avg, Worst: O(nlogn)`
     },
     { que: "Merge sort cont...",
         ans: `Merge sort merges the two sorted partitions into a single list by repeatedly selecting the smallest element from either the left or right partition and adding that element to a temporary merged list. 
         Once fully merged, the elements in the temporary merged list are copied back to the original list.
-        Best, Avg, Worse: O(nlogn)`
+        Avg, Worse: O(nlogn)`
     },
     { que: "Radix sort",
-        ans: "a sorting algorithm designed specifically for integers. The algorithm makes use of a concept called buckets and is a type of bucket sort."
+        ans: `a sorting algorithm designed specifically for integers. The algorithm makes use of a concept called buckets and is a type of bucket sort.
+        Avg, Worse: O(n+k)`
     },
     { que: "Radix sort - bucket",
         ans: `Any array of integer values can be subdivided into buckets by using the integer values' digits. 
@@ -879,7 +882,7 @@ GetLength(list) returns 2`
         ans: `A sorting algorithm that iterates through a list, comparing and swapping adjacent elements if the second element is less than the first element. 
         Bubble sort uses nested loops. Given a list with N elements, the outer i-loop iterates N - 1 times. Each iteration moves the ith largest element into sorted position. The inner j-loop iterates through all adjacent pairs, comparing and swapping adjacent elements as needed, except for the last i pairs that are already in the correct position.
         Because of the nested loops, bubble sort has a runtime of O(N^2). Bubble sort is often considered impractical for real-world use because many faster sorting algorithms exist.
-        Best: O(n^2), Avg: O(n^2), Worst: O(n^2)`
+        Avg, Worst: O(n^2)`
     },
     { que: "Quickselect",
         ans: `An algorithm that selects the kth smallest element in a list. 
@@ -899,7 +902,8 @@ GetLength(list) returns 2`
         In the worst case, quickselect may sort the entire list, resulting in a runtime of O(N^2).`
     },
     { que: "Bucket sort",
-        ans: "a numerical sorting algorithm that distributes numbers into buckets, sorts each bucket with an additional sorting algorithm, and then concatenates buckets together to build the sorted result."
+        ans: `a numerical sorting algorithm that distributes numbers into buckets, sorts each bucket with an additional sorting algorithm, and then concatenates buckets together to build the sorted result.
+        Avg: O(N + k), Worst: O(N^2)`
     },
     { que: "Bucket sort - bucket",
         ans: `a container for numerical values in a specific range. 
