@@ -902,11 +902,11 @@ const flashcards = [
         Bucket sort is designed for arrays with non-negative numbers.`
     },
     { que: "Dr Y: Bubble sort",
-        ans: `Bubble's the worst, but it's a good start for learning sorting algorithms. It repeatedly compares adjacent elements and swaps them if they are in the wrong order, effectively 'bubbling' larger elements to the end of the list.
+        ans: `BUBBLE's the LARGEST, but it's a good start for learning sorting algorithms. It repeatedly compares adjacent elements and swaps them if they are in the wrong order, effectively 'bubbling' larger elements to the end of the list.
         Time complexity: O(N^2)`
     },
     { que: "Dr Y: Selection sort",
-        ans: `SELECTS the smallest (in this case) element from the unsorted part of the list and swaps it with the first unsorted element, moving the boundary between sorted and unsorted parts.
+        ans: `SELECTS the SMALLEST, element from the unsorted part of the list and swaps it with the first unsorted element, moving the boundary between sorted and unsorted parts.
         Time complexity: O(N^2)`
     },
     { que: "Dr Y: Insertion sort",
