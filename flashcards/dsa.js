@@ -910,104 +910,25 @@ GetLength(list) returns 2`
         Ex: All numbers in the range 0 to 49 may be stored in a bucket representing this range. 
         Bucket sort is designed for arrays with non-negative numbers.`
     },
-    { que: "Big O Complexity for sorting algorithm",
-        ans: ""
+    { que: "Dr Y: Bubble sort",
+        ans: `Bubble's the worst, but it's a good start for learning sorting algorithms. It repeatedly compares adjacent elements and swaps them if they are in the wrong order, effectively 'bubbling' larger elements to the end of the list.
+        Time complexity: O(N^2)`
     },
-    { que: "def selection_sort(numbers):",
-        ans: `for i in range(len(numbers)-1):
-        index_smallest = i
-        for j in range(i+1, len(numbers)):
-            if numbers[j] < numbers[index_smallest]:
-                index_smallest = j
-        temp = numbers[i]
-        numbers[i] = numbers[index_smallest]
-        numbers[index_smallest] = temp
-
-        # time complexity: O(N^2)`
+    { que: "Dr Y: Selection sort",
+        ans: `SELECTS the smallest (in this case) element from the unsorted part of the list and swaps it with the first unsorted element, moving the boundary between sorted and unsorted parts.
+        Time complexity: O(N^2)`
     },
-    { que: "def insertion_sort(numbers):",
-        ans: `for i in range(1, len(numbers)):
-        j=i
-        while j > 0 and numbers[j] < numbers[j-1]:
-            temp = numbers[j]
-            numbers[j] = numbers[j-1]
-            numbers[j-1] = temp
-            j=j-1
-            
-        # time complexity: O(N^2)`
+    { que: "Dr Y: Insertion sort",
+        ans: `INSERTS element from unsorted list to the sorted list and compares it with the elements in the sorted list, shifting larger elements to the right until the correct position is found.
+        Time complexity: O(N^2)`
     },
-    { que: "def shell_sort(numbers):",
-        ans: `gap = len(numbers) // 2
-        while gap > 0:
-            for i in range(gap, len(numbers)):
-                j = i
-                while j >= gap and numbers[j] < numbers[j-gap]:
-                    temp = numbers[j]
-                    numbers[j] = numbers[j-gap]
-                    numbers[j-gap] = temp
-                    j = j - gap
-            gap = gap // 2
-
-        # time complexity: O(N^1.5)`
+    { que: "Dr Y: Quicksort",
+        ans: `A fast sorting algorithm that uses a PIVOT to partition the list into two parts: elements '<' to the pivot and elements '>' to the pivot. It recursively sorts each part. Pivot|Midpoint = low+high/2.
+        Time complexity: O(NlogN) on average, O(N^2) in the worst case`
     },
-    { que: "quicksort(numbers, low, high):",
-        ans: `if low < high:
-        pivot_index = partition(numbers, low, high)
-        quicksort(numbers, low, pivot_index - 1)
-        quicksort(numbers, pivot_index + 1, high)
-
-        partition(numbers, low, high):
-        pivot = numbers[high]
-        i = low - 1
-        for j in range(low, high):
-            if numbers[j] <= pivot:
-                i += 1
-                numbers[i], numbers[j] = numbers[j], numbers[i]
-        numbers[i + 1], numbers[high] = numbers[high], numbers[i + 1]
-        return i + 1 
-
-        # time complexity: O(NlogN) on average, O(N^2) in the worst case`
-    },
-    { que: "merge_sort(numbers, left, right):",
-        ans: `if left < right:
-        mid = (left + right) // 2
-        merge_sort(numbers, left, mid)
-        merge_sort(numbers, mid + 1, right)
-        merge(numbers, left, mid, right)
-        
-        merge(numbers, left, mid, right):
-        n1 = mid - left + 1
-        n2 = right - mid
-        L = [0] * n1
-        R = [0] * n2
-        for i in range(n1):
-            L[i] = numbers[left + i]
-        for j in range(n2):
-            R[j] = numbers[mid + 1 + j]
-        i = 0
-        j = 0
-        k = left
-        while i < n1 and j < n2:
-            if L[i] <= R[j]:
-                numbers[k] = L[i]
-                i += 1
-            else:
-                numbers[k] = R[j]
-                j += 1
-            k += 1
-        while i < n1:
-            numbers[k] = L[i]
-            i += 1
-            k += 1
-        while j < n2:
-            numbers[k] = R[j]
-            j += 1
-            k += 1 
-        
-        # time complexity: O(NlogN)`
-    },
-    { que: "",
-        ans: ""
+    { que: "Dr Y: Merge sort",
+        ans: `A divide-and-conquer sorting algorithm that splits the list into halves, recursively sorts each half, and then merges the sorted halves. It uses a temporary array to hold the merged result.
+        Time complexity: O(NlogN)`
     },
     { que: "",
         ans: ""
