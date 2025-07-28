@@ -137,6 +137,45 @@ const flashcards = [
     { que: "Factors of an Algorithm: Extensibility",
         ans: "Extensible for other designers/programmers to use"
     },
+    { que: "Types of Alrogithms: Brute Force Algorithm",
+        ans: `This simplest algorithm tries all possible solutions until the correct one is found. It's not the most efficient, but it is very straightforward.
+        Ex: Trying every possible password until the correct one is found.`
+    },
+    { que: "Types of Alrogithms: Greedy Algorithm",
+        ans: `A greedy algorithm makes the best choice at each step, hoping to find the overall best solution. It doesn’t always guarantee the perfect result, but it's fast and simple.
+        Ex: Picking the shortest available route at every step in a road trip.`
+    },
+    { que: "Types of Alrogithms: Divide and Conquer Algorithm",
+        ans: `This method breaks a problem into smaller parts, solves each part separately, and then combines the solutions.
+        Ex: The Merge Sort algorithm divides a list into halves, sorts them, and then merges them.`
+    },
+    { que: "Types of Alrogithms: Dynamic Programming Algorithm",
+        ans: `It solves problems by breaking them into subproblems, solving each subproblem once, and storing their solutions to avoid repeated work.
+        Ex: Calculating the Fibonacci sequence using memoization to store results of previous calculations.`
+    },
+    { que: "Types of Alrogithms: Backtracking Algorithm",
+        ans: `The backtracking algorithm tries to build a solution step-by-step and abandons a path ("backtracks") when it determines that the path won’t work.
+        Ex: Solving a Sudoku puzzle by filling in numbers and undoing steps if a mistake is found.`
+    },
+    { que: "Types of Alrogithms: Recursive Algorithm",
+        ans: `A recursive algorithm solves a problem by calling on smaller inputs until a base condition is met.
+        Ex: Finding the factorial of a number (n! = n × (n-1)!).`
+    },
+    { que: "Types of Alrogithms: Searching Algorithm",
+        ans: `These algorithms are designed to retrieve information from a data structure.
+        Ex: Binary Search efficiently finds an element in a sorted list by repeatedly dividing the search space in half.`
+    },
+    { que: "Types of Alrogithms: Sorting Algorithm",
+        ans: `Sorting algorithms arrange data in a specific order (ascending or descending).
+        Ex: Bubble Sort repeatedly swaps adjacent elements if they are in the wrong order until the entire list is sorted.`
+    },
+    { que: "Types of Alrogithms: Hashing Algorithm",
+        ans: `These algorithms allow computers to learn from data and make predictions or decisions without being explicitly programmed.
+        Ex: Decision Tree algorithms predict if a person will buy a product based on age and income.`
+    },
+    { que: "Types of Alrogithms:",
+        ans: ""
+    },
     { que: "Greedy algorithm",
         ans: `solves a problem by assuming that the optimal choice at a given moment during the algorithm will also be the optimal choice overall. 
         Greedy algorithms tend to be efficient, but certain types of problems exist where greedy algorithms don't find the best or optimal solution. 
