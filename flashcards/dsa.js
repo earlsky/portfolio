@@ -118,49 +118,49 @@ const flashcards = [
     },
     { que: "Common list ADT operations (part 1)):",
         ans: `Operation: Description = example starting with "list: 99,77"
----
-Append(list,x): 
-Inserts x at end of list = 
-Append(list,44), list: 99,77,44
+        ---
+        Append(list,x): 
+        Inserts x at end of list = 
+        Append(list,44), list: 99,77,44
 
-Prepend(list,x):
-Inserts x at start of list =
-Prepend(list,44), list: 44,99,77
+        Prepend(list,x):
+        Inserts x at start of list =
+        Prepend(list,44), list: 44,99,77
 
-InsertAfter(list,w,x):
-Inserts x after w = 
-InsertAfter(list,99,44), list: 99,44,77
+        InsertAfter(list,w,x):
+        Inserts x after w = 
+        InsertAfter(list,99,44), list: 99,44,77
 
-Remove(list,x):
-Removes x
-Remove(list,77), list: 99
+        Remove(list,x):
+        Removes x
+        Remove(list,77), list: 99
 
-Search(list, x):
-Returns item if found, else returns null =
-Search(list, 99), returns item 99
-Search(list, 22), returns null
-`
+        Search(list, x):
+        Returns item if found, else returns null =
+        Search(list, 99), returns item 99
+        Search(list, 22), returns null
+        `
     },
     { que: "Common list ADT operations (part 2)):",
         ans: `Print(list):
-Prints list's items in order =
-Print(list) outputs: 99, 77
+        Prints list's items in order =
+        Print(list) outputs: 99, 77
 
-PrintReverse(list):
-Prints list's items in reverse order =
-PrintReverse(list) outputs: 77, 99
+        PrintReverse(list):
+        Prints list's items in reverse order =
+        PrintReverse(list) outputs: 77, 99
 
-Sort(list):
-Sorts the lists items in ascending order =
-list becomes: 77, 99
+        Sort(list):
+        Sorts the lists items in ascending order =
+        list becomes: 77, 99
 
-IsEmpty(list):
-Returns true if list has no items =
-For list 99, 77, IsEmpty(list) returns false
+        IsEmpty(list):
+        Returns true if list has no items =
+        For list 99, 77, IsEmpty(list) returns false
 
-GetLength(list):
-Returns the number of items in the list =
-GetLength(list) returns 2`
+        GetLength(list):
+        Returns the number of items in the list =
+        GetLength(list) returns 2`
     },
     { que: "List data structure",
         ans: "a data structure containing the list's head and tail, and may also include additional information, such as the list's size."
