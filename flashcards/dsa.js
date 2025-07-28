@@ -808,15 +808,6 @@ GetLength(list) returns 2`
     { que: "Fast sorting algorithm",
         ans: "A sorting algorithm that has an average runtime complexity of O(NlogN) or better"
     },
-    { que: "Sorting algorithm: Runtime complexity - Fast?...",
-        ans: `Selection sort: O(N^2) - No
-        Insertion sort: O(N^2) - No
-        Shell sort: O(N^1.5) - No
-        Quicksort: O(NlogN) - Yes
-        Merge sort: O(NlogN) - Yes
-        Heap sort: O(NlogN) - Yes
-        Radix sort: O(N) - Yes`
-    },
     { que: "element comparison sorting algorithm",
         ans: `a sorting algorithm that operates on an array of elements that can be compared to each other. 
         Ex: An array of strings can be sorted with a comparison sorting algorithm, since two strings can be compared to determine if the one string is less than, equal to, or greater than another string. 
