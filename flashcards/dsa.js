@@ -46,7 +46,7 @@ const flashcards = [
         No one has proven that an efficient algorithm to solve an NP-complete problem is impossible.
         If an efficient algorithm exists for one NP-complete problem, then all NP-complete problems can be solved efficiently.
 
-By knowing a problem is NP-complete, instead of trying to find an efficient algorithm to solve the problem, a programmer can focus on finding an algorithm to efficiently find a good, but non-optimal, solution.`
+        By knowing a problem is NP-complete, instead of trying to find an efficient algorithm to solve the problem, a programmer can focus on finding an algorithm to efficiently find a good, but non-optimal, solution.`
     },
     { que: "Abstract data type (ADT)",
         ans: `a data type described by predefined user operations, such as "insert data at rear," without indicating how each operation is implemented. 
@@ -94,6 +94,48 @@ By knowing a problem is NP-complete, instead of trying to find an efficient algo
     },
     { que: "Heuristic",
         ans: "A technique that willingly accepts a non-optimal or less accurate solution in order to improve execution speed."
+    },
+    { que: "Characteristics of an Algorithm: Unambiguous",
+        ans: `The algorithm's steps are clearly defined and unambiguous.`
+    },
+    { que: "Characteristics of an Algorithm: Well Defined Inputs",
+        ans: `The algorithm has well defined inputs, which are the data that the algorithm will process.`
+    },
+    { que: "Characteristics of an Algorithm: Finiteness",
+        ans: "The algorithm must terminate after a finite number of steps, meaning it cannot run indefinitely." 
+    },
+    { que: "Characteristics of an Algorithm: Language Independent",
+        ans: `The algorithm is not tied to a specific programming language, meaning it can be implemented in any programming language.`
+    },
+    { que: "Characteristics of an Algorithm: Effectiveness and Feasibility",
+        ans: `The algorithm's steps are effective and feasible, meaning they can be performed with the available resources and within a reasonable time frame.`
+    },
+    { que: "Characteristics of an Algorithm: Well-Defined Outputs",
+        ans: `The algorithm produces well-defined outputs, which are the results of the algorithm's processing of the inputs.`
+    },
+    { que: "Factors of an Algorithm: Mondularity",
+        ans: "Broken down to small modules/steps"
+    },
+    { que: "Factors of an Algorithm: Correctness",
+        ans: "Inputs produce desired outputs"
+    },
+    { que: "Factors of an Algorithm: Maintainability",
+        ans: "No significant changes are required when redefining the algorithm"
+    },
+    { que: "Factors of an Algorithm: Functionality",
+        ans: "Uses logical steps to solve the problem"
+    },
+    { que: "Factors of an Algorithm: Robustness",
+        ans: "Ability to define problem clearly and handle unexpected inputs"
+    },
+    { que: "Factors of an Algorithm: User-Friendliness",
+        ans: "Easily explained to users and programmers"
+    },
+    { que: "Factors of an Algorithm: Simplicity",
+        ans: "Simple to understand and implement"
+    },
+    { que: "Factors of an Algorithm: Extensibility",
+        ans: "Extensible for other designers/programmers to use"
     },
     { que: "Greedy algorithm",
         ans: `solves a problem by assuming that the optimal choice at a given moment during the algorithm will also be the optimal choice overall. 
