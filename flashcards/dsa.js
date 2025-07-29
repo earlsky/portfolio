@@ -901,28 +901,41 @@ const flashcards = [
         Ex: All numbers in the range 0 to 49 may be stored in a bucket representing this range. 
         Bucket sort is designed for arrays with non-negative numbers.`
     },
-    { que: "Dr Y: Bubble sort",
+    { que: "AI: Bubble sort",
         ans: `BUBBLE's the LARGEST, but it's a good start for learning sorting algorithms. It repeatedly compares adjacent elements and swaps them if they are in the wrong order, effectively 'bubbling' larger elements to the end of the list.
         Time complexity: O(N^2)`
     },
-    { que: "Dr Y: Selection sort",
+    { que: "AI: Selection sort",
         ans: `SELECTS the SMALLEST, element from the unsorted part of the list and swaps it with the first unsorted element, moving the boundary between sorted and unsorted parts.
         Time complexity: O(N^2)`
     },
-    { que: "Dr Y: Insertion sort",
+    { que: "AI: Insertion sort",
         ans: `INSERTS element from unsorted list to the sorted list and compares it with the elements in the sorted list, shifting larger elements to the right until the correct position is found.
         Time complexity: O(N^2)`
     },
-    { que: "Dr Y: Quicksort",
+    { que: "AI: Quicksort",
         ans: `A fast sorting algorithm that uses a PIVOT to partition the list into two parts: elements '<' to the pivot and elements '>' to the pivot. It recursively sorts each part. Pivot|Midpoint = low+high/2.
         Time complexity: O(NlogN) on average, O(N^2) in the worst case`
     },
-    { que: "Dr Y: Merge sort",
+    { que: "AI: Merge sort",
         ans: `A divide-and-conquer sorting algorithm that splits the list into halves, recursively sorts each half, and then merges the sorted halves. It uses a temporary array to hold the merged result.
         Time complexity: O(NlogN)`
     },
-    { que: "",
-        ans: ""
+    { que: "AI: Heap sort",
+        ans: `A sorting algorithm that uses a MAX-HEAP to sort elements. It builds a max-heap from the input, repeatedly removes the largest element (the root), and places it at the end of the list.
+        Time complexity: O(NlogN)`
+    },
+    { que: "AI: Radix sort",
+        ans: `A non-comparison-based sorting algorithm that sorts integers by processing each digit from least significant to most significant. It uses buckets to group numbers by their digits.
+        Time complexity: O(N + k), where k is the range of the digits`
+    },
+    { que: "AI: Shell sort",
+        ans: `A sorting algorithm that generalizes insertion sort by comparing elements that are far apart, using a GAP VALUE to determine the distance between elements. It reduces the gap over iterations until it becomes 1.
+        Time complexity: O(NlogN)^2 on average, O(N^2) in the worst case`
+    },
+    { que: "AI: Bucket sort",
+        ans: `A sorting algorithm that distributes elements into BUCKETS based on their value range, sorts each bucket individually (often using another sorting algorithm), and then concatenates the sorted buckets.
+        Time complexity: O(N + k), where k is the number of buckets`
     },
     { que: "",
         ans: ""
