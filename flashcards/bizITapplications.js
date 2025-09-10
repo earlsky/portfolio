@@ -10,8 +10,7 @@ const flashcards = [
         ans: `How the service performs`
     },
     { que: "Customer",
-        ans: `role that defines requirements for a service and 
-        takes responsibility for the outcomes of service consumption`
+        ans: `role that defines requirements for a service and takes responsibility for the outcomes of service consumption`
     },
     { que: "User",
         ans: `the role that uses services`
@@ -176,72 +175,91 @@ const flashcards = [
         ans: `to ensure that accurate and reliable information about the configuration of services, and the configuration items (CIs) that support them, is available when and where it is needed. This includes information on how CIs are configured and the relationships between them`
     },
     { que: "Deployment management practice (5.3.1)",
-        ans: ``
+        ans: `to move new or changed hardware, software, documentation, processes, or any other component to live environments. It may also be used to deploy components to other environments for testing or staging`
     },
     { que: "Distinct approaches for Deployment management (5.3.1)",
-        ans: ``
+        ans: `phased deployment,
+        continuous delivery,
+        big bang deployment,
+        pull deployment`
     },
-    { que: "Continual improvement practice (5.1.2)",
-        ans: ``
+    { que: "Deployment management: phased deployment",
+        ans: `The new or changed components are deployed to just part of the production environment at a time, for example to users in one office, or one country. This operation is repeated as many times as needed until the deployment is complete.`
+    },
+    { que: "Deployment management: continuous delivery",
+        ans: `Components are integrated, tested, and deployed when they are needed, providing frequent opportunities for customer feedback loops.`
+    },
+    { que: "Deployment management: big bang deployment",
+        ans: `New or changed components are deployed to all targets at the same time. This approach is sometimes needed when dependencies prevent the simultaneous use of both the old and new components. For example, there could be a database schema change that is not compatible with previous versions of some components.`
+    },
+    { que: "Deployment management: pull deployment",
+        ans: `New or changed software is made available in a controlled repository, and users download the software to client devices when they choose. This allows users to control the timing of updates, and can be integrated with service request management to enable users to request software only when it is needed.`
+    },
+    { que: "Continual improvement practice (5.1.2 p110)",
+        ans: `to align the organization's practices and services with changing business needs through the ongoing identification and improvement of services, service components, practices, or any element involved in the efficient and effective management of products and services`
     },
     { que: "Change enablement/control practice (5.2.4)",
-        ans: ``
+        ans: `to maximize the number of successful service and product changes by ensuring that risks have been properly assessed, authorizing changes to proceed, and managing the change schedule`
     },
     { que: "Incident management practice (5.2.5)",
+        ans: `to minimize the negative impact of incidents by restoring normal service operation as quickly as possible.`
+    },
+    { que: "Problem management practice (5.2.8 p174)",
+        ans: `to reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents, and managing workarounds and known errors`
+    },
+    { que: "Service request management practice (5.2.16 p207)",
+        ans: `to support the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner`
+    },
+    { que: "Service desk practice (5.2.14 p199)",
+        ans: `to capture demand for incident resolution and service requests. It should also be the point of communication for the service provider with all its users`
+    },
+    { que: "Service level management practice (5.2.15 p202)",
+        ans: `to set clear business-based targets for service levels, and to ensure that delivery of services is properly assessed, monitored, and managed against these targets`
+    },
+    { que: "IT asset (5.2.6 p167)",
+        ans: `any financially valuable component that can contribute to the delivery of an IT product or service. This includes hardware, software, documentation, information, and people, as well as formal intangibles such as licenses, service contracts, and warranties`
+    },
+    { que: "Event (5.2.7 p170)",
+        ans: `any change of state that has significance for the management of a service or other configuration item (CI). Events are typically recognized through notifications created by an IT service, CI, or monitoring tool`
+    },
+    { que: "Configuration item (CI) (5.2.11 p187)",
+        ans: `any component that needs to be managed in order to deliver an IT service. Information about each CI is recorded in a configuration record within the configuration management system (CMS) and is maintained throughout its lifecycle by service configuration management. CIs include IT services, hardware, software, buildings, people, and formal documentation such as process documentation and SLAs`
+    },
+    { que: "Change (5.2.4 p160)",
+        ans: `the addition, modification, or removal of anything that could have a direct or indirect effect on services`
+    },
+    { que: "Incident (5.2.5 p163)",
+        ans: `an unplanned interruption to a service, or a reduction in the quality of a service.
+        Incidents have an impact on users or business processes, and must be resolved so that normal business activity can take place.`
+    },
+    { que: "Problem (5.2.8 p175)",
+        ans: `a cause, or potential cause, of one or more incidents.
+        Problems are the causes of incidents.
+        They require investigation and analysis to identify the causes, develop workarounds, and recommend longer-term resolutions.
+        This reduces the number and impact of future incidents`
+    },
+    { que: "Known error (5.2.8 p175)",
+        ans: `a problem that has been analyzed and for which a root cause is identified. A known error has a documented workaround or a permanent solution`
+    },
+    { que: "Continual improvement(detailed)(5.1.2 p110)",
         ans: ``
     },
-    { que: "Problem management practice (5.2.8)",
+    { que: "Change enablement/control(detailed)(5.2.4 p159)",
         ans: ``
     },
-    { que: "Service request management practice (5.2.16)",
+    { que: "Incident management(detailed)(5.2.5 p163)",
         ans: ``
     },
-    { que: "Service desk practice (5.2.14)",
+    { que: "Problem management(detailed)(5.2.8 p174)",
         ans: ``
     },
-    { que: "Service level management practice (5.2.15)",
+    { que: "Service request management(detailed)(5.2.16 p207)",
         ans: ``
     },
-    { que: "",
+    { que: "Service desk(detailed)(5.2.14 p199)",
         ans: ``
     },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
+    { que: "Service level management(detailed)(5.2.15)",
         ans: ``
     },
     { que: "",
