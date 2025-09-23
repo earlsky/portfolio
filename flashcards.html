@@ -105,6 +105,13 @@
       color: #d0c7c7;
       font-size: 0.9em;
     }
+    .keyboard-hints {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.8em;
+      color: #999;
+      line-height: 1.3;
+    }
     @media (max-width: 600px) {
       .card h2 {
         font-size: 1.2em;
@@ -122,6 +129,9 @@
       }
       .goto-section input {
         width: 80px;
+      }
+      .keyboard-hints {
+        font-size: 0.7em;
       }
     }
   </style>
@@ -141,9 +151,15 @@
       <label for="cardInput">Go to card:</label>
       <input type="number" id="cardInput" min="1" placeholder="1">
       <button onclick="goToCard()">Go</button>
+    </div>
+    <div class="keyboard-hints">
+      Keyboard shortcuts: A/← Previous | D/→ Next | S/W/↑/↓ Flip card
+    </div>
   </div>
 
-  <script src="flashcards/bizITapplications.js"></script>
+  <!-- Load flashcard deck -->
+  <!-- <script src="flashcards/bizITapplications.js"></script> -->
+  <script src="flashcards/bizITapplicationsExamPrepWorkbook.js"></script>
 
   <script>
 
@@ -179,6 +195,7 @@
         displayCard();
       }
     }
+    
     function goToCard() {
       const input = document.getElementById('cardInput');
       const cardNumber = parseInt(input.value);
@@ -194,13 +211,44 @@
       }
     }
 
-    // NEW: Allow Enter key to trigger go to card functionality
+    // Allow Enter key to trigger go to card functionality
     document.getElementById('cardInput').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         goToCard();
       }
     });
-    // Initialize the first card
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      // Don't trigger keyboard shortcuts when typing in the input field
+      if (document.activeElement === document.getElementById('cardInput')) {
+        return;
+      }
+
+      const key = e.key.toLowerCase();
+      
+      switch (key) {
+        case 'a':
+        case 'arrowleft':
+          e.preventDefault();
+          prevCard();
+          break;
+        case 'd':
+        case 'arrowright':
+          e.preventDefault();
+          nextCard();
+          break;
+        case 's':
+        case 'w':
+        case 'arrowup':
+        case 'arrowdown':
+          e.preventDefault();
+          flipCard();
+          break;
+      }
+    });
+
+    // Initializes first card
     displayCard();
   </script>
 </body>

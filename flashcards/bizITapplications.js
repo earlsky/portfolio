@@ -25,13 +25,16 @@ const flashcards = [
         ans: `amount spent...the amount of money spent on a specific activity or resource`
     },
     { que: "Organization",
-        ans: `person or group with its own functions...responsibilities, authorities, and relationships to achieve its objectives`
+        ans: `person or group with its own functions...
+        responsibilities, authorities, and relationships to achieve its objectives`
     },
     { que: "Outcome",
-        ans: `Result for stakeholder... a result for a stakeholder enabled by one or more outputs`
+        ans: `Result for stakeholder... 
+        a result for a stakeholder enabled by one or more outputs`
     },
     { que: "Output",
-        ans: `Deliverable of an activity... a tangible or intangible deliverable of an activity`
+        ans: `Deliverable of an activity... 
+        a tangible or intangible deliverable of an activity`
     },
     { que: "Risk",
         ans: `possible events that could cause harm or loss...
@@ -40,14 +43,15 @@ const flashcards = [
     { que: "Utility",
         ans: `Functionality to meet a need...
         functionality offered by a product or service to meet a particular need.
-        Utility can be summarized by "What the service DOES" and determine whether a service 
-        is "fit for PURPOSE"`
+        Utility can be summarized by "What the service DOES" 
+        and determine whether a service is "fit for PURPOSE"`
     },
     { que: "Warranty",
         ans: `Assurance that requirements will be met...
         assuracne that a product or service will meet agreed requirements.
-        Warranty can be summarized by "how the service PERFORMS" and can be used to determine where a service
-        is "fit for USE"`
+        Warranty can be summarized by "how the service PERFORMS" 
+        and can be used to determine where a service 
+        'is "fit for USE"`
     },
     { que: "Service offering",
         ans: `may include goods, resources, and service actions...
@@ -261,20 +265,5 @@ const flashcards = [
     },
     { que: "Service level management(detailed)(5.2.15)",
         ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
-    { que: "",
-        ans: ``
-    },
+    }
 ]
