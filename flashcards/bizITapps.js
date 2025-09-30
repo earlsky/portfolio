@@ -9,7 +9,7 @@ const flashcards = [
         ans: `perceived benefits, usefulness, and importance of something` 
     },
     { que: "Value is SUBJECTIVE",
-        ans: `and will be based on the stakeholder's perception`
+        ans: `based on the stakeholder's perception`
     },
     { que: "Value is CO-CREATED",
         ans: `through relationshiop between service provider and service consumer`
