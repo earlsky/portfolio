@@ -1,4 +1,7 @@
 const flashcards = [
+    { que: "Service",
+        ans: `a means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks.`
+    },
     { que: "Service management",
         ans: `a set of specialized organizational capabilities for enabling value for customers in the form of services` 
     },
