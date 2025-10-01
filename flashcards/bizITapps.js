@@ -448,13 +448,13 @@ const flashcards = [
         Pull deployment`
     },
     { que: "Phased deployment",
-        ans: `new or changed components are deployed to just part of the production environment at a time, for example to users in one office, or one country. This operation is repeated as many times as needed until the deployment is complete.` 
+        ans: `new or changed components are deployed to just part of the production environment at a time, ex: to users in one office, or one country. This operation is repeated as many times as needed until the deployment is complete.` 
     },
     { que: "Continuous delivery",
-        ans: `components are integrated, tested, and deployed to just part of the production environment at a time, for ex: to users in one office, or one country. This operation is repeated as many times as needed until the deployment is complete.`
+        ans: `components are integrated, tested, and deployed when they are needed, providing frequent opportunities for customer feedback loops.`
     },
     { que: "Big bang deployment",
-        ans: `new or changed components are deployed to all targets at the same time. This approach is sometimes needed when dependencies prevent the simultaneous use of both the old and new components. For ex: there could be a database schema change that is not compatible with previous versions of some components.` 
+        ans: `new or changed components are deployed to all targets at the same time. This approach is sometimes needed when dependencies prevent the simultaneous use of both the old and new components. Ex: there could be a database schema change that is not compatible with previous versions of some components.` 
     },
     { que: "Pull deployment",
         ans: `New or changed software is made available in a controlled repository, and users download the software to client devices when they choose. This allows users to control the timing of updates, and can be integrated with service request management to enable users to request software only when it is needed.`
