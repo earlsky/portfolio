@@ -361,6 +361,20 @@ const flashcards = [
     { que: "Event",
         ans: `any change of state that has significance for the management of a service or other configuration item (CI). Events are typically recognized through notifications created by an IT service, configuration item, or monitoring tool.` 
     },
+    { que: "Events can be classified as...",
+        ans: `Informational,
+        Warning,
+        Exception`
+    },
+    { que: "Informational event",
+        ans: `an event that does not require any action. For example, a user successfully logs on to a system.` 
+    },
+    { que: "Warning event",
+        ans: `an event that could lead to an incident or a potential future issue. For example, a system is approaching full capacity.` 
+    },
+    { que: "Exception event",
+        ans: `an event that indicates that an incident has occurred, or is about to occur. For example, a system is no longer available for use.` 
+    },
     { que: "* Problem Management",
         ans: `to reduce likelihood and impact of incidents by identifying actual and potential causes of incidents and managing workarounds and known errors.`
     },
