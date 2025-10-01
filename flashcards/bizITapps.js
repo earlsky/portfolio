@@ -8,11 +8,11 @@ const flashcards = [
     { que: "Value",
         ans: `perceived benefits, usefulness, and importance of something` 
     },
-    { que: "Value is SUBJECTIVE",
+    { que: "Value is subjective",
         ans: `based on the stakeholder's perception`
     },
-    { que: "Value is CO-CREATED",
-        ans: `through relationshiop between service provider and service consumer`
+    { que: "Value is co-created",
+        ans: `through relationship between service provider and service consumer`
     },
     { que: "Organization",
         ans: `A person or a group of people that has its own functions with responsibilities, authorities, and relationships to achieve its objectives.`
