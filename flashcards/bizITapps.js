@@ -319,7 +319,7 @@ const flashcards = [
         ans: `NEED TO BE scheduled, assessed, and authorized following a process.`
     },
     { que: "* Emergency change",
-        ans: `not scheduled, must be implemented ASAP, for example to resolve an incident or implement a SECURITY patch.`
+        ans: `not scheduled, must be implemented ASAP, (ex: to resolve an incident or implement a SECURITY patch.)`
     },
     { que: "* Incident Management Practice",
         ans: `to minimize the negative impact of incidents by restoring normal service operation as quickly as possible.`
