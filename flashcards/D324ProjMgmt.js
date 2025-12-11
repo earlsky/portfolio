@@ -395,46 +395,92 @@ const flashcards = [
         High Power/Low Impact: have enough influence that they could derail a project if they wanted.
         Low Power/High Impact: have little power to change a project, so they are less likely to disrupt it.
         Low Power/Low Impact: have little power or impact on the project. You are likely to find the lowest level of interest in this quadrant, but the situation could change.` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
+    { que:"3. Understand stakeholders",
+        ans:`talk to your stakeholders, and learn about their expectations. Find out who is supportive, what concerns they have, and how much they know about the project. Of course, you will eventually work with stakeholders who are not supportive. In these instances, hear out their concerns and try to address them. Find out if resistant stakeholders are likely to move to supportive. If they aren’t, evaluate the risk they pose to your project and how to manage it. For instance, a high-power, high-impacted stakeholder who is against the project will need to be monitored closely.` },
+    { que:"4. Develop a stakeholder engagement plan",
+        ans:`summarize what you’ve learned about the stakeholders in a stakeholder register, and describe how you will engage with them.` },
+    { que:"Stakeholder Register fields",
+        ans:`Stakeholder: list the person or group.
+        Point of Contact: if the stakeholder is not a person, list the person who represents the stakeholder.
+        Power: list the power level from the Power/Impact Grid.
+        Influence: list their impact level from the Power/Impact Grid.
+        Project Phase: list the project phases that you will need to engage with them.
+        Engagement Needs: describe what they need or why they are a key stakeholder. For example, this section could include why they strongly influence the project.
+        Engagement Approach: list the type of engagement you will conduct from the Power/Impact Grid.
+        Methods: capture how you will communicate with them.
+        Frequency: list a descriptive term of how often you will engage with the stakeholder. For example, use options such as occasional, less frequent, frequent, and very frequent.` },
+    { que:"Key Performance Indicator (KPI)",
+        ans:`measure only the most crucial measures. They are measured regularly in an ongoing manner. You can create KPIs for a project, process, or organization.` },
+    { que:"Lagging indicators",
+        ans:`are reflective measures. Ex:
+        Test and build lead time
+        Number of defects released to production
+        Number of internal promotions
+        Revenue
+        Change adoption effectiveness` },
+    { que:"Leading indicators",
+        ans:`are predictive measures. Ex:
+        Number of automated tests
+        Number of bugs fixed in test
+        Employee development program participation
+        Advertisement clickthrough rate
+        Change management quality` },
+    { que:"SMART Objective",
+        ans:`Specific: should explain exactly what needs to change.
+        Measurable: needs to include a quantifiable metric, so that you can know when you’ve met the goal.
+        Achievable: meant to be realistic. Therefore, ensure the goal is within the realm of possibility.
+        Relevant: needs to have a purpose. In an organization, it should align with business strategy or business priorities.
+        Time-Bound: needs to have a target end date.` },
+    { que:"Objective and Key Results (OKR)",
+        ans:`to achieve tremendous results quickly. OKRs are meant to be aspirational and slightly out of reach, they drive teams to deliver value that they didn’t think was possible.` },
+    { que:"OKRs create a two-part goal statement composed of:",
+        ans:`"Objective" is a qualitative goal statement. It doesn’t need to be as measurable as KPIs or SMART objectives. The Objective portion of the OKR tells the story about what the goal is for and why it matters.
+        "Key Results" are quantitative measures of success. The key results will look similar to SMART objectives. They describe what you need to do to meet the goal.` },
+    { que:"Selecting a Performance Measure Method",
+        ans:`SMART is a method for writing solid goals. You can apply the technique to any goal in any framework.
+        KPIs are long-term, operational metrics that describe the health of the system. KPIs help you stabilize and protect systems.
+        OKRs are used to create shorter-term goals and generate change, where KPIs won’t change until the project ends or the process changes. An OKR exists long enough to achieve a target, and then a new OKR is created to reach the next goal.` },
+    { que:"Timeline Charts",
+        ans:`Milestone Charts aka "Project Timeline"
+        Project Road Maps
+        Gantt Charts` },
+    { que:`Milestone Charts aka "Project Timeline"`,
+        ans:`have more detail than a roadmap but are not exhaustive enough to form a plan. Milestone charts describe the milestone events, which are project checkpoints. They look like a timeline and plot deadlines, check-ins, and critical dates over the course of the project.` },
+    { que:"Project Road Maps",
+        ans:`are high-level documents that share major progress points, such as new feature rollouts. A road map is highly visual and resembles the format and level of detail that you might read in a press release. This visual works well for executive summaries.` },
+    { que:"Gantt Charts",
+        ans:`are highly detailed project plans. They show tasks and time in a grid to create a visual schedule view in a unique bar chart that shows time across the x-axis and a list of tasks or activities on the y-axis. The bars represent the time that each activity will occur. Additionally, Gantt charts show relationships and dependencies between tasks. Where roadmaps and milestones show events, Gantt charts show the tasks needed to reach the events. The team will use the Gantt chart during the planning, execution, and closing phases because it helps them plan and deliver the work.` },
+    { que:"Project Charter",
+        ans:`created in initiation phase,  brief, formal document that outlines the project parameters. It helps the team, stakeholders, sponsor, and PM agree on why the project matters and what needs to happen.` },
+    { que:"Tips for Creating a Project Charter",
+        ans:`Use a template.
+        Keep the document short and simple: Use visual elements, such as graphs, charts, and bulleted lists.
+        Use clear, concise language: Make the most of the limited page space available to you.
+        Collaborate with team members to create a realistic timeline and risk assessment: Review the charter drafts with your project sponsor to ensure alignment before distributing the finished product.` },
+    { que:"Project Charter Template Sections - General Project Information",
+        ans:`1. Project Name: give the project a short title. This name will appear on subsequent reports and dashboards.
+        2. Description: write a short sentence that expands on the project name to describe the project. This field will also appear on reports and dashboards, so you want something straightforward and understandable.
+        3. Version Number and Date: track the revision history according to your company’s requirements.
+        4. Project Manager: list just the PM’s name here. You will provide additional information later in the charter.
+        5. Project Sponsor: list just the sponsor's name here. You will provide additional information later in the charter.` },
+    { que:"Project Charter Template Sections - Project Vision",
+        ans:`6. Objectives: identify the specific milestones or targets. The objectives should be clear, observable, and measurable; in other words, you should know when they have been met.
+        7. Purpose: the business case for the project. List organizational priorities that this project will affect, such as the strategic plans or enterprise-level objectives.
+        8. Preliminary Scope: set the project boundaries, and clearly state what is in and out of scope. List only high-level deliverables in this section because you will refine the content in the scope statement.
+        9. Success Criteria: identify the measures of success for the project. Usually, you will list the time, cost, scope, and quality constraints.
+        10. Expected Benefits: describe how the business will change as a result of completing the project.` },
+    { que:"Project Charter Template Sections - Organization Overview",
+        ans:`11. Stakeholders: the main stakeholders are the people who can make or break the project. The stakeholder engagement plan will list more people and groups. At this stage, look for those who will have the most influence/experience the most impact from this project.
+        12. Customers and End-Users: describe who will either use or purchase the project’s outputs. This section doesn’t include names; use a general description (groups, demographics, divisions). Note if they are internal/external to the organization.
+        13. Project Roles: list the PM and project sponsor. List the project board, steering committee, or other governing bodies that will oversee this project. Include high-level responsibilities as well.
+        14. Team Members: list each member’s name, role, and responsibilities on the project.
+        15. Project Organization: create a project organization chart to show the project team and reporting structure.` },
+    { que:"Project Charter Template Sections - Implementation Overview",
+        ans:`16. Timeline and Milestones: capture a general timeline and critical milestones. Later, you will create a detailed project schedule to show all activities and milestones.
+        17. Resource Requirements: summarize the resources you will need for the project. Identify the labor, equipment, materials, and capital required.
+        18. Risks: list the risks that stakeholders and sponsors will be most interested in. The risks listed here will not replace the risk register. Usually, this list will include high-impact and high-probability risks.
+        19. Assumptions and Constraints: list the assumptions and constraints that the project will operate within, because it helps you manage expectations with the project sponsor and stakeholders. Assumptions and constraints are similar; they are both factors that will affect the project plan. They differ because constraints are known truths, and assumptions are assumed to be true. 
+        20. Budget: share anticipated project costs. The charter doesn’t need to include an entire budget. However, the total figure should be accurate enough that the project sponsor and stakeholders can make an informed decision.` },
     { que:"",
         ans:`` },
     { que:"",
