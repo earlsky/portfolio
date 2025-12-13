@@ -138,25 +138,25 @@ const flashcards = [
         4. The steps repeat as long as the product backlog exists.` },
     { que:"Scrum roles",
         ans:`Scrum team, Product owner, Scrum master, Developers` },
-    { que:"Scrum Team",
+    { que:"Scrum roles - Scrum Team",
         ans:`includes Scrum master, product owner, developers` },
-    { que:"Product Owner",
+    { que:"Scrum roles - Product Owner",
         ans:`creates, maintains, owns product backlog.` },
-    { que:"Scrum Master",
+    { que:"Scrum roles - Scrum Master",
         ans:`agile team's Scrum coach; help team, product owner, and organization improve applying Scrum.` },
-    { que:"Developers",
+    { que:"Scrum roles - Developers",
         ans:`any job title or function that helps Scrum team produce value.` },
     { que:"Key Scrum Artifacts and Terms",
         ans:`Product backlog, Product goal, Sprint backlog, Sprint goal, Increment.` },
-    { que:"Product Backlog",
+    { que:"Scrum Artifacts - Product Backlog",
         ans:`an ordered list of product changes or enhancements.` },
-    { que:"Product goal",
+    { que:"Scrum Artifacts - Product goal",
         ans:`describe product's longer-term target.` },
-    { que:"Sprint backlog",
+    { que:"Scrum Artifacts - Sprint backlog",
         ans:`Scrum team's plan for upcoming sprint.` },
-    { que:"Sprint goal",
+    { que:"Scrum Artifacts - Sprint goal",
         ans:`describe objective that team plans to meet to advance toward product goal.` },
-    { que:"Increment",
+    { que:"Scrum Artifacts - Increment",
         ans:`a complete body of work that meets the definition of done and moves toward the product goal.` },
     { que:"Scrum Events",
         ans:`Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective` },
@@ -480,7 +480,351 @@ const flashcards = [
         17. Resource Requirements: summarize the resources you will need for the project. Identify the labor, equipment, materials, and capital required.
         18. Risks: list the risks that stakeholders and sponsors will be most interested in. The risks listed here will not replace the risk register. Usually, this list will include high-impact and high-probability risks.
         19. Assumptions and Constraints: list the assumptions and constraints that the project will operate within, because it helps you manage expectations with the project sponsor and stakeholders. Assumptions and constraints are similar; they are both factors that will affect the project plan. They differ because constraints are known truths, and assumptions are assumed to be true. 
-        20. Budget: share anticipated project costs. The charter doesn’t need to include an entire budget. However, the total figure should be accurate enough that the project sponsor and stakeholders can make an informed decision.` },
+        20. Budget: share anticipated project costs. The charter doesn’t need to include an entire budget. But, the total figure should be accurate enough that the project sponsor and stakeholders can make an informed decision.` },
+    { que:"Project Scope Statement",
+        ans:`expands on the scope provided in the project charter. Where the project charter includes a summarized scope and major boundaries and deliverables, the scope statement includes detailed descriptions of multiple elements.` },
+    { que:"Elements of a Preliminary Scope Statement",
+        ans:`Project Scope Description: summarize the project’s intent and purpose. This section summarizes the project vision contents of the project charter.
+        Project Acceptance Criteria: list the success criteria of the project. Acceptance criteria are the measurable outcomes of success. 
+        Project Deliverables (In Scope): set the project boundaries and identify what the team will deliver. The items listed here are in scope, and your project plan will need to ensure they are completed.
+        Project Exclusions (Out of Scope): set the project boundaries, and identify what the team will not deliver. Use this section as a clarification point, and identify the items most likely to cause scope creep throughout the project.
+        Assumptions: Treat this as a living document, and update the list as assumptions are proven true or false and new assumptions arise.
+        Constraints: list the known constraints and maintain the list throughout the project. Items might move between the assumptions and constraints section.` },
+    { que:"Records Management Plan - Types of Records",
+        ans:`Project Management Artifacts: the artifacts used to manage the project, such as the project budget and stakeholder engagement plan.
+        Project Artifacts: the documents created to move the project along, such as the requirements documentation and blueprints.
+        Legal Documents: legally binding agreements.
+        Communications: meeting notes, status reports, and written communications generate communications records.` },
+    { que:"Records Management Plan - Types of Data",
+        ans:`Public data: no restrictions. Ex: information on company website and in public records.
+        Internal data: available to anybody within the company. It isn’t necessarily secret, and exposing this data wouldn’t violate laws or trust. Ex: work procedures and project plans.
+        Confidential data: Limited access. The information is only available to authorized users either on a role or case-by-case basis. Ex: Personnel records.
+        Restricted data: top secret, and access is severely restricted. This is the highest-security information. Criminal charges against unauthorized users or face charges if leak information. Ex: research, top-secret projects, user’s passwords.` },
+    { que:"Requirements for Records Management Plan",
+        ans:`The plan needs to comply with organizational policy.
+        Records need to be organized and easy to find.
+        Plan needs to make information accessible
+        Information needs to be inaccessible to unauthorized users.
+        Plan needs to establish accepted communication channels` },
+    { que:"Elements of a Records Management Plan",
+        ans:`Creation: define naming conventions, file owners, and who can create files
+        Storage and Retrieval: identify where the team will store files and the file organizational structure. Address the process for adding new versions and managing old versions.
+        Archival and Disposition: define how to handle duplicate files and outdated files.` },
+    { que:"Project Kickoff",
+        ans:`Marks end of initiation phase.` },
+    { que:"Communication Methods",
+        ans:`Synchronous aka "Real-Time": ex: live video conference.
+        Asynchronous: delay in information exchange. Ex: email.
+        Written: exchanges through handwritten or typed messages. Ex: emails, memos, chat messages.
+        Verbal aka "Oral": face-to-face conversations, phone calls, group meetings.
+        Nonverbal: body language and appearance.
+        Formal: official communication channels. Ex: help desk systems, company memos.
+        Informal: unofficial information flows in organization. ex: casual convo between coworkers, group chatter before meeting.` },
+    { que:"Meeting Roles",
+        ans:`Attendees / Target Audience: include people necessary to make decisions or contribute knowledge
+        Facilitator: guides meeting's progress. They know the meeting's purpose and agenda.
+        Scribe: records the meeting for meeting minutes, action items, follow-ups.` },
+    { que:"Informative Meetings",
+        ans:`disseminate information. Ex:
+        Demonstrations/Presentations
+        Status: "project status meetings" give update on progress.
+        Stand-ups: "daily stand-ups" popularized by Scrum as Daily Scrum.` },
+    { que:"Decisive Meetings",
+        ans:`aka "decision-making meetings". Ex:
+        Task Setting: when you need individuals to complete activities outside of a meeting, you can use a task-setting meeting to plan the work.
+        Project Steering Committee Meeting: includes the PM and executive stakeholders; your steering committee is the voice of the customer. They are a governing body, and while they don’t manage the project, they have a vested interest in its success. They offer support and guidance throughout the project’s life cycle, such as sharing insights on how to increase adoption.
+        Refinement: aka "product/backlog refinement meetings", maintain backlog's relevancy, adjusting task priorities.` },
+    { que:"Collaborative Meetings",
+        ans:`most interactive meeting. Attendees work together to accomplish common goal, such as creating a plan, solving a problem, or designing a new system.
+        Ex: Focus Groups, Workshops, Joint Application Development, Brainstorming` },
+    { que:"Collaborative Meetings - Focus Groups",
+        ans:`use to gather requirements for customers. Moderators use diff techniques to facilitate focus groups:
+        Single-Moderator: uses one moderator, who facilitates the session and monitors interactions. May recruit helper to take notes / record the session.
+        Dual-Moderator: two moderators. One is the lead facilitator and keeps the interactions flowing. The other serves as a quality check; tracking the topics and ensure the group covers all the content.
+        Dueling-Moderator: two moderators. Both moderators are actively engaged in facilitation and take opposite views. This technique generally draws out the most viewpoints.
+        Two-Way: allows one group to observe another focus group’s session. This technique gives the focus group more perspective and can create more complex responses.
+        Respondent-Moderator:uses participants as moderators, creating dynamic energy with many new ideas. This format can rotate moderators or select a single moderator. Rotating also minimizes a single moderator's impact.` },
+    { que:"Collaborative Meetings - Workshops",
+        ans:`a working session where a group with shared interests gathers to exchange information and conduct research.
+        Define the workshop’s ground rules, which are team agreements regarding how they will operate and treat each other.
+        Engage the participants in setting success criteria.
+        Encourage questions.
+        Use icebreakers.
+        Use breakouts for large groups.
+        After the workshop, ask for feedback from the participants.` },
+    { que:"Collaborative Meetings - Joint Application Development(JAD)",
+        ans:`aka "joint application review": are a specific type of workshop.
+        JAD describes a product design approach that involves the customer in the design process. Therefore, a JAD workshop is a working session where the team and customer meet and design a product together.` },
+    { que:"Collaborative Meetings - Brainstorming",
+        ans:`allows a group to generate many ideas rapidly. A group reviews a problem or proposal, then creates as many ideas as possible that could help solve the problem or meet the goal.` },
+    { que:"Brainstorming Techniques",
+        ans:`Rapid brainstorming: gives team members a short time limit to write down 3–5 ideas. The time limit should be brief enough to create a sense of urgency but long enough for everybody to capture their thoughts.
+        Reverse brainstorming: occurs when you look at a problem from different angles. With reverse brainstorming, you would brainstorm ideas for why you could never solve the problem.
+        Stop-and-go brainstorming: combats the quantity-over-quality issue. First, the team brainstorms for a short period, perhaps ten minutes, and then they stop brainstorming to review and refine the results. Next, they start brainstorming and repeat the cycle. This method gives the team time to generate ideas.
+        Round-robin brainstorming: gives every participant an equal voice. Each person offers one idea on the topic. The group critiques the ideas after everybody contributes once, then the process repeats. This method works well if some attendees dominate the conversation.` },
+    { que:"Meeting Artifacts",
+        ans:`Agenda
+        Timebox 
+        Action Items 
+        Meeting Minutes 
+        Follow-Up` },
+    { que:"Meeting Artifacts - Agenda",
+        ans:`includes meeting's purpose and schedule of activities/topics. Sets expectations for attendees.` },
+    { que:"POWER Start Agenda Technique",
+        ans:`Purpose: Describe reason for the meeting.
+        Outcomes: List expected results/deliverables that the team will create.
+        What’s in It for Me (WIIFM): Explain how the meeting will benefit the attendees.
+        Engagement: Describe how attendees can or should participate in the meeting.
+        Roles/Responsibilities: Explain what responsibilities various attendees will have. For example, list the facilitator, explain that SMEs will create diagrams, and everybody will brainstorm ideas.` },
+    { que:"Meeting Artifacts - Timebox",
+        ans:`a fixed maximum amount of time, and you already see timeboxes everywhere. Ex: a wall calendar has one box for each day.` },
+    { que:"Meeting Artifacts - Action Items",
+        ans:`tasks that somebody will complete after the meeting. The team may identify new or open tasks and missing information during the session. Capture these items on an action item list so that the group can remember to do them later.` },
+    { que:"Meeting Artifacts - Meeting Minutes",
+        ans:`a written record of key points. 
+        Ex: governance meetings require formal meeting minutes, including timestamps, an official roll call, approvals, and new business.` },
+    { que:"Meeting Artifacts - Follow-Up",
+        ans:`follow-up email is the avenue for sharing the meeting minutes and additional information. A follow-up email closes the meeting by expressing appreciation for the attendees’ time.` },
+    { que:"Communication Challenges",
+        ans:`Language Barriers.
+        Time Zones and Geographical Factors.
+        Technological Factors: discomfort with software or lack of access to technology or services.
+        Cultural Differences: shared social customs, behavior, habits, beliefs.` },
+    { que:"Team Life Cycle",
+        ans:`Forming: team members come together for the first time. People tend to be excited/polite in this phase, but minimally productive.
+        Storming: Members are figuring out their roles and finding each other’s flaws and differences in the storming stage. Every little problem in the process gets amplified and questioned in this stage.
+        Norming: Conflict slows, and productivity starts to increase, in the norming stage.
+        Performing: Productivity is highest in performing stage. Team members understand their roles, trust each other, and work together effectively.
+        Adjourning: the project work finishes, the team breaks apart, and the members move on to new projects.` },
+    { que:"Conflict Management (two types)",
+        ans:`substantive: task-based conflict, such as disagreements over goals, projects, or processes.
+        emotional: Conflicts around relationships and feelings, such as due to personality, working styles, insecurity, and envy.` },
+    { que:"Causes of Conflict",
+        ans:`Personality Differences
+        Personal Issues
+        External Factors
+        Competition Over Resources
+        Conflicting Priorities
+        Conflicting Proposals
+        Communication Issues` },
+    { que:"Conflict Resolution Strategies",
+        ans:`Smoothing
+        Forcing
+        Compromising
+        Collaborating
+        Avoiding` },
+    { que:"Smoothing",
+        ans:`"accommodating" style that redirects attention away from conflict. Ex: minor disagreements such as color theme.` },
+    { que:"Forcing",
+        ans:`"dominating" style where you manage conflict by deciding what needs to happen to fix the issue. Ex: Emergencies.` },
+    { que:"Compromising",
+        ans:`both parties meet in the middle. Nobody gets everything they want but all receive something.` },
+    { que:"Collaborating",
+        ans:`"win-win situation", parties work together that works for everyone. This is most complex approach` },
+    { que:"Avoiding",
+        ans:`ignores the conflict. Use when issue isn't hurting team or resolving issue won't help team.` },
+    { que:"Conflict Escalation (stage 1-3) win-win, facilitation helpful",
+        ans:`1. Tension: conflict often not voiced or not recognized as conflict.
+        2. Debate: parties begin trying to convince each other of their views.
+        3. Actions replace words: there are no more discussions. Actions underline each party's stance. Empathy shrinks.` },
+    { que:"Conflict Escalation (stage 4-6) win-loss, mediation helpful",
+        ans:`4. Coalitions: parties look for supporters. The original issue becomes unimportant. Now it's about winning.
+        5. Loss of face: opponents are disparaged. Exaggerations and lies circulate.
+        6. Threats: parties try to gain control with threats.` },
+    { que:"Conflict Escalation (stage 7-9) lose-lose, forcible intervention needed",
+        ans:`7. Limited destruction: opponents are not seen as human. Parties are fine with losing if their opponent loses more.
+        8. Annihilation: opponents and their supporters are destroyed by any means necessary.
+        9. Abyss: the parties careen together into disaster. Destruction of self is acceptable as long as the opponent is also completely destroyed.` },
+    { que:"Software Installation Options - Overview",
+        ans:`Cloud-based: aka "online software/installation", used through internet.
+        On-Premise: is installed in cloud or on premise on buyer's hardware, such as server/computer.
+        Local Installation: variation of on-premises installation, this is a common model for personal computers. A local installation means the software is installed on the computer or device that will use the software.` },
+    { que:"Software Installation Options - User Access",
+        ans:`Cloud: benefits the users because it works across various devices via an internet browser, allowing people to use their preferred hardware but still access the tools they need.
+        On-Premise: users access the software through an application on their devices. Users may need to connect to their company network to install or use the software if the installation occurs on a network server.
+        Local Install: user accesses the software from the single device it is installed on. They can access the software without a network or internet connection.` },
+    { que:"Software Installation Options - Pricing Model",
+        ans:`Cloud: pay recurring fee for latest version of the product. Cloud offers more scalability because they purchase licenses and don’t have other investments. Cloud is an operational expense (OpEx), which is easier to budget.
+        On-Premise: buyer makes initial investment, may include long-term capital expense (CapEx). Buyer purchases licenses and storage hardware, but minimal ongoing costs.
+        Local Install: requires purchase of software. Technically requires hardware, but doesn’t accrue hardware expenses, since software is installed on existing equipment.` },
+    { que:"Software Installation Options - Overhead",
+        ans:`Cloud: lower overhead requirements than on-premise hosting. IT staff will configure the installation and optimize cloud capabilities.
+        On-Premise: buyer is responsible for installation, upgrades, storage, and maintenance, which requires IT staff. As a result, on-premises implementations lead to higher staffing costs and delayed updates. But, company has control/flexibility on configurations and upgrades.
+        Local Install: require significant overhead. A staff member installs every instance of software on one machine at a time. Updates occur one machine at a time and at the user’s discretion.` },
+    { que:"Software Installation Options - Advantages",
+        ans:`Cloud: low-maintenance option. The provider manages all updates and security measures, so the buyer enjoys lower IT overhead and up-to-date software.
+        On-Premise: allows companies to have total control over the software. This method can have lower long-term costs because all the expenses occur once or infrequently.
+        Local Install: provide reliable access to software because you can use the software offline. It can improve security by providing exclusive access to the software and data.` },
+    { que:"Software Installation Options - Disadvantages",
+        ans:`Cloud: requires an internet connection, and users working with large data sets or on slow networks might experience latency. Low short-term costs but have higher long-term costs.
+        On-Premise: requires investment, which the company cannot recoup. For example, you have to buy enough software, and if you buy too much, you can’t return the licenses for a refund. In addition, you need enough server space. In another instance, if your server needs to grow and shrink throughout the year, you must purchase enough space to accommodate the largest storage requirement.
+        Local Install: software is only available on that computer. You cannot access the software from another device, and any personalization remains on that device only.` },
+    { que:"Project Tools",
+        ans:`Ticketing or Case Management: organized way to manage records of customer problems. Also referred to as a "case management" or "help desk" system, this product type combines workflows and user interfaces to create a one-stop experience.
+        Project Management Scheduling Tools: software allows you to create comprehensive project schedules easily. Project management software include many features, such as task planning, workflow automation, and resource allocation. ` },
+    { que:"Meeting Tools",
+        ans:`Calendaring Tools
+        Real-Time Surveys and Polls: gather simple info quickly from large group of people.
+        Print Media: Physical materials. Ex: posters, brochures, training manual.
+        Conferencing Platforms: software used for video conferencing.` },
+    { que:"Productivity Tools",
+        ans:`Text Editor: minimal functionality and features.
+        Word Processing: more functionality than text editor.
+        Spreadsheets, works with data in tables.
+        Presentation: slide decks, which are visual pages that tell a story.
+        Diagramming: create visual representations of processes, systems, objects, structures, ideas, information.` },
+    { que:"Commom Diagrams",
+        ans:`Gantt Chart
+        Flowchart
+        Decision Tree
+        Data Flow Diagram
+        Mind Map
+        Quadrant Diagram` },
+    { que:"Commom Diagrams - Gantt Chart",
+        ans:`bar chart that shows time across the horizontal axis and a list of tasks or activities on the vertical axis. The bars represent the time that each activity will occur. You can also show milestones, deadlines, and dependencies between activities. A Gantt chart creates a visual project schedule.` },
+    { que:"Commom Diagrams - Flowchart",
+        ans:`"process flow" or "process diagram." This chart visualizes a process, and can compress complicated work instructions into a few charts. Project teams often create multiple flowcharts to show how a project affects processes. Commonly used in process analysis.
+        Describes a process that could include many decisions.` },
+    { que:"Commom Diagrams - Decision Tree",
+        ans:`represents a single decision that could have many outcomes. Use a decision tree when a single decision requires consideration of many factors.` },
+    { que:"Commom Diagrams - Data Flow Digram",
+        ans:`shows how information flows through a process/system. Works well for audience with technical and nontechnical expertise.` },
+    { que:"Commom Diagrams - Mind Map",
+        ans:`visualizes categories of informatioin around a single theme.` },
+    { que:"Commom Diagrams - Quadrant Diagram",
+        ans:`includes many implementations that use the same concept.` },
+    { que:"Collaboration Tools",
+        ans:`Real-Time, Multi-Authoring Editing Software: allows multiple users to update the same file simultaneously.
+        File Sharing Platforms: allows you to post a file in a single location and grant access to one or more users.
+        Workflow and E-Signature Platforms: allow to sign documents using internet and electronic devies(smartphone, tablets, laptops).
+        Wiki and Knowledge Base: "wiki" is a collaborative product where everybody with knowledge can contribute to its contents. There may be reviewers and fact-checkers.
+        "knowledge base" is more curated than a wiki; specific authors contribute to the knowledge base and cover particular topics. As a result, knowledge bases appear more polished and consistent than wikis.
+        Whiteboard: creates virtual creative space. Offers blank canvas to accomplish creative tasks.` },
+    { que:"Communication Platforms",
+        ans:`Email
+        Chat or Chat Messaging
+        Short Message Service (SMS)
+        Face-to-Face Meeting
+        Telephone
+        Video Call or Videoconference
+        Enterprise Social Media: internal communication networks.` },
+    { que:"Communication Plan Elements",
+        ans:`Communication Goals
+        Stakeholders
+        Team Members
+        Communication Artifacts, Ex: dashboard snapshopts, presentations, links to file, text summaries.
+        Communication Channels, Ex: host a meeting to review a presentation and send text summaries via email.
+        Communication Recipients: person receiving the communication. Note formality of each artifact.
+        Communication Frequency: how often.
+        Communication Outcomes: for each artifact, define what you need to happen in that exchange.` },
+    { que:"Develop Communication Plan Steps",
+        ans:`1. Identify stakeholders
+        2. Identify stakeholder communication preferences
+        3. Create project communication plan
+        4. Share and finalize the plan
+        5. Schedule everything
+        6. Revise the plan.` },
+    { que:"Escalation Plan Sections",
+        ans:`Category: describes type of escalation. Ex: may include type of work to be done or a decision needed
+        Level: indicates escalation order. Ex: Level 1 is first point of contact, Level 2 is next person in chain of command.
+        Escalation Owner: The person responsible for managing the escalation at each level.
+        Trigger: conditions that initiate escalation.` },
+    { que:"Communication Security",
+        ans:`Public Data: no restrictions
+        Confidential Data: limited access. Only available to authorized users or case-by-case.
+        Critical Data: top secret.` },
+    { que:"Communication Integrity",
+        ans:`means the message shared matches reality.
+        Capturing Information: communication and project progress will happen verbally through formal reviews and casual conversations.
+        Centralizing Information: create summarized communication artifact to gather conversations in a single place to keep track of crucial decisions.
+        Reflecting Reality: communication artifacts are a summary of project progress, conversations, and decisions. The documents should reflect the actual progress of a project at all times. ` },
+    { que:"Solution Designs)",
+        ans:`High-Level Design(HLD): created in analysis phase and assess techincal feasibility. Project sponsor, solution architect, and technical staff create HLD. Defines nonfunctional requirements(NFRs).
+        Low-Level Design(LLD): a technical decision-making document, created in design phase. Solution architect and SMEs create LLD.` },
+    { que:"Functional vs Nonfunctional Requirements",
+        ans:`Functional: product features, user interfaces, administration processes, and implementation support or training. Tangible elements that make the system work.
+        NFRs: system's attributes, the abstract noun; "-ilities", of software` },
+    { que:"NFR Examples",
+        ans:`Usability: refers to how user friendly the solution is.
+        Maintainability: how easy it is to change the solution later. Systems or code can be "brittle." Brittle code has low maintainability because it breaks easily.
+        Scalability: how easy it is to grow/shrink the solution as needs change.
+        Availability or reliability: how long the system is running in a given time.` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
     { que:"",
         ans:`` },
     { que:"",
