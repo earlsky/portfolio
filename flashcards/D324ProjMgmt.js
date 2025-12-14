@@ -744,77 +744,146 @@ const flashcards = [
     { que:"Functional vs Nonfunctional Requirements",
         ans:`Functional: product features, user interfaces, administration processes, and implementation support or training. Tangible elements that make the system work.
         NFRs: system's attributes, the abstract noun; "-ilities", of software` },
-    { que:"NFR Examples",
+    { que:"NFR Examples 1/3",
         ans:`Usability: refers to how user friendly the solution is.
         Maintainability: how easy it is to change the solution later. Systems or code can be "brittle." Brittle code has low maintainability because it breaks easily.
-        Scalability: how easy it is to grow/shrink the solution as needs change.
-        Availability or reliability: how long the system is running in a given time.` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
+        Scalability: how easy it is to grow/shrink the solution as needs change.` },
+    { que:"NFR Examples 2/3",
+        ans:`Availability or reliability: how long the system is running in a given time.
+        Extensibility: is how easy it is to add new features without changing what is already in place.
+        Security: refers to how the solution and the company’s assets are protected. Authentication methods, data classification, user access, and administration procedures are part of the security requirements.` },
+    { que:"NFR Examples 3/3",
+        ans:`Portability or compatibility: evaluates how well the solution can work within the existing environment. The solution components need to communicate with each other and other platforms in the company, including data exchanges, operating systems, software, and hardware.
+        Compliance: refers to the need for the solution to comply with applicable regulations.` },
+    { que:"Solution Design Approach - Environmental Factors",
+        ans:`Functional Requirements
+        NFRs
+        Constraints
+        Software Products
+        Hardware Requirements` },
+    { que:"Sections of a Solution Design Document",
+        ans:`Overview
+        Audience
+        Purpose
+        References
+        Glossary
+        Summary of Existing Functionality
+        Functional Requirements Details
+        NFR Details
+        Assumptions and Prerequisites
+        HLD: visuals(process flowcharts and data flow diagrams) to describe systems and integrations.
+        LLD
+        Impact Analysis
+        Out-of-Scope
+        Risks and Mitigation
+        Appendix: optional` },
+    { que:"IT Infrastructure 1/2",
+        ans:`Multitiered Architecture: aka "N-tier architecture", modular software design, which divides software into layers, or tiers. Increases modularity to make systems resilient.
+        Single tier is typical for test and small production environments.
+        Networking and Connectivity: how users and components in a system connect. Includes network configurations, protocols, access rules, hardware, cabling, switches, routers.` },
+    { que:"IT Infrastructure 2/2",
+        ans:`Storage: a storage plan includes a physical location with temperature/humiditiy control.
+        Database: are data storage systems that organize electronic information into structured tables. Analysts and engineers intentionally design databases, making it easier to retrieve and interpret data.
+        Data Warehouse: an extensive database used for reporting and analytics. Ex: companies use data warehouses to create dashboards for monitoring company performance. Project teams create data warehouses and use them to analyze problems and solutions.
+        Documentation: includes all the diagrams and information about the IT infrastructure. includes network diagrams and extensive server information, such as location, maintenance instructions, and addresses, and scripts, procedures, communications, maintenance, and end-of-life schedules.` },
+    { que:"Cloud Models",
+        ans:`delivered either locally or over internet. Local delivery is "on-premises computing," and internet delivery is "cloud computing." Cloud service model is desirable because it's easy to set up and maintain. Has higher availability and scalability.` },
+    { que:"Cloud Model Types",
+        ans:`Infrastructure as a Service(IaaS): basic computing resources (servers, networks, storage).
+        Platform as a Service(PaaS): delivers development tools (ex: software environments). PaaS includes infrastructure from IaaS and middleware and tools developers need to create finished product.
+        Software as a Service: complete software stack. Contains the infrastructure, environments, and actual product the end-user will use.
+        Anything as a Service:(XaaS): general term for any cloud computing service.` },
+    { que:"Enterprise Resource Planning(ERP)",
+        ans:`refers how companies acquire, manage, and consume resources.` },
+    { que:"Financial Systems",
+        ans:`subset of ERPs that encompass the financial aspects. They track financial resources, including budgets, spending, and cost estimates. ` },
+    { que:"Customer Relationship Management(CRM)",
+        ans:`software helps companies track and manage customer interactions. The idea behind CRM is that exchanges with customers aren’t single transactions. Instead, companies should form relationships with customers and would-be customers to build loyalty and increase revenue.` },
+    { que:"Electronic Document Management System(EDMS) and Records Management System(RMS)",
+        ans:`EDMS is not just an electronic filing cabinet; this software builds in workflows and other features to create streamlined processes.` },
+    { que:"Content Management System(CMS)",
+        ans:`user-friendly systems that allow more users to complete historically complex activities. A CMS applies a simple user interface and hides all the code and complexity from the end-user.` },
+    { que:"Data Classification",
+        ans:`Public Data: least sensitive. No restrictions and publicly available. Ex: press releases, content of the company website, job postings.
+        Internal data: available to anybody within the company and therefore is minimally sensitive. It isn’t public facing, but exposing this data wouldn’t violate laws or consumer trust.
+        Confidential data: sensitive data with limited access. Information only available to authorized users/role or case-by-case basis. 
+        Restricted data: most sensitive data. Access severely restricted and granted on need-to-know basis with strict business justification. Company likely to bring criminal charges against unauthorized users or face charges if inadvertently leaks the information.` },
+    { que:"Data Handling Considerations: Sensitive Data",
+        ans:`Personally identifiable information (PII) includes data that could reveal a person’s identity.
+        Personal health information (PHI) is federally protected in USA. HIPAA requires organizations to protect against unauthorized access and disclosure of sensitive health information.` },
+    { que:"Data Handling Consideration: Country-, State-, and Province-Specific Privacy Regulations",
+        ans:`General Data Protection Regulation (GDPR) is a data privacy and security law in the European Union (EU). It includes 11 chapters of regulations and is widely considered the strictest privacy law. This law protects people located in the EU. 
+        The California Privacy Rights Act protects the data of California residents. The Consumer Data Protection Act in Virginia offers data rights and protection to Virginia residents. Both share many similarities with GDPR.` },
+    { que:"Data Handling Consideration: IP and Trade Secrets",
+        ans:`Intellectual Property(IP): asset type that refers to creations of the mind. In business, it comprises the inventions and creative assets that the company owns. IP includes four asset types: patents, copyrights, trademarks, and trade secrets.
+        Trade Secrets: specific type of IP, an asset that gives the company a competitive advantage but hasn’t been registered with a copyright, trademark, or patent. Ex: food recipe, search engine algorithm.` },
+    { que:"Digital Security",
+        ans:`Resource Access and Permissions: Electronic resources (ex: applications, network folders) are accessible to authorized users. System administrators or service providers create multiple user roles for each application to provide varying access levels.
+        Remote Access Restrictions: Employees/contractors need to connect with company network while offsite. Remote access allows employees to work from various locations. Remote access increases flexibility but could expose company network if security measures are not in place. May require VPN usage.
+        Multifactor Authentication(MFA): added layer of security that requires user to present to access a remote system or resource. It requires two or more credentials across three categories:
+        Something you know: a password, email address, or PIN.
+        Something you have: a mobile device, badge, or other token.
+        Something you are: a fingerprint, face, or voice.` },
+    { que:"Physical/Operational Security",
+        ans:`Removable Media: ortable storage devices that can be plugged in and removed while a computer is running, such as USB drives.
+        Mobile Device: a portable media type, and many corporate applications are available on mobile devices. Mobile access helps the company because employees can be more productive. Companies require mobile device management (MDM) software, which allows IT functions to monitor and remotely erase compromised mobile devices.
+        Facility Access: Networks are easier to break into from inside the building. Company assets are everywhere; computers, documents in people’s offices are available. Companies grant facility access only to authorized users.
+        Background Screening/Checks: helps organizations confirm hiring requirements; person’s education, certifications, references. Also verifies person’s identity and may investigate criminal history and previous employment.
+        National Security Information and Clearance Requirements: may require handling information related to national defense or foreign relations. In the United States, this is called national security information, and access is highly restricted.
+        Four clearance levels: Confidential, Secret, Top Secret, and Sensitive Compartmented Information(SCI).` },
+    { que:"Types of Resources",
+        ans:`Human Resources: Internal human resources are called "labor," external human resources are services.
+        Physical Resources: goods needed in a project, including the equipment, software, office supplies, workspaces, buildings, vehicles, and other assets.
+        Capital Resources: money` },
+    { que:"Resource Sourcing Methods",
+        ans:`Internal Sourcing: affordable but less available than external resources.
+        External Sourcing: expensive but more available than internal resources.
+        Procurement Plan: if a project needs external resources.` },
+    { que:"Resource Allocation Methods",
+        ans:`Dedicated Resources: work on one project only and nothing else.
+        Shared Resources: work across multiple projects at once.` },
+    { que:"Resource Life Cycle",
+        ans:`Acquisition Phase: company brings resources into the company in the acquisition phase. Goods are procured, and people are recruited and hired.
+        Maintenance Phase: Resources are not self-sustaining. After acquired, they need updates, maintenance, evaluation. Equipment needs upkeep, repairs, upgrades, inventory tracking. Software needs security patches, updates, and managing licenses.
+        Improvement Phase: improve performance/effectiveness of resources. Equipment is adjusted and reconfigured, software is enhanced. Employees review processes and procedures to make efficient and cost effective
+        Retirement Phase: Equipment breaks down/retires to make room for newer model, software goes out of service or invalid.` },
+    { que:"Resource Retirement Examples",
+        ans:`End of Life Software(EOL): no more updates/maintainence for the software after EOL date. If company uses EOL software, vendor cannot help with troubleshooting, configurations, maintenance.
+        Hardware Decommissioning: hardware is ready for decommissioning ex: Failure to turn on, Random shutdowns or stoppages, Declining KPIs (ex: uptime or speed), EOL notice from manufacturer. Increasing maintenance requests (maintenance becomes more expensive than replacement).
+        Succession Planning: practice where companies create a plan for who would replace roles in a company if vacated. Succession planning doesn’t identify one person who would replace somebody; it identifies current role’s knowledge, skills, responsibilities. Then documents processes and provides training/development to people who fit the role.` },
+    { que:"Needs Assessment Process",
+        ans:`1. Understand the project’s requirements: identify project’s objective, success criteria, milestones, deliverables. 
+        2. Identify the current resources.
+        3. Identify any resource gaps: aka "gap identification".
+        4. Address the gaps` },
+    { que:"Resource Optimization Techniques",
+        ans:`Resource Smoothing: attempts to reduce variation of resource usage from one time period to the next.
+        Resource Leveling: reduces variation and allows the project timeline to extend.` },
+    { que:"Skills Matrix",
+        ans:`a visual tool for assessing the current state of a team's skills. Identify all the skills needed for a project, and record them on the matrix. Then, each person assesses their competency level.` },
+    { que:"Histogram",
+        ans:`a chart used in statistical analysis. The horizontal axis shows a fixed series of continuous data, and vertical axis shows the varying frequency that each value on the horizontal axis occurs. Each column is sized relative to others based on frequency. ` },
+    { que:"Resource Management Process",
+        ans:`Estimate the Necessary Resources
+        Secure Resources
+        Train Team Members
+        Allocate Resources
+        Monitor and Adjust the Resource Allocations` },
+    { que:"Compare Risk, Issues, and Changes",
+        ans:`Risk: something that you think will happen that you don’t control.
+        Issue: something that is already happening that you don’t control. "Issue Management"documents issues after they arise and recovers from them.
+        Change: modification to a project’s scope, budget, or timeline via an adjustment in project activities or resources.` },
+    { que:"Risk Management Overview",
+        ans:`1. Identify the Risk: list all potential risks.
+        2. Analyze the Risk: Determine how likely a risk event will happen; the probability. If risk were to happen, identify how it would impact this project, other projects, and organization. This process is known as "effect-based risk classification".
+        3. Treat the Risk: Create risk management strategy for every risk.
+        4. Monitor the Risk` },
+    { que:"Risk Assessment Meeting",
+        ans:`theme of the meeting is “What If”?”` },
+    { que:"Common Internal Risks",
+        ans:`New Projects: company might approve a new, higher-priority project.
+        Digital Transformation: assess the current technology stack and adopt modern products.
+        New Management: ` },
     { que:"",
         ans:`` },
     { que:"",
