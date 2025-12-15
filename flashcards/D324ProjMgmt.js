@@ -944,15 +944,16 @@ const flashcards = [
     { que:"Risk Management Plan Elements 1/2",
         ans:`Approach: Describe how the process will work and which analysis tools will be used. Include any specific terminology, such as if you are choosing to use “threat” and “opportunity” instead of “negative risk” and “positive risk.”
         Risk Identification Plan: Include a plan for how the team will identify risks. The risk identification plan can include multiple activities and sources, but it should have a clear focus.
-        Risk Register: Identify where you will store and manage risks.
-        Risk Breakdown Structure(RBS): Identify which categories you will use to classify the nature of the risks in an RBS.
-        Risk Assessment Strategy: Specify how the team will score risks, including criteria and scales. Include definitions for any qualitative scales.` },
-    { que:"Risk Management Plan Elements 2/2",
-        ans:`Risk Response Strategy: Summarize the risk response options used to manage risks.
-        Roles and Responsibilities: Name the roles and responsibilities for the entire risk management process. Include clear responsibilities for the risk owners and the risk manager.
+        Risk Register: Identify where you will store and manage risks.` },
+    { que:"Risk Management Plan Elements 2/3",
+        ans:`Risk Breakdown Structure(RBS): Identify which categories you will use to classify the nature of the risks in an RBS.
+        Risk Assessment Strategy: Specify how the team will score risks, including criteria and scales. Include definitions for any qualitative scales.
+        Risk Response Strategy: Summarize the risk response options used to manage risks.` },
+    { que:"Risk Management Plan Elements 3/3",
+        ans:`Roles and Responsibilities: Name the roles and responsibilities for the entire risk management process. Include clear responsibilities for the risk owners and the risk manager.
         Funding: List any financial factors, such as funding availability, funding needs, or resource requirements.
         Risk Monitoring: Describe how you and the risk owners will identify and track risks.
-        Schedule: Outline the timing of all risk management activities. ` },
+        Schedule: Outline the timing of all risk management activities.` },
     { que:"Transition Plan Elements",
         ans:`Roles and responsibilities
         Transition schedule
@@ -1043,27 +1044,46 @@ const flashcards = [
         ans:`Duration: the time between when a work package starts and when it ends.
         Task Hours: more specific time measurement than duration. 
         Story points are an estimating technique used in agile teams, so it would apply to user stories and not work packages. A story point is an abstract measure representing the relative complexity, risk, and uncertainty of the work needed to deliver a story. 
-        Storyt points values use modified Fibonacci sequence: 1,2,3,5,8,13. ` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
+        Story points values use modified Fibonacci sequence: 1,2,3,5,8,13. ` },
+    { que:"Assign Resources",
+        ans:`Clarity: 
+        Parity: 
+        Discovery: 
+        Validity: ` },
+    { que:"Responsibility Assignment Matrix(RAM)",
+        ans:`Responsible (R). The person who will do the work.
+        Accountable (A). The person who will be held accountable for the final work.
+        Consulted (C). The person who can offer expertise on the work but will not work on it directly.
+        Informed (I). The person who needs to know when the work is done.` },
+    { que:"Project Schedule",
+        ans:`the activities required to complete the project work. ` },
+    { que:"Project Network Diagrams",
+        ans:`compact, visual model of the project schedule; it is also called a "project schedule network diagram." It shows the project activities, duration, and dependencies on a simple chart using arrows and same-sized rectangles.
+        Three diagrams: precedence diagram method (PDM), Program Evaluation and Review Technique (PERT), and critical path method (CPM). ` },
+    { que:"Project Network Diagram - Precedence Diagram Method",
+        ans:`a popular project diagram style. PDM diagrams use rectangles and arrows to show the dependencies between activities. A PDM is useful for visualizing activities and dependencies.
+        Sketch a PDM chart to focus on the activities, sequencing, and dependencies. Then, you can layer in duration and calculations using another diagram technique.` },
+    { que:"Project Network Diagram - Program Evaluation and Review Technique(PERT)",
+        ans:`represents duration, activities, and dependencies. PERT chart uses the same diagramming style as PDM, with rectangles for activities and arrows for dependencies. PERT estimate is a weighted factor. 
+        PERT estimate requires three duration estimates for each activity:
+        Optimistic (O) is the duration if things goes right.
+        Pessimistic (P) is the duration if things goes wrong.
+        Most Likely (M) is the duration that will probably happen.
+        PERT = ((O + 4M + P) / 6)` },
+    { que:"Project Network Diagram - Critical Path Method(CPM)",
+        ans:`incorporates duration, activities, dependencies, PERT estimates, and additional calculations. CPM analyzes a project schedule to identify the dependent activity sequence with the longest duration. This sequence represents the shortest total project duration, known as the critical path. For this reason, CPM is also called "critical path analysis." Critical path analysis is practical when a project has a fixed timeline.` },
+    { que:"CPM Analysis Process 1/3",
+        ans:`1. Diagram the activities and dependencies.
+        2. Calculate the PERT estimate duration for each activity. (O + 4M + P) / 6` },
+    { que:"CPM Analysis Process 2/3",
+        ans:`3. Complete forward pass to calculate early start(ES) and early finish(EF).
+        Early Start (ES): the earliest an activity can start based on predecessor activities.
+        Early Finish (EF): the earliest an activity can finish based on predecessor activities.
+        4. Complete a backward pass to calculate the late start and late finish.` },
+    { que:"CPM Analysis Process 3/3",
+        ans:`5. Calculate the total float (TF).
+        6. Calculate the free float (FF).
+        7. Identify the critical path.` },
     { que:"",
         ans:`` },
     { que:"",
