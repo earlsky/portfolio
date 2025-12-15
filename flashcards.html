@@ -163,94 +163,137 @@
   <script src="flashcards/D324ProjMgmt.js"></script>
 
   <script>
+  let currentCard = 0;
+  let showans = false;
 
-    let currentCard = 0;
-    let showans = false;
+  function displayCard() {
+    const card = flashcards[currentCard];
+    document.getElementById('que').innerText = card.que;
+    document.getElementById('ans').innerText = card.ans;
+    document.getElementById('counter').innerText =
+      `Card ${currentCard + 1} of ${flashcards.length}`;
+    document.getElementById('prevBtn').disabled = currentCard === 0;
+    document.getElementById('nextBtn').disabled =
+      currentCard === flashcards.length - 1;
+    document.querySelector('.card').classList.remove('show-ans');
+    showans = false;
+  }
 
-    function displayCard() {
-      const card = flashcards[currentCard];
-      document.getElementById('que').innerText = card.que;
-      document.getElementById('ans').innerText = card.ans;
-      document.getElementById('counter').innerText = `Card ${currentCard + 1} of ${flashcards.length}`;
-      document.getElementById('prevBtn').disabled = currentCard === 0;
-      document.getElementById('nextBtn').disabled = currentCard === flashcards.length - 1;
-      document.querySelector('.card').classList.remove('show-ans');
-      showans = false;
+  function flipCard() {
+    showans = !showans;
+    document.querySelector('.card').classList.toggle('show-ans', showans);
+  }
+
+  function prevCard() {
+    if (currentCard > 0) {
+      currentCard--;
+      displayCard();
     }
+  }
 
-    function flipCard() {
-      showans = !showans;
-      document.querySelector('.card').classList.toggle('show-ans', showans);
+  function nextCard() {
+    if (currentCard < flashcards.length - 1) {
+      currentCard++;
+      displayCard();
     }
+  }
 
-    function prevCard() {
-      if (currentCard > 0) {
-        currentCard--;
-        displayCard();
-      }
-    }
+  function goToCard() {
+    const input = document.getElementById('cardInput');
+    const cardNumber = parseInt(input.value);
 
-    function nextCard() {
-      if (currentCard < flashcards.length - 1) {
-        currentCard++;
-        displayCard();
-      }
+    if (cardNumber && cardNumber >= 1 && cardNumber <= flashcards.length) {
+      currentCard = cardNumber - 1;
+      displayCard();
+      input.value = '';
+    } else {
+      alert(`Please enter a valid card number between 1 and ${flashcards.length}`);
     }
-    
-    function goToCard() {
-      const input = document.getElementById('cardInput');
-      const cardNumber = parseInt(input.value);
-      
-      // Validate the input is within valid range
-      if (cardNumber && cardNumber >= 1 && cardNumber <= flashcards.length) {
-        currentCard = cardNumber - 1; // Convert to 0-based index
-        displayCard();
-        input.value = ''; // Clear the input after successful navigation
-      } else {
-        // Show error message for invalid input
-        alert(`Please enter a valid card number between 1 and ${flashcards.length}`);
-      }
-    }
+  }
 
-    // Allow Enter key to trigger go to card functionality
-    document.getElementById('cardInput').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        goToCard();
+  document.getElementById('cardInput').addEventListener('keypress', e => {
+    if (e.key === 'Enter') goToCard();
+  });
+
+  /* ==========================
+     KEYBOARD CONTROLS
+  ========================== */
+  document.addEventListener('keydown', e => {
+    if (document.activeElement === document.getElementById('cardInput')) return;
+
+    const key = e.key.toLowerCase();
+
+    switch (key) {
+      case 'a':
+      case 'arrowleft':
+        e.preventDefault();
+        prevCard();
+        break;
+      case 'd':
+      case 'arrowright':
+        e.preventDefault();
+        nextCard();
+        break;
+      case 'w':
+      case 's':
+      case 'arrowup':
+      case 'arrowdown':
+        e.preventDefault();
+        flipCard();
+        break;
+    }
+  });
+
+  /* ==========================
+     XBOX GAMEPAD SUPPORT
+  ========================== */
+  let prevButtons = [];
+
+  function handleGamepadInput(index) {
+    switch (index) {
+      case 14: // D-Pad Left
+        prevCard();
+        break;
+      case 15: // D-Pad Right
+        nextCard();
+        break;
+
+      // Flip card (A B X Y + D-Pad Up/Down)
+      case 0:  // A
+      case 1:  // B
+      case 2:  // X
+      case 3:  // Y
+      case 12: // D-Pad Up
+      case 13: // D-Pad Down
+        flipCard();
+        break;
+    }
+  }
+
+  function gamepadLoop() {
+    const gp = navigator.getGamepads()[0];
+    if (!gp) return requestAnimationFrame(gamepadLoop);
+
+    gp.buttons.forEach((btn, i) => {
+      if (btn.pressed && !prevButtons[i]) {
+        handleGamepadInput(i);
       }
     });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-      // Don't trigger keyboard shortcuts when typing in the input field
-      if (document.activeElement === document.getElementById('cardInput')) {
-        return;
-      }
+    prevButtons = gp.buttons.map(b => b.pressed);
+    requestAnimationFrame(gamepadLoop);
+  }
 
-      const key = e.key.toLowerCase();
-      
-      switch (key) {
-        case 'a':
-        case 'arrowleft':
-          e.preventDefault();
-          prevCard();
-          break;
-        case 'd':
-        case 'arrowright':
-          e.preventDefault();
-          nextCard();
-          break;
-        case 's':
-        case 'w':
-        case 'arrowup':
-        case 'arrowdown':
-          e.preventDefault();
-          flipCard();
-          break;
-      }
-    });
+  window.addEventListener('gamepadconnected', () => {
+    console.log('Xbox controller connected');
+    gamepadLoop();
+  });
 
-    // Initializes first card
-    displayCard();
-  </script>
+  /* ==========================
+     INIT
+  ========================== */
+  displayCard();
+</script>
+
 </body>
 </html>
