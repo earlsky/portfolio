@@ -244,29 +244,54 @@
     }
   });
 
-  /* ==========================
-     XBOX GAMEPAD SUPPORT
+/* ==========================
+     GAMEPAD + REMAP + HAPTICS
   ========================== */
+
+  const BUTTONS = {
+    0: "A",
+    1: "B",
+    2: "X",
+    3: "Y",
+    12: "D-Up",
+    13: "D-Down",
+    14: "D-Left",
+    15: "D-Right"
+  };
+
+  let mapping = {
+    prev: 14,  // D-Pad Left
+    next: 15,  // D-Pad Right
+    flip: 0    // A
+  };
+
   let prevButtons = [];
 
-  function handleGamepadInput(index) {
-    switch (index) {
-      case 14: // D-Pad Left
-        prevCard();
-        break;
-      case 15: // D-Pad Right
-        nextCard();
-        break;
+  function vibrate(gamepad, duration = 30) {
+    if (gamepad.vibrationActuator) {
+      gamepad.vibrationActuator.playEffect("dual-rumble", {
+        startDelay: 0,
+        duration,
+        weakMagnitude: 0.4,
+        strongMagnitude: 0.8
+      });
+    }
+  }
 
-      // Flip card (A B X Y + D-Pad Up/Down)
-      case 0:  // A
-      case 1:  // B
-      case 2:  // X
-      case 3:  // Y
-      case 12: // D-Pad Up
-      case 13: // D-Pad Down
-        flipCard();
-        break;
+  function handleGamepadInput(index, gp) {
+    if (index === mapping.prev) {
+      prevCard();
+      vibrate(gp);
+    }
+
+    if (index === mapping.next) {
+      nextCard();
+      vibrate(gp);
+    }
+
+    if (index === mapping.flip) {
+      flipCard();
+      vibrate(gp, 20);
     }
   }
 
@@ -276,7 +301,7 @@
 
     gp.buttons.forEach((btn, i) => {
       if (btn.pressed && !prevButtons[i]) {
-        handleGamepadInput(i);
+        handleGamepadInput(i, gp);
       }
     });
 
@@ -284,10 +309,39 @@
     requestAnimationFrame(gamepadLoop);
   }
 
-  window.addEventListener('gamepadconnected', () => {
-    console.log('Xbox controller connected');
+  window.addEventListener("gamepadconnected", e => {
+    console.log("Controller connected:", e.gamepad.id);
     gamepadLoop();
+    initRemapUI();
   });
+
+  /* ==========================
+     REMAP UI LOGIC
+  ========================== */
+
+  function initRemapUI() {
+    const prevSel = document.getElementById("mapPrev");
+    const nextSel = document.getElementById("mapNext");
+    const flipSel = document.getElementById("mapFlip");
+
+    [prevSel, nextSel, flipSel].forEach(sel => sel.innerHTML = "");
+
+    for (const index in BUTTONS) {
+      const label = BUTTONS[index];
+
+      prevSel.add(new Option(label, index));
+      nextSel.add(new Option(label, index));
+      flipSel.add(new Option(label, index));
+    }
+
+    prevSel.value = mapping.prev;
+    nextSel.value = mapping.next;
+    flipSel.value = mapping.flip;
+
+    prevSel.onchange = () => mapping.prev = Number(prevSel.value);
+    nextSel.onchange = () => mapping.next = Number(nextSel.value);
+    flipSel.onchange = () => mapping.flip = Number(flipSel.value);
+  }
 
   /* ==========================
      INIT
