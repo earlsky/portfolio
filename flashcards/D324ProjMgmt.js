@@ -883,7 +883,217 @@ const flashcards = [
     { que:"Common Internal Risks",
         ans:`New Projects: company might approve a new, higher-priority project.
         Digital Transformation: assess the current technology stack and adopt modern products.
-        New Management: ` },
+        New Management: 
+        Reorganization: "organizational restructuring," cause reporting structure and job titles to change.
+        Merger and Acquisition(M&A): one company purchases another company, combining into a new entity` },
+    { que:"Common External Risks",
+        ans:`Infrastructure End-Of-Life (EOL): no longer supported/maintained by the vendor.
+        Major Cybersecurity Incident: aka "data breach" or "cyber-attack," when hackers steal data, seize control of systems, or modify data.
+        Regulatory Environment Changes: business must adhere to laws, taxes, and rules. Different regulations exist for various industries, locations, business sizes, and incorporation types. Regulation environment changes often, and compliance failures result in adverse impacts. Compliance failures are illegal and subject to legal action. Organizations assigned fines, remediation plans, reinspection, or even shutdown orders. ` },
+    { que:"Qualitative Risk Analysis",
+        ans:`subjective; based on how people perceive and interpret the risk. Use simple scales, ex: 1–10, low-medium-high.` },
+    { que:"Quantitative Risk Analysis",
+        ans:`objective; uses verifiable data to assign scores to project risks. Reliable if source data is accurate. However, takes longer to compile and measure.` },
+    { que:"Interconnectivity",
+        ans:`how risks interact with each other and create ripple effects across a project. Nothing exists in isolation, every risk could potentially influence multiple aspects of a project if it were to occur.` },
+    { que:"Detectability",
+        ans:`how quickly a risk would be identified if it were to occur. High detectability risks offer clear signals when a risk event occurs or will occur. Low detectability risks will occur with little to no warning.` },
+    { que:"Probability and Impact",
+        ans:`Probability: measures the chances of a risk occurring. "Probability Scale" uses a numerical or relative scale. The numerical scale runs from 0 to 1, where 1 equals a 100% chance of occurrence.
+        Impact: measures how the risk would affect the business if it were to occur. "Impact scale" uses either a numerical or relative scale. You can create a multidimensional impact assessment to measure how the risk impacts multiple measures, such as cost, time, or scope.` },
+    { que:"Failure Mode and Effects Analysis(FMEA)",
+        ans:`a structured risk analysis tool used frequently in manufacturing operations and product design. It is a detailed analysis of a single process that identifies multiple risks. An FMEA scores each risk’s probability, impact, and detectability to create a prioritized risk list.` },
+    { que:"Scenario Analysis",
+        ans:`"situational analysis" or "what-if analysis." A process where you generate potential events and evaluate the impact.` },
+    { que:"Negative Risk Strategies",
+        ans:`Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don’t invest.
+        Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
+        Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
+        Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don’t have to prevent every risk.` },
+    { que:"Positive Risk Strategies",
+        ans:`Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
+        Enhancement: increases the positive effects of the risk. The opposite of risk mitigation. Mitigation tries to suppress impact, enhancement maximize the benefits. Ex: you want the company to purchase collaboration software so you watch demos and identify uses and features.
+        Sharing: finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.
+        Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn’t. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
+    { que:"Mitigation and Contingency Plans",
+        ans:`Mitigation: a strategy for reducing the impact of negative risks and increasing the benefits of positive risks. Includes the actions, owners, timing, and funding necessary to optimize a risk’s impact.
+        Contingency: "fallback plan" or "backup plan." Part of the "contingent response strategy" for how to react when risk occurs, created before risk occurs but implemented at occurrence.` },
+    { que:"Risk Register",
+        ans:`Information gathered during the risk management process:
+        Risk ID
+        Risk description
+        Risk analysis summary
+        Impact, priority, or other scoring criteria
+        Risk priority or ranking
+        Risk owner
+        Risk response or treatment` },
+    { que:"Risk Report",
+        ans:`shares information about a project’s risk management process: 
+        Current project risk status
+        Total number of known risks
+        Trends
+        Summary of realized risks
+        Financial impacts as a result of realized risks
+        Timeline impacts as a result of realized risks
+        Scope impacts as a result of realized risks
+        Notable emerging risks
+        Notable timely and high-impact risks
+        Forecasted risk status` },
+    { que:"Risk Management Plan",
+        ans:`This document defines how the PM will manage risks.` },
+    { que:"Risk Management Plan Elements 1/2",
+        ans:`Approach: Describe how the process will work and which analysis tools will be used. Include any specific terminology, such as if you are choosing to use “threat” and “opportunity” instead of “negative risk” and “positive risk.”
+        Risk Identification Plan: Include a plan for how the team will identify risks. The risk identification plan can include multiple activities and sources, but it should have a clear focus.
+        Risk Register: Identify where you will store and manage risks.
+        Risk Breakdown Structure(RBS): Identify which categories you will use to classify the nature of the risks in an RBS.
+        Risk Assessment Strategy: Specify how the team will score risks, including criteria and scales. Include definitions for any qualitative scales.` },
+    { que:"Risk Management Plan Elements 2/2",
+        ans:`Risk Response Strategy: Summarize the risk response options used to manage risks.
+        Roles and Responsibilities: Name the roles and responsibilities for the entire risk management process. Include clear responsibilities for the risk owners and the risk manager.
+        Funding: List any financial factors, such as funding availability, funding needs, or resource requirements.
+        Risk Monitoring: Describe how you and the risk owners will identify and track risks.
+        Schedule: Outline the timing of all risk management activities. ` },
+    { que:"Transition Plan Elements",
+        ans:`Roles and responsibilities
+        Transition schedule
+        Maintenance schedule
+        Training: Identify operational training requirements and delivery channels, such as SMEs or computer-based training.
+        Activities
+        Tools and techniques: List specific tools, techniques, or processes the operations team will need longterm.
+        Product documentation
+        Asset turnover plan` },
+    { que:"Common Project Milestones",
+        ans:`Project approval
+        Project kickoff
+        Solution design approval
+        Project schedule approval
+        Project phase transition
+        Sprint demos
+        Release
+        Any approval events, such as from the client or stakeholder
+        Sprint goals` },
+    { que:"Work Breakdown Structure(WBS)",
+        ans:`use "decomposition" to break projects into manageable pieces.` },
+    { que:"Work Breakdown Structure - Key Terms",
+        ans:`Task: the action completed to deliver project work.
+        Activity: 
+        Work: 
+        Project schedule: includes WBS deliverables, timing, and resource needs.
+        Deliverables: outcomes of the project.` },
+    { que:"Sections of a Work Breakdown Structure",
+        ans:`Elements: deliverables in a WBS.
+        Work Package: "terminal element". Lowest element in the branch/leg; an element without a child element is a work package.
+        Level: layer of the WBS where an element resides.
+        Numbering Scheme: "code of accounts", a sequential numbering scheme: each level is separated by a decimal point and restarts at 1. (1.1 1.2, 1.3; 1.3.1; 2.1, 2.2; 2.2.1).
+        Leg: group of elements with a shared ancestor. The lowest elements in a leg will roll up to equal everything in the highest level of the leg.
+        Branch: one or more elements that do not represent the whole top-level element in the branch.` },
+    { que:"Work Breakdown Structure Design Guidelines",
+        ans:`Mutually Exclusive, Collectively Exhaustive: organization and problem-solving method. Each element exists without overlapping anything else, which makes it mutually exclusive.
+        100% Rule: the WBS includes 100% of the project work. Sounds similar to MECE, but it's different. This rule means the WBS includes exactly 100% of the project work, nothing more, nothing less.
+        Plan Around Outcomes: WBS should include outcomes instead of tasks. Tasks are too detailed for a WBS, taking creative freedom away from the team members.` },
+    { que:"Work Breakdown Structure Creation Process 1/2",
+        ans:`1. Determine Scope: Review project scope on project charter, scope statement, statement of work (SOW), and terms of reference.
+        2. Identify the Deliverables: deliverables need to capture the full scope of the project. These will turn into WBS elements.
+        3. Identify the Team Members: you identify new deliverables and work packages, add people with the necessary skills to your team.` },
+    { que:"Work Breakdown Structure Creation Process 2/2",
+        ans:`4. Build Level 2: This level sets the grouping or construction method.
+        5. Build Remaining Levels: Use the design guidelines to continue breaking work down into new levels. When you reach a point where you don't need to break it down again, you've reached the work package.
+        6. Build WBS Dictionary:
+        Work package ID, name, description
+        Assigned to
+        Date of assignment
+        Due date
+        Estimated cost` },
+    { que:"Product Backlog Versus Project Backlog",
+        ans:`Backlog is the body of work that a team will complete. The backlog owner continually refines and modifies the backlog. Project backlogs has a fixed start/end date, but product owner fills product backlog as long as the product is active.` },
+    { que:"Work Breakdown Structure Versus Project Backlog",
+        ans:`WBS and project backlog share similarities. Neither creates activities; both create deliverables.
+        WBS and project schedule will balance scope, time, and cost. Agile embraces flexible scope but fixes time and cost through agile ceremonies. WBS details are stored in a WBS dictionary, and product backlog details are stored in the backlog items.
+        A WBS assumes that scope, time, and cost are fixed and works to control them. A project backlog uses agile ceremonies to fix time and cost.` },
+    { que:"Agile Project Backlogs",
+        ans:`backlogs requires a similar breakdown process as WBS, but backlog breaks down into epics, features, and user stories.
+        Epic: a large deliverable often triggered by a business case.
+        Feature: smaller than an epic but sizeable; usually lasts 1–3 iterations.
+        User Story: the smallest agile deliverable. It is equivalent to a work package in both size and spirit. A user story does not describe how to do something, but it describes the expected outcome of completing the story.` },
+    { que:"Dependencies and Sequencing",
+        ans:`Dependency describes a relationship between activities. If two activities have a dependent relationship, one activity cannot start or finish until the other activity starts or finishes.
+        A single dependency involves two activities in a specific sequence. The activity that starts first is called the predecessor, the activity that starts second is the successor. Predecessor precedes the successor.` },
+    { que:"Dependency Sequencing Types",
+        ans:`Finish-to-Start(FS): Most common. Activity 1 finishes before Activity 2 starts.
+        Start-to-Start(SS): Activity 1 starts, Activity 2 starts after.
+        Finish-to-Finish(FF): Activity 1 finishes, Activity 2 finishes after.
+        Start-to-Finish(SF): Most rare. Activity 1 starts in order for Activity 2 to finish.` },
+    { que:"Dependency Logic Types - Mandatory v Discretionary",
+        ans:`Mandatory Dependency: "hard logic dependency", is unavoidable. Ex: you cannot start painting a wall until the wall is built.
+        Discretionary Dependency: "soft logic dependency", is a preference. Ex: a strategy for optimizing efficiency, lowering costs, or improving quality.` },
+    { que:"Dependency Logic Types - External v Internal",
+        ans:`External Dependency: outside the control of the organization. Ex: waiting for the internet provider to upgrade the network.
+        Internal Dependency: under your organization's control. Ex: waiting for legal team to review contracts before operation.` },
+    { que:"Estimation Techniques - Top-Down v Bottom-Up",
+        ans:`Top-Down: creates an estimate of the entire project or key deliverables. Then estimates are cascaded down to the activities. Top-down estimating is less accurate than other techniques. 
+        Bottom-Up: creates estimates at the lowest-level activities, work packages, and user stories. Then, the individual estimates are added together to create a project estimate. Bottom-up estimate is time consuming but more accurate than top-down estimate. ` },
+    { que:"Estimation Techniques - Analogous v Parametric",
+        ans:`Analogous: a top-down approach that uses historical data. For example, suppose you are estimating a marketing campaign project. If your previous similar projects lasted for six weeks, you could reasonably estimate that this project will last six weeks.
+        Parametric: augments either bottom-up or top-down estimates with historical data. It uses known variables, such as cost per hour and the number of hours, to create a custom estimate for a project. For instance, suppose you need to create four new advertisements for an ad campaign. Usually, you can complete a single advertisement in two hours. Using a parametric model, you can estimate that it will take eight hours to complete the four campaigns.` },
+    { que:"Estimation Techniques - Three-Point Estimating",
+        ans:`Used in combination with other estimating techniques. Factors multiple scenarios to create average estimate.
+        You collect three values: (O)ptimistic, (P)essimistic, and (M)ost likely.
+        Estimate = (O + M + P) / 3` },
+    { que:"Estimate Time and Effort",
+        ans:`Duration: the time between when a work package starts and when it ends.
+        Task Hours: more specific time measurement than duration. 
+        Story points are an estimating technique used in agile teams, so it would apply to user stories and not work packages. A story point is an abstract measure representing the relative complexity, risk, and uncertainty of the work needed to deliver a story. 
+        Storyt points values use modified Fibonacci sequence: 1,2,3,5,8,13. ` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
     { que:"",
         ans:`` },
     { que:"",
