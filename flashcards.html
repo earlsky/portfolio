@@ -170,7 +170,7 @@
     const card = flashcards[currentCard];
     document.getElementById('que').innerText = card.que;
     document.getElementById('ans').innerText = card.ans;
-    document.getElementById('counter').innerText =
+    document.getElementById('counter').innerText = 
       `Card ${currentCard + 1} of ${flashcards.length}`;
     document.getElementById('prevBtn').disabled = currentCard === 0;
     document.getElementById('nextBtn').disabled =

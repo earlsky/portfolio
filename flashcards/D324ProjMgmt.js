@@ -290,13 +290,17 @@ const flashcards = [
         5. Managing delivery: the PM measures the project’s performance. They also verify quality and obtain approvals of completed work.
         6. Managing a stage boundary: the PM prepares project updates and updates the project plan. The project board reviews the project data and decides if it should advance to the next stage or not. The project team captures lessons learned.
         7. Closing: the PM completes closing materials, turns over completed work, and closes the project.` },
+    { que:"Product Ownership - Roles",
+        ans:`Product Owner, Project Manager, Product Manager` },
     { que:"Product Owner",
         ans:`Product owners work within agile teams. They identify how to improve a product and are accountable for creating the most valuable product possible. A product owner tends to own a product for the entire product’s life cycle.` },
     { que:"Project Manager",
         ans:`They form a team for a short duration to achieve a specific objective. The PM is responsible for a project only as long as it is active.` },
     { que:"Product Manager",
         ans:`works in any framework. Product managers serve a more strategic function than product owners or PMs. Product managers oversee products and therefore exist for a product’s entire life cycle. They define the product strategy and create roadmaps to show how it will improve and change over time. The PM identifies projects and product changes. They often generate ideas that lead to new work for both PMs and product owners.` },
-    { que:"Project Manager PM responsibilities",
+    { que:"Project Team Roles And Responsibilities",
+        ans:`Project Manager, Business Analyst (BA), Architect, Developer/Engineer, Tester/Quality Assurance(QA), Customer/End-user, Vendor, Stakeholder, Subject Matter Expert(SME)` },
+    { que:"Project Manager responsibilities",
         ans:`Build project team and secure resources.
         Build project charter and define project scope.
         Establish project logs and processes, including: issue log, change log, risk register
@@ -355,7 +359,7 @@ const flashcards = [
         Availability by Phase
         Available on Request` },
     { que:"Percentage of Time",
-        ans:`n your organization, BAs are a functional group that supports projects. ex: one BA might work on up to four teams at a time, so they would allocate 25% of their time to your project.` },
+        ans:`in your organization, BAs are a functional group that supports projects. ex: one BA might work on up to four teams at a time, so they would allocate 25% of their time to your project.` },
     { que:"Availability by Phase",
         ans:`Your organization has a quality improvement team that moves through the organization as consultants. You can request a quality improvement consultant for the project’s execution phase. You would not include their availability in other project stages in this scenario.` },
     { que:"Available on Request",
@@ -844,7 +848,7 @@ const flashcards = [
         Shared Resources: work across multiple projects at once.` },
     { que:"Resource Life Cycle",
         ans:`Acquisition Phase: company brings resources into the company in the acquisition phase. Goods are procured, and people are recruited and hired.
-        Maintenance Phase: Resources are not self-sustaining. After acquired, they need updates, maintenance, evaluation. Equipment needs upkeep, repairs, upgrades, inventory tracking. Software needs security patches, updates, and managing licenses.
+        Maintenance (and Monitoring) Phase: Resources are not self-sustaining. After acquired, they need updates, maintenance, evaluation. Equipment needs upkeep, repairs, upgrades, inventory tracking. Software needs security patches, updates, and managing licenses.
         Improvement Phase: improve performance/effectiveness of resources. Equipment is adjusted and reconfigured, software is enhanced. Employees review processes and procedures to make efficient and cost effective
         Retirement Phase: Equipment breaks down/retires to make room for newer model, software goes out of service or invalid.` },
     { que:"Resource Retirement Examples",
@@ -859,6 +863,11 @@ const flashcards = [
     { que:"Resource Optimization Techniques",
         ans:`Resource Smoothing: attempts to reduce variation of resource usage from one time period to the next.
         Resource Leveling: reduces variation and allows the project timeline to extend.` },
+    { que:"Fishbone Diagram",
+        ans:`"Ishikawa diagram" or "cause and effect diagram.
+        A simple tool that visualizes how various factors impact a single outcome. 
+        A fishbone diagram has a single problem on the far right of the diagram, in the fish’s head. 
+        On the left of the diagram are various branches representing categories of potential causes for the problem; these branches look like the fish’s ribs."` },
     { que:"Skills Matrix",
         ans:`a visual tool for assessing the current state of a team's skills. Identify all the skills needed for a project, and record them on the matrix. Then, each person assesses their competency level.` },
     { que:"Histogram",
@@ -906,15 +915,15 @@ const flashcards = [
     { que:"Scenario Analysis",
         ans:`"situational analysis" or "what-if analysis." A process where you generate potential events and evaluate the impact.` },
     { que:"Negative Risk Strategies",
-        ans:`Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don’t invest.
-        Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
-        Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
-        Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don’t have to prevent every risk.` },
+        ans:`Avoid/Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don’t invest.
+        Mitigate/Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
+        Transer/Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
+        Accept/Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don’t have to prevent every risk.` },
     { que:"Positive Risk Strategies",
-        ans:`Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
-        Enhancement: increases the positive effects of the risk. The opposite of risk mitigation. Mitigation tries to suppress impact, enhancement maximize the benefits. Ex: you want the company to purchase collaboration software so you watch demos and identify uses and features.
-        Sharing: finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.
-        Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn’t. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
+        ans:`Exploit/Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
+        Enhance/Enhancement: increases the positive effects of the risk. The opposite of risk mitigation. Mitigation tries to suppress impact, enhancement maximize the benefits. Ex: you want the company to purchase collaboration software so you watch demos and identify uses and features.
+        Share/haring: finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.
+        Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn’t. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
     { que:"Mitigation and Contingency Plans",
         ans:`Mitigation: a strategy for reducing the impact of negative risks and increasing the benefits of positive risks. Includes the actions, owners, timing, and funding necessary to optimize a risk’s impact.
         Contingency: "fallback plan" or "backup plan." Part of the "contingent response strategy" for how to react when risk occurs, created before risk occurs but implemented at occurrence.` },
@@ -1072,52 +1081,218 @@ const flashcards = [
         PERT = ((O + 4M + P) / 6)` },
     { que:"Project Network Diagram - Critical Path Method(CPM)",
         ans:`incorporates duration, activities, dependencies, PERT estimates, and additional calculations. CPM analyzes a project schedule to identify the dependent activity sequence with the longest duration. This sequence represents the shortest total project duration, known as the critical path. For this reason, CPM is also called "critical path analysis." Critical path analysis is practical when a project has a fixed timeline.` },
-    { que:"CPM Analysis Process 1/3",
+    { que:"CPM Analysis Process 1-2/7",
         ans:`1. Diagram the activities and dependencies.
         2. Calculate the PERT estimate duration for each activity. (O + 4M + P) / 6` },
-    { que:"CPM Analysis Process 2/3",
+    { que:"CPM Analysis Process 3/7 - Calc ES and EF",
         ans:`3. Complete forward pass to calculate early start(ES) and early finish(EF).
         Early Start (ES): the earliest an activity can start based on predecessor activities.
-        Early Finish (EF): the earliest an activity can finish based on predecessor activities.
-        4. Complete a backward pass to calculate the late start and late finish.` },
-    { que:"CPM Analysis Process 3/3",
-        ans:`5. Calculate the total float (TF).
-        6. Calculate the free float (FF).
-        7. Identify the critical path.` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
+        ES = take the maximum EF of immediate predecessor.
+        Early Finish (EF): the earliest an activity. t = duration of activity.
+        EF = ES + t` },
+    { que:"CPM Analysis Process 4/7 - Calc LS and LF",
+        ans:`4. Complete a backward pass to calculate late start(LS) and late finish(LF).
+        Late Start (LS) is the latest an activity can start and still allow the project to finish on time.
+        LF = the minimum LS of all successors.
+        Late Finish (LF) is the latest an activity can finish and still allow the project to finish on time. t = duration of activity.
+        LS = LF - t` },
+    { que:"CPM Analysis Process 5/7 - Calc TF",
+        ans:`5. Calculate the total float (TF): the amount of time an activity can wait to start without impacting the total project timeline. aka "slack" because it measures the unused time in the schedule.
+        TF = LS - ES
+        TF = LF - EF` },
+    { que:"CPM Analysis Process 6/7 - Calc FF",
+        ans:`6. Calculate the free float (FF): the amount of time an activity can wait to start without impacting any other activities. Mathematically, FF is the amount of time an activity can delay without encroaching on the early start of any subsequent activities.
+        FF(1) = the minimum ES of all direct successors - EF(1)` },
+    { que:"CPM Analysis Process 7/7 - Identify Critical Path",
+        ans:`7. Identify the critical path.
+        Critical Path = list of all activities where (TF = 0)` },
+    { que:"Usefulness of CPM Outputs",
+        ans:`1. Project Duration
+        2. Critical Path
+        3. Total Float (TF)
+        4. Free Float (FF): ` },
+    { que:"Minimum Viable Product(MVP)",
+        ans:`early version of a product. The MVP has enough functionality to demonstrate how a product will operate so that early adopters can use the product and provide feedback. The MVP is functional but not complete. ` },
+    { que:"Detailed Scope Statement",
+        ans:`"preliminary scope statement" is prepared in the initiation phase with unknowns, fewer details, general ideas.
+        By the end of planning phase, team will know project scope in detail, creating Detailed Scope Statement.` },
+    { que:"Elements of a Detailed Scope Statement",
+        ans:`Project Scope Description
+        Project Acceptance Criteria
+        Project Deliverables (In Scope)
+        Project Exclusions (Out of Scope)
+        Assumptions
+        Constraints
+        ---
+        OPTIONAL FIELDS:
+        Milestones
+        Requirements
+        Tasks
+        Risks
+        Budget
+        Estimates and Estimation Methods` },
+    { que:"Estimate Costs",
+        ans:`Project costs include direct and indirect costs. 
+        Direct costs: are created as a result of a project. Ex: specific resource or activity, such as an equipment rental and materials cost. 
+        Indirect costs: are overhead costs that support operations, including your project. You cannot trace exactly how much of an indirect cost is incurred by a project. Ex: utilities, building supplies, and management staff.` },
+    { que:"Project Reserves",
+        ans:`Contingency Reserve: "contingency buffer"; a calculated buffer of time and cost that covers documented risks. These risks are “known unknowns,” which we know about, but don’t know if they will happen. PM can authorize use of contingency reserves.
+        Management Reserve: additional sum of time or money that covers “unknown unknowns”; setbacks that we have not forecasted and do not know if they will happen. Senior management has authority over management reserves. PM can access these reserves after escalating issue and obtaining approval.` },
+    { que:"Methods for Calculating Reserves",
+        ans:`Reserve Analysis: accommodates multiple methods for calculating contingency reserves, each with benefits/drawbacks.
+        Percentage of the Project's Cost: a simple calculation that uses a percentage of the project’s cost estimate. This method is for smaller organizations/projects. 3–10% reserve is sufficient.
+        Monte Carlo Analysis: popular simulation technique. Uses three-point estimate to create probability distribution. You need the optimistic, most likely, and pessimistic estimates for each project activity.` },
+    { que:"Methods for Calculating Reserves - EMV",
+        ans:`Expected Monetary Value(EMV): requires each risk’s probability and impact assessment. First, the probability and the financial impact of occurrence are multiplied for each risk. Then, the EMV for each risk is summed to calculate the project’s contingency buffer. EMV is helpful for large, expensive projects with many risks.
+        EMV = Probability x Impact
+        ex: Risk Activity 1 | Probability: 20% | Impact: -$5000 | EMV: -$1000
+            Risk Activity 2 | Probability: 35% | Impact: -$7000 | EMV: -$2450
+            Risk Activity 3 | Probability: 45% | Impact: -$8250 | EMV: -$3712.50
+            Total EMV = -$7162.50
+            Contingency Reserve = $7162.50` },
+    { que:"Methods for Calculating Reserves - Decision Tree Analysis",
+        ans:`Decision Tree Analysis: in contingency planning; is a quantitative decision-making tool.
+        Three parts:
+        1. Decision: decision tree asks one question.
+        2. Option: have 2+ ways responding to the decision.
+        3. Outcome: each options generates 2+ outcomes.
+        EMV = Probability × Impact
+        ---
+        EMV(A1) = 70% × (-10,000) = -$7,000
+        EMV(A2) = 30% × (-50,000) = -$15,000
+        EMV(A) = -$22,000
+        ---
+        EMV(B1) = 90% × (-5,000) = -$4,500
+        EMV(B2) = 10% × (-100,000) = -$10,000
+        EMV(B) = -$14,500
+        ---
+        Choose lower-cost option, EMV(B)` },
+    { que:"Project Baselines",
+        ans:`baseline aids the "change control process". Scope tends to change, and the baseline is the source of truth for the original scope. When significant change requests come in, you can reference the baseline to evaluate the impact. It can also justify renegotiating contracts or rebaselining the project.
+        Scope baseline: original scope from detailed scope statement. It includes project’s key deliverables.
+        Schedule baseline: the total project duration captured from project schedule.
+        Cost baseline: the expected costs plus contingency reserves. Represents total project cost within PM’s control.` },
+    { que:"How to Create a Baseline",
+        ans:`1. Set the scope and key deliverables. ex: Scope Baseline: All new appliances in matching color scheme; New countertops; New flooring; Painted walls; Tiled backsplash.
+        2. Create a schedule with a project duration and deadline. ex: Schedule Baseline: 8 weeks
+        3. Sum the project cost estimate and contingency reserve to create the cost baseline. ex: Cost Baseline: $25,000
+        4. Obtain stakeholder approval.` },
+    { que:"Project Budget",
+        ans:`a summary of all resource costs. It is the total project cost, including the cost estimate, contingency reserve, and management reserve.` },
+    { que:"Budget Considerations",
+        ans:`Manage the reserves: Represent the cost estimate, contingency reserve, and management reserve as separate categories.
+        Maintain your documentation: Many calculations and decisions go into creating the project estimates. Keep a separate document with the reasoning for each estimate so you can refer to it if an estimate is wrong or needs to change.
+        Keep the budget updated: Update budget when changes occur. It’s easy to forget details, and tracking down missing information is not a good use of time. ` },
+    { que:"Quality Assurance(QA)",
+        ans:`set of processes that touch every part of a project. Ex: software testing, customer surveys, and hiring practices.` },
+    { que:"QA Plan",
+        ans:`created in planning phase, used throughout project. Describes how the team will ensure the project outputs meet the project’s requirements.` },
+    { que:"QA plan answers several questions...",
+        ans:`If we do this work, how will we verify that it meets expectations?
+        If this risk were to occur, how would we prevent quality defects from escaping?
+        This process could create defects. How can we prevent defects?
+        If our process isn’t working, how can we recognize and improve it?
+        If our customer finds a defect, how will we recover?` },
+    { que:"QA Plan Contents",
+        ans:`Quality Standards: document any industry or regulatory standards that apply to the project. Ex: health codes.
+        Quality Objectives: list measurable quality targets. The project will have quality metrics, ex: on-time delivery and number of defects.
+        Roles and Responsibilities: identify the people responsible for managing the program, adhering to standards, and evaluating products against the standards.
+        Deliverables and Approach: identify deliverables and processes subject to QA activities. Then, list QC activities, standards, and when they will occur for each deliverable or process.` },
+    { que:"QA Plan - Verification Activities",
+        ans:`Verification: objectively confirms that the deliverable meets quality standards. Verification compares the project against documented standards.
+        Retrospectives: "lessons learned"; when meeting to reflect on their performance and improve.
+        Inspection: Quality Control(QC) tool, where you examine finished product and compare to expected results by running user acceptance tests(UATs).
+        Audits: type of inspection process that reviews processes to identify issues.` },
+    { que:"Types of Software Tests - Automated v Manual Testing",
+        ans:` Automated testing: runs faster than a person could, which allows a developer to run more tests more frequently. In addition, it enables practices such as continuous integration, and it increases the confidence in the software’s quality. But, need people to build and maintain automated tests.
+        Manual testing: time consuming and expensive. Requires people every step of the test. Creates capacity limit on development; continuous integration(CI) will not succeed in manual testing. People tend to skip manual tests or resist building the feature. But manual testing is adaptive as people detect software appearance and work around it.` },
+    { que:"Types of Software Tests - Unit Testing",
+        ans:`Unit testing: measures smallest piece of functionality in software. Each component/unit is tested. Works well with modular coding where developers reuse code. Unit tests run as the developer writes code and are highly valuable. ` },
+    { que:"Types of Software Tests - Regression Testing",
+        ans:`Regression testing: when making changes to existing code, run regression tests to ensure that the new code does not break existing functionality. Regression testing doesn't introduce new tests, but reruns existing tests.` },
+    { que:"Types of Software Tests - Smoke Testing",
+        ans:`runs a high-level system test. Runs after the code is compiled into a build and before deployment and release. These tests confirm that the main features are working before detailed tests run. This test method detects a flawed build before the team invests time in testing smaller components. Ex: a shopping website needs to show items, add items to a cart, and check out items. A smoke test will ensure that these features work because, if they don’t, no other tests will matter, since the site can’t perform its core functions.` },
+    { que:"Types of Software Tests - User Acceptance Testing(UAT)",
+        ans:`evaluates the final outputs against specifications. If this test passes, you can safely assume a user will accept the product. In addition, UAT tests whether a product would satisfy the business requirements if it were released to production.` },
+    { que:"Types of Software Tests - Performance Testing",
+        ans:`measure the system’s performance. They evaluate if the system is stable and fast enough to work under various workloads. Performance tests usually measure expected conditions. ex: measuring how a website responds to 0–5,000 simultaneous users.` },
+    { que:"Types of Software Tests - Stress Testing",
+        ans:`a specific type of performance testing. Most performance tests measure performance under expected conditions. but stress testing evaluates how a system performs when it reaches or exceeds the expected workload. ex: if website expects 5,000 simultaneous users, a stress test will measure 4,500–25,000 simultaneous users.` },
+    { que:"Create a Test Plan",
+        ans:`test plan is a reference that describes how a project will verify the project’s outputs meet expectations. It includes test strategy, specific schedule of events, tests to run, and necessary resources. Includes manual and automated tests. Created in the project planning phase, and quality testers reference and update it throughout the project. It describes expected standards and how the tests will measure against them.
+        Both quality tester and developer ensure "verified deliverables" meet project requirements.` },
+    { que:"Test Plan Elements",
+        ans:`Scope: scope is a compressed form of the project scope.
+        Types: test types section identifies how the team will test the deliverables. It lists the types of tests used in the project, what they will test for, and when they are used.
+        Schedule: schedule includes when testing will start and end. It includes dates for each test category.
+        Resources: includes the systems and people needed to complete testing and all activities in the test plan. 
+        Envinronment: "test environment" mimics the production environment, but failures in the test environment do not impact the product’s end-users. Outline the necessary configurations, hardware, and software needed for a test environment. 
+        Tools: list all the software requirements under tools and a brief reason for use for reporting test results, recording defects, and sharing progress.
+        Defect Management: include clear expectations for defect handling. ex: specify which system to use for recording, when to record a defect, and which information to capture. 
+        Risk Management: summarizes those risks relevant to the testing process
+        Exit Parameters: explains what the end of testing looks like. ` },
+    { que:"Validation Activities",
+        ans:`Service Level Agreement(SLA): is as close to a guarantee as you get in service. 
+        It's a service contract that specifies performance expectations and consequences of failing to meet expectations. 
+        Ex: cloud provider will offer SLA of 99.999% uptime and credit subscription costs for downtime exceeding 0.001%.` },
+    { que:"Project Management Plan",
+        ans:`a set of documents that describes what the team will deliver and how they will deliver them. It also reviews how the PM will manage the project and how the team will measure success. This lesson and several previous lessons discussed how to build each of these tools.` },
+    { que:"Project Management Plan Contents",
+        ans:`Detailed Scope Statement
+        WBS or Backlog
+        Resource Plan
+        Project Schedule
+        Quality Management Plan
+        Risk Management Plan
+        Communication Plan
+        Stakeholder Management Plan
+        Project Baselines
+        Project Budget
+        Project Plan Approval` },
+    { que:"Procurement management ",
+        ans:`starts as early as discovery phase and lasts until the last contract is closed` },
+    { que:"Procurement Process Steps",
+        ans:`Determine needs: PM defines the procurement requirements needed to meet the project’s objective.
+        Submit a purchase requisition: PM formally requests help from the procurement team to acquire resources.
+        Complete the solicitation process:procurement specialist prepares a request to solicit quotes, bids, or proposals from vendors. 
+        Evaluate and select vendors: evaluation committee will review and score the vendor proposals on predetermined, objective criteria.
+        Manage orders: procurement specialist or PM generates purchase orders (POs), and the vendor begins work in response. 
+        Manage records and payments: accounting, purchasing, and procurement teams review order records.` },
+    { que:"Common Procurement Artifacts",
+        ans:`Purchase Order (PO): a customer request for specific goods or services.
+        Master Service Agreement(MSA): an overarching document that defines the terms of a vendor–buyer relationship. It establishes general logistics that don’t apply to a specific project, such as payment terms, termination provisions, and ethical statements.
+        Contracts v POs often get confused: Procurement contract establishes agreement to purchase something at some point. Contract is fulfilled through one or more POs.` },
+    { que:"Resource Procurement Methods",
+        ans:`Build: Using your resources to create it. It includes designing, building, and implementing a product, including cost of securing resources.
+        Buy: You purchase from a third party, and ownership transfers from the seller to you.
+        Lease: a fixed-term contract where you pay initial fee and regular recurring payments for duration of the lease. A lease includes additional costs for interest, fees, maintenance, and repairs.
+        Subscription / Pay-as-You-Go: You can rent/subscribe to a resource, "pay-as-you-go" purchasing model. subscription is an all-inclusive rental model where you pay a flat fee for access to a resource for a set duration. A subscription includes all fees, maintenance, and repairs. Subscriptions have the lowest initial costs of all the options mentioned here. However, subscription costs accrue for as long as you use the product. Subscription providers manage all updates for you. This model works well when you want a low-maintenance option with the latest models or for short-term or low-volume use, pilot activities, or a small budget.` },
+    { que:"Exploratory Procurement Documents",
+        ans:`Request for Information(RFI): used to learn more about solutions before initiating the solicitation process. Vendor responds to an RFI with more information about their products or services.
+        Request for Proposal(RFP): used to solicit multiple vendor proposals for a solution.
+        Request for Bid(RFB): solicits proposals like RFP, but vendors compete on price. Since you cannot factor in other criterias, this works best for straightforward work and commodity items (ex: office supplies). 
+        Request for Quote: an exclusively financial proposal. A formal document requesting pricing information for detailed, specific requirements, such as supplies or labor. Vendors respond with pricing models that describe delivering the project scope and coss.` },
+    { que:"Procurement Statement of Work(SOW)",
+        ans:`a formal document that outlines the work a vendor needs to deliver. It’s included with an RFP to provide additional information about the project. It clarifies the scope, sets expectations, and outlines technical requirements.` },
+    { que:"3 types of Statement of Work(SOW)",
+        ans:`Design: is process prescriptive. Outlines how to deliver the work, and it sets resource and performance requirements at each stage. 
+        Functional: is outcome focused. lists the requirements of a finished product only. How to deliver the work is left to the vendor, which can propose alternative approaches or scope adjustments.
+        Performance: describes the expected outcomes along with minimum performance standards. It is more fixed than a functional SOW, but it is still outcome focused and flexible for vendors.` },
+    { que:"Terms of Reference(TOR)",
+        ans:`a specific version of an SOW. Similar to SOW, but focuses on deliverables, and TOR focuses on relationships. SOW involves working together, TOR involves delivering work. TOR resembles a functional SOW, focusing on objectives. TOR is used in consulting/professional services, where value is derived from the relationship, ` },
+    { que:"Procurement Market Research",
+        ans:`collecting information about the product, service, suppliers, and industry trends. Market research firms specialize in gathering industry information through benchmarking studies; final reports are available to subscibers or the public.` },
+    { que:"Competitive Analysis",
+        ans:`discussed alongside market research because they look at the same information from different angles. Market research identifies vendors that provide goods/services. Competitive analysis compares vendors against each other. It evaluates how firms compete in the market. Competitive analysis is a practical recurring procurement activity. ` },
+    { que:"Predetermined Clients",
+        ans:`Developers create products for specific audience, predetermined clients. The predetermined client could be a model user or preferred configuration that optimizes product’s performance. Understanding the product’s predetermined clients can help you compare the potential usefulness of two or more options.` },
+    { que:"Capital v Operational Expenses",
+        ans:`CapEx: permanent assets, such as data centers, vehicles, and equipment. Organizations rarely purchase them, making them noticeable purchases that fall outside the company’s typical operating budget. Capital purchases require intensive capital budgeting because of the high cost. CapEx assets depreciate over multiple years on the accounting register and income statements. Therefore, disposal of such assets must be reported for proper accounting.
+        OpEx: organization’s regular expenses; (ex: salaries, taxes, and recurring expenses, (ex: subscriptions, rentals, utilities)). OpEx are already built into the budget and do not depreciate. Acquiring/disposing OpEx assets is more feasible/flexible.` },
+    { que:"Review Current Vendor Options - Preexisting Contracts",
+        ans:`Your organization has active contracts with many vendors. After defining a project’s requirements, the procurement specialist will review these contracts to determine if any of the vendors are a good fit for your needs. Preexisting contracts are more efficient than bidding and awarding a new contract. But, leveraging a preexisting contract only works when a vendor has the capacity, capability, and interest in delivering the work. An established vendor will still require a TOR or SOW for your project’s requirements. You may need to create a separate document or modify their existing material.` },
+    { que:"Review Current Vendor Options - Prequalified Vendors",
+        ans:`may have prequalified vendors, which have been initially vetted to confirm that they meet basic requirements to work with the organization. The procurement team keeps their information on file in a qualified vendors list and can invite them to participate in an RFP when appropriate. Prequalified vendors can onboard faster, which streamlines the procurement process. Prequalification is mutually beneficial because it expands professional networks.` },
     { que:"",
         ans:`` },
     { que:"",
