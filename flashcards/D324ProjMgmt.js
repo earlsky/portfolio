@@ -1492,18 +1492,35 @@ const flashcards = [
         ans:`used to review change requests. The project manager won’t facilitate this meeting if organization has a change control board (CCB). Instead, you new change requests to this meeting and present them to the board. Prepare an analysis of the change, recommendations, and implementation plans if approved. The board will approve/deny the change, and update the change log and project plan accordingly.` },
     { que:"Conditional Meetings - Ad Hoc Reporting",
         ans:`could be a meeting where you share project information with an audience or a request for data. Purpose of ad hoc report depends. Ex: you might be called to highlight the project at an event, or a stakeholder might need an updated report for one of their activities. Analysts often use project data and might contact you for information. If your reports are good, people will notice and want to use the information for their decision-making activities. Ad hoc requests are a compliment to your skills. Best way to prepare for ad hoc requests is to keep your data updated and your reports easy to create. ` },
-    { que:"Providing Project Team Performance Feedback",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
+    { que:"Providing Project Team Performance Feedback - Feedback Process",
+        ans:`feedback loop is a process cycle where you inspect and improve a system.
+        1. Gather Feedback. Gather work performance information from multiple objective and subjective sources.
+        2. Analyze Feedback. Review and summarize the information, and clarify details whenever needed. Develop proposals for expectations.
+        3. Act on Feedback. Share the information with the affected parties. Identify what will change, if anything. Set a change plan.
+        4. Follow Up. Watch to see how the feedback and changes affect the process. Verify if the change had the intended affect. Then, follow up with the individuals to praise successes and review setbacks.` },
+    { que:"Providing Project Team Performance Feedback - Feedback Sources",
+        ans:`Performance Metrics: Generate project performance reports, and you can glean helpful feedback. Analyze the data to identify specific successes and failures.
+        Stakeholder Comments: Stakeholders will provide feedback throughout the project via meetings, emails, and informal conversations. Summarize and disseminate that information to your team.
+        Observation: monitor project’s operations and inevitably see people deviate from a process or improve a system. Look for how each person is contributing to the product, and take note.
+        Teammate Feedback: Teammates know how a person is affecting the project. Solicit comments from teammates through formal feedback systems or one-on-one meetings. Observe how teammates interact and look for opportunities to amplify positive feedback. Summarize this information, and share anonymously.
+        Lessons Learned: lessons learned or retrospective sessions generate extensive amount of feedback. The entire team is present and receives the feedback together. But, you can monitor the feedback and look for trends that support other feedback you’ve gathered.` },
+    { que:"Tips for Delivering Feedback",
+        ans:`Make sure people know what to do with the information.
+        Be sensitive to potential reactions when delivering feedback.
+        Manage the timing for sharing feedback.
+        Select an appropriate delivery method.
+        Share a balance of positive and negative feedback.
+        Be comfortable giving feedback.` },
+    { que:"Issue Management Process",
+        ans:`Identify the issue: Find and record issues in an issue log.
+        Analyze: Determine the issue’s cause and impact and prioritize all issues.
+        Resolve: Decide what to do about the issue and do it.
+        Monitor: Confirm the issue is resolved and close it.` },
+    { que:"Issue Management Process - Identify the Issue",
+        ans:`Add every issue to the issue log promptly. A simple issue tracking process makes it more likely that issues will appear in the log before they are forgotten.
+        Review the "points of escalation" aka "escalation points" for each issue. Notify increasingly higher levels of authority as a single issue accordingly to escalation points. Ex: when system is down for 15min: escalate to Tech Support Supervisor...30min: ++Communications and Operations Manager...60min: ++Systems Engineering Director and Operations Director.` },
+    { que:"Issue Management Process - Analyze the Issue",
+        ans:`Conduct root cause analysis to determine why the issue is occurring. Then, review the issue log to look for other symptoms. Just as the cold virus can cause many symptoms, you may learn that a single root cause creates multiple issues.` },
     { que:"",
         ans:`` },
     { que:"",
