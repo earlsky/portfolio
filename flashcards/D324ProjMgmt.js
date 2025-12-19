@@ -127,6 +127,11 @@ const flashcards = [
     { que:"Scrum",
         ans:`A lightweight, customer centric framework. 
         Uses "empiricism", which encourages teams to make decisions based on what they see and know. Stands out as "all-or-nothing" framework, meaning you use all parts of Scrum.` },
+    { que:"Scrum Process",
+        ans:`1. The product owner prioritizes work into a product backlog.
+        2. The Scrum team selects the top items in the backlog. The top items create a sprint backlog, which will deliver a working product that helps solve the top problem in the product backlog.
+        3. The Scrum team and stakeholders review the sprint results and adapt the product and the team’s approach for the next sprint.
+        4. The steps repeat as long as the product backlog exists.`},
     { que:"Scrum Values",
         ans:`commitment, focus, openness, respect, courage` },
     { que:"Scrum pillars",
@@ -1293,6 +1298,222 @@ const flashcards = [
         ans:`Your organization has active contracts with many vendors. After defining a project’s requirements, the procurement specialist will review these contracts to determine if any of the vendors are a good fit for your needs. Preexisting contracts are more efficient than bidding and awarding a new contract. But, leveraging a preexisting contract only works when a vendor has the capacity, capability, and interest in delivering the work. An established vendor will still require a TOR or SOW for your project’s requirements. You may need to create a separate document or modify their existing material.` },
     { que:"Review Current Vendor Options - Prequalified Vendors",
         ans:`may have prequalified vendors, which have been initially vetted to confirm that they meet basic requirements to work with the organization. The procurement team keeps their information on file in a qualified vendors list and can invite them to participate in an RFP when appropriate. Prequalified vendors can onboard faster, which streamlines the procurement process. Prequalification is mutually beneficial because it expands professional networks.` },
+    { que:"Financial Evaluation Techniques",
+        ans:`Vendor selection is an objective due diligence process. The evaluation panel can use several "vendor evaluation techniques" to select a vendor. The evaluation method and "source selection criteria" are finalized before the RFP is sent to create a fair vendor selection process. An evaluation committee can apply multiple evaluation techniques in the same vendor selection process.` },
+    { que:"Financial Evaluation Techniques - Best-Value v Lowest-Cost",
+        ans:`"lowest-cost" price evaluation technique compares all bids on price exclusively. The vendor that quotes the lowest cost receives the contract. This technique only works when there is no discernible difference between vendors like commoditized product/service.
+        Best-value evaluation considers cost and additional performance factors in selecting the vendor that provides the most value at a reasonable cost. A flexible vendor evaluation model that allows evaluators to consider qualifications, vendor reputation, and approach. Best-value procurement can reduce risk in a project because it allows you to select highly qualified vendors. It is a preferred method when you expecting variations between vendors. Ex: if vendors sell unique solutions or have different ways of designing or implementing solutions, a complex model like best-value procurement is preferable to the lowest cost.` },
+    { que:"Financial Evaluation Techniques - Cost-Benefit Analysis(CBA)",
+        ans:`a project analysis technique. It compares the cost of a project against expected financial benefits it delivers. The project is a good investment if the benefit exceeds the cost total, according to the CBA.
+        CBA needs to include comprehensive data. Costs also include direct costs; ex: consulting fees, vendor expenses, and capital costs. Includes indirect costs, ex: training, costs incurred downstream/upstream, and changes in overhead costs. The monetary value of benefits needs to be thorough as well. ` },
+    { que:"Practical Evaluation Techniques - Physical v Financial Capacity",
+        ans:`capacity evaluation" considers if vendor meets the demands of the contract. Physical capacity refers to the volume of work a vendor can produce for your contract. Volume can refer to units sold, consulting hours, or any other resource unit of measure. Ex: if you need 1,000 units per month, you would select vendors with the capacity to sell you at least 1,000 units per month. If you require a full-time consultant, you would evaluate if the vendor can provide a dedicated consultant.
+        "Physical capacity evaluations" considers current and long-term growth projections; you can also include an extended projection that arises from scenario planning. Ex: your project expects 1,000 units per month in regular growth models and 15,000 units in unprecedented models. If you selected a vendor that can accommodate up to 2,000 units, you would have an unresolved capacity risk should the 15,000-unit scenario occur.
+        "Financial capacity evaluation" measures the firm’s financial stability, or vendor viability. Vendor relationships are long-term affairs, so you want to work with vendors that intend to exist for a while. A financial evaluation reviews the vendor’s financial statements and credit documentation. You can also review public documentation, such as bankruptcy filings and mergers.` },
+    { que:"Vendor Qualifications",
+        ans:`an evaluation process that compares the buying organization’s requirements against the vendor’s ability to provide them. A qualified vendor must be able to deliver goods or services to the expected standards, and will need to prove that they meet requirements throughout the contract.` },
+    { que:"Fit Evaluation Techniques - Demonstration",
+        ans:`vendor demonstration, aka "demo" or "product demo." Is an interactive session where the vendor demonstrates their solution. Demonstrations are particularly popular when procuring software. A demonstration gives you more interactive information about a product, such as its design and ease of use.` },
+    { que:"Fit Evaluation Techniques - Technical Approach",
+        ans:`technical approach to vendor selection requires evaluators to compare vendor submissions to the project requirements. A technical evaluation is a highly structured event. Technical evaluators score a product strictly against the criteria outlined in the solicitation and nothing else. Vendors offering products above and beyond the requirements do not receive a higher score.
+        References: After selecting final vendor and before signing a contract, the procurement specialist conducts reference checks with a vendor’s other clients. First, procurement specialist inquires about the client’s experience with the vendor. Next, procurement analyst asks how they interact, which technology they use, and why they work with the vendor. They also inquire about the vendor’s performance, including their responsiveness, work quality, on-time performance, and cost management. A reference check reveals information from the source you might not receive elsewhere.` },
+    { que:"Fixed Price Contracts",
+        ans:`"lump sum contract", agrees for fixed scope of work and places most of the contract risk on the vendor. Ex: if materials cost increases, the vendor would not receive more money to cover that. Therefore, their profit margins would shrink. A fixed-price contract is suitable when the contract’s scope will not change.` },
+    { que:"3 types of Fixed-Price Contracts",
+        ans:`firm fixed-price (FFP),
+        fixed-price incentive fee (FPIF),
+        fixed-price with economic price adjustment (FP-EPA).` },
+    { que:"Firm Fixed-Price(FFP) Contract",
+        ans:`sets an expectation with the vendor to deliver on time. In exchange, they will receive the total price offered in the contract. Buyers prefer this contract because it controls costs better than any other fixed-price model. Vendors assume the most risk with this contract type, but it works well if they can deliver work at a lower cost than the buyer estimated.` },
+    { que:"Fixed-Price Incentive Fee(FPIF) Contract",
+        ans:`buyer can add incentives to a fixed-price contract. An incentive is an additional payment for meeting targets. Ex: an FPIF could have a deadline of 24 months but offer a 5% bonus for completing in 20 months or less. You can use an incentive for any measurable target, such as time, quality, or system uptime. ` },
+    { que:"Fixed-Price with Economic Price Adjustment(FP-EPA) Contract",
+        ans:`a fixed-price contract that factors inflation. Each year, the fixed price increases by a certain amount or percentage to cover average inflation costs. Vendors enjoy FP-EPA contracts because it stabilizes their profit margins by providing additional allowances to cover rising resource costs. Buyers benefit from FP-EPA because it still controls costs, and vendors are more likely to sign long-term contracts. FP-EPA is suitable for multi-year contracts where resource costs are expected to increase over time.` },
+    { que:"Cost-Plus Contracts",
+        ans:`"cost-reimbursable contract", pays for all resource costs needed to complete the work plus a fee to the vendor, representing the vendor’s profit margin. The cost-plus contract places most of the risk on the buyer. The buyer pays for all expenses and will pay for increased material costs. The buyer also pays for the vendor’s poor (or efficient) resource management. A cost-plus contract works well when a project has a flexible scope because the buyer can stop the work when they meet their needs—or run out of funds.` },
+    { que:"Four types of Cost-Plus Contracts",
+        ans:`cost-plus fixed fee (CPFF), 
+        cost-plus incentive fee (CPIF), 
+        cost-plus award fee (CPAF), 
+        cost-plus percentage of cost (CPPC).` },
+    { que:"Cost-Plus Fixed Fee(CPFF) Contract",
+        ans:`vendor receives a fixed fee for the work. Fee will not alter if there's change in scope, costs, or performance. CPFF contracts are appealing to vendors when a project is otherwise unattractive.` },
+    { que:"Cost-Plus Incentive Fee(CPIF) Contract",
+        ans:`eases risk for the vendor. But, the vendor will receive a larger payout for the increased risk. Incentive calculations use clear, objective measures, and the entire formula structure is built into the contract. This format reduces disputes and ambiguity for both parties.` },
+    { que:"Cost-Plus Award Fee (CPAF) Contract",
+        ans:`Used when project team struggles to define objective performance metrics. It pays costs plus a fee adjusted for performance. A CPAF contract includes performance goals in the contract, but the goals are not easily measurable. Therefore, the organization subjectively assesses the vendor’s performance and adjusts the fee accordingly. If the vendor fails to meet expectations, they will not receive payment.` },
+    { que:"CPAF and CPIF contracts sound similar",
+        ans:`but have two key differences. First, CPAF uses subjective measures, and CPIF uses an objective formula. Second, the payment awarded in a CPAF is not open to negotiation, but either party can dispute the award in a CPIF contract.
+        Buyers prefer a CPAF contract when the vendor is a risk, such as if they are new to the field. Vendors prefer CPAF when they know they can exceed the project’s requirements. A CPAF contract increases the risk of a project going over budget, since the award is unknown until the final payment.` },
+    { que:"Cost-Plus Percentage of Cost(CPPC) Contract",
+        ans:`a vendor receives a fee equal to a percentage of all costs. This contract pays vendors relative to the amount of work they do or the value of their work. A vendor prefers this type of contract for high-value projects and projects where predicting a final cost is difficult. A CPPC contract contains no total cost, which increases risk for buyers. Buyers prefer this contract when costs are well understood and under control. This contract also benefits buyers when they want to focus on other elements, such as performance or quality. It’s also helpful when the buyer wants the ability to change materials, such as upgrading the flooring material in a remodeling project.` },
+    { que:"Hybrid Contracts - Unit Price Contract",
+        ans:`"measurement" or "remeasurement" contract. Works well when purchasing definable, same-sized bundles of work. The buyer agrees to pay a fixed price per work unit delivered. The vendors set their unit costs and include all their expenses and profit. This term contract model works well when you need to purchase repetitive work and the quantity or scope is unknown at the start of the project. Unit price generally higher than bulk price, ` },
+    { que:"Hybrid Contracts - Time and Materials (T&M) Contract",
+        ans:`when a project has a fixed cost and a flexible scope. The buyer pays materials and labor costs up to the maximum price listed in the contract. Labor costs are charged by the hour and use a fixed hourly rate defined in the contract. The vendors set their hourly costs and incorporate expenses and profit. Buyers prefer this when they want to control the maximum cost but would like to retain flexibility during project execution. ` },
+    { que:"Contract Terms - Warranty",
+        ans:`the vendor’s commitment to resolving defects. It describes how long the vendor expects its product to be defect free and defines how it will remedy the situation if something fails.` },
+    { que:"Contract Terms - Warranty Elements",
+        ans:`Length: warranty is valid for a specific duration. Ex: one year.
+        Scope: warranty covers failures resulting from the production process. Ex: warranty applies if your cell phone’s Wi-Fi antenna suddenly fails. But will not cover if you accidentally run over your phone with your car.
+        Remediation: vendors define what they will do; a refund, replacement, or both.
+        Limitations and Exclusions: vendor identifies the boundaries of their responsibility. Warranty lists limitations of coverage or excluded situations. A vendor recognize warranties only with proof of purchase or exclude coverage if a product is being used in a way not intended. 
+        Commencement: highly relevant for projects. For example, a software implementation warranty in a project procurement could include free remediation for failures. The commencement clause describes when this warranty goes into effect, alleviating disputes.` },
+    { que:"Contract Terms - Nondisclosure Agreement (NDA)",
+        ans:`you agree that you won’t share specific information with others. An NDA allows you to exchange sensitive or valuable information yet remain relatively confident that it will remain private.` },
+    { que:"Certain events trigger the need for an NDA:",
+        ans:`New product development: both parites sign if collaborating on new product/design.
+        Nonpublic information: if vendor accesses nonpublic information, NDA can protect proprietary and sensitive data.
+        Facilities: request an NDA if the vendor will access your facilities, where they can see proprietary processes, equipment, or information.
+        Consulting: consultants should sign an NDA for their clients because the consulting process naturally leads to sharing nonpublic information.` },
+    { que:"Vendor Management - Rules of Engagement",
+        ans:`operating agreements for how the vendor and project team will work together to deliver a project. They include expectations for communication, decision-making, conflict resolution, and roles and responsibilities and guidelines for recognition and celebration. Good rules of engagement create respectful interactions with the team to increase productivity.
+        Vendors have contractual obligations, and failing to meet a deliverable could delay their compensation or constitute a "breach of contract"(Failure to meet obligations of a contract resulting in damages paid to the injured party, litigation, or other ramifications). ` },
+    { que:"Vendor Management - Monitor Performance",
+        ans:`track quantifiable vendor performance, ex: adherence to SLAs. You will track a vendor’s performance over time. Performance trends help you determine the severity of a missed SLA. ex: a single missed SLA from an otherwise high-performing vendor is not as worrisome as a consistent downward trend in performance.` },
+    { que:"Vendor Management - Approve Deliverables",
+        ans:`approval involves reviewing the work delivered and comparing the quality against the standards. The PM approves deliverables; this is the official signal that the work meets expectations. In addition, approving deliverables indicates that the vendor is eligible to collect payment when the work is tied to contract terms.` },
+    { que:"Maintaining Project Momentum",
+        ans:`Start Strong: Start the project with a clear vision. Know why the project matters and what it needs to deliver. You should be able to talk about the project in under 30 sec.
+        Set the Pace: PM reiterates deadlines and sets expectations for the team. They also set cadences and maintain them. Ex: if you set a monthly meeting cadence, don’t cancel half the meetings, becuase it will create a perception that the cadence is every two months, and work will slow.
+        Look Forward: PM’s should look ahead to tomorrow’s work and clear potential roadblocks. Ex: if developers rely on the operations team to release a product, you would keep in contact with the operations team and look for potential issues, such as down environments and staffing issues. Then you can clear the issues, monitor them for improvement, adjust your schedule, or warn your team.
+        Motivate the Team: PM needs to know the value of the project better than anyone else, it’s their mission to ensure the team understands its importance. Convey the purpose of every deadline and milestone to ensure that people doing the work have the motivation to meet the goals. Recognize the team’s hard work, and celebrate successes at every retrospective, milestone, or phase gate review.` },
+    { que:"Requirements Traceability Matrix(RTM)",
+        ans:`Traceability measures how well you can follow the path of something. Ex: cat walking in snow leaves trail prints; high traceability. Cat walking in concrete sidewalk leaves little-no trace; low traceability.
+        Traceability is a necessity, incase a drug recall occurs, you can trace back using lot codes.` },
+    { que:"Time and Work Tracking Tools - Project Management Applications",
+        ans:`designed to track projects and plan the needed activities. It includes the ability to create tasks and track owners, progress, and deadlines. Usually includes a duration but not a time estimate.` },
+    { que:"Time and Work Tracking Tools - Time Tracking Applications",
+        ans:`a detailed data collection tool and tracks how long it takes to complete tasks. Includes ability to create projects/tasks, similar to "project management application". But, users also track their hours worked and associate them with specific tasks/projects. PMs use time tracking applications to measure project’s completion progress. ` },
+    { que:"Time and Work Tracking Tools - Project and Time Tracking Applications",
+        ans:`Both applications include beneficial features; ex: report generation, that simplify communication processes. Users also track their activity progress within both tools at varying levels of detail. So you can review progress and create reports without contacting each individual for updates` },
+    { que:"Time and Work Tracking Tools - Task Board",
+        ans:`a visual task tracking tool (ex: Kanban board). Task board shows each work item as a card, and the cards are organized into lanes by their work states. Activity owners move the cards across the board, from a “to do” state to a “finished” state as they finish work. A task board is also easy to update; users drag and drop cards to update the status. ` },
+    { que:"Version Control Tool",
+        ans:`are traceability tools for source code. They track/manage code changes by automatically tracking what changed, when, and by whom. They retain previous code versions to revert to a working version when necessary.` },
+    { que:"Event Logs - Issue Log",
+        ans:`event happening in a project that you do not control. An issue log tracks/manages issues. The log helps you organize and prioritize the list to focus on the highest-priority items because you won’t have enough time and resources to address everything. For each issue; record a description, date found, who found it. Then prioritize the list and capture the plan for addressing it. Finally, record the owner, and track any changes to the issue.` },
+    { que:"Event Logs - Issue Log fields",
+        ans:`Issue Number
+        Description
+        Priority
+        Impact
+        Raised By (the person who reported the issue)
+        Owner (the person who will fix the issue)
+        Status
+        Date Found
+        Date Closed
+        Comments` },
+    { que:"Event Logs - Defect Log",
+        ans:`occurs when a product was built assuming it would meet a requirement but fails to do so. A defect is an issue found in software development, used primarily in software projects.` },
+    { que:"Event Logs - Defect Log fields",
+        ans:`Defect Number
+        Description
+        Failed Test(s)
+        How to Reproduce
+        Priority (Urgent, High, Medium, Low)
+        Impact (Critical, High, Medium, Low)
+        Found By
+        Owner (the person who will resolve the defect)
+        Status (ex: New, In Progress, Fixed, Won't Fix, Closed, Blocked)
+        Date Found
+        Date Fixed
+        Comments` },
+    { que:"Event Logs - Change Log",
+        ans:`project change occurs when the project’s activities differ from the project plan. Change happens in every project. That includes both requests, such as a request for a new feature, and unplanned changes, such as a team member leaving. You will not implement every change request you receive. However, you should record and evaluate changes to identify those that would improve a project.` },
+    { que:"Event Logs - Change Log fields",
+        ans:`Change Number
+        Description
+        Requested Type
+        Priority
+        Impact
+        Requested By
+        Owner
+        Status
+        Date Requested/Identified
+        Date Implemented
+        Comments` },
+    { que:"Burnup v Burndown Charts",
+        ans:`these charts manage scope and time. Both charts are easy to create and read and used internally by teams.
+        Burnup and burndown charts plot two values: target and actual work. Each chart is a "line chart" or a "line and column chart". For simplicity, this course will use the line and column chart. The project timeline runs along the horizontal axis. The vertical axis visualizes the amount of work, measured in task hours or story points.` },
+    { que:"Burnup Chart",
+        ans:`measures the total amount of work "completed" each day. A line represents the target for completed work. It starts at zero on the first day of the project, and the last day has all the work. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like constructing a skyscraper or climbing a mountain, the work builds up.` },
+    { que:"Burndown Chart",
+        ans:`measures how much work is "remaining" each day. A line represents the target for the day. The first day of the project plots all work remaining, and the last day plots no work remaining. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like a lit candle, the work “burns down” to zero. A burndown chart focuses on the end goal. It works well with a fixed timeline, like in agile teams.` },
+    { que:"Velocity v Throughput Charts",
+        ans:`Agile teams use velocity and throughput charts to set their work goals in future sprints. These measure a team’s historical performance data. Teams use their historical performance as a predictor of future performance. Any team that tracks work items can use throughput because it measures the number of work items completed. Velocity is only used by teams that measure work with story points.` },
+    { que:"Throughput Charts",
+        ans:`measures the number of items completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: the throughput chart shows that they deliver an average of 13 user stories per sprint. So they should include approximately 13 stories in the next iteration.` },
+    { que:"Velocity Charts",
+        ans:`measures how many story points are completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: a team’s velocity chart shows that they usually deliver an average of 21 story points. So they should plan for no more than 21 story points at the next iteration.` },
+    { que:"Team Meetings - Team Status Meeting",
+        ans:`"team touchpoint meeting"; the team’s regular recurring meeting. The purpose is to update the project’s overall progress and solve problems. Team use this time to review problems and brainstorm solutions. This is a working meeting than a stakeholder meeting.` },
+    { que:"Team Meetings - Team Status Meeting agenda",
+        ans:`Open action items
+        Status updates
+        Task updates
+        Open risks and issues
+        New risks and issues
+        Scope, time, and cost performance
+        RACI updates` },
+    { que:"Team Meetings - Sprint Planning",
+        ans:`Sprint Planning is held regularly with Scrum.
+        Held at beginning of each sprint, the team plans their work for upcoming sprint. First; set sprint capacity using historical throughput/velocity. Next; review top priority items in the backlog and break them into smaller work items. Then add items to sprint plan to fill sprint to capacity; these items form the sprint backlog.` },
+    { que:"Team Meetings - Sprint Planning agenda",
+        ans:`Project goal review.
+        Issues, defects, and changes that could affect the project plan.
+        Sprint target (velocity or throughput).
+        Sprint backlog development.` },
+    { que:"Stakeholder Meetings",
+        ans:`occurs less frequently than the team meeting. The purpose is to report on the project’s overall progress, gather feedback, and highlight what stakeholders will see next. A stakeholder meeting should summarize everything and leave most of the time for discussion. Be prepared to answer perceptive questions about the project.
+        PM facilitate status reports for internal/external stakeholders. Adjust meeting’s agenda and tone for each audience. External meetings are restrained than internal meetings. External audience doesn’t know about the internal workings of your organization, so don't include specific departments or issues. External meeting focuses on externally visible deliverables and milestones. You might discuss development milestones with internal stakeholders, you would only tell stakeholders about the go-live event for software.` },
+    { que:"External Stakeholder Meeting agenda",
+        ans:`High-level project status.
+        Project roadmap or upcoming releases.
+        Major milestones and deadlines.
+        Next steps.
+        Feedback solicitation.` },
+    { que:"Internal Stakeholder Meeting agenda",
+        ans:`High-level project status.
+        Critical roadblocks, risks, and issues.
+        Major milestones and deadlines.
+        Scope, time, and cost performance.
+        Next steps.
+        Feedback solicitation.` },
+    { que:"Conditional Meetings",
+        ans:`meetings that don’t happen on a recurring schedule. These conditional meetings occur on request or requesting support from a specific group.` },
+    { que:"Phase Gate Meetings",
+        ans:`phase gate review meeting is held at every phase gate. A phase gate meeting occurs when the project moves from one phase to the next. The end of the project is moving from the closing phase to a closed state, so it’s also a phase gate. This meeting aims to prove that the project has met all requirements for the current phase and is ready to move to the next phase. You will review project’s deliverables, lessons learned, and plans for the future. You can also recognize the team and celebrate successes.` },
+    { que:"Phase gate meetings end with one of three decisions",
+        ans:`1. All phase criteria are met, and the project can move to the next phase (or close in the final stage).
+        2. The project hasn’t met all phase criteria and needs to stay in the current phase.
+        3. The project is no longer viable and is canceled.` },
+    { que:"Conditional Meetings - Change Control Meeting",
+        ans:`used to review change requests. The project manager won’t facilitate this meeting if organization has a change control board (CCB). Instead, you new change requests to this meeting and present them to the board. Prepare an analysis of the change, recommendations, and implementation plans if approved. The board will approve/deny the change, and update the change log and project plan accordingly.` },
+    { que:"Conditional Meetings - Ad Hoc Reporting",
+        ans:`could be a meeting where you share project information with an audience or a request for data. Purpose of ad hoc report depends. Ex: you might be called to highlight the project at an event, or a stakeholder might need an updated report for one of their activities. Analysts often use project data and might contact you for information. If your reports are good, people will notice and want to use the information for their decision-making activities. Ad hoc requests are a compliment to your skills. Best way to prepare for ad hoc requests is to keep your data updated and your reports easy to create. ` },
+    { que:"Providing Project Team Performance Feedback",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
     { que:"",
         ans:`` },
     { que:"",
