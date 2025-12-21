@@ -1520,7 +1520,183 @@ const flashcards = [
         ans:`Add every issue to the issue log promptly. A simple issue tracking process makes it more likely that issues will appear in the log before they are forgotten.
         Review the "points of escalation" aka "escalation points" for each issue. Notify increasingly higher levels of authority as a single issue accordingly to escalation points. Ex: when system is down for 15min: escalate to Tech Support Supervisor...30min: ++Communications and Operations Manager...60min: ++Systems Engineering Director and Operations Director.` },
     { que:"Issue Management Process - Analyze the Issue",
-        ans:`Conduct root cause analysis to determine why the issue is occurring. Then, review the issue log to look for other symptoms. Just as the cold virus can cause many symptoms, you may learn that a single root cause creates multiple issues.` },
+        ans:`Conduct root cause analysis to determine why the issue is occurring. Then, review the issue log to look for other symptoms. Ex: cold virus causes many symptoms, you may learn that a single root cause creates multiple issues.
+        Root Cause Analysis: technique to determine true cause of an issue.` },
+    { que:"Issue Management Process - Analyze the Issue - Scatter Diagram",
+        ans:`Scatter Diagram "scatter plot": demonstrates relationships between two variables on the (x,y) axis.
+        Scatter Diagram - Positive Correlation: when one variable increases, the other also increases.
+        Scatter Diagram - Negative Correlation: when one variable increases, the other decreases.
+        Scatter Diagram - No Correlation: when one variable increases, no clear relationship.` },
+    { que:"Issue Management Process - Analyze the Issue - Run Chart",
+        ans:`Run Chart "time series plot": a time-based line graph that shows time/sequence on horizontal axis and values on vertical axis.` },
+    { que:"Issue Management Process - Analyze the Issue - Pareto Chart",
+        ans:`Pareto Principle asserts that you can solve most problems by fixing a small portion of the root causes. The 80/20 rule is a simple way to describe the principle: 80% of issues are created by 20% of the causes.` },
+    { que:"Issue Management Process - Analyze the Issue - 5 Whys",
+        ans:`a simple root cause analysis tool that looks beyond the surface issue to uncover hidden root causes
+        Define the Problem: Clearly define the problem.
+        1. Why is this problem happening?
+        2. Why is that?
+        3. Why?
+        4. Why?
+        5. Why?` },
+    { que:"Issue Management Process - Analyze the Issue - Fishbone",
+        ans:`useful during issue resolution process. Fishbone or "Ishikawa diagram" looks like the bones of a fish. It is helpful for identifying multiple potential causes for a single problem. The fish’s head contains the problem, and the ribs contain possible related causes. You can use standard categories, such as the 6Ps (policy, process, people, plant, program, and product), or create categories customized to your issue.` },
+    { que:"Issue Prioritization Tools - Issue Severity",
+        ans:`Issue Severity: reflects how it will impact the end-users of a product. Severity measures extensiveness of issue's effect using simple scale:
+        Critical: system is completely inaccessible or nonfunctional. Needs immediate attention from operations, support, and management. Critical issue blocks customers from using application.
+        Major: system is working, but one or more features are unavailable. Major issues require update as soon as practical.
+        Minor: all key features work, but not as expected. Users can access all features, but may need a "workaround".
+        Low: basic functionality is present. Cosmetic defects do not affect functionality but should be resolved for branding, consistency, or improved user experience. Spelling errors and formatting errors are examples of low-severity issues.` },
+    { que:"Issue Prioritization Tools - Urgency",
+        ans:`Urgency: measures the time sensitivity of an issue; should tell you how soon the issue needs to be addressed. The urgency reflects both effects and expectations. The effects are how soon the issue will affect the business or end-users, reflecting how often users access this service.
+        Critical: resolve immediately. critically urgent issue means customers expected it to be fixed already or need it fixed now.
+        Major: resolve within hours. Major urgency means the issue should be resolved within hours if you want to avoid impacting the customer/business. 
+        Medium: resolve within days. 
+        Minor: resolve when convenient. Fix when it is practical. Minor issues can run for weeks or months before affecting the business, if they affect it at all.` }, 
+    { que:"Issue Prioritization Tools - Impact on Project",
+        ans:`Impact: is a measure of quantity. Measures how much/many are affected by an issue. Consider how the issue will affect the scope, schedule, or budget. Customize the scope of the impact assessment. Ex: your organization may assess project impact based on cost and schedule only if it operates with a flexible scope.
+        High: project may not finish. An issue with high impact could put the project at risk. Issues in this category would prevent the team from completing the deliverables. It might finish but is drastically behind schedule or over budget. 
+        Medium: project may be delayed. Will have a noticeable yet tolerable effect on the project. 
+        Low: project will likely be fine. No noticeable effect on the total project. ` },
+    { que:"Issue Prioritization Tools - Scope of Impact on Organization",
+        ans:`measures how many people or items are affected by this issue. Uses a simple scale. Often associated with set quantities.
+        High: impacts most. An issue with high organizational impact will affect many people or many quantities.
+        Medium: impacts many. Might affect several users or segment. Should be resolved soon, but medium impact means most users can work unimpeded. It might affect several batches of goods that can still be quarantined.
+        Low: impacts few. An issue with a low impact on the organization would have minimal effect on its operations. ` },
+    { que:"Issue Prioritization Tools - Issue Escalation",
+        ans:`a process that ensures critical risks and issues receive appropriate follow-up.
+        High: plan in place, has been escalated. High rated issue has an escalation plan and has been escalated. Issues in this category have more people working on them and following up on them. 
+        Medium: plan in place, not been escalated. Medium rated issue has an escalation plan in place, but hasn’t been activated yet. If unresolved, it would be escalated and then move to a high rating.
+        Low: no plan to escalate. Low rated issues do not have an issue escalation plan. These issues may be routine that they are resolved before escalation. ` },
+    { que:"Issue Prioritization Tools - Issue Prioritization",
+        ans:`use a descriptive scale to assist with the initial evaluation, paired with numerical value (1-9; 9 is highest/critical). 
+        Ex: Numerical Scale: 9-3-1
+        Impact on Project: High-Medium-Low
+        Impact on Organization: High-Medium-Low
+        Issue Escalation: High-Medium-Low 
+        ---
+        Ex: Numerical Scale: 9-7-3-1
+        Severity: Critical-Major-Minor-Low
+        Urgency: Critical-Major-Medium-Minor ` },
+    { que:"Issue Management Process - Resolve the Issue",
+        ans:`Review the escalation plan to determine if the issue has been addressed on it already.
+        Assign an owner to each issue. The issue owner will determine how to resolve the issue and hold final accountability for the issue. ` },
+    { que:"Issue Management Process - Monitor the Issue",
+        ans:`The "issue resolution plan" requires multiple monitoring activities:
+        Monitoring resolved issues to make sure they stay resolved.
+        Monitoring open issues to ensure they aren’t more problematic than expected.
+        Monitoring project performance to identify new issues.
+        Verify Issue Resolution: Verify and approve each completed resolution. Look for performance data or feedback to confirm the resolution. Another SME or process owner may verify the resolutions as well.
+        Remove Workarounds: use a workaround in the issue management process, an alternate approach to completing work that circumvents an inconvenience or problem
+        Complete Outcome Documentation: Close the issue in the issue log. Update issue log with notes about how the issue was resolved and its impact on the project. You can then change the issue’s status to a closed/resolved.` },
+    { que:"Control Charts",
+        ans:`statistical charts that tracks variation in a process. Chart does not consider targets or goals, it shows if the process is performing as usual. A process performing “in control” has acceptable amount of variation. Conversely, a process with unacceptable levels of variation is not performing as expected and is "out of control."
+        Chart looks like a run chart with additional data. Also a time-based line graph. It uses all the data you would use in a run chart and more. Time/sequence is on horizontal axis, output is on vertical axis. ` },
+    { que:"Control Charts - Control Limits",
+        ans:`1. center line (CL) is the mean of the actual values graphed.
+        2. upper control limit (UCL), highest expected value for the process, when under control.
+        3. lower control limit (LCL), lowest expected value for the process, when under control.` },
+    { que:"Control Charts - Variations",
+        ans:`Variation is neutral; it simply represents a deviation from past, expected performance. However, you want process performance to change over time. 
+        Common Cause Variation - variation expected to see. Control limits are built around common cause variation. You can eliminate it with enough budget and focus, but it’s not the focus for most projects. Attempting to remove common cause variation usually leads to overcorrection. It worsens performance over time unless you are working on a variation-reduction process. If not, you can accept common cause variation as part of the cost of the process.
+        Special Cause Variation - variation you want to detect when monitoring a project. Special causes are unique events that changed something about a process and created an unusual outcome. When you find a special cause event, you should analyze the cause of the variation. Then you can decide if you want to preserve or prevent the variation in the future.` },
+    { que:"Change Control",
+        ans:`change Control process: a formal series of artifacts and procedures that tracks modifications to a project, product, or system. Change control accepts requests, evaluates them, and approves/denies them.
+        Change Control process(4 phases):
+        Initiate the request.
+        Evaluate impacts.
+        Decide on an outcome.
+        Implement the change.` },
+    { que:"Benefits of Change Control",
+        ans:`change control process keeps the project aligned to the business needs.
+        Change control improves traceability for project requirements.
+        Change control simplifies work. It sets a standard process for how stakeholders request project changes.
+        Change control eliminates confusion. Changes will happen whether you use change control or not.` },
+    { que:"Reasons for Change Requests",
+        ans:`Inconsistencies: request changes to create a more stable, consistent plan.
+        Aggressive Goals: Projects often start with nearly unattainable goals, known as "stretch goals." At some point in the project, you may realize that a goal is too aggressive. You can change the goals to reflect the most likely project outcomes.
+        Team Improvements: improves their systems at every retrospective, phase gate, and lessons learned event. Team may identify new ways to approach the project and submit change requests.
+        Strategic Changes: organization’s strategic direction may switch in the middle of your project. Redirect a project to protect it from cancellation.
+        Scope: When a project delivers more or less work than originally intended, a scope change can bring it back into alignment.
+        Product Change: could drive change in your project. Product and project changes are different yet interrelated events.` },
+    { que:"Scope Change v Scope Creep",
+        ans:`Scope creep: is unapproved change.
+        Scope change: is approved project change.` },
+    { que:"Control Change - Initiate the Change Request",
+        ans:`Change requests process uses 2 documents: "change request form" and "change log".
+        Change request form fields:
+        Project Name
+        Date Requested
+        Description
+        Reason for Change
+        Priority
+        Impact
+        Requested By
+        Owner
+        Deadline(s), If Applicable
+        Comments` },
+    { que:"Change Control - Evaluate Impacts",
+        ans:`PM conducts a thorough impact assessment for every change that moves past the preliminary review. The review completed in the previous step clarified the request and removed unnecessary ones because this evaluation is more complex and time consuming. They analyze the change request to understand how it would affect the project’s resources, budget, scope, and schedule. They also work with the project team to define the potential work packages and resource requirements.` },
+    { que:"Change Control - Software Change Approval",
+        ans:`Software Change Approval:
+        Technical Approval:
+        Product Owner Approval:
+        Architectural Approval` },
+    { que:"Change Control - Implement the Change",
+        ans:`Communicate the Change Status: After deciding on the change request’s outcome, PM will inform the team, and the team uses this information to plan how they can incorporate the change.
+        Update the Project Plan: PM updates the project plan. The extent of updates will depend on the nature of the change. For example, you may need to update the schedule, deliverable, or budget. You may also need to update the RACI, business case, or stakeholder management plan. The PM role includes evaluating approved changes and resolving all the potential impacts.
+        Validate the Change Implementation: The project manager, change requester, and change reviewer will validate the change implementation. 
+        Communicate Change Deployment: After validation, PM will notify the stakeholders of the completed change to ensure they are updated on the current project condition. They also include changes in recurring meetings and reports, such as the project status report.` },
+    { que:"IT Change Delivery Methods",
+        ans:`Maintenance Windows "downtime windows": changes require taking a system offline, meaning end-users cannot access it, and it will not perform services. Companies prefer to limit downtime and maximize uptime. Intentional changes are planned downtime events, but it’s still downtime.
+        Releases: Software changes reach the end-users through a release. A software release is the version of a product that is accessible to end-users in a production environment. 
+        Customer Notifications: Customers are notified of upcoming software changes via maintenance notifications. Customers need to be aware of any maintenance windows because they may experience disruptions and outages. Advance notice allows users to plan their usage accordingly. ` },
+    { que:"ITIL category changes",
+        ans:`Standard: recurring, routine changes with set policies and procedures. These are the tasks that don’t require additional approval/communication. Do not need to notify customers of these changes.
+        Normal: modifications that do not have a set process and do not happen often. Planned in advance and often require customer notifications to varying degrees. 
+        Emergency: unplanned, recovery events. Rarely give advance notice, but can notify customers during/after the event. ` },
+    { que:"IT Change Risk Mitigation",
+        ans:`Rollback Plans: When new change doesn’t work in production, a "rollback" removes all of the new changes. Rollback plan provides how to roll back the system and whom to contact.
+        Release Validation Checks: QA team conducts tests when a release succeeds and new software is in production. These post-production release validations confirm that the production software behaves as expected. The QA team verifies functionality and validate that the product meets the requirements.
+        QA Testing:
+        1. QA team tests all changes in a test environment, and the test environment should match the production environment exactly. Any inconsistencies between the environments could allow a release to work in one and fail in the other.
+        2. Use manual deployments as eployment procedures flow in a specific sequence, and breaking the sequence can cause problems in production.
+        3. Test environment uses a smaller set of example data, so it may not test for every scenario possible.
+        4. Impacts frequently change, particularly in large systems. For example, thousands of people continually create releases and modify code in an extensive, interconnected system, such as an operating system or search engine.` },
+    { que:"IT Environments - Tiered Software Architecture",
+        ans:`environment is also called a "stage" or "tier" which creates separate environments to work on a product without affecting the production environment, customer, source code at risk.
+        Three basic tier types that cover DevOps cycle:
+        1. software is developed in the "development environment"; available locally to a single user. This environment allows the developer to make changes to the code.
+        2. beta stage is a "test environment". When satisfied with the changes, the developer will push code from their development environment to the beta environment, which is a copy of the live product that is not connected to live data.
+        3. When the release works in beta, it’s ready for "production environment". The production stage is the live environment that end-users can see. When you open a website or app, you are looking at its production environment. ` },
+    { que:"Measure Performance - Scope Burndown Chart",
+        ans:`` },
+    { que:"Measure Performance - Budget Burndown Chart",
+        ans:`` },
+    { que:"Measure Performance - Project Performance Gap Analysis",
+        ans:`` },
+    { que:"Measure Performance - Contingency Reserve Utilization",
+        ans:`` },
+    { que:"Measure Performance - Earned Value Management (EVM)",
+        ans:`` },
+    { que:"Measure Performance - Calculating the Base EVM Metrics",
+        ans:`` },
+    { que:"Measure Performance - EVM: Cost Performance Metrics",
+        ans:`` },
+    { que:"Measure Performance - EVM: Forecasting Performance",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
+    { que:"",
+        ans:`` },
     { que:"",
         ans:`` },
     { que:"",
