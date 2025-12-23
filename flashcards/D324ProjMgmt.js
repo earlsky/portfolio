@@ -3,7 +3,7 @@ const flashcards = [
         ans:`Concept/Delivery, Initiation, Planning, Execution, Closing` },
     { que:"Project Life Cycle - Concept/Delivery Phase",
         ans:`Decide if project is practical. Analyze financial returns, feasibility, implementation options.` },
-    { que:"IProject Life Cycle - Initiation Phase",
+    { que:"Project Life Cycle - Initiation Phase",
         ans:`outline project, identify parties with vested interest, bring project team together to kick off project work. Draft high-level summary of project goals and timeline.` },
     { que:"Project Life Cycle - Planning Phase",
         ans:`Turn project goals into detailed plan. Team define all activities needed to complete. PM will manage team logistics and ensure adequate resources. Have project work schedule and performance metrics for tracking progress.` },
