@@ -1,15 +1,15 @@
 const flashcards = [
     { que:"Project Life Cycle phases",
         ans:`Concept/Delivery, Initiation, Planning, Execution, Closing` },
-    { que:"Project Life Cycle - Concept/Delivery Phase",
+    { que:"Concept/Delivery Phase",
         ans:`Decide if project is practical. Analyze financial returns, feasibility, implementation options.` },
-    { que:"Project Life Cycle - Initiation Phase",
+    { que:"Initiation Phase",
         ans:`outline project, identify parties with vested interest, bring project team together to kick off project work. Draft high-level summary of project goals and timeline.` },
-    { que:"Project Life Cycle - Planning Phase",
+    { que:"Planning Phase",
         ans:`Turn project goals into detailed plan. Team define all activities needed to complete. PM will manage team logistics and ensure adequate resources. Have project work schedule and performance metrics for tracking progress.` },
-    { que:"Project Life Cycle - Execution Phase",
+    { que:"Execution Phase",
         ans:`Team delivers work. Team writes code, configure systems, or build a house. Create supporting materials and coordinate with each other to complete the work. PM monitors progress, measure performance, find and solve problems, maintain records, create reports.` },
-    { que:"Project Life Cycle - Closing Phase",
+    { que:"Closing Phase",
         ans:`project winds down and ensuring everything is ready to close. Confirm project is thorough, update documentation, create financial summary. Request official approval to close project.` },
     { que:"Sections of Business Case",
         ans:`Executive Summary, 
@@ -19,19 +19,19 @@ const flashcards = [
         Project Definition, 
         Financial Overview, 
         Recommendation` },
-    { que:"Sections of Business Case - Executive Summary",
+    { que:"Executive Summary",
         ans:`brief synopsis of the business case. Gives overview of main points including problem statement, solution, expected results.` },
-    { que:"Sections of Business Case - Problem Statement",
+    { que:"Problem Statement",
         ans:`shares details about the problem. Presents thorough analysis of current situation and the business problem, opportunity, or unmet need. Problem statement describes something that will change due to this project.` },
-    { que:"Sections of Business Case - Problem Analysis",
+    { que:"Problem Analysis",
         ans:`Provides context about why the project should be a priority. Include historical performance data, environmental assessment, other evidence to support the business case.` },
-    { que:"Sections of Business Case - Options",
+    { que:"Options",
         ans:`describes several approaches to solving the problem. Compares solutions against each other with pros/cons. Every business case includes two options: do nothing and the project will propose in the recommendation. "Alternatives identification" is a simple step that adds depth to your business case.` },
-    { que:"Sections of Business Case - Project Definition",
+    { que:"Project Definition",
         ans:`includes additional information about proposed project. Ex: contain details about the project scope, resources needed, milestones, implementation timeline.` },
-    { que:"Sections of Business Case - Financial Overview",
+    { que:"Financial Overview",
         ans:`covers economic impacts of the project. Ex: project cost, where money will come from, what company can gain. This section contains cost-benefit analysis or ROI analysis and risks and assumptions.` },
-    { que:"Sections of Business Case - Recommendation",
+    { que:"Recommendation",
         ans:`narrows downs options to best solution with justification.` },
     { que:"Current state",
         ans:`describes what is happening now.` },
@@ -63,18 +63,21 @@ const flashcards = [
         Project Work: Accomplishes something new.` },
     { que:"Types of Organizational Structures",
         ans:`Functional, Projectized, Matrix` },
-    { que:"Functional Organization Structure",
-        ans:`divides organization by areas of expertise/specialization.
-        PMs coordinates the project, but have little authority over people or cost.` },
+    { que:"Functional Organization",
+        ans:`divides organization by areas of expertise/specialization. 
+        "Functional manager" retains the budget and people management responsibilities.
+        PMs coordinates the project, but have little "relative authority" over people or cost.
+        Ex: President -> IT VP (IT Staff) - Operations VP (Ops Staff) - Marketing VP (Marketing Staff) -> HR VP (HR Staff)` },
     { que:"Projectized Organization Structure",
-        ans:`organization pool resources around projects. PMs lead each team vs specialized managers. Also fewer layers and branches.` },
+        ans:`organization pool resources around projects. PMs lead each team vs specialized managers.
+        Ex: President -> Project A PM(Project team members) - Project B PM(Project team members) - Project C PM(Project team members)` },
     { que:"Matrix Organization Structure",
         ans:`Include functional leaders and specialized roles, however organization hires PMs and sponsors projects` },
     { que:"Matrix organizations subtypes",
         ans:`Weak matrix: functional manager retains all budget and staff management responsibilities.
-        Strong matrix: PM has substantial control over the budget` },
+        Strong matrix: PM has substantial control over the project, have management authority over people and budget.` },
     { que:"Level of Project Manager Authority in Organizational Structures",
-        ans:`No Authority <- Functional Org - Weak Matrix Org - Strong Matrix Org - Projectized Org -> Total Authority` },
+        ans:`[No Authority] <- Functional Org - Weak Matrix Org - Strong Matrix Org - Projectized Org -> [Total Authority]` },
     { que:"Projects in a Program",
         ans: `a project has a single objective, while a program has multiple related objectives.`},
     { que:"Project Management Roles",
@@ -272,13 +275,13 @@ const flashcards = [
     { que:"PRINCE2’s structure",
         ans:`principles, themes, processes, and tailoring to suit the needs of the project environment. The methodology uses "7 principles, 7 themes, and 7 processes" to move the project forward by defining the approach, artifacts, and activities that do so.` },
     { que:"PRINCE2 Principles",
-        ans:`1. Continued business justification
-        2. Learn from experience
-        3. Defined roles and responsibilities
-        4. Manage by stages
-        5. Manage by exception
-        6. Focus on products
-        7. Tailor to suit the product` },
+        ans:`1. Continued business justification: where other methodologies create a business case to start the project, PRINCE2 projects update the business case throughout the project's life. 
+        2. Learn from experience: this lessons learned or continual improvement process helps teams learn from their own experience and other projects. Team maintains lessons log.
+        3. Defined roles and responsibilities: PRINCE2 creates clarity for team members. This process leads to faster decision-making and reduced friction.
+        4. Manage by stages: this process breaks projects into 2+ phases, the boundaries between phases serve as checkpoints for the project board. PMs handle daily management duties, the project board reviews a project when it is ready to move from one stage to the next.
+        5. Manage by exception: this phase sets performance tolerances for the standard project performance metrics: time, cost, quality, scope, benefits, and risk. 
+        6. Focus on products: team understands and agrees on the product’s definition and quality requirements.
+        7. Tailor to suit the product: PMs adapt PRINCE2 elements to fit a specific project’s size, scope, and requirements.` },
     { que:"PRINCE2 Themes",
         ans:`1. Business case: use the business case to provide continued business justification.
         2. Organization: define and document the roles and responsibilities.
