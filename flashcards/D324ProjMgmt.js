@@ -1,15 +1,15 @@
 const flashcards = [
     { que:"Project Life Cycle phases",
         ans:`Concept/Delivery, Initiation, Planning, Execution, Closing` },
-    { que:"Concept/Delivery Phase",
+    { que:"Project Life Cycle - Concept/Delivery Phase",
         ans:`Decide if project is practical. Analyze financial returns, feasibility, implementation options.` },
-    { que:"Initiation Phase",
+    { que:"IProject Life Cycle - Initiation Phase",
         ans:`outline project, identify parties with vested interest, bring project team together to kick off project work. Draft high-level summary of project goals and timeline.` },
-    { que:"Planning Phase",
+    { que:"Project Life Cycle - Planning Phase",
         ans:`Turn project goals into detailed plan. Team define all activities needed to complete. PM will manage team logistics and ensure adequate resources. Have project work schedule and performance metrics for tracking progress.` },
-    { que:"Execution Phase",
+    { que:"Project Life Cycle - Execution Phase",
         ans:`Team delivers work. Team writes code, configure systems, or build a house. Create supporting materials and coordinate with each other to complete the work. PM monitors progress, measure performance, find and solve problems, maintain records, create reports.` },
-    { que:"Closing Phase",
+    { que:"Project Life Cycle - Closing Phase",
         ans:`project winds down and ensuring everything is ready to close. Confirm project is thorough, update documentation, create financial summary. Request official approval to close project.` },
     { que:"Sections of Business Case",
         ans:`Executive Summary, 
@@ -19,19 +19,19 @@ const flashcards = [
         Project Definition, 
         Financial Overview, 
         Recommendation` },
-    { que:"Executive Summary",
+    { que:"Sections of Business Case - Executive Summary",
         ans:`brief synopsis of the business case. Gives overview of main points including problem statement, solution, expected results.` },
-    { que:"Problem Statement",
+    { que:"Sections of Business Case - Problem Statement",
         ans:`shares details about the problem. Presents thorough analysis of current situation and the business problem, opportunity, or unmet need. Problem statement describes something that will change due to this project.` },
-    { que:"Problem Analysis",
+    { que:"Sections of Business Case - Problem Analysis",
         ans:`Provides context about why the project should be a priority. Include historical performance data, environmental assessment, other evidence to support the business case.` },
-    { que:"Options",
+    { que:"Sections of Business Case - Options",
         ans:`describes several approaches to solving the problem. Compares solutions against each other with pros/cons. Every business case includes two options: do nothing and the project will propose in the recommendation. "Alternatives identification" is a simple step that adds depth to your business case.` },
-    { que:"Project Definition",
+    { que:"Sections of Business Case - Project Definition",
         ans:`includes additional information about proposed project. Ex: contain details about the project scope, resources needed, milestones, implementation timeline.` },
-    { que:"Financial Overview",
+    { que:"Sections of Business Case - Financial Overview",
         ans:`covers economic impacts of the project. Ex: project cost, where money will come from, what company can gain. This section contains cost-benefit analysis or ROI analysis and risks and assumptions.` },
-    { que:"Recommendation",
+    { que:"Sections of Business Case - Recommendation",
         ans:`narrows downs options to best solution with justification.` },
     { que:"Current state",
         ans:`describes what is happening now.` },
@@ -1685,29 +1685,70 @@ const flashcards = [
         ans:`` },
     { que:"Measure Performance - EVM: Forecasting Performance",
         ans:`` },
-    { que:"",
+    { que:"Rebaseline and Revise the Baseline",
+        ans:`
+        Rebaseline: 
+        Revised Baseline: ` },
+    { que:"Update the Schedule and Budget",
         ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
+    { que:"Types of Project Schedules",
+        ans:`Executive Schedule: 
+        Milestone Schedule: 
+        Detailed Schedule: ` },
+    { que:"Distribute the Schedule",
+        ans:`Set a Schedule Maintenance Cadence: The team will review the detailed schedule as often as they plan work. Ex: agile project team running one-week iterations will review the schedule once weekly. The project sponsor may review the executive schedule monthly/quarterly.` },
+    { que:"Distribute the Schedule - Schedule maintenance tasks include the following",
+        ans:`Review the critical path
+        Review resource utilization, including contingency reserves utilization
+        Review the current sprint plan
+        Update the project schedule
+        Publish updated project schedules
+        Review project dashboards
+        Prepare project status reports` },
+    { que:"Project Dashboards",
+        ans:`A "business dashboard" works just like a car dashboard. It contains visual elements that describe specific information about the business. It is a visual summary of comprehensive data from many sources. It displays the few things you need to know to monitor performance or accomplish a goal. You can create dashboards for anything with summarizable data. You might see dashboards for projects, products, programs, departments, or teams.
+        Project Dashboards start with Key Performance Indicators (KPIs), which measures how likely a project is to meet its goals.
+        KPI ex:
+        Number of Users
+        Revenue Generated
+        Performance to Budget
+        Cost per Requirement
+        Cost Variance (CV)
+        Schedule Variance (SV)` },
+    { que:"Project Dashboards - Dashboards v Reports",
+        ans:`A dashboard continually updates, reports are periodically updated. Dashboards are interactive, reports are static. A report contains a snapshot of a dashboard plus additional information because reports are larger than dashboards. Dashboards and reports are intended to be clear and brief, but dashboards are aggressively compressed. Good dashboards is a single screen.` },
+    { que:"Types of Project Dashboards - Executive Project Dashboard",
+        ans:`executive-level dashboard have compressed information. It's reviewed monthly or less so it doesn't need daily information. Exec Dashboards provide quick answers to critical questions.
+        Executive dashboard will answer one or more of the following:
+        Why does this project matter?: display relevant business value measure, ex: Revenue Generated.
+        Is this project on time, on budget, and in scope?: display graphics showing schedule, budget, and scope snapshots.
+        Was this project a worthwhile investment?: might display ROI.
+        Will this project put the organization at risk?: could display high-impact risks or issues` },
+    { que:"Types of Project Dashboards - Team Project Dashboard",
+        ans:`team-level dashboard is tactical and more detailed than an executive dashboard, but team still uses it to make decisions. eam’s dashboard centers around the work.
+        Team dashboard answers one or more of the following:
+        What do we need to do next?: display a list of upcoming tasks.
+        Is anybody overutilized or underutilized?: show resource utilization for the week or iteration.
+        What are our deadlines?: list activity deadlines and milestones.
+        Are we on track to finish on time?: summarize the schedule deficit or surplus.` },
+    { que:"Types of Project Dashboards - Project Manager Project Dashboard",
+        ans:`PM needs to anticipate what is on the executive dashboard and summarize what the team will use. Their dashboard include expanded measure of the executive dashboard metrics that provides more detail and updates more often. 
+        PM dashboard answers one or more of the following:
+        Does the project team have everything they need to succeed?: include resource utilization summaries.
+        Is this project on time, under budget, and in scope, or are any of these metrics performing worse than usual?: include trending scope, budget, and schedule graphics.
+        What impediments are the team likely to face next?: list upcoming dependencies.
+        What are the upcoming milestones?: list the project timeline or milestone list.
+        What needs my attention?: list issues, change requests, and risks with upcoming deadlines.` },
+    { que:"Dashboard Design Principles",
+        ans:`dashboards contain mix of graphic tiles, lists, gauges, and information blocks. The appearance and data depend on the purpose and audience.
+        Intuitive: person with minimal training should be able to look at a dashboard and interpret the information. Should be as easy to read as a stop sign/traffic signal.
+        Actionable: The owner should know when they need to do something within 30 seconds of looking at the dashboard. They might not know what is causing an issue; problems require research.
+        Relevance: should contain information the audience needs to know to make good decisions. It's a good practice to start with the audience's needs and build a dashboard around them.
+        Timely: dashboard supports effective decision-making by providing relevant, objective data. Information needs to refresh as often as you need to look at it.
+        Brevity: should contain as little information as is required. Too much information will distract the user with unnecessary metrics.
+        Accuracy: Data quality assesses how likely the data is to reflect reality based on its accuracy, timeliness, and completeness. Use high-quality data in dashboards because you have to trust the data to make decisions with it.
+        Sustainability: Consider long-term impacts of a dashboard. A highly manual dashboard isn't likely to be maintained or updated often. It will also have more accuracy issues. Dashboard automatically updates as the source data is updated.` },
+    { que:"Organizational Change Management(OCM)",
         ans:`` },
     { que:"",
         ans:`` },
