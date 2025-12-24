@@ -122,14 +122,14 @@ const flashcards = [
     { que:"Agile Developments",
         ans:`Iterative, Incremental, Iterative & Incremental` },
     { que:"Iterative Development",
-        ans:`cycle of improvement; something is built, inspected, improved upon next iteration. Develop small parts of features and improve them often.` },
+        ans:`develop PARTS OF ALL features and continually improve all of them often. Ex: Sprint1: Build 9 features, Sprint2: improve all 9 features, Sprint3: improve all 9 features.` },
     { que:"Incremental",
-        ans:`features and completed and released often throughout the project. Build all of one of the features and release it.` },
+        ans:`build ALL OF ONE feature and release it. Build another feature, release, repeat. Features are completed and released often. Ex: Sprint1: build 3 features, Sprint2: build next 3 features, Sprint3: then the next 3 features` },
     { que:"Iterative and Incremental Development (IID)",
-        ans:`Build one feature at a time; build small sections at a time, review progress, adapt approach. Only release feature to production when appropriate.` },
+        ans:`Build ONE feature at a time; build SMALL sections at a time, review progress, adapt approach. Only release feature to production when appropriate.` },
     { que:"Scrum",
         ans:`A lightweight, customer centric framework. 
-        Uses "empiricism", which encourages teams to make decisions based on what they see and know. Stands out as "all-or-nothing" framework, meaning you use all parts of Scrum.` },
+        Uses "empiricism"; encourages team to make decisions based on what they see and know. Stands out as "all-or-nothing" framework, meaning you use all parts of Scrum.` },
     { que:"Scrum Process",
         ans:`1. The product owner prioritizes work into a product backlog.
         2. The Scrum team selects the top items in the backlog. The top items create a sprint backlog, which will deliver a working product that helps solve the top problem in the product backlog.
@@ -225,16 +225,16 @@ const flashcards = [
     { que:"Continuous Integration (CI)",
         ans:`Individual developers check their code into the main branch frequently, and automated tests run against the new code.` },
     { que:"Continuous delivery (CD)",
-        ans:`The process after continuous integration; it prepares the code for release to production.` },
+        ans:`The process after continuous integration; it prepares the code for release to production. Implementing continuous delivery can deploy anytime but chooses to delay deployment strategically.` },
     { que:"Continuous deployment (CD)",
         ans:`fully automated alternative to continuous delivery. After integration, the continuous deployment process prepares the code for production release and deploys it to production.` },
     { que:"DevSecOps",
         ans:`As speed of DevOps increases, IT security risk would increase if it didn't keep pace.` },
     { que:"Scaled Agile Framework (SAFe)",
-        ans:`Agile team: 3-10 cross-functional people work together to deliver increments of value.
-        Agile release train (ART): in large companies, multiple agile teams work together to create large products. Ex: an agile team of 8 people wouldn't work alone to create a new operating system.
+        ans:`Agile team: teams of 3-10 cross-functional people work together to deliver increments of value.
+        Agile release train (ART): in large companies, multiple agile teams work together to create large products. Ex: agile team of 8 people wouldn't work alone to create a new operating system.
         Iteration: Scrum refers as Sprint, XP teams refer as Weekly Cycle. SAFe recommends 1-4 week iterations.
-        Program Increment (PI): lasts 8-12 weeks, not three months.
+        Program Increment (PI): similar to XP's Quarterly Cycle. PI increment lasts 8-12 weeks, not three months.
         Program Increment Planning (PI Planning): similar to sprint planning for single Scrum team.` },
     { que:"SDLC 7 Phases",
         ans:`Planning: outline project and define software's scope and purpose
@@ -275,11 +275,11 @@ const flashcards = [
     { que:"PRINCE2's structure",
         ans:`principles, themes, processes, and tailoring to suit the needs of the project environment. The methodology uses "7 principles, 7 themes, and 7 processes" to move the project forward by defining the approach, artifacts, and activities that do so.` },
     { que:"PRINCE2 Principles",
-        ans:`1. Continued business justification: where other methodologies create a business case to start the project, PRINCE2 projects update the business case throughout the project's life. 
-        2. Learn from experience: this lessons learned or continual improvement process helps teams learn from their own experience and other projects. Team maintains lessons log.
-        3. Defined roles and responsibilities: PRINCE2 creates clarity for team members. This process leads to faster decision-making and reduced friction.
-        4. Manage by stages: this process breaks projects into 2+ phases, the boundaries between phases serve as checkpoints for the project board. PMs handle daily management duties, the project board reviews a project when it is ready to move from one stage to the next.
-        5. Manage by exception: this phase sets performance tolerances for the standard project performance metrics: time, cost, quality, scope, benefits, and risk. 
+        ans:`1. Continued business justification: other methodologies create a business case to start the project, PRINCE2 projects update the business case throughout the project's life. 
+        2. Learn from experience: lessons learned or continual improvement process helps teams learn from their own experience. Team maintains lessons log.
+        3. Defined roles and responsibilities: creates clarity for team members by assigning specific roles and responsibilities, which leads to faster decision-making and reduced friction.
+        4. Manage by stages: this process breaks projects into 2+ phases, the boundaries between phases serve as checkpoints. PMs handle daily management duties, the project board reviews the project and decides to move one stage to the next.
+        5. Manage by exception: this phase sets performance tolerances for the standard project performance metrics(time, cost, quality, scope, benefits, risk). 
         6. Focus on products: team understands and agrees on the product's definition and quality requirements.
         7. Tailor to suit the product: PMs adapt PRINCE2 elements to fit a specific project's size, scope, and requirements.` },
     { que:"PRINCE2 Themes",
@@ -289,16 +289,16 @@ const flashcards = [
         4. Plans: maintain a project plan, and measure project performance.
         5. Risk: document and manage risks throughout the project.
         6. Change: track changes, and obtain approval before adding them to the plan.
-        7. Progress: regularly track and measure the project's progress so you can keep the project on track and address exceptions immediately.` },
+        7. Progress: track and measure the project's progress to keep the project on track and address exceptions.` },
     { que:"PRINCE2 Processes",
         ans:`1. Starting up: initiate the business and determine a project's viability.
         2. Initiating: define the project's aspects: scope, costs, time scales, risk, quality, and benefits.
-        3. Directing: the product board provides oversight, including approving the project at stage boundaries. The project board decides when a project is ready to close.
-        4. Controlling a stage: this stage includes the PM's day-to-day activities. The PM breaks the project into tasks and oversees progress. They respond to and escalate issues when they arise
-        5. Managing delivery: the PM measures the project's performance. They also verify quality and obtain approvals of completed work.
-        6. Managing a stage boundary: the PM prepares project updates and updates the project plan. The project board reviews the project data and decides if it should advance to the next stage or not. The project team captures lessons learned.
-        7. Closing: the PM completes closing materials, turns over completed work, and closes the project.` },
-    { que:"Product Ownership - Roles",
+        3. Directing: the product board provides oversight, including approving the project at stage boundaries. Project board decides when a project is ready to close.
+        4. Controlling a stage: this is PM's day-to-day activities. PM breaks the project into tasks and oversees progress. PM responds to and escalate issues when they arise.
+        5. Managing delivery: PM measures project's performance. PM also verifies quality and obtain approvals of completed work.
+        6. Managing a stage boundary: PM prepares project updates and updates the project plan. The project board reviews the project data and decides if it should advance to the next stage. The project team captures lessons learned.
+        7. Closing: PM completes closing materials, turns over completed work, and closes the project.` },
+    { que:"Product Ownership - 3 Roles",
         ans:`Product Owner, Project Manager, Product Manager` },
     { que:"Product Owner",
         ans:`Product owners work within agile teams. They identify how to improve a product and are accountable for creating the most valuable product possible. A product owner tends to own a product for the entire product's life cycle.` },
@@ -326,13 +326,13 @@ const flashcards = [
         Verify project deliverables against requirements.
         Assist with testing and validation.` },
     { que:"Architect",
-        ans:`An umbrella term for many designer roles in an organization. Ex: enterprise architects, software architects, and solution architects support IT projects and operations. Architects design solutions; they look across an organization at how different systems work together and ensure projects adhere to solution requirements.` },
+        ans:`umbrella term for designer roles. Ex: enterprise architects, software architects, solution architects. Architects design solutions: they look across an organization at how different systems work together and ensure projects adhere to solution requirements.` },
     { que:"Architect responsibilities",
         ans:`Contribute to solution design.
         Build system blueprints.
         Evaluate systems against organizational standards, such as information security.` },
     { que:"Developer/Engineer",
-        ans:`Developers and engineers represent multiple roles that create the final product. Each software engineer or developer possesses specialized expertise in their field. Ex: software developers create the front-end and back-end, write the code, and create the products.` },
+        ans:`Developers and engineers represent multiple roles that create the final product. Each software engineer or developer possesses specialized expertise in their field. Ex: software developers create full stack, write code, and create products.` },
     { que:"Developer/Engineer responsibilities",
         ans:`Write code to expected standards.
         Build products according to the blueprints, project plan, or sprint backlog.
@@ -372,7 +372,7 @@ const flashcards = [
         ans:`Your organization has a quality improvement team that moves through the organization as consultants. You can request a quality improvement consultant for the project's execution phase. You would not include their availability in other project stages in this scenario.` },
     { que:"Available on Request",
         ans:`Your organization runs many projects and has a small accounting team. Accountants are available during any project phase but only work on financial tasks. In this case, you would add their availability to the resource plan only when you have financial activities for them to complete. You would also need to coordinate with them to ensure they are available.` },
-    { que:"Build Project Team",
+    { que:"Build Project Team - adding team members, capture details:",
         ans:`Position
         Core/Extended Member
         Availability
@@ -382,7 +382,8 @@ const flashcards = [
         Manager
         Organization` },
     { que:"Sections of a Project Organizational Chart",
-        ans:`Sponsor: list the sponsor or sponsors of the project.
+        ans:`Proj Org Chart shows "project interfaces"(reporting relationships) for your team.
+        Sponsor: list the sponsor or sponsors of the project.
         Steering Committee: list the members of the steering committee/advisory group.
         Project Manager: at the top of the main chart is the PM.
         Logical Groupings: group the team members in a way that makes sense for your project.
@@ -392,47 +393,57 @@ const flashcards = [
         Accountable: ultimately accountable for the work. Work isn't complete until they approve it. It's best to have only one accountable person for each activity because it creates clarity of authority.
         Consulted: acts as a consultant. They are a SME who can provide advice or direction. They may also review and quality check work for the responsible group.
         Informed: receives updates but doesn't interact with the tasks.` },
+    { que:"How to create a Responsibility Assignment Matrix (RAM)",
+        ans:`1. List the activities in the first column. Ex: WBS elements or PBIs
+        2. List project team members, stakeholders, necessary parties on top of the columns with their name and title/function.
+        3. Each activity; identify who is responsible for completing the work with "R".
+        4. Identify one person accountable for activity with "A".
+        5. Identify who might need to consult for task with "C".
+        6. Identify who needs to be informed of activity's progress with "I".
+        7. optional: color code to help visualize the matrix.` },
     { que:"Stakeholder Engagement Plan",
         ans:`organizes project management activities, and the PM is the primary audience. The project manager benefits from the thought and effort that goes into creating the plan. Creating the plan requires the PM to think through the project's impact and talk to stakeholders.` },
     { que:"Stakeholder Engagement Steps",
-        ans:`1. Identify the stakeholders
-        2. Prioritize the stakeholders
+        ans:`1. Identify stakeholders
+        2. Prioritize stakeholders
         3. Understand stakeholders
-        4. Develop a stakeholder engagement plan` },
-    { que:"1. Identify the stakeholders",
-        ans:`create a list of all the people and groups who could be stakeholders. Use a brainstorming approach at first; write down every idea and refine the list later. Summarize stakeholders into a shortlist of groups or categories. If your stakeholder is a group, identify the person(s) who will represent the stakeholders. Remember that the project team members are also stakeholders.` },
-    { que:"2. Prioritize the stakeholders",
-        ans:`categorize and prioritize stakeholders. The highest-priority stakeholders need frequent and active engagement, and the lowest-priority stakeholders require minimal attention.
+        4. Develop stakeholder engagement plan` },
+    { que:"1. Identify stakeholders",
+        ans:`list all the people and groups who could be stakeholders. Brainstorm at first; write down every idea and refine the list later. Summarize stakeholders into a shortlist of groups or categories. If your stakeholder is a group, identify person(s) who will represent the stakeholders. Remember, project team members are also stakeholders.` },
+    { que:"2. Prioritize stakeholders",
+        ans:`categorize/prioritize stakeholders. High-priority stakeholders need frequent and active engagement, low-priority stakeholders require minimal attention.
         High Power/High Impact: have the most to gain and the most power.
         High Power/Low Impact: have enough influence that they could derail a project if they wanted.
         Low Power/High Impact: have little power to change a project, so they are less likely to disrupt it.
-        Low Power/Low Impact: have little power or impact on the project. You are likely to find the lowest level of interest in this quadrant, but the situation could change.` },
+        Low Power/Low Impact: have little power/impact on project. Most likely to find lowest level of interest in this quadrant, but the situation could change.` },
     { que:"3. Understand stakeholders",
-        ans:`talk to your stakeholders, and learn about their expectations. Find out who is supportive, what concerns they have, and how much they know about the project. Of course, you will eventually work with stakeholders who are not supportive. In these instances, hear out their concerns and try to address them. Find out if resistant stakeholders are likely to move to supportive. If they aren't, evaluate the risk they pose to your project and how to manage it. For instance, a high-power, high-impacted stakeholder who is against the project will need to be monitored closely.` },
-    { que:"4. Develop a stakeholder engagement plan",
+        ans:`talk to your stakeholders, and learn about their expectations. Find out who is supportive, their concerns, and how much they know about the project. You will eventually work with stakeholders who are not supportive. In these instances, hear out their concerns and try to address them. Find out if resistant stakeholders are likely to move to supportive. If they aren't, evaluate the risk they pose to your project and how to manage it. For instance, a high-power, high-impacted stakeholder who is against the project will need to be monitored closely.` },
+    { que:"4. Develop stakeholder engagement plan",
         ans:`summarize what you've learned about the stakeholders in a stakeholder register, and describe how you will engage with them.` },
     { que:"Stakeholder Register fields",
         ans:`Stakeholder: list the person or group.
-        Point of Contact: if the stakeholder is not a person, list the person who represents the stakeholder.
-        Power: list the power level from the Power/Impact Grid.
-        Influence: list their impact level from the Power/Impact Grid.
-        Project Phase: list the project phases that you will need to engage with them.
-        Engagement Needs: describe what they need or why they are a key stakeholder. For example, this section could include why they strongly influence the project.
-        Engagement Approach: list the type of engagement you will conduct from the Power/Impact Grid.
-        Methods: capture how you will communicate with them.
-        Frequency: list a descriptive term of how often you will engage with the stakeholder. For example, use options such as occasional, less frequent, frequent, and very frequent.` },
+        Point of Contact: if stakeholder is not a person, list who represents the stakeholder.
+        Power: list power level from Power/Impact Grid.
+        Influence: list impact level from Power/Impact Grid.
+        Project Phase: list project phases that you will need to engage with them.
+        Engagement Needs: describe what they need or why they are a key stakeholder. Ex: this section include why they influence the project.
+        Engagement Approach: list type of engagement you will conduct from Power/Impact Grid.
+        Methods: capture how you communicate with them.
+        Frequency: list how often you will engage with the stakeholder. Ex: occasional, less frequent, frequent, and very frequent.` },
     { que:"Key Performance Indicator (KPI)",
-        ans:`measure only the most crucial measures. They are measured regularly in an ongoing manner. You can create KPIs for a project, process, or organization.` },
+        ans:`measure only the most crucial measures. They are measured regularly in an ongoing manner. You can create KPIs for a project, process, or organization.
+        Ex: KPI: Customer Satisfaction(Target: 8/10 stars), 
+        KPI: Resource Utilization(Target: Use within +/- 10%)` },
     { que:"Lagging indicators",
-        ans:`are reflective measures. Ex:
-        Test and build lead time
+        ans:`are reflective measures. Captured after work is complete. Describe actual success of project.
+        Ex: Test and build lead time
         Number of defects released to production
         Number of internal promotions
         Revenue
         Change adoption effectiveness` },
     { que:"Leading indicators",
-        ans:`are predictive measures. Ex:
-        Number of automated tests
+        ans:`are predictive measures. You assume if these measures perform well, the desired outcomes will improve.
+        Ex: Number of automated tests
         Number of bugs fixed in test
         Employee development program participation
         Advertisement clickthrough rate
@@ -453,41 +464,45 @@ const flashcards = [
         KPIs are long-term, operational metrics that describe the health of the system. KPIs help you stabilize and protect systems.
         OKRs are used to create shorter-term goals and generate change, where KPIs won't change until the project ends or the process changes. An OKR exists long enough to achieve a target, and then a new OKR is created to reach the next goal.` },
     { que:"Timeline Charts",
-        ans:`Milestone Charts aka "Project Timeline"
-        Project Road Maps
+        ans:`Project Road Maps
+        Milestone Charts aka "Project Timeline"
         Gantt Charts` },
-    { que:`Milestone Charts aka "Project Timeline"`,
-        ans:`have more detail than a roadmap but are not exhaustive enough to form a plan. Milestone charts describe the milestone events, which are project checkpoints. They look like a timeline and plot deadlines, check-ins, and critical dates over the course of the project.` },
     { que:"Project Road Maps",
-        ans:`are high-level documents that share major progress points, such as new feature rollouts. A road map is highly visual and resembles the format and level of detail that you might read in a press release. This visual works well for executive summaries.` },
+        ans:`are high-level documents that share major progress points, such as new feature rollouts. A road map is highly visual and resembles the format and level of detail that you might read in a press release. This visual works well for executive summaries.
+        Ex: Q1 Ideation: ...
+        Q2 Alpha Release: ...
+        Q3 Beta Release: ...
+        Q4 Release: ...` },
+    { que:`Milestone Charts aka "Project Timeline"`,
+        ans:`have more detail than a roadmap but not exhaustive enough to form a plan. Milestone charts describe the milestone events, which are project checkpoints. They look like a timeline and plot deadlines, check-ins, and critical dates over the course of the project.` },
     { que:"Gantt Charts",
         ans:`are highly detailed project plans. They show tasks and time in a grid to create a visual schedule view in a unique bar chart that shows time across the x-axis and a list of tasks or activities on the y-axis. The bars represent the time that each activity will occur. Additionally, Gantt charts show relationships and dependencies between tasks. Where roadmaps and milestones show events, Gantt charts show the tasks needed to reach the events. The team will use the Gantt chart during the planning, execution, and closing phases because it helps them plan and deliver the work.` },
     { que:"Project Charter",
-        ans:`created in initiation phase,  brief, formal document that outlines the project parameters. It helps the team, stakeholders, sponsor, and PM agree on why the project matters and what needs to happen.` },
+        ans:`created in initiation phase, is a brief, formal document that outlines project parameters. It helps the team, stakeholders, sponsor, and PM agree on why the project matters and what needs to happen.` },
     { que:"Tips for Creating a Project Charter",
         ans:`Use a template.
-        Keep the document short and simple: Use visual elements, such as graphs, charts, and bulleted lists.
+        Keep document short and simple: Use visual elements(graphs, charts, bulleted lists).
         Use clear, concise language: Make the most of the limited page space available to you.
         Collaborate with team members to create a realistic timeline and risk assessment: Review the charter drafts with your project sponsor to ensure alignment before distributing the finished product.` },
-    { que:"Project Charter Template Sections - General Project Information",
+    { que:"Project Charter - Information",
         ans:`1. Project Name: give the project a short title. This name will appear on subsequent reports and dashboards.
         2. Description: write a short sentence that expands on the project name to describe the project. This field will also appear on reports and dashboards, so you want something straightforward and understandable.
         3. Version Number and Date: track the revision history according to your company's requirements.
         4. Project Manager: list just the PM's name here. You will provide additional information later in the charter.
         5. Project Sponsor: list just the sponsor's name here. You will provide additional information later in the charter.` },
-    { que:"Project Charter Template Sections - Project Vision",
+    { que:"Project Charter - Vision",
         ans:`6. Objectives: identify the specific milestones or targets. The objectives should be clear, observable, and measurable; in other words, you should know when they have been met.
         7. Purpose: the business case for the project. List organizational priorities that this project will affect, such as the strategic plans or enterprise-level objectives.
         8. Preliminary Scope: set the project boundaries, and clearly state what is in and out of scope. List only high-level deliverables in this section because you will refine the content in the scope statement.
         9. Success Criteria: identify the measures of success for the project. Usually, you will list the time, cost, scope, and quality constraints.
         10. Expected Benefits: describe how the business will change as a result of completing the project.` },
-    { que:"Project Charter Template Sections - Organization Overview",
+    { que:"Project Charter - Organization Overview",
         ans:`11. Stakeholders: the main stakeholders are the people who can make or break the project. The stakeholder engagement plan will list more people and groups. At this stage, look for those who will have the most influence/experience the most impact from this project.
         12. Customers and End-Users: describe who will either use or purchase the project's outputs. This section doesn't include names; use a general description (groups, demographics, divisions). Note if they are internal/external to the organization.
         13. Project Roles: list the PM and project sponsor. List the project board, steering committee, or other governing bodies that will oversee this project. Include high-level responsibilities as well.
         14. Team Members: list each member's name, role, and responsibilities on the project.
         15. Project Organization: create a project organization chart to show the project team and reporting structure.` },
-    { que:"Project Charter Template Sections - Implementation Overview",
+    { que:"Project Charter - Implementation Overview",
         ans:`16. Timeline and Milestones: capture a general timeline and critical milestones. Later, you will create a detailed project schedule to show all activities and milestones.
         17. Resource Requirements: summarize the resources you will need for the project. Identify the labor, equipment, materials, and capital required.
         18. Risks: list the risks that stakeholders and sponsors will be most interested in. The risks listed here will not replace the risk register. Usually, this list will include high-impact and high-probability risks.
