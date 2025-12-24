@@ -133,7 +133,7 @@ const flashcards = [
     { que:"Scrum Process",
         ans:`1. The product owner prioritizes work into a product backlog.
         2. The Scrum team selects the top items in the backlog. The top items create a sprint backlog, which will deliver a working product that helps solve the top problem in the product backlog.
-        3. The Scrum team and stakeholders review the sprint results and adapt the product and the team’s approach for the next sprint.
+        3. The Scrum team and stakeholders review the sprint results and adapt the product and the team's approach for the next sprint.
         4. The steps repeat as long as the product backlog exists.`},
     { que:"Scrum Values",
         ans:`commitment, focus, openness, respect, courage` },
@@ -267,12 +267,12 @@ const flashcards = [
     { que:"Project board (PRINCE2)",
         ans:`accountable for a project. The board authorizes resources and funding, supports the PM, and is ultimately responsible for the project. The project board includes three roles: executive, senior user, and senior supplier.` },
     { que:"Executive",
-        ans:`a member of upper management and represents a business perspective. The executive is also the deciding member of the project board, and they own the project’s business case. Each project board has one executive` },
+        ans:`a member of upper management and represents a business perspective. The executive is also the deciding member of the project board, and they own the project's business case. Each project board has one executive` },
     { que:"Senior user",
-        ans:`represents the customer’s perspective. A project board will have one or more senior users.` },
+        ans:`represents the customer's perspective. A project board will have one or more senior users.` },
     { que:"Senior supplier",
-        ans:`represents the supplier or implementation partner’s perspective. One or more senior suppliers sit on the project board.` },
-    { que:"PRINCE2’s structure",
+        ans:`represents the supplier or implementation partner's perspective. One or more senior suppliers sit on the project board.` },
+    { que:"PRINCE2's structure",
         ans:`principles, themes, processes, and tailoring to suit the needs of the project environment. The methodology uses "7 principles, 7 themes, and 7 processes" to move the project forward by defining the approach, artifacts, and activities that do so.` },
     { que:"PRINCE2 Principles",
         ans:`1. Continued business justification: where other methodologies create a business case to start the project, PRINCE2 projects update the business case throughout the project's life. 
@@ -280,8 +280,8 @@ const flashcards = [
         3. Defined roles and responsibilities: PRINCE2 creates clarity for team members. This process leads to faster decision-making and reduced friction.
         4. Manage by stages: this process breaks projects into 2+ phases, the boundaries between phases serve as checkpoints for the project board. PMs handle daily management duties, the project board reviews a project when it is ready to move from one stage to the next.
         5. Manage by exception: this phase sets performance tolerances for the standard project performance metrics: time, cost, quality, scope, benefits, and risk. 
-        6. Focus on products: team understands and agrees on the product’s definition and quality requirements.
-        7. Tailor to suit the product: PMs adapt PRINCE2 elements to fit a specific project’s size, scope, and requirements.` },
+        6. Focus on products: team understands and agrees on the product's definition and quality requirements.
+        7. Tailor to suit the product: PMs adapt PRINCE2 elements to fit a specific project's size, scope, and requirements.` },
     { que:"PRINCE2 Themes",
         ans:`1. Business case: use the business case to provide continued business justification.
         2. Organization: define and document the roles and responsibilities.
@@ -289,23 +289,23 @@ const flashcards = [
         4. Plans: maintain a project plan, and measure project performance.
         5. Risk: document and manage risks throughout the project.
         6. Change: track changes, and obtain approval before adding them to the plan.
-        7. Progress: regularly track and measure the project’s progress so you can keep the project on track and address exceptions immediately.` },
+        7. Progress: regularly track and measure the project's progress so you can keep the project on track and address exceptions immediately.` },
     { que:"PRINCE2 Processes",
-        ans:`1. Starting up: initiate the business and determine a project’s viability.
-        2. Initiating: define the project’s aspects: scope, costs, time scales, risk, quality, and benefits.
+        ans:`1. Starting up: initiate the business and determine a project's viability.
+        2. Initiating: define the project's aspects: scope, costs, time scales, risk, quality, and benefits.
         3. Directing: the product board provides oversight, including approving the project at stage boundaries. The project board decides when a project is ready to close.
-        4. Controlling a stage: this stage includes the PM’s day-to-day activities. The PM breaks the project into tasks and oversees progress. They respond to and escalate issues when they arise
-        5. Managing delivery: the PM measures the project’s performance. They also verify quality and obtain approvals of completed work.
+        4. Controlling a stage: this stage includes the PM's day-to-day activities. The PM breaks the project into tasks and oversees progress. They respond to and escalate issues when they arise
+        5. Managing delivery: the PM measures the project's performance. They also verify quality and obtain approvals of completed work.
         6. Managing a stage boundary: the PM prepares project updates and updates the project plan. The project board reviews the project data and decides if it should advance to the next stage or not. The project team captures lessons learned.
         7. Closing: the PM completes closing materials, turns over completed work, and closes the project.` },
     { que:"Product Ownership - Roles",
         ans:`Product Owner, Project Manager, Product Manager` },
     { que:"Product Owner",
-        ans:`Product owners work within agile teams. They identify how to improve a product and are accountable for creating the most valuable product possible. A product owner tends to own a product for the entire product’s life cycle.` },
+        ans:`Product owners work within agile teams. They identify how to improve a product and are accountable for creating the most valuable product possible. A product owner tends to own a product for the entire product's life cycle.` },
     { que:"Project Manager",
         ans:`They form a team for a short duration to achieve a specific objective. The PM is responsible for a project only as long as it is active.` },
     { que:"Product Manager",
-        ans:`works in any framework. Product managers serve a more strategic function than product owners or PMs. Product managers oversee products and therefore exist for a product’s entire life cycle. They define the product strategy and create roadmaps to show how it will improve and change over time. The PM identifies projects and product changes. They often generate ideas that lead to new work for both PMs and product owners.` },
+        ans:`works in any framework. Product managers serve a more strategic function than product owners or PMs. Product managers oversee products and therefore exist for a product's entire life cycle. They define the product strategy and create roadmaps to show how it will improve and change over time. The PM identifies projects and product changes. They often generate ideas that lead to new work for both PMs and product owners.` },
     { que:"Project Team Roles And Responsibilities",
         ans:`Project Manager, Business Analyst (BA), Architect, Developer/Engineer, Tester/Quality Assurance(QA), Customer/End-user, Vendor, Stakeholder, Subject Matter Expert(SME)` },
     { que:"Project Manager responsibilities",
@@ -343,13 +343,13 @@ const flashcards = [
         ans:`Write tests against requirements.
         Run tests on completed code to find defects and bugs.` },
     { que:"Customer / End-user",
-        ans:`Some project teams will include a customer or end-user on the team. While this isn’t required, they can offer valuable insight.` },
+        ans:`Some project teams will include a customer or end-user on the team. While this isn't required, they can offer valuable insight.` },
     { que:"Customer / End-user responsibilities",
-        ans:`Offer end-user perspective about the final product’s usability.
+        ans:`Offer end-user perspective about the final product's usability.
         Suggest new features or the next development priority in the project.
         Collaborate with team members to design the product.` },
     { que:"Vendor",
-        ans:`Often referred to as "suppliers" or "business partners," vendors are external to the company. Your organization pays vendors to provide support, services, or goods needed for the project. Any third party you work with to procure resources is a vendor, and you may work with none or many vendors on a single project. You may include vendors on your project team, but it’s just as common not to have them. In either scenario, consider their impact and responsibilities while you build the project team and plan.` },
+        ans:`Often referred to as "suppliers" or "business partners," vendors are external to the company. Your organization pays vendors to provide support, services, or goods needed for the project. Any third party you work with to procure resources is a vendor, and you may work with none or many vendors on a single project. You may include vendors on your project team, but it's just as common not to have them. In either scenario, consider their impact and responsibilities while you build the project team and plan.` },
     { que:"Vendor responsibilities",
         ans:`Provide the work outlined in the contract. For instance, the deliverables could include delivery and setup, configuration, technical support, or advisory services.
         Maintain the service-level agreements (SLAs) outlined in the contract.
@@ -357,9 +357,9 @@ const flashcards = [
     { que:"Stakeholder",
         ans:`We often think of stakeholders as recipients; after all, they are the people or groups affected by projects. However, they carry responsibilities for the project as well. Factor in their impact and responsibilities, and it will help you plan for building effective working relationships with them.` },
     { que:"Stakeholder responsibilities ",
-        ans:`Understand the project’s purpose and how it will affect them.
+        ans:`Understand the project's purpose and how it will affect them.
         Be transparent about their support or lack thereof for the project.
-        Provide timely feedback about the project’s progress and direction.` },
+        Provide timely feedback about the project's progress and direction.` },
     { que:"Subject Matter Expert (SME)",
         ans:`SME is a general label for anybody who is a respected expert in their field. The SME is the person you turn to when you need somebody to explain a complex topic simply or solve advanced issues.` },
     { que:"Features of Extended Team Members",
@@ -369,7 +369,7 @@ const flashcards = [
     { que:"Percentage of Time",
         ans:`in your organization, BAs are a functional group that supports projects. ex: one BA might work on up to four teams at a time, so they would allocate 25% of their time to your project.` },
     { que:"Availability by Phase",
-        ans:`Your organization has a quality improvement team that moves through the organization as consultants. You can request a quality improvement consultant for the project’s execution phase. You would not include their availability in other project stages in this scenario.` },
+        ans:`Your organization has a quality improvement team that moves through the organization as consultants. You can request a quality improvement consultant for the project's execution phase. You would not include their availability in other project stages in this scenario.` },
     { que:"Available on Request",
         ans:`Your organization runs many projects and has a small accounting team. Accountants are available during any project phase but only work on financial tasks. In this case, you would add their availability to the resource plan only when you have financial activities for them to complete. You would also need to coordinate with them to ensure they are available.` },
     { que:"Build Project Team",
@@ -389,11 +389,11 @@ const flashcards = [
         Solid and Dotted Lines: use solid lines to show a reporting relationship and dotted lines to show an indirect management relationship.` },
     { que:"responsibility assignment matrix (RAM) or RACI chart",
         ans:`Responsible: completes the work.
-        Accountable: ultimately accountable for the work. Work isn’t complete until they approve it. It’s best to have only one accountable person for each activity because it creates clarity of authority.
+        Accountable: ultimately accountable for the work. Work isn't complete until they approve it. It's best to have only one accountable person for each activity because it creates clarity of authority.
         Consulted: acts as a consultant. They are a SME who can provide advice or direction. They may also review and quality check work for the responsible group.
-        Informed: receives updates but doesn’t interact with the tasks.` },
+        Informed: receives updates but doesn't interact with the tasks.` },
     { que:"Stakeholder Engagement Plan",
-        ans:`organizes project management activities, and the PM is the primary audience. The project manager benefits from the thought and effort that goes into creating the plan. Creating the plan requires the PM to think through the project’s impact and talk to stakeholders.` },
+        ans:`organizes project management activities, and the PM is the primary audience. The project manager benefits from the thought and effort that goes into creating the plan. Creating the plan requires the PM to think through the project's impact and talk to stakeholders.` },
     { que:"Stakeholder Engagement Steps",
         ans:`1. Identify the stakeholders
         2. Prioritize the stakeholders
@@ -408,9 +408,9 @@ const flashcards = [
         Low Power/High Impact: have little power to change a project, so they are less likely to disrupt it.
         Low Power/Low Impact: have little power or impact on the project. You are likely to find the lowest level of interest in this quadrant, but the situation could change.` },
     { que:"3. Understand stakeholders",
-        ans:`talk to your stakeholders, and learn about their expectations. Find out who is supportive, what concerns they have, and how much they know about the project. Of course, you will eventually work with stakeholders who are not supportive. In these instances, hear out their concerns and try to address them. Find out if resistant stakeholders are likely to move to supportive. If they aren’t, evaluate the risk they pose to your project and how to manage it. For instance, a high-power, high-impacted stakeholder who is against the project will need to be monitored closely.` },
+        ans:`talk to your stakeholders, and learn about their expectations. Find out who is supportive, what concerns they have, and how much they know about the project. Of course, you will eventually work with stakeholders who are not supportive. In these instances, hear out their concerns and try to address them. Find out if resistant stakeholders are likely to move to supportive. If they aren't, evaluate the risk they pose to your project and how to manage it. For instance, a high-power, high-impacted stakeholder who is against the project will need to be monitored closely.` },
     { que:"4. Develop a stakeholder engagement plan",
-        ans:`summarize what you’ve learned about the stakeholders in a stakeholder register, and describe how you will engage with them.` },
+        ans:`summarize what you've learned about the stakeholders in a stakeholder register, and describe how you will engage with them.` },
     { que:"Stakeholder Register fields",
         ans:`Stakeholder: list the person or group.
         Point of Contact: if the stakeholder is not a person, list the person who represents the stakeholder.
@@ -439,19 +439,19 @@ const flashcards = [
         Change management quality` },
     { que:"SMART Objective",
         ans:`Specific: should explain exactly what needs to change.
-        Measurable: needs to include a quantifiable metric, so that you can know when you’ve met the goal.
+        Measurable: needs to include a quantifiable metric, so that you can know when you've met the goal.
         Achievable: meant to be realistic. Therefore, ensure the goal is within the realm of possibility.
         Relevant: needs to have a purpose. In an organization, it should align with business strategy or business priorities.
         Time-Bound: needs to have a target end date.` },
     { que:"Objective and Key Results (OKR)",
-        ans:`to achieve tremendous results quickly. OKRs are meant to be aspirational and slightly out of reach, they drive teams to deliver value that they didn’t think was possible.` },
+        ans:`to achieve tremendous results quickly. OKRs are meant to be aspirational and slightly out of reach, they drive teams to deliver value that they didn't think was possible.` },
     { que:"OKRs create a two-part goal statement composed of:",
-        ans:`"Objective" is a qualitative goal statement. It doesn’t need to be as measurable as KPIs or SMART objectives. The Objective portion of the OKR tells the story about what the goal is for and why it matters.
+        ans:`"Objective" is a qualitative goal statement. It doesn't need to be as measurable as KPIs or SMART objectives. The Objective portion of the OKR tells the story about what the goal is for and why it matters.
         "Key Results" are quantitative measures of success. The key results will look similar to SMART objectives. They describe what you need to do to meet the goal.` },
     { que:"Selecting a Performance Measure Method",
         ans:`SMART is a method for writing solid goals. You can apply the technique to any goal in any framework.
         KPIs are long-term, operational metrics that describe the health of the system. KPIs help you stabilize and protect systems.
-        OKRs are used to create shorter-term goals and generate change, where KPIs won’t change until the project ends or the process changes. An OKR exists long enough to achieve a target, and then a new OKR is created to reach the next goal.` },
+        OKRs are used to create shorter-term goals and generate change, where KPIs won't change until the project ends or the process changes. An OKR exists long enough to achieve a target, and then a new OKR is created to reach the next goal.` },
     { que:"Timeline Charts",
         ans:`Milestone Charts aka "Project Timeline"
         Project Road Maps
@@ -472,8 +472,8 @@ const flashcards = [
     { que:"Project Charter Template Sections - General Project Information",
         ans:`1. Project Name: give the project a short title. This name will appear on subsequent reports and dashboards.
         2. Description: write a short sentence that expands on the project name to describe the project. This field will also appear on reports and dashboards, so you want something straightforward and understandable.
-        3. Version Number and Date: track the revision history according to your company’s requirements.
-        4. Project Manager: list just the PM’s name here. You will provide additional information later in the charter.
+        3. Version Number and Date: track the revision history according to your company's requirements.
+        4. Project Manager: list just the PM's name here. You will provide additional information later in the charter.
         5. Project Sponsor: list just the sponsor's name here. You will provide additional information later in the charter.` },
     { que:"Project Charter Template Sections - Project Vision",
         ans:`6. Objectives: identify the specific milestones or targets. The objectives should be clear, observable, and measurable; in other words, you should know when they have been met.
@@ -483,20 +483,20 @@ const flashcards = [
         10. Expected Benefits: describe how the business will change as a result of completing the project.` },
     { que:"Project Charter Template Sections - Organization Overview",
         ans:`11. Stakeholders: the main stakeholders are the people who can make or break the project. The stakeholder engagement plan will list more people and groups. At this stage, look for those who will have the most influence/experience the most impact from this project.
-        12. Customers and End-Users: describe who will either use or purchase the project’s outputs. This section doesn’t include names; use a general description (groups, demographics, divisions). Note if they are internal/external to the organization.
+        12. Customers and End-Users: describe who will either use or purchase the project's outputs. This section doesn't include names; use a general description (groups, demographics, divisions). Note if they are internal/external to the organization.
         13. Project Roles: list the PM and project sponsor. List the project board, steering committee, or other governing bodies that will oversee this project. Include high-level responsibilities as well.
-        14. Team Members: list each member’s name, role, and responsibilities on the project.
+        14. Team Members: list each member's name, role, and responsibilities on the project.
         15. Project Organization: create a project organization chart to show the project team and reporting structure.` },
     { que:"Project Charter Template Sections - Implementation Overview",
         ans:`16. Timeline and Milestones: capture a general timeline and critical milestones. Later, you will create a detailed project schedule to show all activities and milestones.
         17. Resource Requirements: summarize the resources you will need for the project. Identify the labor, equipment, materials, and capital required.
         18. Risks: list the risks that stakeholders and sponsors will be most interested in. The risks listed here will not replace the risk register. Usually, this list will include high-impact and high-probability risks.
         19. Assumptions and Constraints: list the assumptions and constraints that the project will operate within, because it helps you manage expectations with the project sponsor and stakeholders. Assumptions and constraints are similar; they are both factors that will affect the project plan. They differ because constraints are known truths, and assumptions are assumed to be true. 
-        20. Budget: share anticipated project costs. The charter doesn’t need to include an entire budget. But, the total figure should be accurate enough that the project sponsor and stakeholders can make an informed decision.` },
+        20. Budget: share anticipated project costs. The charter doesn't need to include an entire budget. But, the total figure should be accurate enough that the project sponsor and stakeholders can make an informed decision.` },
     { que:"Project Scope Statement",
         ans:`expands on the scope provided in the project charter. Where the project charter includes a summarized scope and major boundaries and deliverables, the scope statement includes detailed descriptions of multiple elements.` },
     { que:"Elements of a Preliminary Scope Statement",
-        ans:`Project Scope Description: summarize the project’s intent and purpose. This section summarizes the project vision contents of the project charter.
+        ans:`Project Scope Description: summarize the project's intent and purpose. This section summarizes the project vision contents of the project charter.
         Project Acceptance Criteria: list the success criteria of the project. Acceptance criteria are the measurable outcomes of success. 
         Project Deliverables (In Scope): set the project boundaries and identify what the team will deliver. The items listed here are in scope, and your project plan will need to ensure they are completed.
         Project Exclusions (Out of Scope): set the project boundaries, and identify what the team will not deliver. Use this section as a clarification point, and identify the items most likely to cause scope creep throughout the project.
@@ -509,9 +509,9 @@ const flashcards = [
         Communications: meeting notes, status reports, and written communications generate communications records.` },
     { que:"Records Management Plan - Types of Data",
         ans:`Public data: no restrictions. Ex: information on company website and in public records.
-        Internal data: available to anybody within the company. It isn’t necessarily secret, and exposing this data wouldn’t violate laws or trust. Ex: work procedures and project plans.
+        Internal data: available to anybody within the company. It isn't necessarily secret, and exposing this data wouldn't violate laws or trust. Ex: work procedures and project plans.
         Confidential data: Limited access. The information is only available to authorized users either on a role or case-by-case basis. Ex: Personnel records.
-        Restricted data: top secret, and access is severely restricted. This is the highest-security information. Criminal charges against unauthorized users or face charges if leak information. Ex: research, top-secret projects, user’s passwords.` },
+        Restricted data: top secret, and access is severely restricted. This is the highest-security information. Criminal charges against unauthorized users or face charges if leak information. Ex: research, top-secret projects, user's passwords.` },
     { que:"Requirements for Records Management Plan",
         ans:`The plan needs to comply with organizational policy.
         Records need to be organized and easy to find.
@@ -544,7 +544,7 @@ const flashcards = [
     { que:"Decisive Meetings",
         ans:`aka "decision-making meetings". Ex:
         Task Setting: when you need individuals to complete activities outside of a meeting, you can use a task-setting meeting to plan the work.
-        Project Steering Committee Meeting: includes the PM and executive stakeholders; your steering committee is the voice of the customer. They are a governing body, and while they don’t manage the project, they have a vested interest in its success. They offer support and guidance throughout the project’s life cycle, such as sharing insights on how to increase adoption.
+        Project Steering Committee Meeting: includes the PM and executive stakeholders; your steering committee is the voice of the customer. They are a governing body, and while they don't manage the project, they have a vested interest in its success. They offer support and guidance throughout the project's life cycle, such as sharing insights on how to increase adoption.
         Refinement: aka "product/backlog refinement meetings", maintain backlog's relevancy, adjusting task priorities.` },
     { que:"Collaborative Meetings",
         ans:`most interactive meeting. Attendees work together to accomplish common goal, such as creating a plan, solving a problem, or designing a new system.
@@ -554,11 +554,11 @@ const flashcards = [
         Single-Moderator: uses one moderator, who facilitates the session and monitors interactions. May recruit helper to take notes / record the session.
         Dual-Moderator: two moderators. One is the lead facilitator and keeps the interactions flowing. The other serves as a quality check; tracking the topics and ensure the group covers all the content.
         Dueling-Moderator: two moderators. Both moderators are actively engaged in facilitation and take opposite views. This technique generally draws out the most viewpoints.
-        Two-Way: allows one group to observe another focus group’s session. This technique gives the focus group more perspective and can create more complex responses.
+        Two-Way: allows one group to observe another focus group's session. This technique gives the focus group more perspective and can create more complex responses.
         Respondent-Moderator:uses participants as moderators, creating dynamic energy with many new ideas. This format can rotate moderators or select a single moderator. Rotating also minimizes a single moderator's impact.` },
     { que:"Collaborative Meetings - Workshops",
         ans:`a working session where a group with shared interests gathers to exchange information and conduct research.
-        Define the workshop’s ground rules, which are team agreements regarding how they will operate and treat each other.
+        Define the workshop's ground rules, which are team agreements regarding how they will operate and treat each other.
         Engage the participants in setting success criteria.
         Encourage questions.
         Use icebreakers.
@@ -585,7 +585,7 @@ const flashcards = [
     { que:"POWER Start Agenda Technique",
         ans:`Purpose: Describe reason for the meeting.
         Outcomes: List expected results/deliverables that the team will create.
-        What’s in It for Me (WIIFM): Explain how the meeting will benefit the attendees.
+        What's in It for Me (WIIFM): Explain how the meeting will benefit the attendees.
         Engagement: Describe how attendees can or should participate in the meeting.
         Roles/Responsibilities: Explain what responsibilities various attendees will have. For example, list the facilitator, explain that SMEs will create diagrams, and everybody will brainstorm ideas.` },
     { que:"Meeting Artifacts - Timebox",
@@ -596,7 +596,7 @@ const flashcards = [
         ans:`a written record of key points. 
         Ex: governance meetings require formal meeting minutes, including timestamps, an official roll call, approvals, and new business.` },
     { que:"Meeting Artifacts - Follow-Up",
-        ans:`follow-up email is the avenue for sharing the meeting minutes and additional information. A follow-up email closes the meeting by expressing appreciation for the attendees’ time.` },
+        ans:`follow-up email is the avenue for sharing the meeting minutes and additional information. A follow-up email closes the meeting by expressing appreciation for the attendees' time.` },
     { que:"Communication Challenges",
         ans:`Language Barriers.
         Time Zones and Geographical Factors.
@@ -604,7 +604,7 @@ const flashcards = [
         Cultural Differences: shared social customs, behavior, habits, beliefs.` },
     { que:"Team Life Cycle",
         ans:`Forming: team members come together for the first time. People tend to be excited/polite in this phase, but minimally productive.
-        Storming: Members are figuring out their roles and finding each other’s flaws and differences in the storming stage. Every little problem in the process gets amplified and questioned in this stage.
+        Storming: Members are figuring out their roles and finding each other's flaws and differences in the storming stage. Every little problem in the process gets amplified and questioned in this stage.
         Norming: Conflict slows, and productivity starts to increase, in the norming stage.
         Performing: Productivity is highest in performing stage. Team members understand their roles, trust each other, and work together effectively.
         Adjourning: the project work finishes, the team breaks apart, and the members move on to new projects.` },
@@ -656,20 +656,20 @@ const flashcards = [
         On-Premise: users access the software through an application on their devices. Users may need to connect to their company network to install or use the software if the installation occurs on a network server.
         Local Install: user accesses the software from the single device it is installed on. They can access the software without a network or internet connection.` },
     { que:"Software Installation Options - Pricing Model",
-        ans:`Cloud: pay recurring fee for latest version of the product. Cloud offers more scalability because they purchase licenses and don’t have other investments. Cloud is an operational expense (OpEx), which is easier to budget.
+        ans:`Cloud: pay recurring fee for latest version of the product. Cloud offers more scalability because they purchase licenses and don't have other investments. Cloud is an operational expense (OpEx), which is easier to budget.
         On-Premise: buyer makes initial investment, may include long-term capital expense (CapEx). Buyer purchases licenses and storage hardware, but minimal ongoing costs.
-        Local Install: requires purchase of software. Technically requires hardware, but doesn’t accrue hardware expenses, since software is installed on existing equipment.` },
+        Local Install: requires purchase of software. Technically requires hardware, but doesn't accrue hardware expenses, since software is installed on existing equipment.` },
     { que:"Software Installation Options - Overhead",
         ans:`Cloud: lower overhead requirements than on-premise hosting. IT staff will configure the installation and optimize cloud capabilities.
         On-Premise: buyer is responsible for installation, upgrades, storage, and maintenance, which requires IT staff. As a result, on-premises implementations lead to higher staffing costs and delayed updates. But, company has control/flexibility on configurations and upgrades.
-        Local Install: require significant overhead. A staff member installs every instance of software on one machine at a time. Updates occur one machine at a time and at the user’s discretion.` },
+        Local Install: require significant overhead. A staff member installs every instance of software on one machine at a time. Updates occur one machine at a time and at the user's discretion.` },
     { que:"Software Installation Options - Advantages",
         ans:`Cloud: low-maintenance option. The provider manages all updates and security measures, so the buyer enjoys lower IT overhead and up-to-date software.
         On-Premise: allows companies to have total control over the software. This method can have lower long-term costs because all the expenses occur once or infrequently.
         Local Install: provide reliable access to software because you can use the software offline. It can improve security by providing exclusive access to the software and data.` },
     { que:"Software Installation Options - Disadvantages",
         ans:`Cloud: requires an internet connection, and users working with large data sets or on slow networks might experience latency. Low short-term costs but have higher long-term costs.
-        On-Premise: requires investment, which the company cannot recoup. For example, you have to buy enough software, and if you buy too much, you can’t return the licenses for a refund. In addition, you need enough server space. In another instance, if your server needs to grow and shrink throughout the year, you must purchase enough space to accommodate the largest storage requirement.
+        On-Premise: requires investment, which the company cannot recoup. For example, you have to buy enough software, and if you buy too much, you can't return the licenses for a refund. In addition, you need enough server space. In another instance, if your server needs to grow and shrink throughout the year, you must purchase enough space to accommodate the largest storage requirement.
         Local Install: software is only available on that computer. You cannot access the software from another device, and any personalization remains on that device only.` },
     { que:"Project Tools",
         ans:`Ticketing or Case Management: organized way to manage records of customer problems. Also referred to as a "case management" or "help desk" system, this product type combines workflows and user interfaces to create a one-stop experience.
@@ -763,7 +763,7 @@ const flashcards = [
     { que:"NFR Examples 2/3",
         ans:`Availability or reliability: how long the system is running in a given time.
         Extensibility: is how easy it is to add new features without changing what is already in place.
-        Security: refers to how the solution and the company’s assets are protected. Authentication methods, data classification, user access, and administration procedures are part of the security requirements.` },
+        Security: refers to how the solution and the company's assets are protected. Authentication methods, data classification, user access, and administration procedures are part of the security requirements.` },
     { que:"NFR Examples 3/3",
         ans:`Portability or compatibility: evaluates how well the solution can work within the existing environment. The solution components need to communicate with each other and other platforms in the company, including data exchanges, operating systems, software, and hardware.
         Compliance: refers to the need for the solution to comply with applicable regulations.` },
@@ -810,25 +810,25 @@ const flashcards = [
     { que:"Financial Systems",
         ans:`subset of ERPs that encompass the financial aspects. They track financial resources, including budgets, spending, and cost estimates. ` },
     { que:"Customer Relationship Management(CRM)",
-        ans:`software helps companies track and manage customer interactions. The idea behind CRM is that exchanges with customers aren’t single transactions. Instead, companies should form relationships with customers and would-be customers to build loyalty and increase revenue.` },
+        ans:`software helps companies track and manage customer interactions. The idea behind CRM is that exchanges with customers aren't single transactions. Instead, companies should form relationships with customers and would-be customers to build loyalty and increase revenue.` },
     { que:"Electronic Document Management System(EDMS) and Records Management System(RMS)",
         ans:`EDMS is not just an electronic filing cabinet; this software builds in workflows and other features to create streamlined processes.` },
     { que:"Content Management System(CMS)",
         ans:`user-friendly systems that allow more users to complete historically complex activities. A CMS applies a simple user interface and hides all the code and complexity from the end-user.` },
     { que:"Data Classification",
         ans:`Public Data: least sensitive. No restrictions and publicly available. Ex: press releases, content of the company website, job postings.
-        Internal data: available to anybody within the company and therefore is minimally sensitive. It isn’t public facing, but exposing this data wouldn’t violate laws or consumer trust.
+        Internal data: available to anybody within the company and therefore is minimally sensitive. It isn't public facing, but exposing this data wouldn't violate laws or consumer trust.
         Confidential data: sensitive data with limited access. Information only available to authorized users/role or case-by-case basis. 
         Restricted data: most sensitive data. Access severely restricted and granted on need-to-know basis with strict business justification. Company likely to bring criminal charges against unauthorized users or face charges if inadvertently leaks the information.` },
     { que:"Data Handling Considerations: Sensitive Data",
-        ans:`Personally identifiable information (PII) includes data that could reveal a person’s identity.
+        ans:`Personally identifiable information (PII) includes data that could reveal a person's identity.
         Personal health information (PHI) is federally protected in USA. HIPAA requires organizations to protect against unauthorized access and disclosure of sensitive health information.` },
     { que:"Data Handling Consideration: Country-, State-, and Province-Specific Privacy Regulations",
         ans:`General Data Protection Regulation (GDPR) is a data privacy and security law in the European Union (EU). It includes 11 chapters of regulations and is widely considered the strictest privacy law. This law protects people located in the EU. 
         The California Privacy Rights Act protects the data of California residents. The Consumer Data Protection Act in Virginia offers data rights and protection to Virginia residents. Both share many similarities with GDPR.` },
     { que:"Data Handling Consideration: IP and Trade Secrets",
         ans:`Intellectual Property(IP): asset type that refers to creations of the mind. In business, it comprises the inventions and creative assets that the company owns. IP includes four asset types: patents, copyrights, trademarks, and trade secrets.
-        Trade Secrets: specific type of IP, an asset that gives the company a competitive advantage but hasn’t been registered with a copyright, trademark, or patent. Ex: food recipe, search engine algorithm.` },
+        Trade Secrets: specific type of IP, an asset that gives the company a competitive advantage but hasn't been registered with a copyright, trademark, or patent. Ex: food recipe, search engine algorithm.` },
     { que:"Digital Security",
         ans:`Resource Access and Permissions: Electronic resources (ex: applications, network folders) are accessible to authorized users. System administrators or service providers create multiple user roles for each application to provide varying access levels.
         Remote Access Restrictions: Employees/contractors need to connect with company network while offsite. Remote access allows employees to work from various locations. Remote access increases flexibility but could expose company network if security measures are not in place. May require VPN usage.
@@ -839,8 +839,8 @@ const flashcards = [
     { que:"Physical/Operational Security",
         ans:`Removable Media: ortable storage devices that can be plugged in and removed while a computer is running, such as USB drives.
         Mobile Device: a portable media type, and many corporate applications are available on mobile devices. Mobile access helps the company because employees can be more productive. Companies require mobile device management (MDM) software, which allows IT functions to monitor and remotely erase compromised mobile devices.
-        Facility Access: Networks are easier to break into from inside the building. Company assets are everywhere; computers, documents in people’s offices are available. Companies grant facility access only to authorized users.
-        Background Screening/Checks: helps organizations confirm hiring requirements; person’s education, certifications, references. Also verifies person’s identity and may investigate criminal history and previous employment.
+        Facility Access: Networks are easier to break into from inside the building. Company assets are everywhere; computers, documents in people's offices are available. Companies grant facility access only to authorized users.
+        Background Screening/Checks: helps organizations confirm hiring requirements; person's education, certifications, references. Also verifies person's identity and may investigate criminal history and previous employment.
         National Security Information and Clearance Requirements: may require handling information related to national defense or foreign relations. In the United States, this is called national security information, and access is highly restricted.
         Four clearance levels: Confidential, Secret, Top Secret, and Sensitive Compartmented Information(SCI).` },
     { que:"Types of Resources",
@@ -862,9 +862,9 @@ const flashcards = [
     { que:"Resource Retirement Examples",
         ans:`End of Life Software(EOL): no more updates/maintainence for the software after EOL date. If company uses EOL software, vendor cannot help with troubleshooting, configurations, maintenance.
         Hardware Decommissioning: hardware is ready for decommissioning ex: Failure to turn on, Random shutdowns or stoppages, Declining KPIs (ex: uptime or speed), EOL notice from manufacturer. Increasing maintenance requests (maintenance becomes more expensive than replacement).
-        Succession Planning: practice where companies create a plan for who would replace roles in a company if vacated. Succession planning doesn’t identify one person who would replace somebody; it identifies current role’s knowledge, skills, responsibilities. Then documents processes and provides training/development to people who fit the role.` },
+        Succession Planning: practice where companies create a plan for who would replace roles in a company if vacated. Succession planning doesn't identify one person who would replace somebody; it identifies current role's knowledge, skills, responsibilities. Then documents processes and provides training/development to people who fit the role.` },
     { que:"Needs Assessment Process",
-        ans:`1. Understand the project’s requirements: identify project’s objective, success criteria, milestones, deliverables. 
+        ans:`1. Understand the project's requirements: identify project's objective, success criteria, milestones, deliverables. 
         2. Identify the current resources.
         3. Identify any resource gaps: aka "gap identification".
         4. Address the gaps` },
@@ -874,8 +874,8 @@ const flashcards = [
     { que:"Fishbone Diagram",
         ans:`"Ishikawa diagram" or "cause and effect diagram.
         A simple tool that visualizes how various factors impact a single outcome. 
-        A fishbone diagram has a single problem on the far right of the diagram, in the fish’s head. 
-        On the left of the diagram are various branches representing categories of potential causes for the problem; these branches look like the fish’s ribs."` },
+        A fishbone diagram has a single problem on the far right of the diagram, in the fish's head. 
+        On the left of the diagram are various branches representing categories of potential causes for the problem; these branches look like the fish's ribs."` },
     { que:"Skills Matrix",
         ans:`a visual tool for assessing the current state of a team's skills. Identify all the skills needed for a project, and record them on the matrix. Then, each person assesses their competency level.` },
     { que:"Histogram",
@@ -887,9 +887,9 @@ const flashcards = [
         Allocate Resources
         Monitor and Adjust the Resource Allocations` },
     { que:"Compare Risk, Issues, and Changes",
-        ans:`Risk: something that you think will happen that you don’t control.
-        Issue: something that is already happening that you don’t control. "Issue Management"documents issues after they arise and recovers from them.
-        Change: modification to a project’s scope, budget, or timeline via an adjustment in project activities or resources.` },
+        ans:`Risk: something that you think will happen that you don't control.
+        Issue: something that is already happening that you don't control. "Issue Management"documents issues after they arise and recovers from them.
+        Change: modification to a project's scope, budget, or timeline via an adjustment in project activities or resources.` },
     { que:"Risk Management Overview",
         ans:`1. Identify the Risk: list all potential risks.
         2. Analyze the Risk: Determine how likely a risk event will happen; the probability. If risk were to happen, identify how it would impact this project, other projects, and organization. This process is known as "effect-based risk classification".
@@ -919,21 +919,21 @@ const flashcards = [
         ans:`Probability: measures the chances of a risk occurring. "Probability Scale" uses a numerical or relative scale. The numerical scale runs from 0 to 1, where 1 equals a 100% chance of occurrence.
         Impact: measures how the risk would affect the business if it were to occur. "Impact scale" uses either a numerical or relative scale. You can create a multidimensional impact assessment to measure how the risk impacts multiple measures, such as cost, time, or scope.` },
     { que:"Failure Mode and Effects Analysis(FMEA)",
-        ans:`a structured risk analysis tool used frequently in manufacturing operations and product design. It is a detailed analysis of a single process that identifies multiple risks. An FMEA scores each risk’s probability, impact, and detectability to create a prioritized risk list.` },
+        ans:`a structured risk analysis tool used frequently in manufacturing operations and product design. It is a detailed analysis of a single process that identifies multiple risks. An FMEA scores each risk's probability, impact, and detectability to create a prioritized risk list.` },
     { que:"Scenario Analysis",
         ans:`"situational analysis" or "what-if analysis." A process where you generate potential events and evaluate the impact.` },
     { que:"Negative Risk Strategies",
-        ans:`Avoid/Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don’t invest.
+        ans:`Avoid/Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don't invest.
         Mitigate/Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
         Transer/Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
-        Accept/Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don’t have to prevent every risk.` },
+        Accept/Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don't have to prevent every risk.` },
     { que:"Positive Risk Strategies",
         ans:`Exploit/Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
         Enhance/Enhancement: increases the positive effects of the risk. The opposite of risk mitigation. Mitigation tries to suppress impact, enhancement maximize the benefits. Ex: you want the company to purchase collaboration software so you watch demos and identify uses and features.
         Share/haring: finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.
-        Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn’t. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
+        Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn't. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
     { que:"Mitigation and Contingency Plans",
-        ans:`Mitigation: a strategy for reducing the impact of negative risks and increasing the benefits of positive risks. Includes the actions, owners, timing, and funding necessary to optimize a risk’s impact.
+        ans:`Mitigation: a strategy for reducing the impact of negative risks and increasing the benefits of positive risks. Includes the actions, owners, timing, and funding necessary to optimize a risk's impact.
         Contingency: "fallback plan" or "backup plan." Part of the "contingent response strategy" for how to react when risk occurs, created before risk occurs but implemented at occurrence.` },
     { que:"Risk Register",
         ans:`Information gathered during the risk management process:
@@ -945,7 +945,7 @@ const flashcards = [
         Risk owner
         Risk response or treatment` },
     { que:"Risk Report",
-        ans:`shares information about a project’s risk management process: 
+        ans:`shares information about a project's risk management process: 
         Current project risk status
         Total number of known risks
         Trends
@@ -1063,15 +1063,16 @@ const flashcards = [
         Story points are an estimating technique used in agile teams, so it would apply to user stories and not work packages. A story point is an abstract measure representing the relative complexity, risk, and uncertainty of the work needed to deliver a story. 
         Story points values use modified Fibonacci sequence: 1,2,3,5,8,13. ` },
     { que:"Assign Resources",
-        ans:`Clarity: 
-        Parity: 
-        Discovery: 
-        Validity: ` },
+        ans:`After identifying the activities, you will assign resources to each activity. Resource Assignment Process focuses on human and physical resources because capital resources were used on them.
+        Clarity: assigning resources clarifies roles and responsibilities. Team members know what they need to do and can plan their time accordingly.
+        Parity: physical resources benefit from resource assignments as well. Physical resources have a body of work and limited time, just like people.
+        Discovery: resource assignment process can uncover issues early. 
+        Validity: increases the accuracy of project metrics. Tracking resource assignments allows you to create detailed cost estimates.` },
     { que:"Responsibility Assignment Matrix(RAM)",
-        ans:`Responsible (R). The person who will do the work.
-        Accountable (A). The person who will be held accountable for the final work.
-        Consulted (C). The person who can offer expertise on the work but will not work on it directly.
-        Informed (I). The person who needs to know when the work is done.` },
+        ans:`Responsible (R): person who will DO the work.
+        Accountable (A): person held accountable for the FINAL work.
+        Consulted (C): person who offer expertise on the work but will not work on it.
+        Informed (I): person who needs to know when the work is done.` },
     { que:"Project Schedule",
         ans:`the activities required to complete the project work. ` },
     { que:"Project Network Diagrams",
@@ -1144,14 +1145,14 @@ const flashcards = [
         Direct costs: are created as a result of a project. Ex: specific resource or activity, such as an equipment rental and materials cost. 
         Indirect costs: are overhead costs that support operations, including your project. You cannot trace exactly how much of an indirect cost is incurred by a project. Ex: utilities, building supplies, and management staff.` },
     { que:"Project Reserves",
-        ans:`Contingency Reserve: "contingency buffer"; a calculated buffer of time and cost that covers documented risks. These risks are “known unknowns,” which we know about, but don’t know if they will happen. PM can authorize use of contingency reserves.
+        ans:`Contingency Reserve: "contingency buffer"; a calculated buffer of time and cost that covers documented risks. These risks are “known unknowns,” which we know about, but don't know if they will happen. PM can authorize use of contingency reserves.
         Management Reserve: additional sum of time or money that covers “unknown unknowns”; setbacks that we have not forecasted and do not know if they will happen. Senior management has authority over management reserves. PM can access these reserves after escalating issue and obtaining approval.` },
     { que:"Methods for Calculating Reserves",
         ans:`Reserve Analysis: accommodates multiple methods for calculating contingency reserves, each with benefits/drawbacks.
-        Percentage of the Project's Cost: a simple calculation that uses a percentage of the project’s cost estimate. This method is for smaller organizations/projects. 3–10% reserve is sufficient.
+        Percentage of the Project's Cost: a simple calculation that uses a percentage of the project's cost estimate. This method is for smaller organizations/projects. 3–10% reserve is sufficient.
         Monte Carlo Analysis: popular simulation technique. Uses three-point estimate to create probability distribution. You need the optimistic, most likely, and pessimistic estimates for each project activity.` },
     { que:"Methods for Calculating Reserves - EMV",
-        ans:`Expected Monetary Value(EMV): requires each risk’s probability and impact assessment. First, the probability and the financial impact of occurrence are multiplied for each risk. Then, the EMV for each risk is summed to calculate the project’s contingency buffer. EMV is helpful for large, expensive projects with many risks.
+        ans:`Expected Monetary Value(EMV): requires each risk's probability and impact assessment. First, the probability and the financial impact of occurrence are multiplied for each risk. Then, the EMV for each risk is summed to calculate the project's contingency buffer. EMV is helpful for large, expensive projects with many risks.
         EMV = Probability x Impact
         ex: Risk Activity 1 | Probability: 20% | Impact: -$5000 | EMV: -$1000
             Risk Activity 2 | Probability: 35% | Impact: -$7000 | EMV: -$2450
@@ -1177,9 +1178,9 @@ const flashcards = [
         Choose lower-cost option, EMV(B)` },
     { que:"Project Baselines",
         ans:`baseline aids the "change control process". Scope tends to change, and the baseline is the source of truth for the original scope. When significant change requests come in, you can reference the baseline to evaluate the impact. It can also justify renegotiating contracts or rebaselining the project.
-        Scope baseline: original scope from detailed scope statement. It includes project’s key deliverables.
+        Scope baseline: original scope from detailed scope statement. It includes project's key deliverables.
         Schedule baseline: the total project duration captured from project schedule.
-        Cost baseline: the expected costs plus contingency reserves. Represents total project cost within PM’s control.` },
+        Cost baseline: the expected costs plus contingency reserves. Represents total project cost within PM's control.` },
     { que:"How to Create a Baseline",
         ans:`1. Set the scope and key deliverables. ex: Scope Baseline: All new appliances in matching color scheme; New countertops; New flooring; Painted walls; Tiled backsplash.
         2. Create a schedule with a project duration and deadline. ex: Schedule Baseline: 8 weeks
@@ -1190,16 +1191,16 @@ const flashcards = [
     { que:"Budget Considerations",
         ans:`Manage the reserves: Represent the cost estimate, contingency reserve, and management reserve as separate categories.
         Maintain your documentation: Many calculations and decisions go into creating the project estimates. Keep a separate document with the reasoning for each estimate so you can refer to it if an estimate is wrong or needs to change.
-        Keep the budget updated: Update budget when changes occur. It’s easy to forget details, and tracking down missing information is not a good use of time. ` },
+        Keep the budget updated: Update budget when changes occur. It's easy to forget details, and tracking down missing information is not a good use of time. ` },
     { que:"Quality Assurance(QA)",
         ans:`set of processes that touch every part of a project. Ex: software testing, customer surveys, and hiring practices.` },
     { que:"QA Plan",
-        ans:`created in planning phase, used throughout project. Describes how the team will ensure the project outputs meet the project’s requirements.` },
+        ans:`created in planning phase, used throughout project. Describes how the team will ensure the project outputs meet the project's requirements.` },
     { que:"QA plan answers several questions...",
         ans:`If we do this work, how will we verify that it meets expectations?
         If this risk were to occur, how would we prevent quality defects from escaping?
         This process could create defects. How can we prevent defects?
-        If our process isn’t working, how can we recognize and improve it?
+        If our process isn't working, how can we recognize and improve it?
         If our customer finds a defect, how will we recover?` },
     { que:"QA Plan Contents",
         ans:`Quality Standards: document any industry or regulatory standards that apply to the project. Ex: health codes.
@@ -1212,29 +1213,29 @@ const flashcards = [
         Inspection: Quality Control(QC) tool, where you examine finished product and compare to expected results by running user acceptance tests(UATs).
         Audits: type of inspection process that reviews processes to identify issues.` },
     { que:"Types of Software Tests - Automated v Manual Testing",
-        ans:` Automated testing: runs faster than a person could, which allows a developer to run more tests more frequently. In addition, it enables practices such as continuous integration, and it increases the confidence in the software’s quality. But, need people to build and maintain automated tests.
+        ans:` Automated testing: runs faster than a person could, which allows a developer to run more tests more frequently. In addition, it enables practices such as continuous integration, and it increases the confidence in the software's quality. But, need people to build and maintain automated tests.
         Manual testing: time consuming and expensive. Requires people every step of the test. Creates capacity limit on development; continuous integration(CI) will not succeed in manual testing. People tend to skip manual tests or resist building the feature. But manual testing is adaptive as people detect software appearance and work around it.` },
     { que:"Types of Software Tests - Unit Testing",
         ans:`Unit testing: measures smallest piece of functionality in software. Each component/unit is tested. Works well with modular coding where developers reuse code. Unit tests run as the developer writes code and are highly valuable. ` },
     { que:"Types of Software Tests - Regression Testing",
         ans:`Regression testing: when making changes to existing code, run regression tests to ensure that the new code does not break existing functionality. Regression testing doesn't introduce new tests, but reruns existing tests.` },
     { que:"Types of Software Tests - Smoke Testing",
-        ans:`runs a high-level system test. Runs after the code is compiled into a build and before deployment and release. These tests confirm that the main features are working before detailed tests run. This test method detects a flawed build before the team invests time in testing smaller components. Ex: a shopping website needs to show items, add items to a cart, and check out items. A smoke test will ensure that these features work because, if they don’t, no other tests will matter, since the site can’t perform its core functions.` },
+        ans:`runs a high-level system test. Runs after the code is compiled into a build and before deployment and release. These tests confirm that the main features are working before detailed tests run. This test method detects a flawed build before the team invests time in testing smaller components. Ex: a shopping website needs to show items, add items to a cart, and check out items. A smoke test will ensure that these features work because, if they don't, no other tests will matter, since the site can't perform its core functions.` },
     { que:"Types of Software Tests - User Acceptance Testing(UAT)",
         ans:`evaluates the final outputs against specifications. If this test passes, you can safely assume a user will accept the product. In addition, UAT tests whether a product would satisfy the business requirements if it were released to production.` },
     { que:"Types of Software Tests - Performance Testing",
-        ans:`measure the system’s performance. They evaluate if the system is stable and fast enough to work under various workloads. Performance tests usually measure expected conditions. ex: measuring how a website responds to 0–5,000 simultaneous users.` },
+        ans:`measure the system's performance. They evaluate if the system is stable and fast enough to work under various workloads. Performance tests usually measure expected conditions. ex: measuring how a website responds to 0–5,000 simultaneous users.` },
     { que:"Types of Software Tests - Stress Testing",
         ans:`a specific type of performance testing. Most performance tests measure performance under expected conditions. but stress testing evaluates how a system performs when it reaches or exceeds the expected workload. ex: if website expects 5,000 simultaneous users, a stress test will measure 4,500–25,000 simultaneous users.` },
     { que:"Create a Test Plan",
-        ans:`test plan is a reference that describes how a project will verify the project’s outputs meet expectations. It includes test strategy, specific schedule of events, tests to run, and necessary resources. Includes manual and automated tests. Created in the project planning phase, and quality testers reference and update it throughout the project. It describes expected standards and how the tests will measure against them.
+        ans:`test plan is a reference that describes how a project will verify the project's outputs meet expectations. It includes test strategy, specific schedule of events, tests to run, and necessary resources. Includes manual and automated tests. Created in the project planning phase, and quality testers reference and update it throughout the project. It describes expected standards and how the tests will measure against them.
         Both quality tester and developer ensure "verified deliverables" meet project requirements.` },
     { que:"Test Plan Elements",
         ans:`Scope: scope is a compressed form of the project scope.
         Types: test types section identifies how the team will test the deliverables. It lists the types of tests used in the project, what they will test for, and when they are used.
         Schedule: schedule includes when testing will start and end. It includes dates for each test category.
         Resources: includes the systems and people needed to complete testing and all activities in the test plan. 
-        Envinronment: "test environment" mimics the production environment, but failures in the test environment do not impact the product’s end-users. Outline the necessary configurations, hardware, and software needed for a test environment. 
+        Envinronment: "test environment" mimics the production environment, but failures in the test environment do not impact the product's end-users. Outline the necessary configurations, hardware, and software needed for a test environment. 
         Tools: list all the software requirements under tools and a brief reason for use for reporting test results, recording defects, and sharing progress.
         Defect Management: include clear expectations for defect handling. ex: specify which system to use for recording, when to record a defect, and which information to capture. 
         Risk Management: summarizes those risks relevant to the testing process
@@ -1260,7 +1261,7 @@ const flashcards = [
     { que:"Procurement management ",
         ans:`starts as early as discovery phase and lasts until the last contract is closed` },
     { que:"Procurement Process Steps",
-        ans:`Determine needs: PM defines the procurement requirements needed to meet the project’s objective.
+        ans:`Determine needs: PM defines the procurement requirements needed to meet the project's objective.
         Submit a purchase requisition: PM formally requests help from the procurement team to acquire resources.
         Complete the solicitation process:procurement specialist prepares a request to solicit quotes, bids, or proposals from vendors. 
         Evaluate and select vendors: evaluation committee will review and score the vendor proposals on predetermined, objective criteria.
@@ -1268,7 +1269,7 @@ const flashcards = [
         Manage records and payments: accounting, purchasing, and procurement teams review order records.` },
     { que:"Common Procurement Artifacts",
         ans:`Purchase Order (PO): a customer request for specific goods or services.
-        Master Service Agreement(MSA): an overarching document that defines the terms of a vendor–buyer relationship. It establishes general logistics that don’t apply to a specific project, such as payment terms, termination provisions, and ethical statements.
+        Master Service Agreement(MSA): an overarching document that defines the terms of a vendor–buyer relationship. It establishes general logistics that don't apply to a specific project, such as payment terms, termination provisions, and ethical statements.
         Contracts v POs often get confused: Procurement contract establishes agreement to purchase something at some point. Contract is fulfilled through one or more POs.` },
     { que:"Resource Procurement Methods",
         ans:`Build: Using your resources to create it. It includes designing, building, and implementing a product, including cost of securing resources.
@@ -1281,7 +1282,7 @@ const flashcards = [
         Request for Bid(RFB): solicits proposals like RFP, but vendors compete on price. Since you cannot factor in other criterias, this works best for straightforward work and commodity items (ex: office supplies). 
         Request for Quote: an exclusively financial proposal. A formal document requesting pricing information for detailed, specific requirements, such as supplies or labor. Vendors respond with pricing models that describe delivering the project scope and coss.` },
     { que:"Procurement Statement of Work(SOW)",
-        ans:`a formal document that outlines the work a vendor needs to deliver. It’s included with an RFP to provide additional information about the project. It clarifies the scope, sets expectations, and outlines technical requirements.` },
+        ans:`a formal document that outlines the work a vendor needs to deliver. It's included with an RFP to provide additional information about the project. It clarifies the scope, sets expectations, and outlines technical requirements.` },
     { que:"3 types of Statement of Work(SOW)",
         ans:`Design: is process prescriptive. Outlines how to deliver the work, and it sets resource and performance requirements at each stage. 
         Functional: is outcome focused. lists the requirements of a finished product only. How to deliver the work is left to the vendor, which can propose alternative approaches or scope adjustments.
@@ -1293,12 +1294,12 @@ const flashcards = [
     { que:"Competitive Analysis",
         ans:`discussed alongside market research because they look at the same information from different angles. Market research identifies vendors that provide goods/services. Competitive analysis compares vendors against each other. It evaluates how firms compete in the market. Competitive analysis is a practical recurring procurement activity. ` },
     { que:"Predetermined Clients",
-        ans:`Developers create products for specific audience, predetermined clients. The predetermined client could be a model user or preferred configuration that optimizes product’s performance. Understanding the product’s predetermined clients can help you compare the potential usefulness of two or more options.` },
+        ans:`Developers create products for specific audience, predetermined clients. The predetermined client could be a model user or preferred configuration that optimizes product's performance. Understanding the product's predetermined clients can help you compare the potential usefulness of two or more options.` },
     { que:"Capital v Operational Expenses",
-        ans:`CapEx: permanent assets, such as data centers, vehicles, and equipment. Organizations rarely purchase them, making them noticeable purchases that fall outside the company’s typical operating budget. Capital purchases require intensive capital budgeting because of the high cost. CapEx assets depreciate over multiple years on the accounting register and income statements. Therefore, disposal of such assets must be reported for proper accounting.
-        OpEx: organization’s regular expenses; (ex: salaries, taxes, and recurring expenses, (ex: subscriptions, rentals, utilities)). OpEx are already built into the budget and do not depreciate. Acquiring/disposing OpEx assets is more feasible/flexible.` },
+        ans:`CapEx: permanent assets, such as data centers, vehicles, and equipment. Organizations rarely purchase them, making them noticeable purchases that fall outside the company's typical operating budget. Capital purchases require intensive capital budgeting because of the high cost. CapEx assets depreciate over multiple years on the accounting register and income statements. Therefore, disposal of such assets must be reported for proper accounting.
+        OpEx: organization's regular expenses; (ex: salaries, taxes, and recurring expenses, (ex: subscriptions, rentals, utilities)). OpEx are already built into the budget and do not depreciate. Acquiring/disposing OpEx assets is more feasible/flexible.` },
     { que:"Review Current Vendor Options - Preexisting Contracts",
-        ans:`Your organization has active contracts with many vendors. After defining a project’s requirements, the procurement specialist will review these contracts to determine if any of the vendors are a good fit for your needs. Preexisting contracts are more efficient than bidding and awarding a new contract. But, leveraging a preexisting contract only works when a vendor has the capacity, capability, and interest in delivering the work. An established vendor will still require a TOR or SOW for your project’s requirements. You may need to create a separate document or modify their existing material.` },
+        ans:`Your organization has active contracts with many vendors. After defining a project's requirements, the procurement specialist will review these contracts to determine if any of the vendors are a good fit for your needs. Preexisting contracts are more efficient than bidding and awarding a new contract. But, leveraging a preexisting contract only works when a vendor has the capacity, capability, and interest in delivering the work. An established vendor will still require a TOR or SOW for your project's requirements. You may need to create a separate document or modify their existing material.` },
     { que:"Review Current Vendor Options - Prequalified Vendors",
         ans:`may have prequalified vendors, which have been initially vetted to confirm that they meet basic requirements to work with the organization. The procurement team keeps their information on file in a qualified vendors list and can invite them to participate in an RFP when appropriate. Prequalified vendors can onboard faster, which streamlines the procurement process. Prequalification is mutually beneficial because it expands professional networks.` },
     { que:"Financial Evaluation Techniques",
@@ -1312,16 +1313,16 @@ const flashcards = [
     { que:"Practical Evaluation Techniques - Physical v Financial Capacity",
         ans:`capacity evaluation" considers if vendor meets the demands of the contract. Physical capacity refers to the volume of work a vendor can produce for your contract. Volume can refer to units sold, consulting hours, or any other resource unit of measure. Ex: if you need 1,000 units per month, you would select vendors with the capacity to sell you at least 1,000 units per month. If you require a full-time consultant, you would evaluate if the vendor can provide a dedicated consultant.
         "Physical capacity evaluations" considers current and long-term growth projections; you can also include an extended projection that arises from scenario planning. Ex: your project expects 1,000 units per month in regular growth models and 15,000 units in unprecedented models. If you selected a vendor that can accommodate up to 2,000 units, you would have an unresolved capacity risk should the 15,000-unit scenario occur.
-        "Financial capacity evaluation" measures the firm’s financial stability, or vendor viability. Vendor relationships are long-term affairs, so you want to work with vendors that intend to exist for a while. A financial evaluation reviews the vendor’s financial statements and credit documentation. You can also review public documentation, such as bankruptcy filings and mergers.` },
+        "Financial capacity evaluation" measures the firm's financial stability, or vendor viability. Vendor relationships are long-term affairs, so you want to work with vendors that intend to exist for a while. A financial evaluation reviews the vendor's financial statements and credit documentation. You can also review public documentation, such as bankruptcy filings and mergers.` },
     { que:"Vendor Qualifications",
-        ans:`an evaluation process that compares the buying organization’s requirements against the vendor’s ability to provide them. A qualified vendor must be able to deliver goods or services to the expected standards, and will need to prove that they meet requirements throughout the contract.` },
+        ans:`an evaluation process that compares the buying organization's requirements against the vendor's ability to provide them. A qualified vendor must be able to deliver goods or services to the expected standards, and will need to prove that they meet requirements throughout the contract.` },
     { que:"Fit Evaluation Techniques - Demonstration",
         ans:`vendor demonstration, aka "demo" or "product demo." Is an interactive session where the vendor demonstrates their solution. Demonstrations are particularly popular when procuring software. A demonstration gives you more interactive information about a product, such as its design and ease of use.` },
     { que:"Fit Evaluation Techniques - Technical Approach",
         ans:`technical approach to vendor selection requires evaluators to compare vendor submissions to the project requirements. A technical evaluation is a highly structured event. Technical evaluators score a product strictly against the criteria outlined in the solicitation and nothing else. Vendors offering products above and beyond the requirements do not receive a higher score.
-        References: After selecting final vendor and before signing a contract, the procurement specialist conducts reference checks with a vendor’s other clients. First, procurement specialist inquires about the client’s experience with the vendor. Next, procurement analyst asks how they interact, which technology they use, and why they work with the vendor. They also inquire about the vendor’s performance, including their responsiveness, work quality, on-time performance, and cost management. A reference check reveals information from the source you might not receive elsewhere.` },
+        References: After selecting final vendor and before signing a contract, the procurement specialist conducts reference checks with a vendor's other clients. First, procurement specialist inquires about the client's experience with the vendor. Next, procurement analyst asks how they interact, which technology they use, and why they work with the vendor. They also inquire about the vendor's performance, including their responsiveness, work quality, on-time performance, and cost management. A reference check reveals information from the source you might not receive elsewhere.` },
     { que:"Fixed Price Contracts",
-        ans:`"lump sum contract", agrees for fixed scope of work and places most of the contract risk on the vendor. Ex: if materials cost increases, the vendor would not receive more money to cover that. Therefore, their profit margins would shrink. A fixed-price contract is suitable when the contract’s scope will not change.` },
+        ans:`"lump sum contract", agrees for fixed scope of work and places most of the contract risk on the vendor. Ex: if materials cost increases, the vendor would not receive more money to cover that. Therefore, their profit margins would shrink. A fixed-price contract is suitable when the contract's scope will not change.` },
     { que:"3 types of Fixed-Price Contracts",
         ans:`firm fixed-price (FFP),
         fixed-price incentive fee (FPIF),
@@ -1333,7 +1334,7 @@ const flashcards = [
     { que:"Fixed-Price with Economic Price Adjustment(FP-EPA) Contract",
         ans:`a fixed-price contract that factors inflation. Each year, the fixed price increases by a certain amount or percentage to cover average inflation costs. Vendors enjoy FP-EPA contracts because it stabilizes their profit margins by providing additional allowances to cover rising resource costs. Buyers benefit from FP-EPA because it still controls costs, and vendors are more likely to sign long-term contracts. FP-EPA is suitable for multi-year contracts where resource costs are expected to increase over time.` },
     { que:"Cost-Plus Contracts",
-        ans:`"cost-reimbursable contract", pays for all resource costs needed to complete the work plus a fee to the vendor, representing the vendor’s profit margin. The cost-plus contract places most of the risk on the buyer. The buyer pays for all expenses and will pay for increased material costs. The buyer also pays for the vendor’s poor (or efficient) resource management. A cost-plus contract works well when a project has a flexible scope because the buyer can stop the work when they meet their needs—or run out of funds.` },
+        ans:`"cost-reimbursable contract", pays for all resource costs needed to complete the work plus a fee to the vendor, representing the vendor's profit margin. The cost-plus contract places most of the risk on the buyer. The buyer pays for all expenses and will pay for increased material costs. The buyer also pays for the vendor's poor (or efficient) resource management. A cost-plus contract works well when a project has a flexible scope because the buyer can stop the work when they meet their needs—or run out of funds.` },
     { que:"Four types of Cost-Plus Contracts",
         ans:`cost-plus fixed fee (CPFF), 
         cost-plus incentive fee (CPIF), 
@@ -1344,26 +1345,26 @@ const flashcards = [
     { que:"Cost-Plus Incentive Fee(CPIF) Contract",
         ans:`eases risk for the vendor. But, the vendor will receive a larger payout for the increased risk. Incentive calculations use clear, objective measures, and the entire formula structure is built into the contract. This format reduces disputes and ambiguity for both parties.` },
     { que:"Cost-Plus Award Fee (CPAF) Contract",
-        ans:`Used when project team struggles to define objective performance metrics. It pays costs plus a fee adjusted for performance. A CPAF contract includes performance goals in the contract, but the goals are not easily measurable. Therefore, the organization subjectively assesses the vendor’s performance and adjusts the fee accordingly. If the vendor fails to meet expectations, they will not receive payment.` },
+        ans:`Used when project team struggles to define objective performance metrics. It pays costs plus a fee adjusted for performance. A CPAF contract includes performance goals in the contract, but the goals are not easily measurable. Therefore, the organization subjectively assesses the vendor's performance and adjusts the fee accordingly. If the vendor fails to meet expectations, they will not receive payment.` },
     { que:"CPAF and CPIF contracts sound similar",
         ans:`but have two key differences. First, CPAF uses subjective measures, and CPIF uses an objective formula. Second, the payment awarded in a CPAF is not open to negotiation, but either party can dispute the award in a CPIF contract.
-        Buyers prefer a CPAF contract when the vendor is a risk, such as if they are new to the field. Vendors prefer CPAF when they know they can exceed the project’s requirements. A CPAF contract increases the risk of a project going over budget, since the award is unknown until the final payment.` },
+        Buyers prefer a CPAF contract when the vendor is a risk, such as if they are new to the field. Vendors prefer CPAF when they know they can exceed the project's requirements. A CPAF contract increases the risk of a project going over budget, since the award is unknown until the final payment.` },
     { que:"Cost-Plus Percentage of Cost(CPPC) Contract",
-        ans:`a vendor receives a fee equal to a percentage of all costs. This contract pays vendors relative to the amount of work they do or the value of their work. A vendor prefers this type of contract for high-value projects and projects where predicting a final cost is difficult. A CPPC contract contains no total cost, which increases risk for buyers. Buyers prefer this contract when costs are well understood and under control. This contract also benefits buyers when they want to focus on other elements, such as performance or quality. It’s also helpful when the buyer wants the ability to change materials, such as upgrading the flooring material in a remodeling project.` },
+        ans:`a vendor receives a fee equal to a percentage of all costs. This contract pays vendors relative to the amount of work they do or the value of their work. A vendor prefers this type of contract for high-value projects and projects where predicting a final cost is difficult. A CPPC contract contains no total cost, which increases risk for buyers. Buyers prefer this contract when costs are well understood and under control. This contract also benefits buyers when they want to focus on other elements, such as performance or quality. It's also helpful when the buyer wants the ability to change materials, such as upgrading the flooring material in a remodeling project.` },
     { que:"Hybrid Contracts - Unit Price Contract",
         ans:`"measurement" or "remeasurement" contract. Works well when purchasing definable, same-sized bundles of work. The buyer agrees to pay a fixed price per work unit delivered. The vendors set their unit costs and include all their expenses and profit. This term contract model works well when you need to purchase repetitive work and the quantity or scope is unknown at the start of the project. Unit price generally higher than bulk price, ` },
     { que:"Hybrid Contracts - Time and Materials (T&M) Contract",
         ans:`when a project has a fixed cost and a flexible scope. The buyer pays materials and labor costs up to the maximum price listed in the contract. Labor costs are charged by the hour and use a fixed hourly rate defined in the contract. The vendors set their hourly costs and incorporate expenses and profit. Buyers prefer this when they want to control the maximum cost but would like to retain flexibility during project execution. ` },
     { que:"Contract Terms - Warranty",
-        ans:`the vendor’s commitment to resolving defects. It describes how long the vendor expects its product to be defect free and defines how it will remedy the situation if something fails.` },
+        ans:`the vendor's commitment to resolving defects. It describes how long the vendor expects its product to be defect free and defines how it will remedy the situation if something fails.` },
     { que:"Contract Terms - Warranty Elements",
         ans:`Length: warranty is valid for a specific duration. Ex: one year.
-        Scope: warranty covers failures resulting from the production process. Ex: warranty applies if your cell phone’s Wi-Fi antenna suddenly fails. But will not cover if you accidentally run over your phone with your car.
+        Scope: warranty covers failures resulting from the production process. Ex: warranty applies if your cell phone's Wi-Fi antenna suddenly fails. But will not cover if you accidentally run over your phone with your car.
         Remediation: vendors define what they will do; a refund, replacement, or both.
         Limitations and Exclusions: vendor identifies the boundaries of their responsibility. Warranty lists limitations of coverage or excluded situations. A vendor recognize warranties only with proof of purchase or exclude coverage if a product is being used in a way not intended. 
         Commencement: highly relevant for projects. For example, a software implementation warranty in a project procurement could include free remediation for failures. The commencement clause describes when this warranty goes into effect, alleviating disputes.` },
     { que:"Contract Terms - Nondisclosure Agreement (NDA)",
-        ans:`you agree that you won’t share specific information with others. An NDA allows you to exchange sensitive or valuable information yet remain relatively confident that it will remain private.` },
+        ans:`you agree that you won't share specific information with others. An NDA allows you to exchange sensitive or valuable information yet remain relatively confident that it will remain private.` },
     { que:"Certain events trigger the need for an NDA:",
         ans:`New product development: both parites sign if collaborating on new product/design.
         Nonpublic information: if vendor accesses nonpublic information, NDA can protect proprietary and sensitive data.
@@ -1373,21 +1374,21 @@ const flashcards = [
         ans:`operating agreements for how the vendor and project team will work together to deliver a project. They include expectations for communication, decision-making, conflict resolution, and roles and responsibilities and guidelines for recognition and celebration. Good rules of engagement create respectful interactions with the team to increase productivity.
         Vendors have contractual obligations, and failing to meet a deliverable could delay their compensation or constitute a "breach of contract"(Failure to meet obligations of a contract resulting in damages paid to the injured party, litigation, or other ramifications). ` },
     { que:"Vendor Management - Monitor Performance",
-        ans:`track quantifiable vendor performance, ex: adherence to SLAs. You will track a vendor’s performance over time. Performance trends help you determine the severity of a missed SLA. ex: a single missed SLA from an otherwise high-performing vendor is not as worrisome as a consistent downward trend in performance.` },
+        ans:`track quantifiable vendor performance, ex: adherence to SLAs. You will track a vendor's performance over time. Performance trends help you determine the severity of a missed SLA. ex: a single missed SLA from an otherwise high-performing vendor is not as worrisome as a consistent downward trend in performance.` },
     { que:"Vendor Management - Approve Deliverables",
         ans:`approval involves reviewing the work delivered and comparing the quality against the standards. The PM approves deliverables; this is the official signal that the work meets expectations. In addition, approving deliverables indicates that the vendor is eligible to collect payment when the work is tied to contract terms.` },
     { que:"Maintaining Project Momentum",
         ans:`Start Strong: Start the project with a clear vision. Know why the project matters and what it needs to deliver. You should be able to talk about the project in under 30 sec.
-        Set the Pace: PM reiterates deadlines and sets expectations for the team. They also set cadences and maintain them. Ex: if you set a monthly meeting cadence, don’t cancel half the meetings, becuase it will create a perception that the cadence is every two months, and work will slow.
-        Look Forward: PM’s should look ahead to tomorrow’s work and clear potential roadblocks. Ex: if developers rely on the operations team to release a product, you would keep in contact with the operations team and look for potential issues, such as down environments and staffing issues. Then you can clear the issues, monitor them for improvement, adjust your schedule, or warn your team.
-        Motivate the Team: PM needs to know the value of the project better than anyone else, it’s their mission to ensure the team understands its importance. Convey the purpose of every deadline and milestone to ensure that people doing the work have the motivation to meet the goals. Recognize the team’s hard work, and celebrate successes at every retrospective, milestone, or phase gate review.` },
+        Set the Pace: PM reiterates deadlines and sets expectations for the team. They also set cadences and maintain them. Ex: if you set a monthly meeting cadence, don't cancel half the meetings, becuase it will create a perception that the cadence is every two months, and work will slow.
+        Look Forward: PM's should look ahead to tomorrow's work and clear potential roadblocks. Ex: if developers rely on the operations team to release a product, you would keep in contact with the operations team and look for potential issues, such as down environments and staffing issues. Then you can clear the issues, monitor them for improvement, adjust your schedule, or warn your team.
+        Motivate the Team: PM needs to know the value of the project better than anyone else, it's their mission to ensure the team understands its importance. Convey the purpose of every deadline and milestone to ensure that people doing the work have the motivation to meet the goals. Recognize the team's hard work, and celebrate successes at every retrospective, milestone, or phase gate review.` },
     { que:"Requirements Traceability Matrix(RTM)",
         ans:`Traceability measures how well you can follow the path of something. Ex: cat walking in snow leaves trail prints; high traceability. Cat walking in concrete sidewalk leaves little-no trace; low traceability.
         Traceability is a necessity, incase a drug recall occurs, you can trace back using lot codes.` },
     { que:"Time and Work Tracking Tools - Project Management Applications",
         ans:`designed to track projects and plan the needed activities. It includes the ability to create tasks and track owners, progress, and deadlines. Usually includes a duration but not a time estimate.` },
     { que:"Time and Work Tracking Tools - Time Tracking Applications",
-        ans:`a detailed data collection tool and tracks how long it takes to complete tasks. Includes ability to create projects/tasks, similar to "project management application". But, users also track their hours worked and associate them with specific tasks/projects. PMs use time tracking applications to measure project’s completion progress. ` },
+        ans:`a detailed data collection tool and tracks how long it takes to complete tasks. Includes ability to create projects/tasks, similar to "project management application". But, users also track their hours worked and associate them with specific tasks/projects. PMs use time tracking applications to measure project's completion progress. ` },
     { que:"Time and Work Tracking Tools - Project and Time Tracking Applications",
         ans:`Both applications include beneficial features; ex: report generation, that simplify communication processes. Users also track their activity progress within both tools at varying levels of detail. So you can review progress and create reports without contacting each individual for updates` },
     { que:"Time and Work Tracking Tools - Task Board",
@@ -1395,7 +1396,7 @@ const flashcards = [
     { que:"Version Control Tool",
         ans:`are traceability tools for source code. They track/manage code changes by automatically tracking what changed, when, and by whom. They retain previous code versions to revert to a working version when necessary.` },
     { que:"Event Logs - Issue Log",
-        ans:`event happening in a project that you do not control. An issue log tracks/manages issues. The log helps you organize and prioritize the list to focus on the highest-priority items because you won’t have enough time and resources to address everything. For each issue; record a description, date found, who found it. Then prioritize the list and capture the plan for addressing it. Finally, record the owner, and track any changes to the issue.` },
+        ans:`event happening in a project that you do not control. An issue log tracks/manages issues. The log helps you organize and prioritize the list to focus on the highest-priority items because you won't have enough time and resources to address everything. For each issue; record a description, date found, who found it. Then prioritize the list and capture the plan for addressing it. Finally, record the owner, and track any changes to the issue.` },
     { que:"Event Logs - Issue Log fields",
         ans:`Issue Number
         Description
@@ -1423,7 +1424,7 @@ const flashcards = [
         Date Fixed
         Comments` },
     { que:"Event Logs - Change Log",
-        ans:`project change occurs when the project’s activities differ from the project plan. Change happens in every project. That includes both requests, such as a request for a new feature, and unplanned changes, such as a team member leaving. You will not implement every change request you receive. However, you should record and evaluate changes to identify those that would improve a project.` },
+        ans:`project change occurs when the project's activities differ from the project plan. Change happens in every project. That includes both requests, such as a request for a new feature, and unplanned changes, such as a team member leaving. You will not implement every change request you receive. However, you should record and evaluate changes to identify those that would improve a project.` },
     { que:"Event Logs - Change Log fields",
         ans:`Change Number
         Description
@@ -1444,13 +1445,13 @@ const flashcards = [
     { que:"Burndown Chart",
         ans:`measures how much work is "remaining" each day. A line represents the target for the day. The first day of the project plots all work remaining, and the last day plots no work remaining. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like a lit candle, the work “burns down” to zero. A burndown chart focuses on the end goal. It works well with a fixed timeline, like in agile teams.` },
     { que:"Velocity v Throughput Charts",
-        ans:`Agile teams use velocity and throughput charts to set their work goals in future sprints. These measure a team’s historical performance data. Teams use their historical performance as a predictor of future performance. Any team that tracks work items can use throughput because it measures the number of work items completed. Velocity is only used by teams that measure work with story points.` },
+        ans:`Agile teams use velocity and throughput charts to set their work goals in future sprints. These measure a team's historical performance data. Teams use their historical performance as a predictor of future performance. Any team that tracks work items can use throughput because it measures the number of work items completed. Velocity is only used by teams that measure work with story points.` },
     { que:"Throughput Charts",
         ans:`measures the number of items completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: the throughput chart shows that they deliver an average of 13 user stories per sprint. So they should include approximately 13 stories in the next iteration.` },
     { que:"Velocity Charts",
-        ans:`measures how many story points are completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: a team’s velocity chart shows that they usually deliver an average of 21 story points. So they should plan for no more than 21 story points at the next iteration.` },
+        ans:`measures how many story points are completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: a team's velocity chart shows that they usually deliver an average of 21 story points. So they should plan for no more than 21 story points at the next iteration.` },
     { que:"Team Meetings - Team Status Meeting",
-        ans:`"team touchpoint meeting"; the team’s regular recurring meeting. The purpose is to update the project’s overall progress and solve problems. Team use this time to review problems and brainstorm solutions. This is a working meeting than a stakeholder meeting.` },
+        ans:`"team touchpoint meeting"; the team's regular recurring meeting. The purpose is to update the project's overall progress and solve problems. Team use this time to review problems and brainstorm solutions. This is a working meeting than a stakeholder meeting.` },
     { que:"Team Meetings - Team Status Meeting agenda",
         ans:`Open action items
         Status updates
@@ -1468,8 +1469,8 @@ const flashcards = [
         Sprint target (velocity or throughput).
         Sprint backlog development.` },
     { que:"Stakeholder Meetings",
-        ans:`occurs less frequently than the team meeting. The purpose is to report on the project’s overall progress, gather feedback, and highlight what stakeholders will see next. A stakeholder meeting should summarize everything and leave most of the time for discussion. Be prepared to answer perceptive questions about the project.
-        PM facilitate status reports for internal/external stakeholders. Adjust meeting’s agenda and tone for each audience. External meetings are restrained than internal meetings. External audience doesn’t know about the internal workings of your organization, so don't include specific departments or issues. External meeting focuses on externally visible deliverables and milestones. You might discuss development milestones with internal stakeholders, you would only tell stakeholders about the go-live event for software.` },
+        ans:`occurs less frequently than the team meeting. The purpose is to report on the project's overall progress, gather feedback, and highlight what stakeholders will see next. A stakeholder meeting should summarize everything and leave most of the time for discussion. Be prepared to answer perceptive questions about the project.
+        PM facilitate status reports for internal/external stakeholders. Adjust meeting's agenda and tone for each audience. External meetings are restrained than internal meetings. External audience doesn't know about the internal workings of your organization, so don't include specific departments or issues. External meeting focuses on externally visible deliverables and milestones. You might discuss development milestones with internal stakeholders, you would only tell stakeholders about the go-live event for software.` },
     { que:"External Stakeholder Meeting agenda",
         ans:`High-level project status.
         Project roadmap or upcoming releases.
@@ -1484,15 +1485,15 @@ const flashcards = [
         Next steps.
         Feedback solicitation.` },
     { que:"Conditional Meetings",
-        ans:`meetings that don’t happen on a recurring schedule. These conditional meetings occur on request or requesting support from a specific group.` },
+        ans:`meetings that don't happen on a recurring schedule. These conditional meetings occur on request or requesting support from a specific group.` },
     { que:"Phase Gate Meetings",
-        ans:`phase gate review meeting is held at every phase gate. A phase gate meeting occurs when the project moves from one phase to the next. The end of the project is moving from the closing phase to a closed state, so it’s also a phase gate. This meeting aims to prove that the project has met all requirements for the current phase and is ready to move to the next phase. You will review project’s deliverables, lessons learned, and plans for the future. You can also recognize the team and celebrate successes.` },
+        ans:`phase gate review meeting is held at every phase gate. A phase gate meeting occurs when the project moves from one phase to the next. The end of the project is moving from the closing phase to a closed state, so it's also a phase gate. This meeting aims to prove that the project has met all requirements for the current phase and is ready to move to the next phase. You will review project's deliverables, lessons learned, and plans for the future. You can also recognize the team and celebrate successes.` },
     { que:"Phase gate meetings end with one of three decisions",
         ans:`1. All phase criteria are met, and the project can move to the next phase (or close in the final stage).
-        2. The project hasn’t met all phase criteria and needs to stay in the current phase.
+        2. The project hasn't met all phase criteria and needs to stay in the current phase.
         3. The project is no longer viable and is canceled.` },
     { que:"Conditional Meetings - Change Control Meeting",
-        ans:`used to review change requests. The project manager won’t facilitate this meeting if organization has a change control board (CCB). Instead, you new change requests to this meeting and present them to the board. Prepare an analysis of the change, recommendations, and implementation plans if approved. The board will approve/deny the change, and update the change log and project plan accordingly.` },
+        ans:`used to review change requests. The project manager won't facilitate this meeting if organization has a change control board (CCB). Instead, you new change requests to this meeting and present them to the board. Prepare an analysis of the change, recommendations, and implementation plans if approved. The board will approve/deny the change, and update the change log and project plan accordingly.` },
     { que:"Conditional Meetings - Ad Hoc Reporting",
         ans:`could be a meeting where you share project information with an audience or a request for data. Purpose of ad hoc report depends. Ex: you might be called to highlight the project at an event, or a stakeholder might need an updated report for one of their activities. Analysts often use project data and might contact you for information. If your reports are good, people will notice and want to use the information for their decision-making activities. Ad hoc requests are a compliment to your skills. Best way to prepare for ad hoc requests is to keep your data updated and your reports easy to create. ` },
     { que:"Providing Project Team Performance Feedback - Feedback Process",
@@ -1504,9 +1505,9 @@ const flashcards = [
     { que:"Providing Project Team Performance Feedback - Feedback Sources",
         ans:`Performance Metrics: Generate project performance reports, and you can glean helpful feedback. Analyze the data to identify specific successes and failures.
         Stakeholder Comments: Stakeholders will provide feedback throughout the project via meetings, emails, and informal conversations. Summarize and disseminate that information to your team.
-        Observation: monitor project’s operations and inevitably see people deviate from a process or improve a system. Look for how each person is contributing to the product, and take note.
+        Observation: monitor project's operations and inevitably see people deviate from a process or improve a system. Look for how each person is contributing to the product, and take note.
         Teammate Feedback: Teammates know how a person is affecting the project. Solicit comments from teammates through formal feedback systems or one-on-one meetings. Observe how teammates interact and look for opportunities to amplify positive feedback. Summarize this information, and share anonymously.
-        Lessons Learned: lessons learned or retrospective sessions generate extensive amount of feedback. The entire team is present and receives the feedback together. But, you can monitor the feedback and look for trends that support other feedback you’ve gathered.` },
+        Lessons Learned: lessons learned or retrospective sessions generate extensive amount of feedback. The entire team is present and receives the feedback together. But, you can monitor the feedback and look for trends that support other feedback you've gathered.` },
     { que:"Tips for Delivering Feedback",
         ans:`Make sure people know what to do with the information.
         Be sensitive to potential reactions when delivering feedback.
@@ -1516,7 +1517,7 @@ const flashcards = [
         Be comfortable giving feedback.` },
     { que:"Issue Management Process",
         ans:`Identify the issue: Find and record issues in an issue log.
-        Analyze: Determine the issue’s cause and impact and prioritize all issues.
+        Analyze: Determine the issue's cause and impact and prioritize all issues.
         Resolve: Decide what to do about the issue and do it.
         Monitor: Confirm the issue is resolved and close it.` },
     { que:"Issue Management Process - Identify the Issue",
@@ -1543,7 +1544,7 @@ const flashcards = [
         4. Why?
         5. Why?` },
     { que:"Issue Management Process - Analyze the Issue - Fishbone",
-        ans:`useful during issue resolution process. Fishbone or "Ishikawa diagram" looks like the bones of a fish. It is helpful for identifying multiple potential causes for a single problem. The fish’s head contains the problem, and the ribs contain possible related causes. You can use standard categories, such as the 6Ps (policy, process, people, plant, program, and product), or create categories customized to your issue.` },
+        ans:`useful during issue resolution process. Fishbone or "Ishikawa diagram" looks like the bones of a fish. It is helpful for identifying multiple potential causes for a single problem. The fish's head contains the problem, and the ribs contain possible related causes. You can use standard categories, such as the 6Ps (policy, process, people, plant, program, and product), or create categories customized to your issue.` },
     { que:"Issue Prioritization Tools - Issue Severity",
         ans:`Issue Severity: reflects how it will impact the end-users of a product. Severity measures extensiveness of issue's effect using simple scale:
         Critical: system is completely inaccessible or nonfunctional. Needs immediate attention from operations, support, and management. Critical issue blocks customers from using application.
@@ -1569,7 +1570,7 @@ const flashcards = [
     { que:"Issue Prioritization Tools - Issue Escalation",
         ans:`a process that ensures critical risks and issues receive appropriate follow-up.
         High: plan in place, has been escalated. High rated issue has an escalation plan and has been escalated. Issues in this category have more people working on them and following up on them. 
-        Medium: plan in place, not been escalated. Medium rated issue has an escalation plan in place, but hasn’t been activated yet. If unresolved, it would be escalated and then move to a high rating.
+        Medium: plan in place, not been escalated. Medium rated issue has an escalation plan in place, but hasn't been activated yet. If unresolved, it would be escalated and then move to a high rating.
         Low: no plan to escalate. Low rated issues do not have an issue escalation plan. These issues may be routine that they are resolved before escalation. ` },
     { que:"Issue Prioritization Tools - Issue Prioritization",
         ans:`use a descriptive scale to assist with the initial evaluation, paired with numerical value (1-9; 9 is highest/critical). 
@@ -1587,11 +1588,11 @@ const flashcards = [
     { que:"Issue Management Process - Monitor the Issue",
         ans:`The "issue resolution plan" requires multiple monitoring activities:
         Monitoring resolved issues to make sure they stay resolved.
-        Monitoring open issues to ensure they aren’t more problematic than expected.
+        Monitoring open issues to ensure they aren't more problematic than expected.
         Monitoring project performance to identify new issues.
         Verify Issue Resolution: Verify and approve each completed resolution. Look for performance data or feedback to confirm the resolution. Another SME or process owner may verify the resolutions as well.
         Remove Workarounds: use a workaround in the issue management process, an alternate approach to completing work that circumvents an inconvenience or problem
-        Complete Outcome Documentation: Close the issue in the issue log. Update issue log with notes about how the issue was resolved and its impact on the project. You can then change the issue’s status to a closed/resolved.` },
+        Complete Outcome Documentation: Close the issue in the issue log. Update issue log with notes about how the issue was resolved and its impact on the project. You can then change the issue's status to a closed/resolved.` },
     { que:"Control Charts",
         ans:`statistical charts that tracks variation in a process. Chart does not consider targets or goals, it shows if the process is performing as usual. A process performing “in control” has acceptable amount of variation. Conversely, a process with unacceptable levels of variation is not performing as expected and is "out of control."
         Chart looks like a run chart with additional data. Also a time-based line graph. It uses all the data you would use in a run chart and more. Time/sequence is on horizontal axis, output is on vertical axis. ` },
@@ -1601,7 +1602,7 @@ const flashcards = [
         3. lower control limit (LCL), lowest expected value for the process, when under control.` },
     { que:"Control Charts - Variations",
         ans:`Variation is neutral; it simply represents a deviation from past, expected performance. However, you want process performance to change over time. 
-        Common Cause Variation - variation expected to see. Control limits are built around common cause variation. You can eliminate it with enough budget and focus, but it’s not the focus for most projects. Attempting to remove common cause variation usually leads to overcorrection. It worsens performance over time unless you are working on a variation-reduction process. If not, you can accept common cause variation as part of the cost of the process.
+        Common Cause Variation - variation expected to see. Control limits are built around common cause variation. You can eliminate it with enough budget and focus, but it's not the focus for most projects. Attempting to remove common cause variation usually leads to overcorrection. It worsens performance over time unless you are working on a variation-reduction process. If not, you can accept common cause variation as part of the cost of the process.
         Special Cause Variation - variation you want to detect when monitoring a project. Special causes are unique events that changed something about a process and created an unusual outcome. When you find a special cause event, you should analyze the cause of the variation. Then you can decide if you want to preserve or prevent the variation in the future.` },
     { que:"Change Control",
         ans:`change Control process: a formal series of artifacts and procedures that tracks modifications to a project, product, or system. Change control accepts requests, evaluates them, and approves/denies them.
@@ -1619,7 +1620,7 @@ const flashcards = [
         ans:`Inconsistencies: request changes to create a more stable, consistent plan.
         Aggressive Goals: Projects often start with nearly unattainable goals, known as "stretch goals." At some point in the project, you may realize that a goal is too aggressive. You can change the goals to reflect the most likely project outcomes.
         Team Improvements: improves their systems at every retrospective, phase gate, and lessons learned event. Team may identify new ways to approach the project and submit change requests.
-        Strategic Changes: organization’s strategic direction may switch in the middle of your project. Redirect a project to protect it from cancellation.
+        Strategic Changes: organization's strategic direction may switch in the middle of your project. Redirect a project to protect it from cancellation.
         Scope: When a project delivers more or less work than originally intended, a scope change can bring it back into alignment.
         Product Change: could drive change in your project. Product and project changes are different yet interrelated events.` },
     { que:"Scope Change v Scope Creep",
@@ -1639,27 +1640,27 @@ const flashcards = [
         Deadline(s), If Applicable
         Comments` },
     { que:"Change Control - Evaluate Impacts",
-        ans:`PM conducts a thorough impact assessment for every change that moves past the preliminary review. The review completed in the previous step clarified the request and removed unnecessary ones because this evaluation is more complex and time consuming. They analyze the change request to understand how it would affect the project’s resources, budget, scope, and schedule. They also work with the project team to define the potential work packages and resource requirements.` },
+        ans:`PM conducts a thorough impact assessment for every change that moves past the preliminary review. The review completed in the previous step clarified the request and removed unnecessary ones because this evaluation is more complex and time consuming. They analyze the change request to understand how it would affect the project's resources, budget, scope, and schedule. They also work with the project team to define the potential work packages and resource requirements.` },
     { que:"Change Control - Software Change Approval",
         ans:`Software Change Approval:
         Technical Approval:
         Product Owner Approval:
         Architectural Approval` },
     { que:"Change Control - Implement the Change",
-        ans:`Communicate the Change Status: After deciding on the change request’s outcome, PM will inform the team, and the team uses this information to plan how they can incorporate the change.
+        ans:`Communicate the Change Status: After deciding on the change request's outcome, PM will inform the team, and the team uses this information to plan how they can incorporate the change.
         Update the Project Plan: PM updates the project plan. The extent of updates will depend on the nature of the change. For example, you may need to update the schedule, deliverable, or budget. You may also need to update the RACI, business case, or stakeholder management plan. The PM role includes evaluating approved changes and resolving all the potential impacts.
         Validate the Change Implementation: The project manager, change requester, and change reviewer will validate the change implementation. 
         Communicate Change Deployment: After validation, PM will notify the stakeholders of the completed change to ensure they are updated on the current project condition. They also include changes in recurring meetings and reports, such as the project status report.` },
     { que:"IT Change Delivery Methods",
-        ans:`Maintenance Windows "downtime windows": changes require taking a system offline, meaning end-users cannot access it, and it will not perform services. Companies prefer to limit downtime and maximize uptime. Intentional changes are planned downtime events, but it’s still downtime.
+        ans:`Maintenance Windows "downtime windows": changes require taking a system offline, meaning end-users cannot access it, and it will not perform services. Companies prefer to limit downtime and maximize uptime. Intentional changes are planned downtime events, but it's still downtime.
         Releases: Software changes reach the end-users through a release. A software release is the version of a product that is accessible to end-users in a production environment. 
         Customer Notifications: Customers are notified of upcoming software changes via maintenance notifications. Customers need to be aware of any maintenance windows because they may experience disruptions and outages. Advance notice allows users to plan their usage accordingly. ` },
     { que:"ITIL category changes",
-        ans:`Standard: recurring, routine changes with set policies and procedures. These are the tasks that don’t require additional approval/communication. Do not need to notify customers of these changes.
+        ans:`Standard: recurring, routine changes with set policies and procedures. These are the tasks that don't require additional approval/communication. Do not need to notify customers of these changes.
         Normal: modifications that do not have a set process and do not happen often. Planned in advance and often require customer notifications to varying degrees. 
         Emergency: unplanned, recovery events. Rarely give advance notice, but can notify customers during/after the event. ` },
     { que:"IT Change Risk Mitigation",
-        ans:`Rollback Plans: When new change doesn’t work in production, a "rollback" removes all of the new changes. Rollback plan provides how to roll back the system and whom to contact.
+        ans:`Rollback Plans: When new change doesn't work in production, a "rollback" removes all of the new changes. Rollback plan provides how to roll back the system and whom to contact.
         Release Validation Checks: QA team conducts tests when a release succeeds and new software is in production. These post-production release validations confirm that the production software behaves as expected. The QA team verifies functionality and validate that the product meets the requirements.
         QA Testing:
         1. QA team tests all changes in a test environment, and the test environment should match the production environment exactly. Any inconsistencies between the environments could allow a release to work in one and fail in the other.
@@ -1671,7 +1672,7 @@ const flashcards = [
         Three basic tier types that cover DevOps cycle:
         1. software is developed in the "development environment"; available locally to a single user. This environment allows the developer to make changes to the code.
         2. beta stage is a "test environment". When satisfied with the changes, the developer will push code from their development environment to the beta environment, which is a copy of the live product that is not connected to live data.
-        3. When the release works in beta, it’s ready for "production environment". The production stage is the live environment that end-users can see. When you open a website or app, you are looking at its production environment. ` },
+        3. When the release works in beta, it's ready for "production environment". The production stage is the live environment that end-users can see. When you open a website or app, you are looking at its production environment. ` },
     { que:"Measure Performance - Scope Burndown Chart",
         ans:`` },
     { que:"Measure Performance - Budget Burndown Chart",
@@ -1728,7 +1729,7 @@ const flashcards = [
         Was this project a worthwhile investment?: might display ROI.
         Will this project put the organization at risk?: could display high-impact risks or issues` },
     { que:"Types of Project Dashboards - Team Project Dashboard",
-        ans:`team-level dashboard is tactical and more detailed than an executive dashboard, but team still uses it to make decisions. eam’s dashboard centers around the work.
+        ans:`team-level dashboard is tactical and more detailed than an executive dashboard, but team still uses it to make decisions. eam's dashboard centers around the work.
         Team dashboard answers one or more of the following:
         What do we need to do next?: display a list of upcoming tasks.
         Is anybody overutilized or underutilized?: show resource utilization for the week or iteration.
