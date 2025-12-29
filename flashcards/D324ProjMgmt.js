@@ -485,15 +485,15 @@ const flashcards = [
         Use clear, concise language: Make the most of the limited page space available to you.
         Collaborate with team members to create a realistic timeline and risk assessment: Review the charter drafts with your project sponsor to ensure alignment before distributing the finished product.` },
     { que:"Project Charter - Information",
-        ans:`1. Project Name: give the project a short title. This name will appear on subsequent reports and dashboards.
+        ans:`1. Project Name: give project a short title. This name will appear on subsequent reports and dashboards.
         2. Description: write a short sentence that expands on the project name to describe the project. This field will also appear on reports and dashboards, so you want something straightforward and understandable.
         3. Version Number and Date: track the revision history according to your company's requirements.
-        4. Project Manager: list just the PM's name here. You will provide additional information later in the charter.
-        5. Project Sponsor: list just the sponsor's name here. You will provide additional information later in the charter.` },
+        4. Project Manager: list PM's name.
+        5. Project Sponsor: list sponsor's name.` },
     { que:"Project Charter - Vision",
-        ans:`6. Objectives: identify the specific milestones or targets. The objectives should be clear, observable, and measurable; in other words, you should know when they have been met.
+        ans:`6. Objectives: identify the specific milestones/targets. Objectives should be clear, observable, and measurable.
         7. Purpose: the business case for the project. List organizational priorities that this project will affect, such as the strategic plans or enterprise-level objectives.
-        8. Preliminary Scope: set the project boundaries, and clearly state what is in and out of scope. List only high-level deliverables in this section because you will refine the content in the scope statement.
+        8. Preliminary Scope: set the project boundaries, and state what is in and out of scope. List only high-level deliverables in this section because you will refine the content in the scope statement.
         9. Success Criteria: identify the measures of success for the project. Usually, you will list the time, cost, scope, and quality constraints.
         10. Expected Benefits: describe how the business will change as a result of completing the project.` },
     { que:"Project Charter - Organization Overview",
@@ -618,14 +618,14 @@ const flashcards = [
         Technological Factors: discomfort with software or lack of access to technology or services.
         Cultural Differences: shared social customs, behavior, habits, beliefs.` },
     { que:"Team Life Cycle",
-        ans:`Forming: team members come together for the first time. People tend to be excited/polite in this phase, but minimally productive.
-        Storming: Members are figuring out their roles and finding each other's flaws and differences in the storming stage. Every little problem in the process gets amplified and questioned in this stage.
-        Norming: Conflict slows, and productivity starts to increase, in the norming stage.
-        Performing: Productivity is highest in performing stage. Team members understand their roles, trust each other, and work together effectively.
-        Adjourning: the project work finishes, the team breaks apart, and the members move on to new projects.` },
+        ans:`Forming: team members come together for the first time. People are excited/polite, but minimally productive.
+        Storming: Members are figuring out their roles and finding each other's flaws/differences. Little problems in the process gets amplified and questioned in this stage.
+        Norming: Conflict slows, and productivity starts to increase.
+        Performing: Productivity is highest. Members understand their roles, trust each other, and work together effectively.
+        Adjourning: Project work finishes, team breaks apart, and members move to new projects.` },
     { que:"Conflict Management (two types)",
-        ans:`substantive: task-based conflict, such as disagreements over goals, projects, or processes.
-        emotional: Conflicts around relationships and feelings, such as due to personality, working styles, insecurity, and envy.` },
+        ans:`substantive: task-based conflict; disagreements over goals, projects, processes.
+        emotional: Conflicts around relationships and feelings; due to personality, working styles, insecurity, envy.` },
     { que:"Causes of Conflict",
         ans:`Personality Differences
         Personal Issues
@@ -643,11 +643,11 @@ const flashcards = [
     { que:"Smoothing",
         ans:`"accommodating" style that redirects attention away from conflict. Ex: minor disagreements such as color theme.` },
     { que:"Forcing",
-        ans:`"dominating" style where you manage conflict by deciding what needs to happen to fix the issue. Ex: Emergencies.` },
+        ans:`"dominating" style by deciding what needs to happen to fix the issue. Ex: Emergencies.` },
     { que:"Compromising",
-        ans:`both parties meet in the middle. Nobody gets everything they want but all receive something.` },
+        ans:`parties meet in the middle. Nobody gets everything, but all they receive something.` },
     { que:"Collaborating",
-        ans:`"win-win situation", parties work together that works for everyone. This is most complex approach` },
+        ans:`"win-win situation", parties work together that works for everyone. Most complex approach` },
     { que:"Avoiding",
         ans:`ignores the conflict. Use when issue isn't hurting team or resolving issue won't help team.` },
     { que:"Conflict Escalation (stage 1-3) win-win, facilitation helpful",
@@ -664,33 +664,33 @@ const flashcards = [
         9. Abyss: the parties careen together into disaster. Destruction of self is acceptable as long as the opponent is also completely destroyed.` },
     { que:"Software Installation Options - Overview",
         ans:`Cloud-based: aka "online software/installation", used through internet.
-        On-Premise: is installed in cloud or on premise on buyer's hardware, such as server/computer.
-        Local Installation: variation of on-premises installation, this is a common model for personal computers. A local installation means the software is installed on the computer or device that will use the software.` },
+        On-Premise: installed in cloud or on premise on buyer's hardware, such as server/computer.
+        Local Installation: variation of on-premise, common for personal computers. software is installed on the computer/device.` },
     { que:"Software Installation Options - User Access",
         ans:`Cloud: benefits the users because it works across various devices via an internet browser, allowing people to use their preferred hardware but still access the tools they need.
         On-Premise: users access the software through an application on their devices. Users may need to connect to their company network to install or use the software if the installation occurs on a network server.
         Local Install: user accesses the software from the single device it is installed on. They can access the software without a network or internet connection.` },
     { que:"Software Installation Options - Pricing Model",
-        ans:`Cloud: pay recurring fee for latest version of the product. Cloud offers more scalability because they purchase licenses and don't have other investments. Cloud is an operational expense (OpEx), which is easier to budget.
-        On-Premise: buyer makes initial investment, may include long-term capital expense (CapEx). Buyer purchases licenses and storage hardware, but minimal ongoing costs.
-        Local Install: requires purchase of software. Technically requires hardware, but doesn't accrue hardware expenses, since software is installed on existing equipment.` },
+        ans:`Cloud: pay recurring fee for latest version of the product. Cloud offers more scalability because they purchase licenses and don't have other investments. Operational expense (OpEx); easier to budget.
+        On-Premise: requires initial investment, including long-term capital expense (CapEx). Buyer purchases licenses and storage hardware, but minimal ongoing costs.
+        Local Install: requires purchase of software. Doesn't accrue hardware expenses, since software is installed on existing equipment.` },
     { que:"Software Installation Options - Overhead",
         ans:`Cloud: lower overhead requirements than on-premise hosting. IT staff will configure the installation and optimize cloud capabilities.
         On-Premise: buyer is responsible for installation, upgrades, storage, and maintenance, which requires IT staff. As a result, on-premises implementations lead to higher staffing costs and delayed updates. But, company has control/flexibility on configurations and upgrades.
         Local Install: require significant overhead. A staff member installs every instance of software on one machine at a time. Updates occur one machine at a time and at the user's discretion.` },
     { que:"Software Installation Options - Advantages",
-        ans:`Cloud: low-maintenance option. The provider manages all updates and security measures, so the buyer enjoys lower IT overhead and up-to-date software.
-        On-Premise: allows companies to have total control over the software. This method can have lower long-term costs because all the expenses occur once or infrequently.
-        Local Install: provide reliable access to software because you can use the software offline. It can improve security by providing exclusive access to the software and data.` },
+        ans:`Cloud: lowest-maintenance. Provider manages all updates and security measures, so buyer enjoys lower IT overhead and up-to-date software.
+        On-Premise: allows companies to have total control over the software. Can have lower long-term costs because expenses occur once or infrequently.
+        Local Install: reliable access to software, you can use software offline. Can improve security by providing exclusive access to the software/data.` },
     { que:"Software Installation Options - Disadvantages",
-        ans:`Cloud: requires an internet connection, and users working with large data sets or on slow networks might experience latency. Low short-term costs but have higher long-term costs.
-        On-Premise: requires investment, which the company cannot recoup. For example, you have to buy enough software, and if you buy too much, you can't return the licenses for a refund. In addition, you need enough server space. In another instance, if your server needs to grow and shrink throughout the year, you must purchase enough space to accommodate the largest storage requirement.
+        ans:`Cloud: requires internet connection, and users working with large data sets or slow networks experience latency. Low short-term costs but higher long-term costs.
+        On-Premise: requires investment, which company cannot recoup. Ex: you have to buy enough software, and if you buy too much, you can't return the licenses for a refund. additionally, you need server space. Another instance, if server needs to grow/shrink through the year, you must purchase space to accommodate the largest storage requirement.
         Local Install: software is only available on that computer. You cannot access the software from another device, and any personalization remains on that device only.` },
     { que:"Project Tools",
-        ans:`Ticketing or Case Management: organized way to manage records of customer problems. Also referred to as a "case management" or "help desk" system, this product type combines workflows and user interfaces to create a one-stop experience.
-        Project Management Scheduling Tools: software allows you to create comprehensive project schedules easily. Project management software include many features, such as task planning, workflow automation, and resource allocation. ` },
+        ans:`Ticketing / Case Management: way to manage records of customer problems. Referred as "case management" / "help desk" system, this product combines workflows and user interfaces to create a one-stop experience.
+        Project Management Scheduling Tools: create project schedules easily. Include features; task planning, workflow automation, and resource allocation. ` },
     { que:"Meeting Tools",
-        ans:`Calendaring Tools
+        ans:`Calendaring Tools: manage calendars/schedules. Create meetings. Choose a product that will enable you to adjust time zones and schedule with people from multiple organizations.
         Real-Time Surveys and Polls: gather simple info quickly from large group of people.
         Print Media: Physical materials. Ex: posters, brochures, training manual.
         Conferencing Platforms: software used for video conferencing.` },
@@ -707,19 +707,19 @@ const flashcards = [
         Data Flow Diagram
         Mind Map
         Quadrant Diagram` },
-    { que:"Commom Diagrams - Gantt Chart",
+    { que:"Diagrams - Gantt Chart",
         ans:`bar chart that shows time across the horizontal axis and a list of tasks or activities on the vertical axis. The bars represent the time that each activity will occur. You can also show milestones, deadlines, and dependencies between activities. A Gantt chart creates a visual project schedule.` },
-    { que:"Commom Diagrams - Flowchart",
+    { que:"Diagrams - Flowchart",
         ans:`"process flow" or "process diagram." This chart visualizes a process, and can compress complicated work instructions into a few charts. Project teams often create multiple flowcharts to show how a project affects processes. Commonly used in process analysis.
         Describes a process that could include many decisions.` },
-    { que:"Commom Diagrams - Decision Tree",
-        ans:`represents a single decision that could have many outcomes. Use a decision tree when a single decision requires consideration of many factors.` },
-    { que:"Commom Diagrams - Data Flow Digram",
-        ans:`shows how information flows through a process/system. Works well for audience with technical and nontechnical expertise.` },
-    { que:"Commom Diagrams - Mind Map",
-        ans:`visualizes categories of informatioin around a single theme.` },
-    { que:"Commom Diagrams - Quadrant Diagram",
-        ans:`includes many implementations that use the same concept.` },
+    { que:"Diagrams - Decision Tree",
+        ans:`represents a single decision that could have many outcomes. Use decision tree when a single decision requires consideration of many factors.` },
+    { que:"Diagrams - Data Flow Digram",
+        ans:`shows how information flows through a process/system. Works well for audience with technical/nontechnical expertise.` },
+    { que:"Diagrams - Mind Map",
+        ans:`visualizes categories of information around a single theme.` },
+    { que:"Diagrams - Quadrant Diagram",
+        ans:`includes implementations that use the same concept.` },
     { que:"Collaboration Tools",
         ans:`Real-Time, Multi-Authoring Editing Software: allows multiple users to update the same file simultaneously.
         File Sharing Platforms: allows you to post a file in a single location and grant access to one or more users.
@@ -765,7 +765,7 @@ const flashcards = [
         Capturing Information: communication and project progress will happen verbally through formal reviews and casual conversations.
         Centralizing Information: create summarized communication artifact to gather conversations in a single place to keep track of crucial decisions.
         Reflecting Reality: communication artifacts are a summary of project progress, conversations, and decisions. The documents should reflect the actual progress of a project at all times. ` },
-    { que:"Solution Designs)",
+    { que:"Solution Designs",
         ans:`High-Level Design(HLD): created in analysis phase and assess techincal feasibility. Project sponsor, solution architect, and technical staff create HLD. Defines nonfunctional requirements(NFRs).
         Low-Level Design(LLD): a technical decision-making document, created in design phase. Solution architect and SMEs create LLD.` },
     { que:"Functional vs Nonfunctional Requirements",
@@ -776,11 +776,11 @@ const flashcards = [
         Maintainability: how easy it is to change the solution later. Systems or code can be "brittle." Brittle code has low maintainability because it breaks easily.
         Scalability: how easy it is to grow/shrink the solution as needs change.` },
     { que:"NFR Examples 2/3",
-        ans:`Availability or reliability: how long the system is running in a given time.
-        Extensibility: is how easy it is to add new features without changing what is already in place.
-        Security: refers to how the solution and the company's assets are protected. Authentication methods, data classification, user access, and administration procedures are part of the security requirements.` },
+        ans:`Availability/Reliability: how long the system is running in a given time.
+        Extensibility: how easy to add features without changing what is already in place.
+        Security: how the solution and company's assets are protected. Ex: authentication methods, data classification, user access, and administration procedures.` },
     { que:"NFR Examples 3/3",
-        ans:`Portability or compatibility: evaluates how well the solution can work within the existing environment. The solution components need to communicate with each other and other platforms in the company, including data exchanges, operating systems, software, and hardware.
+        ans:`Portability/Compatibility: evaluates how well the solution can work within the existing environment. The solution components need to communicate with each other and other platforms in the company, including data exchanges, operating systems, software, and hardware.
         Compliance: refers to the need for the solution to comply with applicable regulations.` },
     { que:"Solution Design Approach - Environmental Factors",
         ans:`Functional Requirements
@@ -1759,14 +1759,14 @@ const flashcards = [
         What are the upcoming milestones?: list the project timeline or milestone list.
         What needs my attention?: list issues, change requests, and risks with upcoming deadlines.` },
     { que:"Dashboard Design Principles",
-        ans:`dashboards contain mix of graphic tiles, lists, gauges, and information blocks. The appearance and data depend on the purpose and audience.
+        ans:`dashboards contain graphic tiles, lists, gauges, and information blocks. Appearance and data depend on the purpose and audience.
         Intuitive: person with minimal training should be able to look at a dashboard and interpret the information. Should be as easy to read as a stop sign/traffic signal.
         Actionable: The owner should know when they need to do something within 30 seconds of looking at the dashboard. They might not know what is causing an issue; problems require research.
-        Relevance: should contain information the audience needs to know to make good decisions. It's a good practice to start with the audience's needs and build a dashboard around them.
+        Relevance: should contain information the audience needs to know to make good decisions. It's good practice to start with the audience's needs then build a dashboard around them.
         Timely: dashboard supports effective decision-making by providing relevant, objective data. Information needs to refresh as often as you need to look at it.
-        Brevity: should contain as little information as is required. Too much information will distract the user with unnecessary metrics.
-        Accuracy: Data quality assesses how likely the data is to reflect reality based on its accuracy, timeliness, and completeness. Use high-quality data in dashboards because you have to trust the data to make decisions with it.
-        Sustainability: Consider long-term impacts of a dashboard. A highly manual dashboard isn't likely to be maintained or updated often. It will also have more accuracy issues. Dashboard automatically updates as the source data is updated.` },
+        Brevity: should contain necessary information. Too much information will distract and overwhelm the user.
+        Accuracy: Data quality reflect reality based on its accuracy, timeliness, and completeness. Use high-quality data because you have to make decisions from it.
+        Sustainability: Consider long-term impacts. A manual dashboard isn't likely to be maintained/updated often. It will have accuracy issues. Dashboards should automatically update as source data is updated.` },
     { que:"Organizational Change Management(OCM)",
         ans:`` },
     { que:"",
