@@ -32,7 +32,7 @@ const flashcards = [
     { que:"Financial Overview",
         ans:`covers economic impacts of the project. Ex: project cost, where money will come from, what company can gain. This section contains cost-benefit analysis or ROI analysis and risks and assumptions.` },
     { que:"Recommendation",
-        ans:`narrows downs options to best solution with justification.` },
+        ans:`narrows down options to best solution with justification.` },
     { que:"Current state",
         ans:`describes what is happening now.` },
     { que:"Future state",
@@ -179,7 +179,7 @@ const flashcards = [
     { que:"Sprint Retrospective",
         ans:`team inspects how they worked in the past sprint and identifies improvement opportunities. Retrospective doesn't focus on product, but focus on improving how team works together.` },
     { que:"Kanban (agile development methodology) core practices",
-        ans:`Visualize work: create. Kanban board displaying phases that work moves through on your team.
+        ans:`Visualize work: create a Kanban board displaying phases that work moves through on your team.
         Limit WIP: Too much work is overwhelming. Context switching lowers productivity and degrades work environment; so limiting WIP allows team to focus.
         Make policies explicit: clear policies create a shared understanding of the work and workflow.
         Manage flow: look for and eliminate bottlenecks in your workflow.
@@ -361,7 +361,7 @@ const flashcards = [
         Be transparent about their support or lack thereof for the project.
         Provide timely feedback about the project's progress and direction.` },
     { que:"Subject Matter Expert (SME)",
-        ans:`SME is a general label for anybody who is a respected expert in their field. The SME is the person you turn to when you need somebody to explain a complex topic simply or solve advanced issues.` },
+        ans:`An expert in their field. SME is the person you turn to when you need somebody to explain a complex topic simply or solve advanced issues.` },
     { que:"Features of Extended Team Members",
         ans:`Percentage of Time
         Availability by Phase
@@ -457,8 +457,8 @@ const flashcards = [
     { que:"Objective and Key Results (OKR)",
         ans:`to achieve tremendous results quickly. OKRs are meant to be aspirational and slightly out of reach, they drive teams to deliver value that they didn't think was possible.` },
     { que:"OKRs create a two-part goal statement composed of:",
-        ans:`"Objective" is a qualitative goal statement. It doesn't need to be as measurable as KPIs or SMART objectives. The Objective portion of the OKR tells the story about what the goal is for and why it matters.
-        "Key Results" are quantitative measures of success. The key results will look similar to SMART objectives. They describe what you need to do to meet the goal.` },
+        ans:`"Objective", qualitative goal statement. Doesn't need to be as measurable as KPIs or SMART objectives. Objective portion of the OKR tells the story about what the goal is for and why it matters.
+        "Key Results", quantitative measures of success. The key results will look similar to SMART objectives. They describe what you need to do to meet the goal.` },
     { que:"Selecting a Performance Measure Method",
         ans:`SMART is a method for writing solid goals. You can apply the technique to any goal in any framework.
         KPIs are long-term, operational metrics that describe the health of the system. KPIs help you stabilize and protect systems.
@@ -485,8 +485,8 @@ const flashcards = [
         Use clear, concise language: Make the most of the limited page space available to you.
         Collaborate with team members to create a realistic timeline and risk assessment: Review the charter drafts with your project sponsor to ensure alignment before distributing the finished product.` },
     { que:"Project Charter - Information",
-        ans:`1. Project Name: give project a short title. This name will appear on subsequent reports and dashboards.
-        2. Description: write a short sentence that expands on the project name to describe the project. This field will also appear on reports and dashboards, so you want something straightforward and understandable.
+        ans:`1. Project Name: give a short title. This will appear on reports and dashboards.
+        2. Description: write short sentence to describe the project. This will appear on reports and dashboards, so keep it straightforward and understandable.
         3. Version Number and Date: track the revision history according to your company's requirements.
         4. Project Manager: list PM's name.
         5. Project Sponsor: list sponsor's name.` },
@@ -585,10 +585,18 @@ const flashcards = [
     { que:"Collaborative Meetings - Brainstorming",
         ans:`allows a group to generate many ideas rapidly. A group reviews a problem or proposal, then creates as many ideas as possible that could help solve the problem or meet the goal.` },
     { que:"Brainstorming Techniques",
-        ans:`Rapid brainstorming: gives team members a short time limit to write down 3–5 ideas. The time limit should be brief enough to create a sense of urgency but long enough for everybody to capture their thoughts.
-        Reverse brainstorming: occurs when you look at a problem from different angles. With reverse brainstorming, you would brainstorm ideas for why you could never solve the problem.
-        Stop-and-go brainstorming: combats the quantity-over-quality issue. First, the team brainstorms for a short period, perhaps ten minutes, and then they stop brainstorming to review and refine the results. Next, they start brainstorming and repeat the cycle. This method gives the team time to generate ideas.
-        Round-robin brainstorming: gives every participant an equal voice. Each person offers one idea on the topic. The group critiques the ideas after everybody contributes once, then the process repeats. This method works well if some attendees dominate the conversation.` },
+        ans:`Rapid brainstorming, 
+        Reverse brainstorming,
+        Stop-and-go brainstorming,
+        Round-robin brainstorming` },
+    { que: "Rapid Brainstorming",
+        ans:`gives team members a short time limit to write down 3–5 ideas. The time limit should be brief enough to create a sense of urgency but long enough for everybody to capture their thoughts.` },
+    { que: "Reverse Brainstorming",
+        ans:`occurs when you look at a problem from different angles. With reverse brainstorming, you would brainstorm ideas for why you could never solve the problem.` },
+    { que: "Stop-And-Go Brainstorming",
+        ans:`combats the quantity-over-quality issue. First, the team brainstorms for a short period, perhaps ten minutes, and then they stop brainstorming to review and refine the results. Next, they start brainstorming and repeat the cycle. This method gives the team time to generate ideas.` },
+    { que: "Round-Robin Brainstorming",
+        ans:`gives every participant an equal voice. Each person offers one idea on the topic. The group critiques the ideas after everybody contributes once, then the process repeats. This method works well if some attendees dominate the conversation.` },
     { que:"Meeting Artifacts",
         ans:`Agenda
         Timebox 
@@ -739,8 +747,8 @@ const flashcards = [
         ans:`Communication Goals
         Stakeholders
         Team Members
-        Communication Artifacts, Ex: dashboard snapshopts, presentations, links to file, text summaries.
-        Communication Channels, Ex: host a meeting to review a presentation and send text summaries via email.
+        Communication Artifacts: Ex: dashboard snapshopts, presentations, links to file, text summaries.
+        Communication Channels: Ex: host a meeting to review a presentation and send text summaries via email.
         Communication Recipients: person receiving the communication. Note formality of each artifact.
         Communication Frequency: how often.
         Communication Outcomes: for each artifact, define what you need to happen in that exchange.` },
@@ -773,7 +781,7 @@ const flashcards = [
         NFRs: system's attributes, the abstract noun; "-ilities", of software` },
     { que:"NFR Examples 1/3",
         ans:`Usability: refers to how user friendly the solution is.
-        Maintainability: how easy it is to change the solution later. Systems or code can be "brittle." Brittle code has low maintainability because it breaks easily.
+        Maintainability: how easy it is to change the solution later. Systems/code can be "brittle", which has low maintainability because it breaks easily.
         Scalability: how easy it is to grow/shrink the solution as needs change.` },
     { que:"NFR Examples 2/3",
         ans:`Availability/Reliability: how long the system is running in a given time.
@@ -809,16 +817,19 @@ const flashcards = [
         Single tier is typical for test and small production environments.
         Networking and Connectivity: how users and components in a system connect. Includes network configurations, protocols, access rules, hardware, cabling, switches, routers.` },
     { que:"IT Infrastructure 2/2",
-        ans:`Storage: a storage plan includes a physical location with temperature/humiditiy control.
-        Database: are data storage systems that organize electronic information into structured tables. Analysts and engineers intentionally design databases, making it easier to retrieve and interpret data.
-        Data Warehouse: an extensive database used for reporting and analytics. Ex: companies use data warehouses to create dashboards for monitoring company performance. Project teams create data warehouses and use them to analyze problems and solutions.
-        Documentation: includes all the diagrams and information about the IT infrastructure. includes network diagrams and extensive server information, such as location, maintenance instructions, and addresses, and scripts, procedures, communications, maintenance, and end-of-life schedules.` },
+        ans:`Storage: physical location with temperature/humiditiy control.
+        Database: systems that organize electronic information into structured tables. Analysts/engineers design databases, so they can easily retrieve and interpret data.
+        Data Warehouse: extensive database used for reporting/analytics. Ex: data warehouses create dashboards for monitoring company performance. Project teams create data warehouses analyze problems and solutions.
+        Documentation: includes all the diagrams and information about the IT infrastructure. includes network diagrams and extensive server information, such as location, maintenance instructions, addresses, scripts, procedures, communications, maintenance, and end-of-life schedules.` },
     { que:"Cloud Models",
-        ans:`delivered either locally or over internet. Local delivery is "on-premises computing," and internet delivery is "cloud computing." Cloud service model is desirable because it's easy to set up and maintain. Has higher availability and scalability.` },
+        ans:`delivered locally or internet. 
+        Local delivery is "on-premises computing," 
+        Internet delivery is "cloud computing." 
+        Cloud service model is desirable due to easy set up and maintainenance. Higher availability and scalability.` },
     { que:"Cloud Model Types",
         ans:`Infrastructure as a Service(IaaS): basic computing resources (servers, networks, storage).
-        Platform as a Service(PaaS): delivers development tools (ex: software environments). PaaS includes infrastructure from IaaS and middleware and tools developers need to create finished product.
-        Software as a Service: complete software stack. Contains the infrastructure, environments, and actual product the end-user will use.
+        Platform as a Service(PaaS): delivers development tools (ex: software environments). Includes infrastructure from IaaS and middleware and tools developers need to create products.
+        Software as a Service(SaaS): complete software stack. Contains infrastructure, environments, and final product for end-user.
         Anything as a Service:(XaaS): general term for any cloud computing service.` },
     { que:"Enterprise Resource Planning(ERP)",
         ans:`refers how companies acquire, manage, and consume resources.` },
@@ -836,30 +847,30 @@ const flashcards = [
         Confidential data: sensitive data with limited access. Information only available to authorized users/role or case-by-case basis. 
         Restricted data: most sensitive data. Access severely restricted and granted on need-to-know basis with strict business justification. Company likely to bring criminal charges against unauthorized users or face charges if inadvertently leaks the information.` },
     { que:"Data Handling Considerations: Sensitive Data",
-        ans:`Personally identifiable information (PII) includes data that could reveal a person's identity.
-        Personal health information (PHI) is federally protected in USA. HIPAA requires organizations to protect against unauthorized access and disclosure of sensitive health information.` },
+        ans:`Personally identifiable information (PII): include data that reveal a person's identity.
+        Personal health information (PHI): federally protected in USA. HIPAA requires organizations to protect against unauthorized access and disclosure of sensitive health information.` },
     { que:"Data Handling Consideration: Country-, State-, and Province-Specific Privacy Regulations",
         ans:`General Data Protection Regulation (GDPR) is a data privacy and security law in the European Union (EU). It includes 11 chapters of regulations and is widely considered the strictest privacy law. This law protects people located in the EU. 
         The California Privacy Rights Act protects the data of California residents. The Consumer Data Protection Act in Virginia offers data rights and protection to Virginia residents. Both share many similarities with GDPR.` },
     { que:"Data Handling Consideration: IP and Trade Secrets",
-        ans:`Intellectual Property(IP): asset type that refers to creations of the mind. In business, it comprises the inventions and creative assets that the company owns. IP includes four asset types: patents, copyrights, trademarks, and trade secrets.
-        Trade Secrets: specific type of IP, an asset that gives the company a competitive advantage but hasn't been registered with a copyright, trademark, or patent. Ex: food recipe, search engine algorithm.` },
+        ans:`Intellectual Property(IP): asset type that refers to creations of the mind. It comprises the inventions and creative assets of the company. IP asset types(4): patents, copyrights, trademarks, trade secrets.
+        Trade Secrets: specific type of IP, an asset that gives the company a competitive advantage but hasn't been registered with a copyright, trademark, patent. Ex: food recipe, search engine algorithm.` },
     { que:"Digital Security",
         ans:`Resource Access and Permissions: Electronic resources (ex: applications, network folders) are accessible to authorized users. System administrators or service providers create multiple user roles for each application to provide varying access levels.
         Remote Access Restrictions: Employees/contractors need to connect with company network while offsite. Remote access allows employees to work from various locations. Remote access increases flexibility but could expose company network if security measures are not in place. May require VPN usage.
         Multifactor Authentication(MFA): added layer of security that requires user to present to access a remote system or resource. It requires two or more credentials across three categories:
-        Something you know: a password, email address, or PIN.
-        Something you have: a mobile device, badge, or other token.
-        Something you are: a fingerprint, face, or voice.` },
+        Something you know: password, email address, PIN.
+        Something you have: mobile device, badge, other token.
+        Something you are: fingerprint, face, voice.` },
     { que:"Physical/Operational Security",
-        ans:`Removable Media: ortable storage devices that can be plugged in and removed while a computer is running, such as USB drives.
-        Mobile Device: a portable media type, and many corporate applications are available on mobile devices. Mobile access helps the company because employees can be more productive. Companies require mobile device management (MDM) software, which allows IT functions to monitor and remotely erase compromised mobile devices.
+        ans:`Removable Media: portable storage devices that can be plugged in and removed while a computer is running, ex: USB drives.
+        Mobile Device: portable media, many corporate applications are available on mobile devices. Mobile access helps the company because employees can be more productive. Companies require mobile device management (MDM) software, which allows IT functions to monitor and remotely erase compromised mobile devices.
         Facility Access: Networks are easier to break into from inside the building. Company assets are everywhere; computers, documents in people's offices are available. Companies grant facility access only to authorized users.
         Background Screening/Checks: helps organizations confirm hiring requirements; person's education, certifications, references. Also verifies person's identity and may investigate criminal history and previous employment.
         National Security Information and Clearance Requirements: may require handling information related to national defense or foreign relations. In the United States, this is called national security information, and access is highly restricted.
-        Four clearance levels: Confidential, Secret, Top Secret, and Sensitive Compartmented Information(SCI).` },
+        Clearance levels(4): Confidential, Secret, Top Secret, and Sensitive Compartmented Information(SCI).` },
     { que:"Types of Resources",
-        ans:`Human Resources: Internal human resources are called "labor," external human resources are services.
+        ans:`Human Resources: Internal human resources are "labor," external human resources are "services".
         Physical Resources: goods needed in a project, including the equipment, software, office supplies, workspaces, buildings, vehicles, and other assets.
         Capital Resources: money` },
     { que:"Resource Sourcing Methods",
@@ -867,11 +878,11 @@ const flashcards = [
         External Sourcing: expensive but more available than internal resources.
         Procurement Plan: if a project needs external resources.` },
     { que:"Resource Allocation Methods",
-        ans:`Dedicated Resources: work on one project only and nothing else.
+        ans:`Dedicated Resources: work on one project only.
         Shared Resources: work across multiple projects at once.` },
     { que:"Resource Life Cycle",
-        ans:`Acquisition Phase: company brings resources into the company in the acquisition phase. Goods are procured, and people are recruited and hired.
-        Maintenance (and Monitoring) Phase: Resources are not self-sustaining. After acquired, they need updates, maintenance, evaluation. Equipment needs upkeep, repairs, upgrades, inventory tracking. Software needs security patches, updates, and managing licenses.
+        ans:`Acquisition Phase: company brings resources. Goods procured, people recruited.
+        Maintenance (/Monitoring) Phase: Resources are not self-sustaining, they need updates, maintenance, evaluation. Equipment needs upkeep, repairs, upgrades, inventory tracking. Software needs security patches, updates, and managing licenses.
         Improvement Phase: improve performance/effectiveness of resources. Equipment is adjusted and reconfigured, software is enhanced. Employees review processes and procedures to make efficient and cost effective
         Retirement Phase: Equipment breaks down/retires to make room for newer model, software goes out of service or invalid.` },
     { que:"Resource Retirement Examples",
@@ -884,7 +895,7 @@ const flashcards = [
         3. Identify any resource gaps: aka "gap identification".
         4. Address the gaps` },
     { que:"Resource Optimization Techniques",
-        ans:`Resource Smoothing: attempts to reduce variation of resource usage from one time period to the next.
+        ans:`Resource Smoothing: reduce variation of resource usage from one time period to the next.
         Resource Leveling: reduces variation and allows the project timeline to extend.` },
     { que:"Fishbone Diagram",
         ans:`"Ishikawa diagram" or "cause and effect diagram.
@@ -901,10 +912,10 @@ const flashcards = [
         Train Team Members
         Allocate Resources
         Monitor and Adjust the Resource Allocations` },
-    { que:"Compare Risk, Issues, and Changes",
+    { que:"Risk, Issues, Changes",
         ans:`Risk: something that you think will happen that you don't control.
-        Issue: something that is already happening that you don't control. "Issue Management"documents issues after they arise and recovers from them.
-        Change: modification to a project's scope, budget, or timeline via an adjustment in project activities or resources.` },
+        Issue: something already happening that you don't control. "Issue Management" documents issues after they arise and recovers from them.
+        Change: modification to project's scope, budget, or timeline via adjustment in project activities/resources.` },
     { que:"Risk Management Overview",
         ans:`1. Identify the Risk: list all potential risks.
         2. Analyze the Risk: Determine how likely a risk event will happen; the probability. If risk were to happen, identify how it would impact this project, other projects, and organization. This process is known as "effect-based risk classification".
@@ -940,7 +951,7 @@ const flashcards = [
     { que:"Negative Risk Strategies",
         ans:`Avoid/Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don't invest.
         Mitigate/Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
-        Transer/Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
+        Transfer/Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
         Accept/Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don't have to prevent every risk.` },
     { que:"Positive Risk Strategies",
         ans:`Exploit/Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
@@ -973,7 +984,7 @@ const flashcards = [
         Forecasted risk status` },
     { que:"Risk Management Plan",
         ans:`This document defines how the PM will manage risks.` },
-    { que:"Risk Management Plan Elements 1/2",
+    { que:"Risk Management Plan Elements 1/3",
         ans:`Approach: Describe how the process will work and which analysis tools will be used. Include any specific terminology, such as if you are choosing to use “threat” and “opportunity” instead of “negative risk” and “positive risk.”
         Risk Identification Plan: Include a plan for how the team will identify risks. The risk identification plan can include multiple activities and sources, but it should have a clear focus.
         Risk Register: Identify where you will store and manage risks.` },
@@ -1007,28 +1018,28 @@ const flashcards = [
         Sprint goals` },
     { que:"Work Breakdown Structure(WBS)",
         ans:`use "decomposition" to break projects into manageable pieces.` },
-    { que:"Work Breakdown Structure - Key Terms",
+    { que:"WBS - Key Terms",
         ans:`Task: the action completed to deliver project work.
         Activity: 
         Work: 
         Project schedule: includes WBS deliverables, timing, and resource needs.
         Deliverables: outcomes of the project.` },
-    { que:"Sections of a Work Breakdown Structure",
+    { que:"Sections of a WBS",
         ans:`Elements: deliverables in a WBS.
         Work Package: "terminal element". Lowest element in the branch/leg; an element without a child element is a work package.
         Level: layer of the WBS where an element resides.
         Numbering Scheme: "code of accounts", a sequential numbering scheme: each level is separated by a decimal point and restarts at 1. (1.1 1.2, 1.3; 1.3.1; 2.1, 2.2; 2.2.1).
         Leg: group of elements with a shared ancestor. The lowest elements in a leg will roll up to equal everything in the highest level of the leg.
         Branch: one or more elements that do not represent the whole top-level element in the branch.` },
-    { que:"Work Breakdown Structure Design Guidelines",
+    { que:"WBS - Design Guidelines",
         ans:`Mutually Exclusive, Collectively Exhaustive: organization and problem-solving method. Each element exists without overlapping anything else, which makes it mutually exclusive.
         100% Rule: the WBS includes 100% of the project work. Sounds similar to MECE, but it's different. This rule means the WBS includes exactly 100% of the project work, nothing more, nothing less.
         Plan Around Outcomes: WBS should include outcomes instead of tasks. Tasks are too detailed for a WBS, taking creative freedom away from the team members.` },
-    { que:"Work Breakdown Structure Creation Process 1/2",
+    { que:"WBS - Creation Process 1/2",
         ans:`1. Determine Scope: Review project scope on project charter, scope statement, statement of work (SOW), and terms of reference.
         2. Identify the Deliverables: deliverables need to capture the full scope of the project. These will turn into WBS elements.
         3. Identify the Team Members: you identify new deliverables and work packages, add people with the necessary skills to your team.` },
-    { que:"Work Breakdown Structure Creation Process 2/2",
+    { que:"WBS - Creation Process 2/2",
         ans:`4. Build Level 2: This level sets the grouping or construction method.
         5. Build Remaining Levels: Use the design guidelines to continue breaking work down into new levels. When you reach a point where you don't need to break it down again, you've reached the work package.
         6. Build WBS Dictionary:
@@ -1037,9 +1048,9 @@ const flashcards = [
         Date of assignment
         Due date
         Estimated cost` },
-    { que:"Product Backlog Versus Project Backlog",
+    { que:"Product Backlog v Project Backlog",
         ans:`Backlog is the body of work that a team will complete. The backlog owner continually refines and modifies the backlog. Project backlogs has a fixed start/end date, but product owner fills product backlog as long as the product is active.` },
-    { que:"Work Breakdown Structure Versus Project Backlog",
+    { que:"WBS v Project Backlog",
         ans:`WBS and project backlog share similarities. Neither creates activities; both create deliverables.
         WBS and project schedule will balance scope, time, and cost. Agile embraces flexible scope but fixes time and cost through agile ceremonies. WBS details are stored in a WBS dictionary, and product backlog details are stored in the backlog items.
         A WBS assumes that scope, time, and cost are fixed and works to control them. A project backlog uses agile ceremonies to fix time and cost.` },
@@ -1066,8 +1077,8 @@ const flashcards = [
         ans:`Top-Down: creates an estimate of the entire project or key deliverables. Then estimates are cascaded down to the activities. Top-down estimating is less accurate than other techniques. 
         Bottom-Up: creates estimates at the lowest-level activities, work packages, and user stories. Then, the individual estimates are added together to create a project estimate. Bottom-up estimate is time consuming but more accurate than top-down estimate. ` },
     { que:"Estimation Techniques - Analogous v Parametric",
-        ans:`Analogous: a top-down approach that uses historical data. For example, suppose you are estimating a marketing campaign project. If your previous similar projects lasted for six weeks, you could reasonably estimate that this project will last six weeks.
-        Parametric: augments either bottom-up or top-down estimates with historical data. It uses known variables, such as cost per hour and the number of hours, to create a custom estimate for a project. For instance, suppose you need to create four new advertisements for an ad campaign. Usually, you can complete a single advertisement in two hours. Using a parametric model, you can estimate that it will take eight hours to complete the four campaigns.` },
+        ans:`Analogous: a top-down approach that uses historical data. Ex: you are estimating a marketing campaign project. If previous similar projects lasted six weeks, you estimate that this project will last six weeks.
+        Parametric: augments bottom-up/top-down estimates with historical data. It uses known variables, such as cost per hour and the number of hours, to create a custom estimate for a project. Ex: you need to create four advertisements for an ad campaign. Usually, you can complete a single advertisement in two hours. Using a parametric model, you can estimate that it will take eight hours to complete the four campaigns.` },
     { que:"Estimation Techniques - Three-Point Estimating",
         ans:`Used in combination with other estimating techniques. Factors multiple scenarios to create average estimate.
         You collect three values: (O)ptimistic, (P)essimistic, and (M)ost likely.
