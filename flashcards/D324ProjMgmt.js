@@ -53,9 +53,9 @@ const flashcards = [
     { que:"Environmental factors",
         ans:`how the organization impacts natural world.` },
     { que:"Social factors",
-        ans:`how company develops relationships and treats people.` },
+        ans:`how company develops relationships and treats people, employees, community, and groups impacted by the company's products and services.` },
     { que:"Governance factors",
-        ans:`how the company operates, including policies, transparency, structure.` },
+        ans:`how the company operates, including policies, transparency, structure. Change in new policies, oversight committees, and replacing executives for issues ex: mismanagement.` },
     { que:"Corporate Identity",
         ans:`Includes its vision, mission statement, values, and brand.` },
     { que:"Types of Work",
@@ -105,7 +105,7 @@ const flashcards = [
     { que:"Sponsor",
         ans:`accountable for a project` },
     { que:"Customer",
-        ans:`recieve the benefits from the project. Two types (Internal and External)` },
+        ans:`recieves benefits from the project. Two types (Internal and External)` },
     { que:"Internal Customer",
         ans:`customers work inside the project organization.` },
     { que:"External Customer",
@@ -343,7 +343,7 @@ const flashcards = [
         ans:`Write tests against requirements.
         Run tests on completed code to find defects and bugs.` },
     { que:"Customer / End-user",
-        ans:`Some project teams will include a customer or end-user on the team. While this isn't required, they can offer valuable insight.` },
+        ans:`Some project teams will include a customer or end-user on the team. not required, but can offer valuable insight.` },
     { que:"Customer / End-user responsibilities",
         ans:`Offer end-user perspective about the final product's usability.
         Suggest new features or the next development priority in the project.
@@ -449,10 +449,11 @@ const flashcards = [
         Advertisement clickthrough rate
         Change management quality` },
     { que:"SMART Objective",
-        ans:`Specific: should explain exactly what needs to change.
-        Measurable: needs to include a quantifiable metric, so that you can know when you've met the goal.
-        Achievable: meant to be realistic. Therefore, ensure the goal is within the realm of possibility.
-        Relevant: needs to have a purpose. In an organization, it should align with business strategy or business priorities.
+        ans:`quick simple way to create goals.
+        Specific: should explain exactly what needs to change.
+        Measurable: include a quantifiable metric, so you know when you've met the goal.
+        Achievable: meant to be realistic. Ensure goal is within the realm of possibility.
+        Relevant: needs to have a purpose. Should align with business strategy/business priorities.
         Time-Bound: needs to have a target end date.` },
     { que:"Objective and Key Results (OKR)",
         ans:`to achieve tremendous results quickly. OKRs are meant to be aspirational and slightly out of reach, they drive teams to deliver value that they didn't think was possible.` },
@@ -827,7 +828,7 @@ const flashcards = [
         Internet delivery is "cloud computing." 
         Cloud service model is desirable due to easy set up and maintainenance. Higher availability and scalability.` },
     { que:"Cloud Model Types",
-        ans:`Infrastructure as a Service(IaaS): basic computing resources (servers, networks, storage).
+        ans:`Infrastructure as a Service(IaaS): computing resources (servers, networks, storage).
         Platform as a Service(PaaS): delivers development tools (ex: software environments). Includes infrastructure from IaaS and middleware and tools developers need to create products.
         Software as a Service(SaaS): complete software stack. Contains infrastructure, environments, and final product for end-user.
         Anything as a Service:(XaaS): general term for any cloud computing service.` },
@@ -1432,9 +1433,9 @@ const flashcards = [
     { que:"Time and Work Tracking Tools - Project and Time Tracking Applications",
         ans:`Both applications include beneficial features; ex: report generation, that simplify communication processes. Users also track their activity progress within both tools at varying levels of detail. So you can review progress and create reports without contacting each individual for updates` },
     { que:"Time and Work Tracking Tools - Task Board",
-        ans:`a visual task tracking tool (ex: Kanban board). Task board shows each work item as a card, and the cards are organized into lanes by their work states. Activity owners move the cards across the board, from a “to do” state to a “finished” state as they finish work. A task board is also easy to update; users drag and drop cards to update the status. ` },
+        ans:`a visual task tracking tool (ex: Kanban board). Task board shows each work item as a CARD, and the cards are organized into LANES by their work states. Activity owners move the cards across the board, from “to do” to “finished”. Task board is easy to update; users drag and drop cards to update the status. ` },
     { que:"Version Control Tool",
-        ans:`are traceability tools for source code. They track/manage code changes by automatically tracking what changed, when, and by whom. They retain previous code versions to revert to a working version when necessary.` },
+        ans:`Traceability tools for source code. They track/manage code changes by automatically tracking what changed, when, and by whom. They retain previous code versions to revert to a working version when necessary.` },
     { que:"Event Logs - Issue Log",
         ans:`event happening in a project that you do not control. An issue log tracks/manages issues. The log helps you organize and prioritize the list to focus on the highest-priority items because you won't have enough time and resources to address everything. For each issue; record a description, date found, who found it. Then prioritize the list and capture the plan for addressing it. Finally, record the owner, and track any changes to the issue.` },
     { que:"Event Logs - Issue Log fields",
