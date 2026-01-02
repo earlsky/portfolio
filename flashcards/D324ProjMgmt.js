@@ -949,18 +949,32 @@ const flashcards = [
     { que:"Scenario Analysis",
         ans:`"situational analysis" or "what-if analysis." A process where you generate potential events and evaluate the impact.` },
     { que:"Negative Risk Strategies",
-        ans:`Avoid/Avoidance: prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don't invest.
-        Mitigate/Mitigation: reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.
-        Transfer/Transference: assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.
-        Accept/Acceptance: “do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don't have to prevent every risk.` },
+        ans:`Avoid/Avoidance,
+        Mitigate/Mitigation,
+        Transfer/Transference,
+        Accept/Acceptance` },
+    { que: "Neg Risk Strategies - Avoid/Avoidance",
+        ans: `prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don't invest.`},
+    { que: "Neg Risk Strategies - Mitigate/Mitigation",
+        ans: `reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.`},
+    { que: "Neg Risk Strategies - Transfer/Transference",
+        ans: `assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.`},
+    { que: "Neg Risk Strategies - Accept/Acceptance",
+        ans: `“do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don't have to prevent every risk.`},
     { que:"Positive Risk Strategies",
-        ans:`Exploit/Exploitation: taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.
-        Enhance/Enhancement: increases the positive effects of the risk. The opposite of risk mitigation. Mitigation tries to suppress impact, enhancement maximize the benefits. Ex: you want the company to purchase collaboration software so you watch demos and identify uses and features.
-        Share/haring: finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.
-        Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn't. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it.` },
-    { que:"Mitigation and Contingency Plans",
-        ans:`Mitigation: a strategy for reducing the impact of negative risks and increasing the benefits of positive risks. Includes the actions, owners, timing, and funding necessary to optimize a risk's impact.
-        Contingency: "fallback plan" or "backup plan." Part of the "contingent response strategy" for how to react when risk occurs, created before risk occurs but implemented at occurrence.` },
+        ans:`Exploit/Exploitation,
+        Enhance/Enhancement,
+        Share/Sharing,
+        Accept/Acceptance` },
+    { que: "Pos Risk Strategies - Exploit/Exploitation",
+        ans:`taking steps to guarantee the event will happen. The opposite of risk avoidance, exploitation seeks it out. Ex: you want to test a collaboration software so you contact the PM and ask to join the test group.`},
+    { que:"Pos Risk Strategies - Enhance/Enhancement",
+        ans:`increases the positive effects of the risk. Opposite of risk mitigation. Mitigation tries to suppress impact, enhancement tries to maximize the benefits.
+        Ex: you want the company to purchase collaboration software. You watch demos and identify uses and features.` },
+    { que: "Pos Risk Strategies - Share/Sharing",
+        ans:`finding others who would benefit from the risk and sharing it with them. Sharing a risk increases probability that you will benefit as well. Ex: you encourage others to request collaboration software, which increases your likelihood of receiving it.`},
+    { que: "Pos Risk Strategies - Accept/Acceptance",
+        ans: `Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn't. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it. `},
     { que:"Risk Register",
         ans:`Information gathered during the risk management process:
         Risk ID
@@ -1014,7 +1028,7 @@ const flashcards = [
         Project phase transition
         Sprint demos
         Release
-        Any approval events, such as from the client or stakeholder
+        Any approval events (ex: from the client/stakeholder)
         Sprint goals` },
     { que:"Work Breakdown Structure(WBS)",
         ans:`use "decomposition" to break projects into manageable pieces.` },
