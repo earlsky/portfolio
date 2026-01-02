@@ -390,8 +390,8 @@ const flashcards = [
         Solid and Dotted Lines: use solid lines to show a reporting relationship and dotted lines to show an indirect management relationship.` },
     { que:"responsibility assignment matrix (RAM) or RACI chart",
         ans:`Responsible: completes the work.
-        Accountable: ultimately accountable for the work. Work isn't complete until they approve it. It's best to have only one accountable person for each activity because it creates clarity of authority.
-        Consulted: acts as a consultant. They are a SME who can provide advice or direction. They may also review and quality check work for the responsible group.
+        Accountable: accountable for the work. Work isn't complete until they approve it. It's best to have only one accountable person for each activity because it creates clarity of authority.
+        Consulted: acts as a consultant. A SME who can provide advice/direction. May review and quality check work.
         Informed: receives updates but doesn't interact with the tasks.` },
     { que:"How to create a Responsibility Assignment Matrix (RAM)",
         ans:`1. List the activities in the first column. Ex: WBS elements or PBIs
@@ -498,7 +498,7 @@ const flashcards = [
         10. Expected Benefits: describe how the business will change as a result of completing the project.` },
     { que:"Project Charter - Organization Overview",
         ans:`11. Stakeholders: the main stakeholders are the people who can make or break the project. The stakeholder engagement plan will list more people and groups. At this stage, look for those who will have the most influence/experience the most impact from this project.
-        12. Customers and End-Users: describe who will either use or purchase the project's outputs. This section doesn't include names; use a general description (groups, demographics, divisions). Note if they are internal/external to the organization.
+        12. Customers and End-Users: describe who will either use/purchase project's outputs. Use general description (groups, demographics, divisions). Note if they are internal v external to the organization.
         13. Project Roles: list the PM and project sponsor. List the project board, steering committee, or other governing bodies that will oversee this project. Include high-level responsibilities as well.
         14. Team Members: list each member's name, role, and responsibilities on the project.
         15. Project Organization: create a project organization chart to show the project team and reporting structure.` },
@@ -523,10 +523,10 @@ const flashcards = [
         Legal Documents: legally binding agreements.
         Communications: meeting notes, status reports, and written communications generate communications records.` },
     { que:"Records Management Plan - Types of Data",
-        ans:`Public data: no restrictions. Ex: information on company website and in public records.
-        Internal data: available to anybody within the company. It isn't necessarily secret, and exposing this data wouldn't violate laws or trust. Ex: work procedures and project plans.
-        Confidential data: Limited access. The information is only available to authorized users either on a role or case-by-case basis. Ex: Personnel records.
-        Restricted data: top secret, and access is severely restricted. This is the highest-security information. Criminal charges against unauthorized users or face charges if leak information. Ex: research, top-secret projects, user's passwords.` },
+        ans:`Public data: no restrictions, least sensitive. Ex: company website, public records.
+        Internal data: available to anyone in the company. Not secret, and exposing this data wouldn't violate laws or trust. Ex: work procedures, project plans.
+        Confidential data: Limited access. Information available to users on a role or case-by-case basis. Ex: Personnel records.
+        Restricted data: top secret, severely restricted, the highest-security information. Criminal charges against unauthorized users or face charges if leak information. Ex: research, top-secret projects, user's passwords.` },
     { que:"Requirements for Records Management Plan",
         ans:`The plan needs to comply with organizational policy.
         Records need to be organized and easy to find.
@@ -705,7 +705,7 @@ const flashcards = [
     { que:"Productivity Tools",
         ans:`Text Editor: minimal functionality and features.
         Word Processing: more functionality than text editor.
-        Spreadsheets, works with data in tables.
+        Spreadsheets: works with data in tables.
         Presentation: slide decks, which are visual pages that tell a story.
         Diagramming: create visual representations of processes, systems, objects, structures, ideas, information.` },
     { que:"Commom Diagrams",
@@ -1319,8 +1319,8 @@ const flashcards = [
     { que:"Exploratory Procurement Documents",
         ans:`Request for Information(RFI): used to learn more about solutions before initiating the solicitation process. Vendor responds to an RFI with more information about their products or services.
         Request for Proposal(RFP): used to solicit multiple vendor proposals for a solution.
-        Request for Bid(RFB): solicits proposals like RFP, but vendors compete on price. Since you cannot factor in other criterias, this works best for straightforward work and commodity items (ex: office supplies). 
-        Request for Quote: an exclusively financial proposal. A formal document requesting pricing information for detailed, specific requirements, such as supplies or labor. Vendors respond with pricing models that describe delivering the project scope and coss.` },
+        Request for Bid(RFB): solicits proposals like RFP, but vendors compete on price. Cannot factor other criterias, works best for straightforward work and commodity items (ex: office supplies). 
+        Request for Quote: an exclusively financial proposal. Requesting pricing information for detailed, specific requirements, Ex: supplies/labor. Vendors respond with pricing models that describe delivering the project scope and costs.` },
     { que:"Procurement Statement of Work(SOW)",
         ans:`a formal document that outlines the work a vendor needs to deliver. It's included with an RFP to provide additional information about the project. It clarifies the scope, sets expectations, and outlines technical requirements.` },
     { que:"3 types of Statement of Work(SOW)",
@@ -1362,7 +1362,7 @@ const flashcards = [
         ans:`technical approach to vendor selection requires evaluators to compare vendor submissions to the project requirements. A technical evaluation is a highly structured event. Technical evaluators score a product strictly against the criteria outlined in the solicitation and nothing else. Vendors offering products above and beyond the requirements do not receive a higher score.
         References: After selecting final vendor and before signing a contract, the procurement specialist conducts reference checks with a vendor's other clients. First, procurement specialist inquires about the client's experience with the vendor. Next, procurement analyst asks how they interact, which technology they use, and why they work with the vendor. They also inquire about the vendor's performance, including their responsiveness, work quality, on-time performance, and cost management. A reference check reveals information from the source you might not receive elsewhere.` },
     { que:"Fixed Price Contracts",
-        ans:`"lump sum contract", agrees for fixed scope of work and places most of the contract risk on the vendor. Ex: if materials cost increases, the vendor would not receive more money to cover that. Therefore, their profit margins would shrink. A fixed-price contract is suitable when the contract's scope will not change.` },
+        ans:`"lump sum contract", agrees for fixed scope of work and places contract risk on the vendor. Ex: if materials cost increases, the vendor would not receive more money to cover that. Therefore, their profit margins would shrink. A fixed-price contract is suitable when the contract's scope will not change.` },
     { que:"3 types of Fixed-Price Contracts",
         ans:`firm fixed-price (FFP),
         fixed-price incentive fee (FPIF),
@@ -1481,17 +1481,17 @@ const flashcards = [
         ans:`these charts manage scope and time. Both charts are easy to create and read and used internally by teams.
         Burnup and burndown charts plot two values: target and actual work. Each chart is a "line chart" or a "line and column chart". For simplicity, this course will use the line and column chart. The project timeline runs along the horizontal axis. The vertical axis visualizes the amount of work, measured in task hours or story points.` },
     { que:"Burnup Chart",
-        ans:`measures the total amount of work "completed" each day. A line represents the target for completed work. It starts at zero on the first day of the project, and the last day has all the work. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like constructing a skyscraper or climbing a mountain, the work builds up.` },
+        ans:`measures the total amount of "WORK COMPLETED" each day. A line represents the target for completed work. It starts at zero on the first day of the project, and the last day has all the work. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like constructing a skyscraper or climbing a mountain, the work builds up.` },
     { que:"Burndown Chart",
-        ans:`measures how much work is "remaining" each day. A line represents the target for the day. The first day of the project plots all work remaining, and the last day plots no work remaining. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like a lit candle, the work “burns down” to zero. A burndown chart focuses on the end goal. It works well with a fixed timeline, like in agile teams.` },
+        ans:`measures how much "WORK REMAINING" each day. A line represents the target for the day. The first day of the project plots all work remaining, and the last day plots no work remaining. Initially, it creates a straight line, though the line will vary if you add or remove work later in the project. Like a lit candle, the work “burns down” to zero. A burndown chart focuses on the end goal. It works well with a fixed timeline, like in agile teams.` },
     { que:"Velocity v Throughput Charts",
         ans:`Agile teams use velocity and throughput charts to set their work goals in future sprints. These measure a team's historical performance data. Teams use their historical performance as a predictor of future performance. Any team that tracks work items can use throughput because it measures the number of work items completed. Velocity is only used by teams that measure work with story points.` },
     { que:"Throughput Charts",
-        ans:`measures the number of items completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: the throughput chart shows that they deliver an average of 13 user stories per sprint. So they should include approximately 13 stories in the next iteration.` },
+        ans:`measures the number of ITEMS completed per iteration. Ex: the throughput chart shows that they deliver an average of 13 user stories per sprint. So they should include approximately 13 stories in the next iteration.` },
     { que:"Velocity Charts",
-        ans:`measures how many story points are completed per iteration. Chart contains previous iterations and plots average for the iterations. Teams use it to review historical performance and set goals for the upcoming sprint. Ex: a team's velocity chart shows that they usually deliver an average of 21 story points. So they should plan for no more than 21 story points at the next iteration.` },
+        ans:`measures how many STORY POINTS are completed per iteration. Ex: a team's velocity chart shows that they usually deliver an average of 21 story points. So they should plan for no more than 21 story points at the next iteration.` },
     { que:"Team Meetings - Team Status Meeting",
-        ans:`"team touchpoint meeting"; the team's regular recurring meeting. The purpose is to update the project's overall progress and solve problems. Team use this time to review problems and brainstorm solutions. This is a working meeting than a stakeholder meeting.` },
+        ans:`"team touchpoint meeting"; team's recurring meeting. Use this time to review problems and brainstorm solutions. A working meeting, NOT a stakeholder meeting.` },
     { que:"Team Meetings - Team Status Meeting agenda",
         ans:`Open action items
         Status updates
@@ -1793,62 +1793,6 @@ const flashcards = [
         Accuracy: Data quality reflect reality based on its accuracy, timeliness, and completeness. Use high-quality data because you have to make decisions from it.
         Sustainability: Consider long-term impacts. A manual dashboard isn't likely to be maintained/updated often. It will have accuracy issues. Dashboards should automatically update as source data is updated.` },
     { que:"Organizational Change Management(OCM)",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
-        ans:`` },
-    { que:"",
         ans:`` },
     { que:"",
         ans:`` },
