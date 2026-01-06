@@ -53,7 +53,7 @@ const flashcards = [
     { que:"Environmental factors",
         ans:`how the organization impacts natural world.` },
     { que:"Social factors",
-        ans:`how company develops relationships and treats people, employees, community, and groups impacted by the company's products and services.` },
+        ans:`how company develops relationships and treats people, employees, community, and groups impacted by the company's products/services.` },
     { que:"Governance factors",
         ans:`how the company operates, including policies, transparency, structure. Change in new policies, oversight committees, and replacing executives for issues ex: mismanagement.` },
     { que:"Corporate Identity",
@@ -105,7 +105,7 @@ const flashcards = [
     { que:"Sponsor",
         ans:`accountable for a project` },
     { que:"Customer",
-        ans:`recieves benefits from the project. Two types (Internal and External)` },
+        ans:`recieves benefits from the project. Two types: (Internal v External)` },
     { que:"Internal Customer",
         ans:`customers work inside the project organization.` },
     { que:"External Customer",
@@ -442,7 +442,7 @@ const flashcards = [
         Revenue
         Change adoption effectiveness` },
     { que:"Leading indicators",
-        ans:`are predictive measures. You assume if these measures perform well, the desired outcomes will improve.
+        ans:`are predictive measures. If measures perform well, desired outcomes will improve (vice versa).
         Ex: Number of automated tests
         Number of bugs fixed in test
         Employee development program participation
@@ -955,13 +955,13 @@ const flashcards = [
         Transfer/Transference,
         Accept/Acceptance` },
     { que: "Neg Risk Strategies - Avoid/Avoidance",
-        ans: `prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people who are afraid to lose money in the stock market don't invest.`},
+        ans: `prevent a risk from ever happening. Risk avoidance detours around anything that could cause the event. Ex: people afraid to lose money in the stock market don't invest.`},
     { que: "Neg Risk Strategies - Mitigate/Mitigation",
-        ans: `reduces the impact or probability of a risk. Includes improving processes and creating backup plans. Most common risk response. Ex: every time you put on your seatbelt, lock your door, or put a case on your cell phone.`},
+        ans: `reduce impact/probability of risk, by improving processes and creating backup plans. Most common risk response. Ex: wearing seatbelt, locking your door, add phone case.`},
     { que: "Neg Risk Strategies - Transfer/Transference",
         ans: `assigns the risk to a third party. The risk moves financial responsibility for a risk to somebody else, but the risk might still happen to you. Ex: insurance.`},
     { que: "Neg Risk Strategies - Accept/Acceptance",
-        ans: `“do nothing” approach. You accept the consequences. Risk acceptance can be the most logical and financial sense. You don't have to prevent every risk.`},
+        ans: `“do nothing” approach. You accept the consequences. Can make logical/financial sense. You don't have to prevent every risk.`},
     { que:"Positive Risk Strategies",
         ans:`Exploit/Exploitation,
         Enhance/Enhancement,
@@ -978,9 +978,9 @@ const flashcards = [
         ans: `Accept/Acceptance: “do nothing” approach. You enjoy it if it happens and receive no benefits if it doesn't. Acceptance is valid when the risk is of low value, difficult to treat, or generates a low return on investment. Ex: the IT division is considering purchasing a collaboration application; you could wait and see if they implement it. `},
     { que:"Risk Register",
         ans:`Information gathered during the risk management process:
-        Risk ID
-        Risk description
-        Risk analysis summary
+        ID
+        Description
+        Analysis summary
         Impact, priority, or other scoring criteria
         Risk priority or ranking
         Risk owner
@@ -1005,11 +1005,11 @@ const flashcards = [
         Risk Register: Identify where you will store and manage risks.` },
     { que:"Risk Management Plan Elements 2/3",
         ans:`Risk Breakdown Structure(RBS): Identify which categories you will use to classify the nature of the risks in an RBS.
-        Risk Assessment Strategy: Specify how the team will score risks, including criteria and scales. Include definitions for any qualitative scales.
+        Risk Assessment Strategy: How the team will score risks, including criteria and scales. Add definitions for using qualitative scales.
         Risk Response Strategy: Summarize the risk response options used to manage risks.` },
     { que:"Risk Management Plan Elements 3/3",
-        ans:`Roles and Responsibilities: Name the roles and responsibilities for the entire risk management process. Include clear responsibilities for the risk owners and the risk manager.
-        Funding: List any financial factors, such as funding availability, funding needs, or resource requirements.
+        ans:`Roles and Responsibilities: Name roles/responsibilities for entire risk management process. Include responsibilities for risk owner and risk manager.
+        Funding: List financial factors; ex: funding availability, funding needs, or resource requirements.
         Risk Monitoring: Describe how you and the risk owners will identify and track risks.
         Schedule: Outline the timing of all risk management activities.` },
     { que:"Transition Plan Elements",
@@ -1092,8 +1092,8 @@ const flashcards = [
         ans:`Top-Down: creates an estimate of the entire project or key deliverables. Then estimates are cascaded down to the activities. Top-down estimating is less accurate than other techniques. 
         Bottom-Up: creates estimates at the lowest-level activities, work packages, and user stories. Then, the individual estimates are added together to create a project estimate. Bottom-up estimate is time consuming but more accurate than top-down estimate. ` },
     { que:"Estimation Techniques - Analogous v Parametric",
-        ans:`Analogous: a top-down approach that uses historical data. Ex: you are estimating a marketing campaign project. If previous similar projects lasted six weeks, you estimate that this project will last six weeks.
-        Parametric: augments bottom-up/top-down estimates with historical data. It uses known variables, such as cost per hour and the number of hours, to create a custom estimate for a project. Ex: you need to create four advertisements for an ad campaign. Usually, you can complete a single advertisement in two hours. Using a parametric model, you can estimate that it will take eight hours to complete the four campaigns.` },
+        ans:`Analogous: top-down approach that uses historical data. Ex: for estimating a project; if previous similar projects lasted six weeks, you estimate this project will last six weeks.
+        Parametric: bottom-up/top-down estimates with historical data. Uses known variables, such as cost per hour and number of hours, to estimate for project. Ex: you create four advertisements for an ad campaign. Usually, you complete one advertisement in two hours. With parametric model: you estimate that it will take eight hours to complete four campaigns.` },
     { que:"Estimation Techniques - Three-Point Estimating",
         ans:`Used in combination with other estimating techniques. Factors multiple scenarios to create average estimate.
         You collect three values: (O)ptimistic, (P)essimistic, and (M)ost likely.
@@ -1103,16 +1103,16 @@ const flashcards = [
         Task Hours: more specific time measurement than duration. 
         Story points are an estimating technique used in agile teams, so it would apply to user stories and not work packages. A story point is an abstract measure representing the relative complexity, risk, and uncertainty of the work needed to deliver a story. 
         Story points values use modified Fibonacci sequence: 1,2,3,5,8,13. ` },
-    { que:"Assign Resources",
-        ans:`After identifying the activities, you will assign resources to each activity. Resource Assignment Process focuses on human and physical resources because capital resources were used on them.
-        Clarity: assigning resources clarifies roles and responsibilities. Team members know what they need to do and can plan their time accordingly.
-        Parity: physical resources benefit from resource assignments as well. Physical resources have a body of work and limited time, just like people.
+    { que:"Resource Assignment Process",
+        ans:`Resource Assignment Process focuses on human/physical resources because capital resources were used on them.
+        Clarity: assigning resources clarifies roles and responsibilities. Team members know what they need to do and plan their time accordingly.
+        Parity: physical resources benefit from resource assignments as well. Physical resources have a body of work and limited time.
         Discovery: resource assignment process can uncover issues early. 
-        Validity: increases the accuracy of project metrics. Tracking resource assignments allows you to create detailed cost estimates.` },
+        Validity: increases the accuracy of project metrics. Tracking resource assignments allows to create detailed cost estimates.` },
     { que:"Responsibility Assignment Matrix(RAM)",
-        ans:`Responsible (R): person who will DO the work.
-        Accountable (A): person held accountable for the FINAL work.
-        Consulted (C): person who offer expertise on the work but will not work on it.
+        ans:`Responsible (R): person who DOES the work.
+        Accountable (A): person held ACCOUNTABLE for the FINAL work.
+        Consulted (C): person who offer expertise on the work (ex: SME) but will not work on it.
         Informed (I): person who needs to know when the work is done.` },
     { que:"Project Schedule",
         ans:`the activities required to complete the project work. ` },
@@ -1191,7 +1191,7 @@ const flashcards = [
     { que:"Methods for Calculating Reserves",
         ans:`Reserve Analysis: accommodates multiple methods for calculating contingency reserves, each with benefits/drawbacks.
         Percentage of the Project's Cost: a simple calculation that uses a percentage of the project's cost estimate. This method is for smaller organizations/projects. 3–10% reserve is sufficient.
-        Monte Carlo Analysis: popular simulation technique. Uses three-point estimate to create probability distribution. You need the optimistic, most likely, and pessimistic estimates for each project activity.` },
+        Monte Carlo Analysis: popular simulation technique. Uses three-point estimate to create probability distribution. You need optimistic, most likely, and pessimistic estimates for each project activity.` },
     { que:"Methods for Calculating Reserves - EMV",
         ans:`Expected Monetary Value(EMV): requires each risk's probability and impact assessment. First, the probability and the financial impact of occurrence are multiplied for each risk. Then, the EMV for each risk is summed to calculate the project's contingency buffer. EMV is helpful for large, expensive projects with many risks.
         EMV = Probability x Impact
@@ -1323,13 +1323,13 @@ const flashcards = [
         Request for Bid(RFB): solicits proposals like RFP, but vendors compete on price. Cannot factor other criterias, works best for straightforward work and commodity items (ex: office supplies). 
         Request for Quote: an exclusively financial proposal. Requesting pricing information for detailed, specific requirements, Ex: supplies/labor. Vendors respond with pricing models that describe delivering the project scope and costs.` },
     { que:"Procurement Statement of Work(SOW)",
-        ans:`a formal document that outlines the work a vendor needs to deliver. It's included with an RFP to provide additional information about the project. It clarifies the scope, sets expectations, and outlines technical requirements.` },
+        ans:`formal document that outlines the work a vendor delivers. Includes RFP that provides information about the project. It clarifies scope, sets expectations, outlines technical requirements.` },
     { que:"3 types of Statement of Work(SOW)",
         ans:`Design: is process prescriptive. Outlines how to deliver the work, and it sets resource and performance requirements at each stage. 
         Functional: is outcome focused. lists the requirements of a finished product only. How to deliver the work is left to the vendor, which can propose alternative approaches or scope adjustments.
         Performance: describes the expected outcomes along with minimum performance standards. It is more fixed than a functional SOW, but it is still outcome focused and flexible for vendors.` },
     { que:"Terms of Reference(TOR)",
-        ans:`a specific version of an SOW. Similar to SOW, but focuses on deliverables, and TOR focuses on relationships. SOW involves working together, TOR involves delivering work. TOR resembles a functional SOW, focusing on objectives. TOR is used in consulting/professional services, where value is derived from the relationship, ` },
+        ans:`specific version of SOW, but focuses on deliverables. TOR focuses on relationships. SOW involves working together, TOR involves delivering work. TOR resembles functional SOW, focusing on objectives. TOR is used in consulting/professional services, where value is derived from the relationship, ` },
     { que:"Procurement Market Research",
         ans:`collecting information about the product, service, suppliers, and industry trends. Market research firms specialize in gathering industry information through benchmarking studies; final reports are available to subscibers or the public.` },
     { que:"Competitive Analysis",
@@ -1337,7 +1337,7 @@ const flashcards = [
     { que:"Predetermined Clients",
         ans:`Developers create products for specific audience, predetermined clients. The predetermined client could be a model user or preferred configuration that optimizes product's performance. Understanding the product's predetermined clients can help you compare the potential usefulness of two or more options.` },
     { que:"Capital v Operational Expenses",
-        ans:`CapEx: permanent assets, such as data centers, vehicles, and equipment. Organizations rarely purchase them, making them noticeable purchases that fall outside the company's typical operating budget. Capital purchases require intensive capital budgeting because of the high cost. CapEx assets depreciate over multiple years on the accounting register and income statements. Therefore, disposal of such assets must be reported for proper accounting.
+        ans:`CapEx: permanent assets, (ex: data centers, vehicles, equipment). CapEx rarely used, noticeable purchases that fall outside the company's operating budget. Require intensive capital budgeting due to high cost. CapEx assets depreciate over multiple years on the accounting register and income statements. Therefore, disposal of such assets must be reported for proper accounting.
         OpEx: organization's regular expenses; (ex: salaries, taxes, and recurring expenses, (ex: subscriptions, rentals, utilities)). OpEx are already built into the budget and do not depreciate. Acquiring/disposing OpEx assets is more feasible/flexible.` },
     { que:"Review Current Vendor Options - Preexisting Contracts",
         ans:`Your organization has active contracts with many vendors. After defining a project's requirements, the procurement specialist will review these contracts to determine if any of the vendors are a good fit for your needs. Preexisting contracts are more efficient than bidding and awarding a new contract. But, leveraging a preexisting contract only works when a vendor has the capacity, capability, and interest in delivering the work. An established vendor will still require a TOR or SOW for your project's requirements. You may need to create a separate document or modify their existing material.` },
@@ -1510,7 +1510,7 @@ const flashcards = [
         Sprint target (velocity or throughput).
         Sprint backlog development.` },
     { que:"Stakeholder Meetings",
-        ans:`occurs less frequently than the team meeting. The purpose is to report on the project's overall progress, gather feedback, and highlight what stakeholders will see next. A stakeholder meeting should summarize everything and leave most of the time for discussion. Be prepared to answer perceptive questions about the project.
+        ans:`occurs less frequently than team meetings. Purpose is to report on the project's overall progress, gather feedback, highlight what stakeholders will see next. The meeting should summarize everything and leave most of the time for discussion. Be prepared to answer perceptive questions about the project.
         PM facilitate status reports for internal/external stakeholders. Adjust meeting's agenda and tone for each audience. External meetings are restrained than internal meetings. External audience doesn't know about the internal workings of your organization, so don't include specific departments or issues. External meeting focuses on externally visible deliverables and milestones. You might discuss development milestones with internal stakeholders, you would only tell stakeholders about the go-live event for software.` },
     { que:"External Stakeholder Meeting agenda",
         ans:`High-level project status.
@@ -1573,7 +1573,7 @@ const flashcards = [
         Scatter Diagram - Negative Correlation: when one variable increases, the other decreases.
         Scatter Diagram - No Correlation: when one variable increases, no clear relationship.` },
     { que:"Issue Management Process - Analyze the Issue - Run Chart",
-        ans:`Run Chart "time series plot": a time-based line graph that shows time/sequence on horizontal axis and values on vertical axis.` },
+        ans:`Run Chart "time series plot": displays data over time. A time-based line graph that shows time/sequence on horizontal axis and values on vertical axis.` },
     { que:"Issue Management Process - Analyze the Issue - Pareto Chart",
         ans:`Pareto Principle asserts that you can solve most problems by fixing a small portion of the root causes. The 80/20 rule is a simple way to describe the principle: 80% of issues are created by 20% of the causes.` },
     { que:"Issue Management Process - Analyze the Issue - 5 Whys",
