@@ -68,6 +68,36 @@ button {
   color: #000;
 }
 
+.table-wrapper-rotated {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.roulette-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 40px); /* 12 rows of the original table become columns */
+  grid-auto-rows: 40px;
+  transform: rotate(-90deg); /* rotate counterclockwise */
+  transform-origin: top left;
+  margin-left: 40px; /* adjust so rotated grid fits nicely */
+}
+
+.roulette-grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.green { background: #1e7f43; color: #fff; }
+.red { background: #b11226; color: #fff; }
+.black { background: #111; color: #fff; }
+
+
 .result, .history {
   margin-top: 16px;
   background: #111;
@@ -91,29 +121,30 @@ button {
 
 <div class="table-wrapper">
 <table>
+
 <script>
 for (let row = 0; row < 12; row++) {
   document.write("<tr>");
   for (let col = 0; col < 3; col++) {
-    let num = row * 3 + (col + 1);
+    let num = row * 3 + (col + 1); // horizontal order 1,2,3
     let color = (num % 2 === 0) ? "black" : "red";
     document.write(`<td class="${color}">${num}</td>`);
   }
   document.write("</tr>");
 }
 </script>
-
 </table>
 </div>
 
 <h2>Previous 4 Street Bets</h2>
 <p style="font-size:14px; text-align:center;">
+Comma-separated (example: <b>1,6,12,30</b>)
 </p>
 
 <input
   id="prevStreets"
   type="text"
-  placeholder="1,4,7,10"
+  placeholder="1,6,12,30"
   autocomplete="off"
 />
 
@@ -140,9 +171,15 @@ function loadHistory() {
 function saveHistory(value) {
   let history = JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
   history.unshift(value);
-  history = history.slice(0, 4);
+  history = history.slice(0, 2);
   localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
   loadHistory();
+}
+
+// Map any number to its street start based on table layout
+function getStreetStart(num) {
+  if (num === 0) return null;
+  return Math.floor((num - 1) / 3) * 3 + 1;
 }
 
 function generateBets() {
@@ -151,45 +188,39 @@ function generateBets() {
 
   saveHistory(input);
 
-  const prev = input
+  const prevNums = input
     .split(",")
     .map(n => parseInt(n.trim()))
     .filter(n => !isNaN(n));
 
-  let forbidden = new Set();
-  prev.forEach(s => {
-    forbidden.add(s);
-    forbidden.add(s + 1);
-    forbidden.add(s + 2);
-  });
+  // Create forbidden streets based on input numbers
+  const forbidden = new Set(prevNums.map(getStreetStart));
 
+  // All possible streets
   let streets = [];
   for (let i = 1; i <= 34; i += 3) streets.push(i);
 
-  let valid = streets.filter(s =>
-    !forbidden.has(s) &&
-    !forbidden.has(s + 1) &&
-    !forbidden.has(s + 2)
-  );
+  // Filter out forbidden streets
+  let valid = streets.filter(s => !forbidden.has(s));
 
-  // Randomize selection
-valid.sort(() => Math.random() - 0.5);
+  // Shuffle randomly
+  valid.sort(() => Math.random() - 0.5);
 
-// Pick 8
-const picks = valid.slice(0, 8);
+  // Pick up to 8 streets
+  let picks = valid.slice(0, 8);
 
-// Sort numerically (low → high)
-picks.sort((a, b) => a - b);
+  // Sort low → high for display
+  picks.sort((a, b) => a - b);
 
-document.getElementById("output").innerHTML =
-  "<b>Suggested Street Bets (Low → High):</b><br><br>" +
-  picks.map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
-
+  // Display
+  document.getElementById("output").innerHTML =
+    "<b>Suggested Street Bets (Low → High):</b><br><br>" +
+    picks.map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
 }
 
 loadHistory();
 
-// Service Worker
+// Service Worker registration for offline
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
