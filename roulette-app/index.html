@@ -4,12 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Roulette Street Bet Generator</title>
+
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b3d2e">
 
-
 <style>
-/* ===== Mobile First ===== */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -25,7 +24,6 @@ body {
 
 h1, h2 {
   text-align: center;
-  margin-bottom: 12px;
 }
 
 .table-wrapper {
@@ -68,31 +66,19 @@ button {
   border-radius: 10px;
   background: #e6b800;
   color: #000;
-  cursor: pointer;
 }
 
-button:active {
-  transform: scale(0.98);
-}
-
-.result {
+.result, .history {
   margin-top: 16px;
   background: #111;
   border-radius: 10px;
   padding: 14px;
-  font-size: 16px;
 }
 
-/* ===== Desktop Enhancements ===== */
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-
-  td {
-    width: 48px;
-    height: 48px;
-  }
+.history div {
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -137,21 +123,54 @@ for (let row = 0; row < 11; row++) {
 
 <h2>Previous 4 Street Bets</h2>
 <p style="font-size:14px; text-align:center;">
-Enter starting numbers (e.g. <b>1,4,7,10</b>)
+Comma-separated (example: <b>1,4,7,10</b>)
 </p>
 
-<input id="prevStreets" placeholder="1,4,7,10" inputmode="numeric">
+<input
+  id="prevStreets"
+  type="text"
+  placeholder="1,4,7,10"
+  autocomplete="off"
+/>
 
 <button onclick="generateBets()">Generate 8 New Streets</button>
 
 <div class="result" id="output"></div>
 
+<div class="history">
+  <b>Last Inputs</b>
+  <div id="historyList"></div>
+</div>
+
 </div>
 
 <script>
+const HISTORY_KEY = "roulette-history";
+
+function loadHistory() {
+  const history = JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+  const list = document.getElementById("historyList");
+  list.innerHTML = history.map(h => `<div>${h}</div>`).join("");
+}
+
+function saveHistory(value) {
+  let history = JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+  history.unshift(value);
+  history = history.slice(0, 4);
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  loadHistory();
+}
+
 function generateBets() {
   const input = document.getElementById("prevStreets").value;
-  const prev = input.split(",").map(n => parseInt(n.trim())).filter(n => !isNaN(n));
+  if (!input.trim()) return;
+
+  saveHistory(input);
+
+  const prev = input
+    .split(",")
+    .map(n => parseInt(n.trim()))
+    .filter(n => !isNaN(n));
 
   let forbidden = new Set();
   prev.forEach(s => {
@@ -170,20 +189,19 @@ function generateBets() {
   );
 
   valid.sort(() => Math.random() - 0.5);
-  let picks = valid.slice(0, 8);
 
   document.getElementById("output").innerHTML =
     "<b>Suggested Street Bets:</b><br><br>" +
-    picks.map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
+    valid.slice(0, 8).map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
 }
-</script>
 
-<script>
+loadHistory();
+
+// Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
 </script>
-
 
 </body>
 </html>
