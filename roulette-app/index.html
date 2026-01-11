@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Roulette Street Bet Generator</title>
 
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0b3d2e">
-
 <style>
 body {
   margin: 0;
@@ -15,7 +12,7 @@ body {
   background: #0b2f3d;
   background: #144335;
   background: #0b333d;
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .container {
@@ -24,7 +21,7 @@ body {
   margin: auto;
 }
 
-h1, h2 {
+h1, h3 {
   text-align: center;
 }
 
@@ -39,8 +36,8 @@ table {
 }
 
 td {
-  width: 42px;
-  height: 42px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   font-weight: bold;
   border: 1px solid #333;
@@ -92,8 +89,8 @@ td {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 26px;
-  height: 26px;
+  width: 10px;
+  height: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, #fff, #e6b800);
@@ -110,7 +107,7 @@ td {
 
 /* Shift chip left for street bet edge */
 .street-left {
-  transform: translate(-135%, -50%);
+  transform: translate(-145%, -50%);
 }
 
 </style>
@@ -140,15 +137,14 @@ for (let row = 0; row < 12; row++) {
 </table>
 </div>
 
-<h2>Previous Bets</h2>
+<h3>Prev 4 Bets</h3>
 <p style="font-size:12px; text-align:center;">
-Comma-separated (ex: 3,13,23,33)
 </p>
 
 <input
-  id="prevStreets"
+  id="prevBets"
   type="text"
-  <!-- placeholder="3,13,23,33" -->
+  placeholder=".split(',') (ex: 3,13,23,33)"
   autocomplete="off"
 />
 
@@ -203,7 +199,7 @@ function placeChipOnStreet(streetStart) {
 
 
 function generateBets() {
-  const input = document.getElementById("prevStreets").value;
+  const input = document.getElementById("prevBets").value;
   if (!input.trim()) return;
 
   saveHistory(input);
@@ -246,11 +242,6 @@ picks.forEach(placeChipOnStreet);
 }
 
 loadHistory();
-
-// Service Worker registration for offline
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
 </script>
 
 </body>
