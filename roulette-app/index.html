@@ -12,7 +12,9 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0b3d2e;
+  background: #0b2f3d;
+  background: #144335;
+  background: #0b333d;
   color: #fff;
 }
 
@@ -44,7 +46,7 @@ td {
   border: 1px solid #333;
 }
 
-.green { background: #1e7f43; }
+
 .red { background: #b11226; }
 .black { background: #111; }
 
@@ -67,36 +69,6 @@ button {
   background: #e6b800;
   color: #000;
 }
-
-.table-wrapper-rotated {
-  overflow-x: auto;
-  margin-bottom: 16px;
-}
-
-.roulette-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 40px); /* 12 rows of the original table become columns */
-  grid-auto-rows: 40px;
-  transform: rotate(-90deg); /* rotate counterclockwise */
-  transform-origin: top left;
-  margin-left: 40px; /* adjust so rotated grid fits nicely */
-}
-
-.roulette-grid div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #333;
-  width: 40px;
-  height: 40px;
-  font-weight: bold;
-  margin: 1px;
-}
-
-.green { background: #1e7f43; color: #fff; }
-.red { background: #b11226; color: #fff; }
-.black { background: #111; color: #fff; }
-
 
 .result, .history {
   margin-top: 16px;
@@ -137,8 +109,8 @@ for (let row = 0; row < 12; row++) {
 </div>
 
 <h2>Previous 4 Street Bets</h2>
-<p style="font-size:14px; text-align:center;">
-Comma-separated (example: <b>1,6,12,30</b>)
+<p style="font-size:12px; text-align:center;">
+Comma-separated (example: <b>7,26,9,34</b>)
 </p>
 
 <input
