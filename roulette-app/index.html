@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Roulette Street Bet Generator</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b3d2e">
+
+
+<style>
+/* ===== Mobile First ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b3d2e;
+  color: #fff;
+}
+
+.container {
+  padding: 16px;
+  max-width: 480px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+td {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #333;
+}
+
+.green { background: #1e7f43; }
+.red { background: #b11226; }
+.black { background: #111; }
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: #e6b800;
+  color: #000;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result {
+  margin-top: 16px;
+  background: #111;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* ===== Desktop Enhancements ===== */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  td {
+    width: 48px;
+    height: 48px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Roulette Street Bets</h1>
+
+<div class="table-wrapper">
+<table>
+<tr>
+  <td class="green">0</td>
+  <td class="red">3</td>
+  <td class="black">6</td>
+  <td class="red">9</td>
+  <td class="red">12</td>
+  <td class="black">15</td>
+  <td class="red">18</td>
+  <td class="red">21</td>
+  <td class="black">24</td>
+  <td class="red">27</td>
+  <td class="red">30</td>
+  <td class="black">33</td>
+  <td class="red">36</td>
+</tr>
+
+<script>
+for (let row = 0; row < 11; row++) {
+  document.write("<tr>");
+  for (let col = 0; col < 3; col++) {
+    let num = row * 3 + (3 - col);
+    let color = (num % 2 === 0) ? "black" : "red";
+    document.write(`<td class="${color}">${num}</td>`);
+  }
+  document.write("</tr>");
+}
+</script>
+</table>
+</div>
+
+<h2>Previous 4 Street Bets</h2>
+<p style="font-size:14px; text-align:center;">
+Enter starting numbers (e.g. <b>1,4,7,10</b>)
+</p>
+
+<input id="prevStreets" placeholder="1,4,7,10" inputmode="numeric">
+
+<button onclick="generateBets()">Generate 8 New Streets</button>
+
+<div class="result" id="output"></div>
+
+</div>
+
+<script>
+function generateBets() {
+  const input = document.getElementById("prevStreets").value;
+  const prev = input.split(",").map(n => parseInt(n.trim())).filter(n => !isNaN(n));
+
+  let forbidden = new Set();
+  prev.forEach(s => {
+    forbidden.add(s);
+    forbidden.add(s + 1);
+    forbidden.add(s + 2);
+  });
+
+  let streets = [];
+  for (let i = 1; i <= 34; i += 3) streets.push(i);
+
+  let valid = streets.filter(s =>
+    !forbidden.has(s) &&
+    !forbidden.has(s + 1) &&
+    !forbidden.has(s + 2)
+  );
+
+  valid.sort(() => Math.random() - 0.5);
+  let picks = valid.slice(0, 8);
+
+  document.getElementById("output").innerHTML =
+    "<b>Suggested Street Bets:</b><br><br>" +
+    picks.map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
+}
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+
+</body>
+</html>
