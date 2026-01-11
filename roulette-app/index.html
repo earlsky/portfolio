@@ -91,39 +91,23 @@ button {
 
 <div class="table-wrapper">
 <table>
-<tr>
-  <td class="green">0</td>
-  <td class="red">3</td>
-  <td class="black">6</td>
-  <td class="red">9</td>
-  <td class="red">12</td>
-  <td class="black">15</td>
-  <td class="red">18</td>
-  <td class="red">21</td>
-  <td class="black">24</td>
-  <td class="red">27</td>
-  <td class="red">30</td>
-  <td class="black">33</td>
-  <td class="red">36</td>
-</tr>
-
 <script>
-for (let row = 0; row < 11; row++) {
+for (let row = 0; row < 12; row++) {
   document.write("<tr>");
   for (let col = 0; col < 3; col++) {
-    let num = row * 3 + (3 - col);
+    let num = row * 3 + (col + 1);
     let color = (num % 2 === 0) ? "black" : "red";
     document.write(`<td class="${color}">${num}</td>`);
   }
   document.write("</tr>");
 }
 </script>
+
 </table>
 </div>
 
 <h2>Previous 4 Street Bets</h2>
 <p style="font-size:14px; text-align:center;">
-Comma-separated (example: <b>1,4,7,10</b>)
 </p>
 
 <input
@@ -188,11 +172,19 @@ function generateBets() {
     !forbidden.has(s + 2)
   );
 
-  valid.sort(() => Math.random() - 0.5);
+  // Randomize selection
+valid.sort(() => Math.random() - 0.5);
 
-  document.getElementById("output").innerHTML =
-    "<b>Suggested Street Bets:</b><br><br>" +
-    valid.slice(0, 8).map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
+// Pick 8
+const picks = valid.slice(0, 8);
+
+// Sort numerically (low → high)
+picks.sort((a, b) => a - b);
+
+document.getElementById("output").innerHTML =
+  "<b>Suggested Street Bets (Low → High):</b><br><br>" +
+  picks.map(s => `🎯 ${s}-${s+1}-${s+2}`).join("<br>");
+
 }
 
 loadHistory();
