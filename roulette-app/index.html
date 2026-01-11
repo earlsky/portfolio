@@ -44,6 +44,7 @@ td {
   text-align: center;
   font-weight: bold;
   border: 1px solid #333;
+  
 }
 
 
@@ -82,6 +83,37 @@ button {
   border-bottom: 1px solid #333;
   font-size: 14px;
 }
+
+td {
+  position: relative;
+}
+
+/* Chip marker */
+.chip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #e6b800);
+  border: 2px solid #000;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* Shift chip left for street bet edge */
+.street-left {
+  transform: translate(-135%, -50%);
+}
+
 </style>
 </head>
 
@@ -98,13 +130,14 @@ button {
 for (let row = 0; row < 12; row++) {
   document.write("<tr>");
   for (let col = 0; col < 3; col++) {
-    let num = row * 3 + (col + 1); // horizontal order 1,2,3
+    let num = row * 3 + (col + 1);
     let color = (num % 2 === 0) ? "black" : "red";
-    document.write(`<td class="${color}">${num}</td>`);
+    document.write(`<td class="${color}" data-num="${num}">${num}</td>`);
   }
   document.write("</tr>");
 }
 </script>
+
 </table>
 </div>
 
@@ -154,6 +187,22 @@ function getStreetStart(num) {
   return Math.floor((num - 1) / 3) * 3 + 1;
 }
 
+function clearChips() {
+  document.querySelectorAll(".chip").forEach(c => c.remove());
+}
+
+function placeChipOnStreet(streetStart) {
+  // Use FIRST number of the street
+  const cell = document.querySelector(`td[data-num="${streetStart}"]`);
+  if (!cell) return;
+
+  const chip = document.createElement("div");
+  chip.className = "chip street-left";
+  chip.textContent = "$";
+  cell.appendChild(chip);
+}
+
+
 function generateBets() {
   const input = document.getElementById("prevStreets").value;
   if (!input.trim()) return;
@@ -188,6 +237,13 @@ function generateBets() {
   document.getElementById("output").innerHTML =
     "<b>Bets:</b><br><br>" +
     picks.map(s => `${s}-${s+1}-${s+2}`).join("<br>");
+
+    // Clear previous chips
+clearChips();
+
+// Place chips on selected streets
+picks.forEach(placeChipOnStreet);
+
 }
 
 loadHistory();
