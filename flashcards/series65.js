@@ -1,8 +1,8 @@
 const flashcards = [
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Security",
+        ans: `investment that represents either ownership/debt stake. Investor becomes part owner in a corporation by buying shares of the company's stock. Debt security is acquired by buying issuer's (corporation/goverment) bonds. Debt investment is a loan to the issuer in exchange for interest income and the promise to repay the loan at future maturity date.` },
+    { que: "Common Stock",
+        ans: `equity(ownership) in corporation. A company issues stock to raise capital, and investors who buy the stock are buying a share of ownership in the company. The exam will deal with stock that has been issues to the public.` },
     { que: "",
         ans: `` },
     { que: "",
