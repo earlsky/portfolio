@@ -138,6 +138,14 @@
 </head>
 <body>
   <div class="container">
+
+    <!-- Dropdown menu to select deck: -->
+    <select id="deckSelect" onchange="loadDeck(this.value)">
+      <option value="">-- Choose a Deck --</option>
+      <option value="D385SoftwareSecTest">D385 Software Security</option>
+      <option value="series65">Series 65</option>
+    </select>
+
     <div class="card" onclick="flipCard()">
       <h2 id="que"></h2>
       <p id="ans"></p>
@@ -160,7 +168,8 @@
   <!-- Load flashcard deck -->
   <!-- <script src="flashcards/bizITapplications.js"></script> -->
   <!-- <script src="flashcards/bizITapps.js"></script> -->
-  <script src="D385SoftwareSecTest.js"></script>
+  <!-- <script src="flashcards/D385SoftwareSecTest.js"></script> -->
+  <!-- <script src="flashcards/series65.js"></script> -->
 
   <script>
   let currentCard = 0;
@@ -348,6 +357,37 @@
   ========================== */
   displayCard();
 </script>
+
+<!-- ==========================
+      DYNAMIC DECK LOADING
+========================== -->
+<script>
+let currentDeckScript = null;
+
+function loadDeck(deckName) {
+  if (!deckName) return;
+
+  // Remove old deck script if it exists
+  if (currentDeckScript) {
+    document.body.removeChild(currentDeckScript);
+  }
+
+  // Reset flashcard state
+  currentCard = 0;
+  showans = false;
+
+  // Load new deck
+  const script = document.createElement("script");
+  script.src = `flashcards/${deckName}.js`;
+  script.onload = () => {
+    displayCard(); // show first card
+  };
+
+  document.body.appendChild(script);
+  currentDeckScript = script;
+}
+</script>
+
 
 </body>
 </html>
