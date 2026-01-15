@@ -12,7 +12,7 @@ const flashcards = [
     { que: "Capital Appreciation",
         ans: `an increase in the market price of securities.` },
     { que: "Stock Dividends",
-        ans: `Issures pay "stock dividends", in additional shares of common stock in the issuing company."` },
+        ans: `Issuers pay "stock dividends", in additional shares of common stock in the issuing company."` },
     { que: "Property Dividends",
         ans: `Issuers pay "property dividends", shares in a subsidiary company, or company products.` },
     { que: "Unrealized Gain",
@@ -24,43 +24,69 @@ const flashcards = [
     { que: "preemptive right",
         ans: `Common stockholders, not Preferred stockholders, have preemptive right to maintain their proportionate share of ownership in the corporation.` },
     { que: "Limited Liability",
-        ans: `in event of corporation bankruptcy, when corporate assets are ` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+        ans: `in event of corporation bankruptcy, when corporate assets are not adequate to meet corporate obligations, stockholder's personal assets are not at risk. Cannot be forced to sell personal assets to pay debts of the business.` },
+    { que: "Liquidity",
+        ans: `Stocks are freely transferrable, meaning stakeholders do not need permission of the issuer to sell their stock in the open market.` },
+    { que: "Why include common stock in client's portfolio?",
+        ans: `Potential capital appreciation.
+        Income from dividends.
+        Hedge against inflation.` },
+    { que: "Market Risk",
+        ans: `chance a stock will decline in price. Stock's price fluctuates daily as perceptions of company's business prospects change and influence the actions of buyers/sellers.` },
+    { que: "Business Risk",
+        ans: `possibility of a decline in the company's earnings. Could lead to reduction or elimination of dividends.` },
+    { que: "Low Priority at Dissolution",
+        ans: `When company enters bankruptcy, holders of bonds and preferred stock have priority over common stockholders. Company's debt and preferred shares are considered "senior securities". Common stockholders have "residual rights" to corporate assets upon dissolution.` },
+    { que: "Straight(Noncumulative) Preferred Stock",
+        ans: `has no special features beyond the stated dividend payment. Missed dividends are not paid to the stockholder.` },
+    { que: "Cumulative Preferred Stock",
+        ans: `accrues payments due its shareholders in the event dividends are reduced or suspended. Dividends due cumulative preferred stock accumulate on the company's books until the corporation's board of directors decides to pay them. When the company resumes dividend payments, cumulative preferred stockholders receive current dividends plus the total accumulated dividends--dividends "in arrears"--before any dividends may be distributed to common stockholders.
+        Ex: Common stock paid dividends $1, preferred dividend paid $2. Company had financial difficulties and stopped paying dividends after 2016. After resolving difficulties in 2021, company paid cumulative preferred stockholders dividend of $8.
+        This feature found in cumulative preferred stock, an investor seeking steady income finds this most suitable of different types of preferred stock.` },
+    { que: "Callable(Redeemable) Preferred Stock",
+        ans: `a compnay can buy back from investors at stated price after specified date. Right to call the stock allows company to replace high fixed dividend obligation with a lower one when the cost of money has gone down. (Similar to refinancing a mortgage).
+        When corporation calls preferred stock, dividend payments cease. Corporation pays premium exceeding stock's value ($103 for $100 par value stock).
+        Issuing the call create problems for your client who purchased callable preferred shares issued at a time when market conditions dictated high dividend.
+        If the cost of new money comes down, company will call preferrred and investor will have to reinvest proceeds at lower rate. Ex: of reinvestment risk.` },
+    { que: "Convertible Preferred",
+        ans: `preferred stock is "convertible" if owner can exchange shares for fixed number of shares of common stock of the issuing corporation.
+        Because the value of convertible preferred is linked to value of common stock, the convertible's preferred price tends to fluctuate in line with common stock.
+        Convertible preferred is issued with lower dividend rate than nonconvertible preferred of the same quality becuase the investor have the opportunity to convert common shares and enjoy greater capital gain potential.` },
+    { que: "Adjustable-Rate Preferred Stock",
+        ans: `issued with adjustable(floating) dividend rates. Dividends are tied to rates of interest rate benchmarks, ex: Treasury bills / money market rates, which can adjust monthly.
+        For investors looking for fixed income through preferred stocks, adjustable rate would be least appropirate because dividend fluctuates.
+        ` },
+    { que: "Preferred stock type can be...",
+        ans: `cumulative and callable,
+        callable and convertible, 
+        or any combination. 
+        If not listed, it's straight preferred.` },
+    { que: "Primary objective by investing in preferred stock is...",
+        ans: `income, when analyzing specific preferred stock, most important determination should be the ability of the company to meet its dividend payments.` },
+    { que: "Benefits/Risks of Owning Preferred Stock - Why include in client's portfolio:",
+        ans: `Fixed income from dividends.
+        Prior claim ahead of common stock.
+        Convertible preferred sacrifices income in exchange for potential appreciation.` },
+    { que: "Benefits/Risks of Owning Preferred Stock - Client incurs following risks:",
+        ans: `Market risk--in economic downturn, fear of ability to maintain dividend will cause price to drop.
+        Possible loss of purchasing power.
+        Interest rate(money rate) risk.
+        Business difficulties leading to possible reduction or elimination of the dividend and even bankruptcy leading to loss of principal.` },
+    { que: "Preferred stock regarded as...",
+        ans: `fixed-income investment, unlike debt securities, usually has no preset date which it matures and no scheduled redemption date. Preferred stock is a "perpetual security."` },
+    { que: "Nonqualified Stock Options(NSOs/NQSOs)",
+        ans: `more common than incentive stock options(ISOs).NSOs are treated as form of compensation. When exercising NSOs, the difference between current market price at time of exercise and strike price, referred as "bargain element", is reported as wages on tax returns of employer & employee. Instead of capital gains, the employee is taxed as ordinary income on that bargain element while the company receives tax deduction as salary expense for that same amount.
+        Ex: employee exercises NSO at $53/share when current fair value is $66.50. "Bargain element" is $14.50(the difference of exercise price and fair value). If exercise for $100 shares($1450 ordinary income), the corporation treats that as deductible salary expense.
+        Because the spread between market price and strike price is considered salary, it's subject to payroll taxes as well as income tax.` },
+    { que: "Incentive Stock Options(ISOs)",
+        ans: `No tax consequences to employer with ISO, but can be advantageous to the employee than NSOs. For employees: as long as stock purchased held at least 2 years after date of grant and 1 year after date of exercise, profits are long-term capital gain, another stipulation is max 10 year limit for exercise.
+        When ISO is exercised, the difference between market value at time of purchase and strike price is preference item is used in calculating alternative minimum tax(AMT)` },
+    { que: "Incentive ISO summary",
+        ans: `No income recognized when option is granted.
+        No tax due when option is exercised.
+        Tax is due when stock is sold.
+        Gain is capital(long term) when held at least one year and sold at least two years after grant, otherwise, ordinary income.
+        Difference between option price and fair market value(FMV) on date of exercise is add back for AMT purposes.` },
     { que: "",
         ans: `` },
     { que: "",
