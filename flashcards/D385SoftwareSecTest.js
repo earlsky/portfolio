@@ -574,7 +574,69 @@ const flashcards = [
         Installation Testing()
         Usability Testing()
         Development Testing()` },
-    { que: "Chapter 6: Design and Development (A4): SDL Activities and Best Practices",
+    { que: "📁 Chapter 6: Design and Development (A4): SDL Activities and Best Practices",
+        ans: `https://research.ebsco.com/c/25xrgu/ebook-viewer/pdf/w7zcbuv3kz/page/pp_161?location=https%25253A%25252F%25252Fresearch.ebsco.com%25252Fc%25252F25xrgu%25252Fsearch%25252Fdetails%25252Fw7zcbuv3kz%25253FisDashboardExpanded%25253Dfalse%252526limiters%25253DFT%2525253AY%252526q%25253D9781466560956%252526searchMode%25253Dall&auth-callid=c66f46b3-43d6-449f-babb-d49e38bfe87d` },
+    { que: "Static Analysis",
+        ans: `analyzes the source code prior to compiling, provides a scalable method of security code review, and helps ensure that secure coding policies are being followed. ` },
+    { que: "Dynamic Analysis",
+        ans: `monitors application behavior and ensures that the software functionality works as designed.` },
+    { que: "Fuzz Testing",
+        ans: `specialized form of Dynamic analysis, induces program failure by deliberately introducing malformed or random data to an application and can be used as an effective and low-cost way of finding potential security issues prior to release and potentially throughout the SDL process.` },
+    { que: "6.1 A4 Policy Compliance Analysis",
+        ans: `` },
+    { que: "Security Test Case Execution - QA security testing should look for:",
+        ans: `Plaintext passwords/weak passwords in configuration files.
+        Default accounts on the stack(Apache, Tomcat, OS).
+        Sensitive information in log files.
+        Input validation (XSS, SQLi).
+        Parameter tampering for Web applications.
+        Insecure services used by the software team(ex: Telnet).
+        Security configurations for various services(ex: NFS)` },
+    { que: "Security Test Case Execution - Two primary perspectives:",
+        ans: `1. Security mechanisms are tested to ensure that their functionality is properly implemented.
+        2. Security testing is conducted in relation to understanding and simulating attacker's approach as identified during threat modeling and other associated risk-based analyses.` },
+    { que: "Security Test Case Execution - Categories",
+        ans: `1. Benchmarks: these tests are used to compare estimates to actual results.
+        2. Scheduled tests: include mandatory requirements to validate security of the software and associated system(s) being tested, which must be conducted regardless of whether security issues or vulnerabilities are detected or tuning is required.
+        3. Exploratory tests: emphasizes personal freedom and responsibility of the individual tester to continually optimize quality of their work by treating test-related learning, test design, test execution, test result interpretation as mutually supportive activities that run in parallel throughout the project.` },
+    { que: "Sucessful security test execution plan assumes:",
+        ans: `person has done a detailed risk analysis to evaluate the software and system(s) with which it will be asociated.
+        Test assets have been developed as part of the risk management plan and development of a security engineering/development test strategy.` },
+    { que: "Successful security test execution includes:",
+        ans: `Baseline and benchmark tests have been performed to ensure that obvious security issues have been identified early in the testing cycle.
+        Automated test scripts have been validated as correct.
+        Re-benchmarking testing has been conducted after tuning.
+        Basis for future test comparison has been created.
+        Results of the security test case execution have been analyzed.` },
+    { que: "Code Review Cycle",
+        ans: `1. Identify Security Code Review Objectives.
+        2. Perform Preliminary Scan.
+        3. Review Code for Security Issues.
+        4. Review for Security Issues Unique to the Architecture.`},
+    { que: "Ideal flow of activities for code review success(by Chmielewski et al. via MSDN Magazine):",
+        ans: `Threat Modeling: understand code and data flows; identify high-risk areas and entry points.
+        Code Reviews: document findings appropriately, as well as the process itself.
+        Resolve Problems: cooperate with owners of code on applying fixes and further efforts.
+        Learn the Lesson: update tools, educate development teams, improve processes, plan future iterations.` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
         ans: `` },
     { que: "Secure Programmer: Software Testing - ",
         ans: `` },
@@ -597,8 +659,6 @@ const flashcards = [
     { que: "Defensive Programmer: Secure Testing - ",
         ans: `` },
     { que: "Defensive Programmer: Secure Testing - ",
-        ans: `` },
-    { que: "Design and Development: SDL Activities and Best Practices(CH6)",
         ans: `` },
     { que: "",
         ans: `` },
