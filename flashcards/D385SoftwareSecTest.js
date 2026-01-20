@@ -192,15 +192,73 @@ const flashcards = [
         ans: `where untrusted user input enters a controlled environment. Ex: an HTTP request is considered untrusted input until it has been validated by the server.
         There should be a clear distinction between how you store, transport, and process trusted and untrusted input. Trust boundary violations happen when this distinction is not respected, and trusted and untrusted data are confused with each other. For instance, if trusted and untrusted data are stored in the same data structure or database, the application will start confusing the two. In this case, untrusted data might be mistakenly seen as validated.
         A good way to prevent trust boundary violation is to never write untrusted input into session stores until it is verified. ` },
+    { que: "📁 Python Static Code Analysis",
+        ans: `https://rules.sonarsource.com/python/RSPEC-5145/`
+    },
+    { que: "Logging should not be vulnerable to injection attacks",
+        ans: `Log injection occurs when an application fails to sanitize untrusted data used for logging.
+        An attacker can forge log content to prevent an organization from being able to trace back malicious activities.
+        What is the potential impact?:
+        If attacker insert arbitrary data into a log file, the integrity of the chain of events being recorded are compromised.
+        This occurs because attackers inject the log entry separator of the logger framework, commonly newlines, and thus insert artificial log entries.
+        Other attacks could also occur requiring only field pollution, such as cross-site scripting (XSS) or code injection (for example, Log4Shell) if the logged data is fed to other application components, which may interpret the injected data differently.
+        The focus of this rule is newline character replacement. `
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
+    { que: "",
+        ans: ``
+    },
     { que: "📁 Python Security Considerations",
         ans: `https://docs.python.org/3/library/security_warnings.html` },
     { que: "base64 in RFC 4648",
         ans: `` },
+    { que: "base64.b64code(s,altchars=None,validate=False)",
+        ans:`Deocde the Base64 encoded bytes-like object or ASCII string s and return decoded bytes.
+        Optional altchars must be bytes-like object or ASCII length of 2 which specifies alternative alphabet used instead of + and / characters.
+        If "validate" is "False" (the default), characters that are neither in normal base-64 alphabet nor the alternative alphabet ` },
     { que: "hashlib - Secure hashes and message digests",
         ans: `` },
     { que: "hashlib: all constructors take 'usedforsecurity' keyword-only",
         ans: `` },
-    { que: "http.server",
+    { que: "http.server: HTTP servers",
         ans: `` },
     { que: "logging: Logging configuration uses eval()",
         ans: `` },
@@ -222,151 +280,325 @@ const flashcards = [
         ans: `` },
     { que: "zipfile: cause disk volume exhaustion",
         ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
+    { que: "📁 Defensive Programming",
+        ans: `https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html
+        Assume mistakes will happen and guard against them. This is defensive programming,` },
+    { que: "Assertions",
+        ans: `Common way of defensive programming that checks itself as it runs.
+        Code checks itself as it runs. An assertion is simply a statement that something must be true at a certain point in a program. When Python sees one, it evaluates the assertion’s condition. If it’s true, Python does nothing, but if it’s false, Python halts the program immediately and prints the error message if one is provided. ` },
+    { que: "Assertion Categories",
+        ans: `Precondition: must be true at the start of a function in order for it to work correctly.
+        Postcondition: function guarantees is true when it finishes.
+        Invariant: always true at particular point inside a piece of code.` },
+    { que: "General Defensive Coding Concepts - Fundamental Concepts",
+        ans: `Never trust data.
+        Validate everything.
+        Robust error handling.
+        Unconstrained - Constrain input as much as possible.
+        Unfiltered - all inputs must be filtered.
+        Clean code.
+        Test early/often.` },
+    { que: "Computer Emergency Response Team(CERT) Top 10 Secure Coding Practices - Part A",
+        ans: `1. Input Validation: Be suspicious of all external data sources, including user-controlled files, command line arguments, and network interfaces. Proper validation can eliminate the majority of software vulnerabilities.
+        2. Heed Compiler Warnings: Compile code using the highest available warning level and address all warnings by modifying the code. Supplement this with static and dynamic analysis tools.
+        3. Architect and Design for Security Policies: Create a software architecture that enforces security policies. For example, if a system requires different privileges at different times, divide it into distinct subsystems with specific privilege sets.
+        4. Keep it Simple: Favor simple and small designs. Complexity increases the risk of implementation, configuration, and use errors, making security assurance more difficult.
+        5. Default Deny: Base access decisions on permission rather than exclusion. By default, access should be denied, and the protection scheme should specify only the conditions under which it is permitted.` },
+    { que: "Computer Emergency Response Team(CERT) Top 10 Secure Coding Practices - Part B",
+        ans: `6. Adhere to the Principle of Least Privilege: Ensure every process executes with only the minimum set of privileges necessary for its job. Limit the duration that elevated permissions are held.
+        7. Sanitize Data Sent to Other Systems: Cleanse all data passed to complex subsystems like command shells, relational databases , or off-the-shelf components to prevent injection attacks (e.g., SQL or command injection).
+        8. Practice Defense in Depth: Implement multiple defensive strategies. If one layer of defense fails, others should be in place to prevent or limit the impact of an exploit.
+        9. Use Effective Quality Assurance (QA) Techniques: Incorporate security-focused QA such as fuzz testing, penetration testing, and independent source code audits. Independent reviews can often catch invalid assumptions made by developers.
+        10. Adopt a Secure Coding Standard: Apply a formal secure coding standard tailored to your target development language and platform. ` },
+    { que: "Defensive Coding - Basic Concepts",
+        ans: `All Data is Important: until proven otherwise. Does not mean all data is equal.
+        All Data is Tainted: until proven otherwise. Assume it's tainted, until you verify it's clean.
+        All Code is Insecure: until proven otherwise. Unless you coded it yourself.` },
+    { que: "Open Source Security Testing Methodology Manual(OSSTMM)",
+        ans: `Purpose: Any Security Testing.
+        Peer Reviewed: Institute for Security and Open Methodologies(ISECOM).` },
+    { que: "OSSTMM - Software Security Testing Approaches",
+        ans: `Project Scope:
+        Confidentiality:
+        Change Process: Any changes must go through formal change control process.
+        Test Plan:
+        Test Process:
+        Reporting Standards: What to report.` },
+    { que: "Flaw Hypothesis Methodology(FHM)",
+        ans: `Hypothesis: testable educated guess.
+        Prioritize list: Probability: Difficulty, Discoverability, Damage (that could be caused by it).
+        Test from List: Types of Testing: White Box(Tester has full knowledge of the code), Black Box(no knowledge), Gray Box(some knowledge).` },
+    { que: "Six Sigma (Quality Methodology)(DMAIC)",
+        ans: `Define: Define your goals, processes, what you want to measure.
+        Measure:
+        Analyze: 
+        Improve:
+        Control: mitigating risks and maintain quality.` },
+    { que: "Six Sigma (DMADV)",
+        ans: `Define:
+        Measure:
+        Analyze:
+        Design:
+        Verify: that new design accopmlishes goal.` },
+    { que: "📁 Gentle Introduction to Unit Testing in Python",
+        ans: `https://machinelearningmastery.com/a-gentle-introduction-to-unit-testing-in-python/` },
+    { que: "Intro to Unit Testing Python (5 Parts)",
+        ans: `What are unit tests and why are they important?
+        What is Test Driven Development(TDD)?
+        Using Python's built-in PyUnit framework.
+        Using PyTest library.
+        Unit testing in action.` },
+    { que: "What Are Unit Tests and Why Are They Important?",
+        ans: `Unit Test: checks single component of code, usually modularized as a function, and ensures that it performs as expected. Unit tests help isolate errors.` },
+    { que: "Test Driven Development(TDD)(3 Rules)",
+        ans: `You are not allowed to write any production code unless it is to make a failing unit test pass.
+        You are not allowed to write any more of a unit test than is sufficient to fail, and compilation failures are failures.
+        You are not allowed to write any more production code than is sufficient to pass the one failing unit test.` },
+    { que: "Using Python's Built-In PyUnit Framework",
+        ans: `PyUnit is Python’s built-in unit testing framework and Python’s version of JUnit testing framework for Java. To build a test file, import "unittest" library to use PyUnit` },
+    { que: "Using PyTest Library",
+        ans: `alternative to built-in unittest module. To start PyTest, you need to install it: pip install pytest.
+        Like PyUnit, PyTest has a lot of other functionality that allow you to build comprehensive and advanced unit tests.` },
+    { que: "Unit Testing in Action",
+        ans: `When doing machine learning that consumes stock market data, having unit teset framework helps you identify data preprocessing is working as expected.
+        Building unit tests seem time consuming/tedious, but are critical part of CI pipeline and tools for catching bugs early before moving further down the pipeline and become costly to address.` },
+    { que: "📁 unittest - Unit testing framework",
+        ans: `https://docs.python.org/3/library/unittest.html` },
+    { que: "unittest",
+        ans: `inspired by JUnit and major unit testing frameworks in other languages. Supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from reporting framework.` },
+    { que: "unittest - test fixture",
+        ans: `represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process.` },
+    { que: "unittest - test case",
+        ans: `the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases.` },
+    { que: "unittest - test suite",
+        ans: `a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together.` },
+    { que: "unittest - test runner",
+        ans: `a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests.` },
+    { que: "Defensive Programmer: Advanced Concepts - Session Management",
+        ans: `What is a Session? 
+        Interactive HTTP(Stateless)
+        Temporary
+        Two or more devices: 
+        Necessary for stateless communication` },
+    { que: "Maintain Session",
+        ans: `Session ID: use pseudo random number generator algorithm to prevent session hijacking.
+        Cookies: saves session. Not bad if not managed correctly: shouldn't contain PII, passwords, credit card data, etc. Should be encrypted.
+        Session Expiration: few minutes generally okay. Website that requires filling out tax information should be elongated to a few hours. But should eventually expire incase user forgets to close browser.` },
+    { que: "Secure Sessions",
+        ans: `Use HTTPS: http encrypted with transport layer security(TLS). Use only if maintaining session data.
+        Tokens: use to authenticate the person. As soon as token is used, needs to be invalidated on server side to prevent someone using the same authentication token to perform session hijacking.
+        Expire: Everything expires(cookies, session IDs, tokens) naturally(nothing lasts forever). Gives attacker short time to attack the server's system.` },
+    { que: "📁 Complete Penetration Testing Guide with Sample Test Cases",
+        ans: `https://www.softwaretestinghelp.com/penetration-testing-guide/` },
+    { que: "Penetration Testing",
+        ans: `process of identifying security vulnerabilities in application by evaluating system/network with different malicious techniques. Weak points of system are exploited by authorized simulated attack.
+        Penetration test aka "pen test", penetration tester aka "ethical hacker"` },
+    { que: "What is Penetration Testing?",
+        ans: `Penetration test will tell whether existing defensive measures employed on the system are strong enough to prevent security breaches. Penetration test reports suggest countermeasures which can be taken to reduce risk of system being hacked.` },
+    { que: "Causes of Vulnerability - Design/Development Errors",
+        ans: `flaws in design of hardware/software. These bugs put business-critical data at risk of exposure.` },
+    { que: "Causes of Vulnerability - Poor System Configuration",
+        ans: `If the system is poorly configured, then it can introduce loopholes through which attackers can enter into the system & steal the information.` },
+    { que: "Causes of Vulnerability - Human errors",
+        ans: `improper disposal of documents, leaving the documents unattended, coding errors, insider threats, sharing passwords over phishing sites, etc. can lead to security breaches.` },
+    { que: "Causes of Vulnerability - Connectivity",
+        ans: `If the system is connected to an unsecured network (open connections) then it comes within the reach of hackers.` },
+    { que: "Causes of Vulnerability - Complexity",
+        ans: `security vulnerability rises in proportion to the complexity of a system. The more features a system has, the more are the chances of the system being attacked.` },
+    { que: "Causes of Vulnerability - Password",
+        ans: `Passwords should not be shared with anyone at any cost and passwords should be changed periodically. In spite of these instructions, at times people reveal their passwords to others, write them down somewhere and keep easy passwords that can be guessed.` },
+    { que: "Causes of Vulnerability - User Input",
+        ans: `ex: SQL injection, buffer overflows, etc. The data received electronically through these methods can be used to attack the receiving system.` },
+    { que: "Causes of Vulnerability - Management",
+        ans: `Security is hard & expensive to manage. Sometimes organizations lack behind in proper risk management and hence vulnerability gets induced in the system.` },
+    { que: "Causes of Vulnerability - Lack of training to staff",
+        ans: `leads to human errors and other vulnerabilities.` },
+    { que: "Causes of Vulnerability - Communication",
+        ans: `Channels like mobile networks, internet, telephone opens up security theft scope.` },
+    { que: "Penetration Testing Tools/Companies",
+        ans: `Automated tests identify stanadard vulnerabilities.
+        Pentest tools verify security loopholes by examining data encryption techniques and figuring out hard-coded values(usernames/passwords).` },
+    { que: "Criteria for selecting best penetration tool:",
+        ans: `Easy to deploy, configure and use.
+        Scans your system easily.
+        Categorizes vulnerabilities based on severity that need an immediate fix.
+        Be able to automate the verification of vulnerabilities.
+        Re-verifies the exploits found previously.
+        Generates detailed vulnerability reports and logs.` },
+    { que: "Why Penetration Testing?",
+        ans: `WannaCry ransomware attack locked computers around th world and demanded ransom payments via Bitcoin.` },
+    { que: "Penetration Testing is mainly required for:",
+        ans: `Financial or critical data that must be secured while transferring it between different systems or over the network.
+        Many clients are asking for pen testing as part of the software release cycle.
+        To secure user data.
+        To find security vulnerabilities in an application.
+        To discover loopholes in the system.
+        To assess the business impact of successful attacks.
+        To meet the information security compliance in the organization.
+        To implement an effective security strategy within the organization.
+        Big organizations look for PCI(Payment Card Industry) compliance certifications before doing business with third-party clients` },
+    { que: "What Shoudl Be Tested?",
+        ans: `Software(OS, services, applications)
+        Hardware
+        Network
+        Processes
+        End-user behavior` },
+    { que: "Penetration Testing Types - Social Engineering Test",
+        ans: `make a person reveal sensitive information like passwords, business-critical data, etc. These tests are mostly done through phone or internet and it targets certain helpdesks, employees & processes.
+        Human errors are main causes of security vulnerability. Security standards/policies should be followed by all staff members to avoid social engineering penetration attempts. Never mention sensitive information via email/phone. Security audits identify and correct process flaws.` },
+    { que: "Penetration Testing Types - Web Application Test",
+        ans: `Using software methods, can verify if application is exposed to security vulnerabilities. It checks security vulnerability of web apps and software programs positioned in the target environment.` },
+    { que: "Penetration Testing Types - Physical Penetration Test",
+        ans: `applied to protect sensitive data. This is generally used in military and government facilities. All physical network devices and access points are tested for the possibility of any security breach. This test is not very relevant to the scope of software testing.` },
+    { que: "Penetration Testing Types - Network Services Test",
+        ans: `most commonly performed penetration tests where openings in the network are identified by which entry is being made in the systems on the network to check what kind of vulnerabilities are there. Can be done locally/remotely.` },
+    { que: "Penetration Testing Types - Client-side Test",
+        ans: `aims to search and exploit vulnerabilities in client-side software programs.` },
+    { que: "Penetration Testing Types - Remote dial-up war dial",
+        ans: `searches for modems in the environment and tries to log in to the systems connected through these modems by password guessing or brute-forcing.` },
+    { que: "Penetration Testing Types - Wireless Security Test",
+        ans: `discovers open, unauthorized and less secure hotspots or Wi-Fi networks and connects through them.` },
+    { que: "Types of Penetration Testing - Black Box",
+        ans: `tester assesses the target system, network or process without the knowledge of its details. They just have a very high level of inputs like URL or company name using which they penetrate the target environment. No code is being examined in this method.` },
+    { que: "Types of Penetration Testing - White Box",
+        ans: `tester is equipped with complete details about the target environment – Systems, network, OS, IP address, source code, schema, etc. It examines the code and finds out design & development errors. It is a simulation of an internal security attack.` },
+    { que: "Types of Penetration Testing - Grey Box",
+        ans: `tester has limited details about the target environment. It is a simulation of external security attacks.` },
+    { que: "Pen Testing Techniques",
+        ans: `Manual Penetration.
+        Using Automated penetration testing tools.
+        Combination of both, manual/automated processes.` },
+    { que: "Manual Penetration Test",
+        ans: `It’s difficult to find all vulnerabilities using automated tools. There are some vulnerabilities that can only be identified by manual scan. Penetration testers can perform better attacks on applications based on their skills and knowledge of the system being penetrated.
+        Methods like social engineering can be done by humans. Manual checks include design, business logic as well as code verification.` },
+    { que: "Penetration Test Process - Data Collection",
+        ans: `Various methods including Google search are used to get target system data. One can use the web page source code analysis technique to get more info about the system, software and plugin versions.
+        There are many free tools and services available in the market which can give you information like database or table names, DB versions, software versions, the hardware used and various third-party plugins used in the target system.` },
+    { que: "Penetration Test Process - Vulnerability Assessment",
+        ans: `Based on the data collected in the first step, one can find the security weakness in the target system. This helps penetration testers to launch attacks using identified entry points in the system.` },
+    { que: "Penetration Test Process - Actual Exploit",
+        ans: `a crucial step. It requires special skills and techniques to launch an attack on the target system. Experienced penetration testers can use their skills to launch an attack on the system.` },
+    { que: "Penetration Test Process - Result in analysis and report preparation",
+        ans: `After completion of penetration tests, detailed reports are prepared for taking corrective actions. All identified vulnerabilities and recommended corrective methods are listed in these reports. You can customize the vulnerability report format (HTML, XML, MS Word or PDF) as per your organization’s needs.` },
+    { que: "📁 Penetration testing methodologies and standards",
+        ans: `https://www.ibm.com/think/insights/pen-testing-methodology` },
+    { que: "Top Penetration Testing Methodologies - Open-Source Security Testing Methodology Manual(OSSTMM)",
+        ans: `one of the most popular standards of penetration testing. This methodology is peer-reviewed for security testing and was created by the Institute for Security and Open Methodologies (ISECOM).
+        The method is based on a scientific approach to pen testing with accessible and adaptable guides for testers. The OSSTMM includes key features, such as an operational focus, channel testing, metrics and trust analysis in its methodology.
+        OSSTMM provides a framework for network penetration testing and vulnerability assessment for pen testing professionals. It is meant to be a framework for providers to find and resolve vulnerabilities, such as sensitive data and issues surrounding authentication.` },
+    { que: "Top Penetration Testing Methodologies - Open Web Application Security Project(OWASP)",
+        ans: `an open-source organization dedicated to web application security.
+        organization’s goal is to make all its material free and easily accessible for anyone who wants to improve their own web application security. OWASP has its own Top 10 , which is a well-maintained report outlining the biggest security concerns and risks to web applications, such as cross-site scripting, broken authentication and getting behind a firewall. OWASP uses the top 10 list as a basis for its OWASP Testing Guide.
+        The guide is divided into three parts: OWASP testing framework for web application development, web application testing methodology and reporting. The web application methodology can be used separately or as a part of the web testing framework for web application penetration testing, mobile application penetration testing, API penetration testing, and IoT penetration testing.` },
+    { que: "Top Penetration Testing Methodologies - Penetration Testing Execution Standard(PTES)",
+        ans: `a comprehensive penetration testing method.
+        designed by a team of information security professionals and is made up of seven main sections covering all aspects of pen testing. The purpose of PTES is to have technical guidelines to outline what organizations should expect from a penetration test and guide them throughout the process, starting at the pre-engagement stage.
+        PTES aims to be the baseline for penetration tests and provide a standardized methodology for security professionals and organizations. The guide provides a range of resources, such as best practices in each stage of the penetration testing process, from start to finish. Some key features of PTES are exploitation and post exploitation. Exploitation refers to the process of gaining access to a system through penetration techniques such as social engineering and password cracking. Post exploitation is when data is extracted from a compromised system and access is maintained` },
+    { que: "Top Penetration Testing Methodologies - Information System Security Assessment Framework(ISSAF)",
+        ans: ` pen testing framework supported by the Information Systems Security Group (OISSG).
+        This methodology is no longer maintained and is likely not the best source for the most up-to-date information. However, one of its main strengths is that it links individual pen testing steps with specific pen testing tools. This type of format can be a good foundation for creating an individualized methodology.` },
+    { que: "Top Penetration Testing Methodologies - National Institute of Standards and Technology(NIST)",
+        ans: `a cybersecurity framework that provides a set of pen testing standards for the federal government and outside organizations to follow. NIST is an agency within the U.S. Department of Commerce and should be considered the minimum standard to follow.
+        NIST penetration testing aligns with the guidance sent by NIST. To comply with such guidance, organizations must perform penetration tests following the pre-determined set of guidelines.` },
+    { que: "Pen Testing Stages",
+        ans: `Set Scope
+        Start Test
+        Report Findings` },
+    { que: "Pen Testing Stages - Set Scope",
+        ans: `Before pen test begins: the testing team and the company set a scope for the test. The scope outlines which systems will be tested, when the testing will happen, and the methods pen testers can use. The scope also determines how much information the pen testers will have ahead of time.` },
+    { que: "Pen Testing Stages - Start Test",
+        ans: `test scoping plan and assess vulnerabilities and functionality. In this step: network and vulnerability scanning can be done to get a better understanding of the organization’s infrastructure. Internal testing and external testing can be done depending on the organization’s needs. There are a variety of tests the pen testers can do, including a black-box test, white-box test, and gray-box test. Each provides varying degrees of information about the target system.
+        Once overview of the network is established, testers can analyze the system and applications within the scope. In this step: pen testers gather as much information as possible to understand any misconfigurations.` },
+    { que: "Pen Testing Stages - Report Findings",
+        ans: `report and debrief. In this step: develop a penetration testing report with all the findings from the pen test outlining the vulnerabilities identified. The report should include a plan for mitigation and the potential risks if remediation does not occur.` },
+    { que: "Defensive Programmer: Defensive Techniques - Exception Handling",
+        ans: `Principles: Trap All Errors, Specific Error Handling, Trap On Site
+        Error Messages: Meaningful, Not Too Much, Actionable` },
+    { que: "Defensive Programmer: Defensive Techniques - Validation",
+        ans: `What to Validate: User Input(SQL Injection), Internal Data, External Source.
+        When to Validate: Before data is used, When data moves.` },
+    { que: "Defensive Programmer: Defensive Techniques - Reliability",
+        ans: `Uptime: 7days/wk or few hours? What percentage(99.99% - 4 nines).
+        Responsiveness: How long to deliver info from pressing button on web app, also consider GPS systems(how often app is updating).
+        Accurate` },
+    { que: "Defensive Programmer: Defensive Techniques - Resiliency",
+        ans: `Resistant to failure
+        Handles unexpected situations
+        Stable operations` },
+    { que: "Defensive Programmer: Defensive Techniques - Recovery",
+        ans: `Recovers, Resumes` },
+    { que: "Defensive Programmer: Defensive Techniques - CDI/UDI",
+        ans: `Constrained/Unconstrained Data Interface CDI/UDI.
+        Generally the less free form text, the better.
+        More Secure: stops some attacks.
+        More User Friendly: ease of use.
+        Starts Data Validation: narrows possible input.
+        CDI: Reduces Text(you want filtering and data validation), Constrain Flow(cannot do Part C without completing Part A & B), Easy to Flow` },
+    { que: "Defensive Programmer: Defensive Techniques - Parameter Checking",
+        ans: `is both data validation and data filtering.
+        What Parameters to Check: Function parameters, Constructor parameters, Data parameters.
+        What Data Parameters to Check: Data Type(string/integer), Size(Mb v Gb), Format(.jpg, .txt, )` },
+    { que: "Defensive Programmer: Defensive Techniques - Trusting Software Components",
+        ans: `Libraries, Visual Components, Services.
+        Any data coming from third-party must be validated.
+        Validate data from those components.
+        Strong exception handling.
+        Testing those tools.` },
+    { que: "Defensive Programmer: Defensive Techniques - Intelligent Code Re-Use",
+        ans: `When to Re-Use: Broad application
+        How to Re-Use: Compartmentalize` },
+    { que: "Secure Programmer: Software Testing - Testing Methodologies",
+        ans: `Testing Approaches: Static v Dynamic v Passive.
+        Knowledge: White box v Black v Gray.
+        Alpha testing(early preliminary testing, expecting bugs), Beta testing(product has gone through internal testing and ready for user testing).
+        Concepts: Variance, Quality, Verification/Validation` },
+    { que: "Secure Programmer: Software Testing - Unit Testing",
+        ans: `General Features of Unit Testing: Done early: as soon as a unit is complete.
+        Done by developer: before it moves on.
+        Done less formally: usually fewer formal protocols.` },
+    { que: "Secure Programmer: Software Testing - Integration Testing",
+        ans: `Approaches: Big bang(putting 6 components together), Bottom-up, Top-down, Sandwich.
+        Issues: When to integrate, Who does the testing, What method.
+        Integration Patterns: Client/server integration, Collaboration integration, Distributed services integration, Layer integration.` },
+    { que: "Secure Programmer: Software Testing - Regression Testing",
+        ans: `Issues: Prioritization, Test Selection, Who Tests.` },
+    { que: "Secure Programmer: Software Testing - User Acceptance Testing(UAT)",
+        ans: `SME, Tester
+        Problems: Training, Focus, Bias.
+        Requirements: Standard(what is the goal?), Resources(how much and how long?), Criteria(What is acceptance)` },
+    { que: "Secure Programmer: Software Testing - Roles and Responsibilities in Testing",
+        ans: `Questions: Who? When? What?
+        User Roles, Tester Roles, Developer Roles, Management Roles` },
+    { que: "Secure Programmer: Software Testing - Specific Testing Methods",
+        ans: `Ad Hoc Testing(banging away on the software)
+        Installation Testing()
+        Usability Testing()
+        Development Testing()` },
+    { que: "Chapter 6: Design and Development (A4): SDL Activities and Best Practices",
+        ans: `` },
+    { que: "Secure Programmer: Software Testing - ",
+        ans: `` },
+    { que: "Secure Programmer: Software Testing - ",
+        ans: `` },
+    { que: "Secure Programmer: Software Testing - ",
+        ans: `` },
+    { que: "Secure Programmer: Software Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Defensive Programmer: Secure Testing - ",
+        ans: `` },
+    { que: "Design and Development: SDL Activities and Best Practices(CH6)",
         ans: `` },
     { que: "",
         ans: `` },
