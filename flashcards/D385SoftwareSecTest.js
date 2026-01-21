@@ -638,25 +638,17 @@ const flashcards = [
         ans: `` },
     { que: "",
         ans: `` },
-    { que: "Secure Programmer: Software Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Secure Testing Concepts",
         ans: `` },
-    { que: "Secure Programmer: Software Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Secure Unit Testing",
         ans: `` },
-    { que: "Secure Programmer: Software Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Secure Regression Testing",
         ans: `` },
-    { que: "Secure Programmer: Software Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Secure Integration Testing",
         ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Security Metrics",
         ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
-        ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
-        ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
-        ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
-        ans: `` },
-    { que: "Defensive Programmer: Secure Testing - ",
+    { que: "Defensive Programmer: Secure Testing - Tracking Security Bugs",
         ans: `` },
     { que: "Defensive Programmer: Secure Testing - ",
         ans: `` },
@@ -667,80 +659,152 @@ const flashcards = [
         20: INFO: confirmation of expected operation, used for general applciation flow information.
         10: DEBUG: detailed information for developers during troubleshooting.
         0: NOTSET: no level set; logger defers to parent.`},
-    { que: "",
+    { que: "Chapter1 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
         ans: `` },
-    { que: "",
+    { que: "Attack Surface - entry point: user of the system, the system itself, or network between the user and the system",
+        ans: `Ex: Reflective cross-site scripting (XSS).
+        Social engineering (ex: phishing, smishing).
+        Cross-site request forgery.
+        Open redirect attack.` },
+    { que: "Attack Surface - attacker targets the system as entry point",
+        ans: `This form of attack is designed to take advantage of a system with insufficient input validation.
+        Ex: Structured Query Language(SQL) injection.
+        Remote code execution.
+        Host header attack
+        Denial of service` },
+    { que: "Attack Surface - attacker targets user and system together as entry point",
+        ans: `ex: persistant cross-site scripting.
+        clickjacking` },
+    { que: "Attack Surface - attacker uses network or network device between user and system as entry point",
+        ans: `ex: Man-in-the-middle attack.
+        Replay attack` },
+    { que: "Data integrity",
+        ans: `aka "message integrity": ensures data is free of accidental corruption(bit rot).
+        Data integrity guarantees data is read the way it's written. Data reader can verify the integrity fo the data regardless of who authored it.` },
+    { que: "Authentication",
+        ans: `answers, "who are you?". The act of verifying identity of someone/something via username/password.
+        Machines can be authenticated (ex: continuous integration server authenticates before it pulls changes from code repository).` },
+    { que: "Data authentication",
+        ans: `aka "message authentication": ensures data reader can verify identity of data writer.` },
+    { que: "Nonrepudiation",
+        ans: `answers "who did what?". It's the assurance that an individual/organization has no way of denying their actions.
+        Nonrepudiation can be applied to any activity, but crucial for online transactions and legal agreements.` },
+    { que: "Authorization",
+        ans: `aka "access control", often confused with "authentication". Authentication answers "who are you?", Authorization answers "what can you do?".
+        Reading spreadsheet, sending email, canceling an order are actions a user may or may not be authorized to do.` },
+    { que: "Confidentiality",
+        ans: `answers "who can access this?". Ensures that 2+ parties can exchange data privately. Info transmitted confidentially cannot be read/interpreted by unauthorized parties.` },
+    { que: "Security Fundamentals (Building Block:Solutions)(1/2)",
+        ans: `Data Integrity: Secure networking protocols, Version control, Package management
+        Authentication: User authentication, System authentication.
+        Data Authentication: User registration, User-login workflows, Password-reset workflows, User-session management.` },
+    { que: "Security Fundamentals (Building Block:Solutions)(2/2)",
+        ans: `Nonrepudiation: Online tractions, Digital signatures, Trusted third parties.
+        Authorization: User authorization, System-to-system authorization, Filesystem-access authorization.
+        Confidentiality: Encryption algorithms, Secure networking protocols.` },
+    { que: "hashlib module",
+        ans: `Cryptographic hashing
+        https://docs.python.org/3/library/hashlib.html` },
+    { que: "secrets module",
+        ans: `Secure random number generation
+        https://docs.python.org/3/library/secrets.html` },
+    { que: "hmac module",
+        ans: `Hash-based message authentication
+        https://docs.python.org/3/library/hmac.html` },
+    { que: "os and subprocess modules",
+        ans: `Gateways to the OS
+        https://docs.python.org/3/library/os.html
+        https://docs.python.org/3/library/subprocess.html` },
+    { que: "argon2-cffi",
+        ans: `function used to protect passwords
+        https://pypi.org/project/argon2-cffi/` },
+    { que: "cryptography",
+        ans: `package for common cryptography functions
+        https://pypi.org/project/cryptography/` },
+    { que: "defusedxml",
+        ans: `safe way to parse XML
+        https://pypi.org/project/defusedxml/` },
+    { que: "Gunicorn",
+        ans: `web server gateway interface (Python)
+        https://gunicorn.org/` },
+    { que: "Pipenv",
+        ans: `Python package manager with many security features
+        https://pypi.org/project/pipenv/` },
+    { que: "requests",
+        ans: `easy-to-use HTTP library
+        https://pypi.org/project/requests/` },
+    { que: "requests-oauthlib",
+        ans: `client-side OAuth 2.0 implementation
+        https://pypi.org/project/requests-oauthlib/` },
+    { que: "📁 Digging for Security Bugs / Vulnerabilities in Python Applications",
+        ans: `https://www.tripwire.com/state-of-security/digging-for-security-bugs-vulnerabilities-in-python-applications` },
+    { que: "High Risk Python Security Vulnerabilities",
+        ans: `SQL Injections(SQLi)
+        Cross Site Scripting(XSS)
+        Cross Site Request Forgery(CSRF)
+        LDAP (Lightweight Directory Access Protocol) Injections
+        Command Injections
+        XPathi` },
+    { que: "SQL Injections(SQLi)(4 subclasses)",
+        ans: `execute SQL statements for application at backend database server.
+        1. In-band SQL Injection/Classic SQLi
+        2. Inferential/Blind SQL Injection
+        3. DBMS SQLi
+        4. Compounded SQLi(ex: Strom Worm):
+            1. SQLi with inadequate authentication
+            2. SQLi with DDoS attacks
+            3. SQLi with DNS hijacking
+            4. SQLi with XSS` },
+    { que: "Cross Site Scripting (XSS)",
+        ans: `malicious user tricks web application to steal stored cookies, saved passwords, and script code that served unsuspecting users of that application.` },
+    { que: "Cross Site Request Forgery (CSRF)",
+        ans: `occurs when a compromised website is forced to perform an action by another logged-in user like clicking on a button. Also, includes hacking/logging into of a website with others' login credentials.` },
+    { que: "LDAP (Lightweight Directory Access Protocol) Injections",
+        ans: `occurs when a malicious user inserts/modifies LDAP statements that lead to speculations.` },
+    { que: "Command Injections",
+        ans: `malicious user executes OS commands on a web server by abusing it in order to insert their own commands to gain complete control over the server.` },
+    { que: "XPathi",
+        ans: `occurs when a malevolent user intentionally passes data to a website. They can use that interaction to find out how the data is structured in XML, or they can access secured data that they can’t access normally.` },
+    { que: "Security Scanners (1/2)",
+        ans: `1. Python Taint (PYT) - Static Analysis Tool
+        2. Tinfoil Security Website Scanner
+        3. Bandit - AST Based Static Analyzer
+        4. Pyntch - Static Code Analyzer
+        5. Spaghetti Security Scanner
+        6. Rough Auditing Tools for Security (RATS)` },
+    { que: "Security Scanners (2/2)",
+        ans: `7. PyDbgEng - Windows Debugging Engine's Python Wrapper
+        8. python-ptrace
+        9. vdb / vtrace - Debugger for Exploit Malware Analysis
+        10. Immunity Debugger - Python Penetration Testing Tool
+        11. Mona.py - Open Immunity Debugger` },
+    { que: "Python Taint (PYT) - Static Analysis Tool",
+        ans: `used for identifying command injection, XSS, SQLi, interprocedural, path traversal HTTP attacks in Python web apps. Python Taint is based on the Control flow graphs, data flow analysis and fixed points that are theoretical foundations built using the Flask framework.` },
+    { que: "Tinfoil Security Website Scanner",
+        ans: `security scanner for Python & Django that helps find holes in web servers and applications and also tells you the ways to fix them.` },
+    { que: "Bandit - AST Based Static Analyzer",
+        ans: `OpenStack security linter that identifies the common security risks in Python programming. It is distributed using pip. To install bandit from source, we can use the command python setup.py install after downloading the pypi source tarball. You can even access the reports from bandit.` },
+    { que: "Pyntch - Static Code Analyzer",
+        ans: `(PYthoN Type CHecker) helps in detecting runtime errors such as exceptions, not found attributes and variable type missmatchings. It supports Python 2.x currently. It won’t address style issues like Pychecker or Pyflakes, but it works pretty fast and efficient in scanning thousands of lines within a minute.` },
+    { que: "Spaghetti Security Scanner",
+        ans: `open-source web application security scanner. Detects default files, misconfigurations, and insecure files, and it supports numerous frameworks including Django, CherryPy, CakePHP, etc. Tool is capable of finding attacks like admin panel, cookie security, credit card/email/private IP disclosures, SQL injections, ShellShock, Struts-shock, Apache ModStatus, Anonymous cipher, and others.` },
+    { que: "Rough Auditing Tools for Security (RATS)",
+        ans: `free tool that scans languages like C, C++, PHP, Perl and Python and emphasizes the errors that are related to security like TOC (Time of Check), TOU (Time of Use), Buffer overflows and Acunetix. Manual code introspection is still important, but this tool still greatly assists us.` },
+    { que: "PyDbgEng - Windows Debugging Engine's Python Wrapper",
+        ans: `helps debugging user mode, kernel mode, software/hardware breakpoints, etc. With help of PyDbgEbg, you can do fault injection, fuzzing of applications, and unpacking executables automatically.` },
+    { que: "python-ptrace",
+        ans: `opensource debugging tool that uses ptrace developed and written in Python. Here, ptrace works as an tracer that hands the system calls in Linux, BSD and Darwin.` },
+    { que: "vdb / vtrace - Debugger for Exploit Malware Analysis",
+        ans: `VDB refers to a dynamic debugging element; vtrace refers to a platform that's used in debugging frameworks implemented in Python. Vdb utilizes vtrace.` },
+    { que: "Immunity Debugger - Python Penetration Testing Tool",
+        ans: `uses python scripts and supports Windows with Graphical user interface and command line debuggers.` },
+    { que: "Mona.py - Open Immunity Debugger",
+        ans: `a PyCommand that replaces the pvefindaddr and resolves performance issues.` },
+    { que: "📁 Chapter2 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
         ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Hash Function",
+        ans: `Has input/output. Input to a hash function is "message". Message can be any form of data.
+        Output of hash function is a large number. The number has many names(ex: hash value, hash, hash code, digest, message digest) which is represented as alphanumeric strings.` },
     { que: "",
         ans: `` },
     { que: "",
