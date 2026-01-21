@@ -660,8 +660,13 @@ const flashcards = [
         ans: `` },
     { que: "Defensive Programmer: Secure Testing - ",
         ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Python Logging Levels",
+        ans: `50: CRITICAL: serious error.
+        40: ERROR: serious problem.
+        30: WARNING: something unexpected or potential future problem. default level.
+        20: INFO: confirmation of expected operation, used for general applciation flow information.
+        10: DEBUG: detailed information for developers during troubleshooting.
+        0: NOTSET: no level set; logger defers to parent.`},
     { que: "",
         ans: `` },
     { que: "",
