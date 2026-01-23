@@ -829,58 +829,103 @@ const flashcards = [
         ans: `if hash function is given a message, it is infeasible to identify second message that hashes same hash value. ex: if attacker has one input, it must be infeasible. Weak collision resistance is bound to particular message.` },
     { que: "Cryptographic Hash Function - Strong Collision Resistance",
         ans: `if hash function is infeasible to find any collision whatsoever. Strong collision resistance applies to any pair of messages.` },
-    { que: "Archetypal Characters",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "pigeonhole principle",
+        ans: `messages can have "any" length; hash values can have "one" length. The set of all possible messages will always be larger than set of all possible hash values.`},
+    { que: "Data Integrity",
+        ans: `aka "message integrity", is the assurance that data is free of unintended modification. Answers, "has the data changed?".` },
+    { que: "Choosing cryptographic hash function",
+        ans: `Python ships "hashlib" module. "algorithms_guaranteed" contains every hash function.
+        >>> import hashlib 
+        >>> sorted(hashlib.algorithms_guaranteed) ['blake2b', 'blake2s', 'md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', 'sha512', 'shake_128', 'shake_256']` },
+    { que: "Which hash functions are safe?",
+        ans: `SHA-2
+        SHA-3
+        BLAKE2` },
+    { que: "SHA-2",
+        ans: `comprised of SHA-224, SHA-256, SHA-384, SHA-512.
+        SHA-256 and SHA-512 is core of the family.
+        SHA-256 is 256 bits long, which is more likely to be unique and less likely to collide.` },
+    { que: "SHA-3",
+        ans: `composed of SHA3-224, SHA3-256, SHA3-384, SHA3-512, SHAKE128, SHAKE256.
+        Considered successor of SHA-2, but may not find much support as SHA-2.` },
+    { que: "BLAKE2",
+        ans: `not popular as SHA-2/SHA-3, but advantage is, BLAKE2 leverages modern CPU to hash quickly. Consider BLAKE2 to hash large data. 
+        Composed of BLAKE2b and BLAKE2s. 
+        BLAKE2b is optimized for 64-bit. BLAKE2s is optimized for 8- to 32-bit platforms.` },
+    { que: "Unsafe hash functions",
+        ans: `Insecure hash functions are preserved for maintaining backward compatibility for legacy systems.
+        Unsafe hash functions of "algorithms_guaranteed":
+        MD5
+        SHA-1` },
+    { que: "MD5",
+        ans: `obsolete 128-bit hash function in early 1990s.` },
+    { que: "SHA-1",
+        ans: `obsolete 160-bit hash function developed by NSA in mid-1990s.SHA-1 was used to verify data integrity in version control systems such as Git and Mercurial.` },
+    { que: "Dos/Don'ts of choosing hash function:",
+        ans: `SHA-256 for general-purpose cryptographic hashing.
+        SHA3-256 in high security environments, but expect less support than SHA-256.
+        BLAKE2 to hash large messages/data.
+        Never use MD5/SHA1 for security purposes.` },
+    { que: "Cryptographic hashing in Python",
+        ans: `import hashlib
+        named = hashlib.sha256() ... Named Constructor
+        generic = hashlib.new('sha256') ... Generic Constructor
+        
+        hash_function.digest() ... returns hash value as bytes.
+        hash_function.hexdigest() ... returns hash value as string.` },
+    { que: "📁 Chapter3 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Keyed Hashing",
+        ans: `Keyed Hashing` },
+    { que: "Data authentication",
+        ans: `aka "message authentication", ensures data reader can verify the identity of the writer.
+        Functionality requires 2 things: a key and a keyed hash function.` },
+    { que: "Key generation",
+        ans: `Every key should be hard to guess if to remain a secret.
+        Key types(2): random numbers and passphrases.` },
+    { que: "Random Numbers",
+        ans: `use "os.urandom" function as cryptographically secure random number source. This function accepts an integer size and returns "size" random bytes.
+        >>> import os 
+        >>> os.urandom(16)` },
+    { que: "'secrets' module for random-number generation",
+        ans: `>>> from secrets import token_bytes, token_hex, token_urlsafe 
+        >>> token_bytes(16) ... generates 16 random bytes.
+        token_hex(16) ... generates 16 random bytes of hexadecimal text
+        token_urlsafe(16) ... generates 16 random bytes of URL-safe text.` },
+    { que: "📁 Chapter4 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Symmetric Encryption",
+        ans: `Encryption begins with plaintext.
+        Plaintext: information readily comprehensible.
+        Encryption: obfuscation of plaintext with purpose of hiding info from unauthorized parties.
+        Ciphertext: obfuscated output of encryption.
+        Decryption: transforms ciphertext back to plaintext (inverse of encryption).
+        Cipher: algo for encrypting/decrypting data. Every cipher requires a key.` },
+    { que: "python 'cryptography' package divided API into 2 levels:",
+        ans: `hazardous materials layer: complex low-level API.
+        recipes layer: simple high-level API` },
+    { que: "Hazardous Material Layer",
+        ans: `complex low-level API, living beneath "dcryptography.hazmat". Be cautious when using API in production. Use only if 100% sure. Requires in-depth knkowledge of cryptography.` },
+    { que: "Valid use for hazardous material layer:",
+        ans: `Encrypt files too big to fit into memory.
+        Might be forced to process data with rare encryption algorithm.` },
+    { que: "Recipes Layer",
+        ans: `Simple high-level API. Use whenever possible, fall back to hazmat layer only when necessary. This API satisfies most encryption needs.` },
+    { que: "Fernet",
+        ans: `a symmetric encryption method implemented in recipes layer.Defines encryption protocol designed to resist tampering in interoperable way.
+        Protocol is encapsulated by class, "Fernet", beneath cryptography.fernet.` },
+    { que: "Fernet class",
+        ans: `designed as general purpose tool for encrypting/decrypting data. "Fernet.generate_key" method generates 32 random bytes. "Fernet init" method accepts this key.
+        >>> from cryptography.fernet import Fernet
+        >>> key = Fernet.generate_key() 
+        >>> fernet = Fernet(key)` },
+    { que: "Fernet.encrypt method",
+        ans: `doesn't just encrypt plaintext, but hashes ciphertext with HMAC-SHA256(causes ciphertext becoming a message).
+        Ciphertext and hash value are returned together as "fernet token":
+        >>> token = fernet.encrypt(b'plaintext')` },
+    { que: "Fernet.decrypt method",
+        ans: `extracts ciphertext from fernet token and authenticates it with HMAC-SHA256. 
+        If new hash values doesn't match old hash value in fernet token, "InvalidToken" exception is raised.
+        If hash values match, ciphertext is decrypted and returned:
+        >>> fernet.decrypt(token) b'plaintext'` },
+    { que: "Key rotation",
+        ans: `used to retire one key with another. ` },
     { que: "",
         ans: `` },
     { que: "",
