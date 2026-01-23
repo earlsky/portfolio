@@ -574,7 +574,7 @@ const flashcards = [
         Installation Testing()
         Usability Testing()
         Development Testing()` },
-    { que: "📁 Chapter 6: Design and Development (A4): SDL Activities and Best Practices",
+    { que: "📁 Ch6: Design and Development (A4): SDL Activities and Best Practices",
         ans: `https://research.ebsco.com/c/25xrgu/ebook-viewer/pdf/w7zcbuv3kz/page/pp_161?location=https%25253A%25252F%25252Fresearch.ebsco.com%25252Fc%25252F25xrgu%25252Fsearch%25252Fdetails%25252Fw7zcbuv3kz%25253FisDashboardExpanded%25253Dfalse%252526limiters%25253DFT%2525253AY%252526q%25253D9781466560956%252526searchMode%25253Dall&auth-callid=c66f46b3-43d6-449f-babb-d49e38bfe87d` },
     { que: "Static Analysis",
         ans: `analyzes the source code prior to compiling, provides a scalable method of security code review, and helps ensure that secure coding policies are being followed. ` },
@@ -659,7 +659,7 @@ const flashcards = [
         20: INFO: confirmation of expected operation, used for general applciation flow information.
         10: DEBUG: detailed information for developers during troubleshooting.
         0: NOTSET: no level set; logger defers to parent.`},
-    { que: "Chapter1 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
+    { que: "Ch1 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
         ans: `` },
     { que: "Attack Surface - entry point: user of the system, the system itself, or network between the user and the system",
         ans: `Ex: Reflective cross-site scripting (XSS).
@@ -800,7 +800,7 @@ const flashcards = [
         ans: `uses python scripts and supports Windows with Graphical user interface and command line debuggers.` },
     { que: "Mona.py - Open Immunity Debugger",
         ans: `a PyCommand that replaces the pvefindaddr and resolves performance issues.` },
-    { que: "📁 Chapter2 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
+    { que: "📁 Ch2 Full Stack Python Security: Cryptography, TLS, Attack Resistance",
         ans: `` },
     { que: "Hash Function",
         ans: `Has input/output. Input to a hash function is "message". Message can be any form of data.
@@ -873,7 +873,7 @@ const flashcards = [
         
         hash_function.digest() ... returns hash value as bytes.
         hash_function.hexdigest() ... returns hash value as string.` },
-    { que: "📁 Chapter3 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Keyed Hashing",
+    { que: "📁 Ch3 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Keyed Hashing",
         ans: `Keyed Hashing` },
     { que: "Data authentication",
         ans: `aka "message authentication", ensures data reader can verify the identity of the writer.
@@ -890,7 +890,7 @@ const flashcards = [
         >>> token_bytes(16) ... generates 16 random bytes.
         token_hex(16) ... generates 16 random bytes of hexadecimal text
         token_urlsafe(16) ... generates 16 random bytes of URL-safe text.` },
-    { que: "📁 Chapter4 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Symmetric Encryption",
+    { que: "📁 Ch4 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Symmetric Encryption",
         ans: `Encryption begins with plaintext.
         Plaintext: information readily comprehensible.
         Encryption: obfuscation of plaintext with purpose of hiding info from unauthorized parties.
@@ -925,50 +925,81 @@ const flashcards = [
         If hash values match, ciphertext is decrypted and returned:
         >>> fernet.decrypt(token) b'plaintext'` },
     { que: "Key rotation",
-        ans: `used to retire one key with another. ` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
+        ans: `used to retire one key with another. It decommissions old key, all ciphertext is decrypted and re-encrypted with new key. Reason key is rotated when person leaves organization.` },
+    { que: "MultiFernet",
+        ans: `method for key rotation. MultiFernet decrypts everything encrypted with old key and re-encrypts with new key. Once every token is re-encrypted with new key, old key is retired.` },
+    { que: "Symmetric Encryption",
+        ans: `when encryption algorithm encrypts and decrypts with same key (like one wrapped by Fernet). Symmetric encryption algorithms are further subdivided into: block ciphers and stream ciphers.` },
+    { que: "Block Ciphers",
+        ans: `encrypts paintext as series of fixed-length block. Each block of plaintext is encrypted to a block of ciphertext. Block size depends on encryption algorithm. Larger blocks are considered more secure.` },
+    { que: "popular Block Ciphers",
+        ans: `Triple DES
+        Blowfish
+        Twofish
+        Advanced Encryption Standard` },
+    { que: "Triple DES(3DES)",
+        ans: `adaptation of Data Encryption Standard(DES), uses DES three times, earning reputation for being slow.
+        3DES uses 64-bit block size and key size of 56, 112, 168 bits.
+        WARNING: deprecated by NIST and OpenSSL (don't use!)` },
+    { que: "Blowfish",
+        ans: `uses 64-bit block size and variable key size (32 to 448 bits).
+        One of the first major royalty-free encryption algorithms without patent.
+        WARNING: Blowfish recommends using Twofish.` },
+    { que: "Twofish",
+        ans: `Blowfish successor.
+        Uses 128-bit block size and key size of 128, 192, 256 bits.` },
+    { que: "Advanced Encryption Standard (Rijndael)",
+        ans: `Rijndael is encryption algorithm standardized by NIST. Rijndael adopted the name Advanced Encryption Standard for winning competition title.` },
+    { que: "Advanced Encryption Standard(AES)",
+        ans: `only symmetric encryption algorithm for typical programmer.
+        Algorithm uses 128-bit block size and key size of 128, 192, 256 bits.
+        Applications of AES encryption include: networking protocols(ex: HTTPS), compression, filesystems, hashing, virtual private networks(VPNs)` },
+    { que: "Stream Ciphers",
+        ans: `plaintext is processed as stream of individual bytes; one byte in, one byte out.
+        Good for encrypting continuous or unknown amounts of data. Often used by networking protocols.` },
+    { que: "Stream Ciphers examples",
+        ans: `RC4 and ChaCha.
+        RC4: has vulnerabilities discovered.
+        ChaCha: secure and fast.` },
+    { que: "Encryption Modes",
+        ans: `Symmetric encryption algorithms run different modes. Each with strengths and weaknesses.` },
+    { que: "Electronic Codebook (ECB) mode",
+        ans: `simplest mode. Exceptionally weak. ECB mode encrypts identical plaintext blocks into identical ciphertext blocks, meaning easy for attack to infer patterns in plaintext from ciphertext.
+        WARNING: do not encrypt data with ECB mode in production.` },
+    { que: "Cipher Block Chaining (CBC) mode",
+        ans: `ensures each change in block affects ciphertext of all subsequent blocks.
+        CBC produces different ciphertexts when encryption plaintexts, by individualizing plaintext with "initializing vector(IV)".` },
+    { que: "Summary: 📁 Ch4 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Symmetric Encryption",
+        ans: `Encryption ensures confidentiality.
+        Fernet is safe and easy way to symmetrically encrypt and authenticate data.
+        MultiFernet makes key rotation less difficult.
+        Symmetric encryption algorithms use same key for encryption and decryption.
+        AES is first and last choice for symmetric encryption.` },
+    { que: "📁 Ch5 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Asymmetric Encryption",
+        ans: `Chapter covers:
+        Introducing key-distribution problem.
+        Demonstrating asymmetric encryption with "cryptography" package.
+        Ensuring nonrepudiation with digital signatures.` },
+    { que: "Key-Distribution Problem",
+        ans: `Symmetric encryption works when encryptor and decryptor are same party, but it doesn't scale well. Key distribution is a recursive problem as sender of a message constantly encrypts keys in order to send message to receiver. Alternatively, could manage different keys correlating for different person.` },
+    { que: "Asymmetric Encryption",
+        ans: `Solves key-distribution problem. If encryption algo, like AES, encrypts/decrypts with same key, it's "symmetric". If encryption algo encrypts/decrypts with two different keys, it's "asymmetric". The keys are referred as "key pair".` },
+    { que: "Key Pair",
+        ans: `compose of "private key" and "public key". Private key is hidden by the owner. Public key is distributed to anyone; not secret. Private key decrypts what public key encrypts.` },
+    { que: "RSA Public-Key Encryption",
+        ans: `RSA stands for last names of creators(Rivest, Shamir, Adleman).
+        $ openssl genpkey -algorithm RSA \ ... generates RSA key.
+        -out private_key.pem \ ... generates private-key file to path.
+        -pkeyopt rsa_keygen_bits:3072 .. key size is 3072 bits.
+        RSA key is much larger than AES key(256 bits).` },
+    { que: "Nonrepudiation",
+        ans: `when a system prevents participant from denying their actions. Ex: point-of-sales feature nonrepudiation a way to legally bind business partners to fulfill end of agreements. Uses third party, such as legal authority, to verify transactions.` },
+    { que: "Digital Signatures",
+        ans: `goes beyond data authentication and data integrity nonrepudiation. Answers: Who sent the message? Has the message been modified in transit?
+        Digital signatures combine hash function with public-key encryption.
+        Hash value and sender's private key is the "input" to asymmetric encryption algorithm; "output" is message sender's digital signature.
+        Goal of digital signature is nonrepudiation, not confidentiality.` },
+    { que: "RSA Digital Signatures",
         ans: `` },
     { que: "",
         ans: `` },
