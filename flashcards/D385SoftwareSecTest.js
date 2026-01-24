@@ -999,15 +999,30 @@ const flashcards = [
         Digital signatures combine hash function with public-key encryption.
         Hash value and sender's private key is the "input" to asymmetric encryption algorithm; "output" is message sender's digital signature.
         Goal of digital signature is nonrepudiation, not confidentiality.` },
-    { que: "RSA Digital Signatures",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
+    { que: "RSA Digital Signatures in Python",
+        ans: `code signs message with SHA-256, RSA public-key encryption, padding scheme(probabilistic signature scheme(PSS)). "RSAPrivateKey.sign" method combines all three":
+        >>> import json from cryptography.hazmat.primitives.asymmetric >>> import padding from cryptography.hazmat.primitives >>> import hashes
+        >>> message = b'from Bob to Alice'
+        >>> padding_config = padding.PSS(mgf=padding.MGF1(hashes.SHA256()), salt_length=padding.PSS.MAX_LENGTH)
+        >>> private_key = load_rsa_private_key()
+        >>> signature = private_key.sign(message, padding_config, hashes.SHA256())
+        >>> signed_msg = {'message': list(message), 'signature': list(signature),}
+        >>> outbound_msg_to_alice = json.dumps(signed_msg)` },
+    { que: "RSA Digital Signature Verification",
+        ans: `After Alice receives Bob's message and digital signature, she does three things:
+        1. She hashes the message.
+        2. Decrypts the signature with Bob's public key.
+        3. Compares hash values` },
+    { que: "Elliptic-Curve Digital Signatures",
+        ans: `Like RSA key pairs, elliptic-curve key pairs sign data and verify signatures; but unlike RSA key pairs, elliptic-curve key pairs do not asymmetrically encrypt data.
+        ` },
+    { que: "📁 SUMMARY Ch5 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Asymmetric Encryption",
+        ans: `Asymmetric encryption algo use diff keys for encryption/decryption.
+        Public-key encryption is a solution to the key-distribution problem.
+        RSA key pairs are classic and secure way to asymmetrically encrypt data.
+        Digital signatures guarantee nonrepudiation.
+        Elliptic-curve digital signatures are more efficient than RSA digital signatures.` },
+    { que: "Defensive Programmer: Cryptography",
         ans: `` },
     { que: "",
         ans: `` },
