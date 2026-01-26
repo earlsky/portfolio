@@ -1022,78 +1022,153 @@ const flashcards = [
         RSA key pairs are classic and secure way to asymmetrically encrypt data.
         Digital signatures guarantee nonrepudiation.
         Elliptic-curve digital signatures are more efficient than RSA digital signatures.` },
-    { que: "Defensive Programmer: Cryptography",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "VIDEO: Defensive Programmer: Cryptography",
+        ans: `https://wgu.percipio.com/courses/b3fafebc-4d2f-416e-9d52-848b548c4c4e/videos/dd3681a2-9b65-468c-89a2-dacd752ca2b4` },
+    { que: "📁 Ch6 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Transport Layer Security(TLS)",
+        ans: `Ch6 covers:
+        Resisting man-in-the-middle attacks.
+        Understanding the Transport Layer Security Handshake.
+        Building, configuring, running Django web app.
+        Installing public-key certificate with Gunicorn.
+        Securing HTTP, email, database traffic with Transport Layer Security.` },
+    { que: "Secure Sockets Layer(SSL)",
+        ans: `insecure predecessor to Transport Layer Security(TLS). SSL may be dead but survives in method signatures, command-line arguments, module names. APIs preserve SSL name for backwards compatibility. Programmers refer to SSL, but mean TLS.` },
+    { que: "Hypertext Transfer Protocol Secure(HTTPS)",
+        ans: `is HTTP over SSL/TLS. HTTP is point-to-point protocol for transferring data(ex: web pages, images, videos)` },
+    { que: "Man-In-The-Middle Attack",
+        ans: `attacker takes control of position between two vulnerable parties. The position can be network segment or intermediary system.
+        Two forms: Passive/Active.` },
+    { que: "Passive MITM attack",
+        ans: `Eve launches passive MITM attack after gaining access to Bob's wireless network. Bob sends HTTP resquests to bank.alice.com, bank.alice.com sends HTTP responses to Bob. Eve passively intercepts the requests/responses(Bob's password and personal info).
+        TLS cannot protect Bob's wireless network, but provides confidentiality, by encrypting conversation between sender/receiver.` },
+    { que: "Active MITM attack",
+        ans: `Eve gains access to intermediary network device between Bob and bank.alice.com. Eve can listen/modify conversations (When Bob sends $10 to alice, Eve modifies to send $10 to Eve).
+        TLS cannot protect network device between sender/receiver, but prevent attacker impersonating sender/receiver. sender/receiver should use HTTP over TLS to communicate securely.` },
+    { que: "TLS handshake",
+        ans: `a point-to-point, client/server protocol. TLS connection starts with handshake between client/server. 
+        Handshake is initiated by the client, which performs 3 tasks:
+        1. Cipher suite negotiation.
+        2. Key exchange.
+        3. Server authentication.` },
+    { que: "Cipher suite negotiation",
+        ans: `TLS is application of encryption and hashing.The client and server must agree on set of algos(cipher suite).
+        TLS 1.3 spec cipher suites(5):
+        TLS_AES_128_CCM_8_SHA256
+        TLS_AES_128_CCM_SHA256
+        TLS_AES_128_GCM_SHA256
+        TLS_AES_128_GCM_SHA384
+        TLS_CHACHA20_POLY1305_SHA256` },
+    { que: "Cipher Suite - Three Segments",
+        ans: `1st segment: TLS_
+        2nd segment: encryption algo(AES_128_GCM / CHACHA20_POLY1305) AES 128-bit GCM mode
+        3rd segment: hashing algo(_SHA256)` },
+    { que: "Key exchange",
+        ans: `client/server exchanges key, which is used with encryption algorithm of cipher suite.
+        TLS key exchange is ex: of key-distribution problem, but TLS 1.3 solves it with Diffie-Hellman method.` },
+    { que: "Diffie-Hellman(DH) Key Exchange",
+        ans: `method that allows two parties to establish shared key over insecure channel, which is solution to key-distribution problem.` },
+    { que: "Simplified version of DH method",
+        ans: `1. sender/receiver agree on two parameters.
+        2. sender/receiver generate private key.
+        3. sender/receiver derive public key from parameters and their private key.
+        4. sender/receiver openly exchange public keys.
+        5. sender/receiver independently compute shared secret key.` },
+    { que: "Server authentication",
+        ans: `What good is private conversation if you can't verify the identify of the other person? TLS is means of "authentication" in addition to privacy. Authentication is bidirectional and optional.
+        ` },
+    { que: "PUBLIC-KEY CERTIFICATES",
+        ans: `resembles driver's license(you identify with a driver's license); a server identifies itself with a public-key certificate. Your driver's lic is issued by a government agency; a certificate is issued to key owner by certificate authority. License is scrutinized by police officer before you're trusted; certificate is scrutinized by browser before server is trusted.` },
+    { que: "HTTP with Django",
+        ans: `Django is Python web app framework. App can serve web page over HTTP, but has no support for confidentiality / server authentication, which is vulnerable to MITM attacks and needs to be converted from HTTP to HTTPS.` },
+    { que: "HTTPS with Gunicorn.",
+        ans: `host public-key certificate with Gunicorn(Python implementation of Web Server Gateway Interface(WSGI) protocol).
+        Gunicorn automatically uses installed certificate to serve Django traffic over HTTPS.` },
+    { que: "📁 SUMMARY Ch6 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Transport Layer Security(TLS)",
+        ans: `SSL, TLS, HTTPS are not synonyms.
+        MITM attacks come in two: passive/active.
+        TLS handshake establishes a cipher suite, shared key, server authentication.
+        Diffie-Hellman method is efficient solution to key-distribution problem.
+        Public-key certificate is analogous to your driver's license.
+        Django isn't responsible for HTTPS; Gunicorn is.
+        TLS authentication applies to both client/server.
+        TLS protects database and email traffic in addition to HTTP.` },
+    { que: "📁 Ch7 Full Stack Python Security: Cryptography, TLS, Attack Resistance - HTTP Session Management",
+        ans: `Chapter covers:
+        Understanding HTTP cookies
+        Configuring HTTP sessions in Django
+        Choosing HTTP session-state persistence strategy.
+        Preventing remote code-execution attacks and replay attacks.` },
+    { que: "What are HTTP sessions?",
+        ans: `used on web apps to isolate traffic, context, and state of each user. The basis for every form of online transaction.
+        User's browser stores their session ID with every subsequent request.
+        If someone steals a session ID, they can use to impersonate someone else.` },
+    { que: "Session Sniffing",
+        ans: `Malicious network eavesdroppers target HTTP sites to steal session ID, waiting for user to log in, hijacking user's account over HTTPS.
+        Django prevents session sniffing by changing identifier when user logs in, whether protocol is HTTP/S.
+        Best defense: use HTTPS for entire website.` },
+    { que: "HTTP cookies",
+        ans: `small texts mananged/stored by browser, typically created by server.
+        Websites/browsers communicate session IDs with cookies. When new user session is created, server sends session ID to browser as a cookie.` },
+    { que: "Set-Cookie response header - multiple directives",
+        ans: `Secure
+        Domain
+        Max-Age` },
+    { que: "Secure directive",
+        ans: `Servers resist MITM attacks by sending session ID cookie with Secure directive which prohibits browser from sending cookie back to server over HTTP.
+        Set-Cookie: sessionid=<session-id-value>; Secure` },
+    { que: "Domain directive",
+        ans: `use when want to control which hosts the browser should send session ID to.
+        Set-Cookie: sessionid=<session-id-value>; Domain=example.com` },
+    { que: "Max-Age directive",
+        ans: `server sends Max-Age directive to declare expiration time for cookie.
+        Set-Cookie: sessionid=<session-id-value>; Max-Age=1209600.
+        When cookie expires, browser no longer echo it back to site it came from.` },
+    { que: "Browser-length sessions",
+        ans: `if cookie is set without Max-Age directive, browser will keep cookie alive as long as tab stays open. Session can't be hijacked after user closes browser tab.` },
+    { que: "Setting cookies programmatically",
+        ans: `from django.http import HttpResponse
+        response = HttpResponse() response.set_cookie('cookie-name', 'cookie-value', secure=True, domain='alice.com', max_age=42)
+        1. browser sends this cookie over HTTPS.
+        2. alice.com and all subdomains will receive this cookie.
+        3. after 42 seconds, cookie expires.` },
+    { que: "Session-state persistence",
+        ans: `Django models user session with API via session object, behaving like Python dict (storing values by key).
+        Session state is created, read, updated, deleted through API.
+        Django manages session-state persistance. If session is modified during request life cycle, Django serializes and persists the modifications. Abstraciton layer for de/serialization is session serializer.` },
+    { que: "Session serializer",
+        ans: `Django delegates de/serialization of session state to configurable component, configured by SESSION_SERIALIZER setting:
+        JSONSerializer (default session serializer),
+        PickleSerializer` },
+    { que: "JSONSerializer",
+        ans: `transforms session state to and from JSON, allowing you to compose session state with Python data types(int, str, dict, list).
+        1. Serializes a Python dict
+        2. Serialized JSON
+        3. Deserializes JSON
+        4. Deserialized Python dict` },
+    { que: "PickleSerializer",
+        ans: `transforms session state to/from byte streams.1. Serializes an application-defined object
+        2. Serialized byte stream
+        3. Deserializeds byte stream
+        4. Deserialized object` },
+    { que: "JSONSerializer v PickleSerializer",
+        ans: `JSONSerializer: secure/safe, but cannot serialize arbitrary Python objects.
+        PickleSerializer: can serialize arbitrary Python objects but with severe risk.` },
+    { que: "Django automatically persists serialized session state with session engine",
+        ans: `Session engine: configurable abstract layer for underlying data source through 5 options:
+        1. Simple cache-based sessions
+        2. Write-through cache-based sessions
+        3. Database-based sessions (default option)
+        4. File-based sessions
+        5. Signed-cookie sessions` },
+    { que: "Simple cache-based sessions",
+        ans: `store session state in cache service using Memcached/Redis. Cache services store data in memory than disk, meaning store/load data from Memcached/Redis quickly, but risk occasional data loss. Ex: if cache service runs out of free space, it will write new data over least recently accessed data. If cache is restarted, all data is lost.
+        Strength of cache service: speed.
+        Weakness: data loss` },
+    { que: "Write-through cache-based sessions",
+        ans: `combine cache service and database to manage session state. Django writes session state to cache service, "write through", the database, meaning session state is persistent, at expense of write performance. When reading session state, it reads cache service first, using database as last resort.` },
+    { que: "Database-based session engine",
+        ans: `bypasses Django's cache integration. This is useful if chocen to forgo the overhead of integrating your application with cache service.
+        ` },
     { que: "",
         ans: `` },
     { que: "",
