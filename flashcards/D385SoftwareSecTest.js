@@ -1187,7 +1187,216 @@ const flashcards = [
         ans: `cookie-based, uses HMAC function to authenticate inbound session state, telling the server who original author of payload is, but this cannot tell the server if the payload received is latest version of payload. Meaning the browser can't get away with modifying session ID cookie, but browser can replay older versions (attacker exploits this limitation with "replay attack").
         Ex: An ecommerce website gives one-time discount to new users, attacker is new to website and eligible for discount (session state reflects this). Attacker saves local copy of session state, makes purchase with one-time discount. Now ineligible for discount, attacker replays session state copy for additional discounts, this is "replay attack". Replay attacks can be used to forge automated teller machines(ATM) transactions, unlock vehicles, open garage doors, bypass voice-recognition authentication.` },
     { que: "Cookie-Based Session Engine - Remote Code-Execution Attacks",
-        ans: `Combining cookie-based sessions with PickleSerializer, can be exploited if attacker have SECRET_KEY setting.` },
+        ans: `Combining cookie-based sessions with PickleSerializer can be exploited if attacker have SECRET_KEY setting.
+        Execute malicious attack:
+        1. Write malicious code.
+        2. Hash malicious code with HMAC function and SECRET_KEY.
+        3. Send malicious code and has value to website as session cookie.
+        4. Watch website execute attacker's malicious code.` },
+    { que: "📁 SUMMARY Ch7 Full Stack Python Security: Cryptography, TLS, Attack Resistance - HTTP Session Management",
+        ans: `Servers set session IDs on browsers with Set-Cookie response header.
+        Browsers send session IDs to servers with Cookie request header.
+        Use Secure, Domain, Max-Age directives to resist online attacks.
+        Django supports 5 ways to store session state.
+        Django supports 6 ways to cache data.
+        Replay attacks abuse cookie-based sessions.
+        Remote code-execution attacks abuse PickleSerializer.
+        Django uses SECRET_KEY setting for keyed hashing, not encryption.` },
+    { que: "📁 SUMMARY Ch8 Full Stack Python Security: Cryptography, TLS, Attack Resistance - User Authentication",
+        ans: `covers:
+        Registering/Activating new user accounts.
+        Installing/Creating Django apps.
+        Logging into/out of your project.
+        Accessing user profile information.
+        Testing authentication.` },
+    { que: "User Registration",
+        ans: `leverage "django-registration". User-registration is two-step process: Create, Activate.
+        User enters user-registration workflow with request for user-registration form. User submits form with username, email address, password. Server creates inactive account, redirects him to registration confirmation page, sends user account activation email. User verifies email address to activate account.
+        User account workflow - 3 building blocks:
+        Views
+        Models
+        Templates` },
+    { que: "User account workflow - Views",
+        ans: `Django maps each request to a "view", a request handler. Views can be implemented by a class/function.` },
+    { que: "User account workflow - Models",
+        ans: `an object-relational mapping class. Models bridge the gap between object-oriented world of your application and relational database(where you store data).
+        "Model class" is analogous to database table.
+        Model class "attribute" is analogous to database table column.
+        Model "object" is analogous to database table row.Views use models in CRUD database records.` },
+    { que: "User account workflow - Templates",
+        ans: `represents response of request. Views/Models are written in Python, Template is written in HTML and simple templating syntax.` },
+    { que: "Django application server",
+        ans: `Uses model-view-template architecture(MVT), roughly equiv to model-view-controller(MVC) architecture.` },
+    { que: "MVT v MVC",
+        ans: `Model | Model: Object-relational mapping layer.
+        View | Controller: Request handler responsible for logic/orchestration.
+        Template | View: Response content production.` },
+    { que: "Django project",
+        ans: `collection of configuration files(settings.py, urls.py, 1+ Django apps)` },
+    { que: "Django app",
+        ans: `modular component of Django project. Each component responsible for discrete set of functionality(ex: user registration).` },
+    { que: "User Authentication",
+        ans: `Use multifactor authentication(MFA):
+        One-time password(OTP).
+        Keyfob, access badge, smartcard.
+        Biometric factors(fingerprints, facial recognition).
+        Resist urge to build security yourself(error prone).
+        Avoid OTPs via text/voicemail(telephone networks are insecure).
+        Avoid questions like, "what is mother's maiden name or pet name?"(could search on social media).` },
+    { que: "📁 SUMMARY Ch8 Full Stack Python Security: Cryptography, TLS, Attack Resistance - HTTP Session Management",
+        ans: `Verify user's email with two-step user-registration workflow.
+        Views, Models, Templates are building blocks of Django web development.
+        Don't reinvent the wheel; authenticate users with built-in Django components.
+        Prohibit anonymous access to restricted resources.
+        Authentication is no excuse for untested functionality.` },
+    { que: "📁 Ch9 Full Stack Python Security: Cryptography, TLS, Attack Resistance - User Password Management",
+        ans: `covers:
+        Changing, validating, resetting user passwords.
+        Resisting breaches with salted hashing.
+        Resisting brute-force attacks with key derivation functions.
+        Migrating hashed passwords.` },
+    { que: "Password-change workflow",
+        ans: `Django's PasswordChangeView contains 3 required fields: user's password, new password, new password confirmation.` },
+    { que: "Password storage - 3 approaches",
+        ans: `Plaintext
+        Ciphertext
+        Hash value` },
+    { que: "Password storage - Plaintext",
+        ans: `bad practice; attacker has access to user account once gaining access to password store.
+        Attacker can be outside the organization or employee(ex: system administrator)` },
+    { que: "Password storage - Ciphertext",
+        ans: `not much improvemnt over plaintext.
+        ex: system encrypts each password and stores as ciphertext. When user logs in, system encrypts reproduced password and compares ciphertext to the ciphertext in storage.` },
+    { que: "Password storage - Hash value",
+        ans: `used by modern authetication systems.
+        When you log in, system compares hash value of reproduced password to hash value in storage.` },
+    { que: "Malicious tools for password cracking:",
+        ans: `Common password lists: hashing every possible common password.
+        Hash function determinism: hash values for one user is the same as another so both users have same password.
+        Rainbow tables: large table of messages(password) mapped to precomputed hash values` },
+    { que: "Salted hashing",
+        ans: `way to compute different hash value from 2+ identical messages.
+        "salt": random string of bytes that accompany message as input to hash function.` },
+    { que: "Salt is hashing what initialization vector is to encryption:",
+        ans: `Salts individualize hash values; IVs individualize ciphertexts.
+        Salted hash value is useless if sale is lost; ciphertext is useless if IV is lost.
+        Salt or IV is stored unobfuscated with the hash value or ciphertext.
+        Neither salt or IV should be reused.` },
+    { que: "Password-reset workflow - 4 components",
+        ans: `PasswordResetView
+        PasswordResetDoneView
+        PasswordResetConfirmView
+        PasswordResetCompleteView` },
+    { que: "📁 Ch9 SUMMARY Full Stack Python Security: Cryptography, TLS, Attack Resistance - User Password Management",
+        ans: `Don't reinvent the wheel; change/reset user passwords with Django components.
+        Enforce/fine-tune password policy with password validation.
+        Resist brute-force attacks with salted hashing.
+        Don't hash passwords with regular hash function; use key derivation function(Argon2).
+        Migrate legacy password hash values with Django data migration.
+        Password-reset workflows are another application of data authentication and keyed hashing.` },
+    { que: "📁 Ch10 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Authorization",
+        ans: `covers:
+        Creating superusers and permissions
+        Managing group membership
+        Enforcing application-level authorization with Django
+        Testing authorization logic` },
+    { que: "Authentication v Authorization",
+        ans: `Authentication(authn): who the user is.
+        Authorization(authz): what the user can do.
+        Authentication is prerequisite for authorization.` },
+    { que: "Permission",
+        ans: `atomic form of authorization.` },
+    { que: "📁 SUMMARY Ch10 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Authorization",
+        ans: `Authentication is who you are; Authorization is what you can do.
+        Users, groups, and permissions are building blocks of authorization.
+        WhiteNoise is simple/efficient way to serve static resources.
+        Django's administration console enables superusers to manage users.
+        Prefer high-level authorization APIs over low-level APIs.
+        In general, enforce authorization via standalone permissions; grant authorization via group membership.` },
+    { que: "📁 Ch11 Full Stack Python Security: Cryptography, TLS, Attack Resistance - OAuth 2",
+        ans: `covers:
+        Registering OAuth client.
+        Requesting authorization to protected resources.
+        Granting authorization without exposing authentication credentials.
+        Accesing protected resources.` },
+    { que: "OAuth 2 - social login",
+        ans: `when visiting website and allows to sign in using Google, Facebook, Twitter` },
+    { que: "OAuth terms",
+        ans: `"protected resource": Google account info.
+        "Resource owner": entity, usually end user with power to authorize access to protected resource.
+        "OAuth client": example.com, a third-party entity that can access protected resource when permitted by resource owner.
+        "authorization server": hosted by Google, allows resource owner to authorize third-party access to protected resource.
+        "resource server" aka "APIs": hosted by Google, guards protected resource.` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
     { que: "",
         ans: `` },
     { que: "",
