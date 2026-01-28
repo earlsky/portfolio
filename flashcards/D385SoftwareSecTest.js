@@ -1167,22 +1167,27 @@ const flashcards = [
     { que: "Write-through cache-based sessions",
         ans: `combine cache service and database to manage session state. Django writes session state to cache service, "write through", the database, meaning session state is persistent, at expense of write performance. When reading session state, it reads cache service first, using database as last resort.` },
     { que: "Database-based session engine",
-        ans: `bypasses Django's cache integration. This is useful if chocen to forgo the overhead of integrating your application with cache service.
-        ` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+        ans: `bypasses Django's cache integration. This is useful if chosen to forgo the overhead of integrating your application with cache service.` },
+    { que: "File-based session engine",
+        ans: `this option is insecure, each file-backed session is serialized to single file. Session ID is in filename, and session state is stored unencrypted. Anyone with read access to filesystem can hijack session or view session state.` },
+    { que: "Cookie-based session engine",
+        ans: `stores session state in sesion ID cookie. Session ID cookie doesn't just "identify" the session; it "is" the session.
+        Instead of storing session locally, Django serializes and sends whole thing to browser, then deserializes payload when browser echoes back on subsequent requests.` },
+    { que: "Cookie-based sesison engine (downsides)",
+        ans: `Cookie size limitations
+        Unauthorized access to session state
+        Replay attacks
+        Remote code-execution attacks` },
+    { que: "Cookie-Based Session Engine - Cookie Size Limitations",
+        ans: `filesystems/databases store large amounts of data; cookies do not.
+        RFC 6265 requires HTTP client to support "4096 bytes per cookie", meaning serialized cookie-based Django session should remain below 4KB.` },
+    { que: "Cookie-Based Session Engine - Unauthorized access to session state",
+        ans: `cookie-based, hashes outbound session state; does not encrypt session state. It guarantees integrity, not confidentiality.` },
+    { que: "Cookie-Based Session Engine - Replay Attacks",
+        ans: `cookie-based, uses HMAC function to authenticate inbound session state, telling the server who original author of payload is, but this cannot tell the server if the payload received is latest version of payload. Meaning the browser can't get away with modifying session ID cookie, but browser can replay older versions (attacker exploits this limitation with "replay attack").
+        Ex: An ecommerce website gives one-time discount to new users, attacker is new to website and eligible for discount (session state reflects this). Attacker saves local copy of session state, makes purchase with one-time discount. Now ineligible for discount, attacker replays session state copy for additional discounts, this is "replay attack". Replay attacks can be used to forge automated teller machines(ATM) transactions, unlock vehicles, open garage doors, bypass voice-recognition authentication.` },
+    { que: "Cookie-Based Session Engine - Remote Code-Execution Attacks",
+        ans: `Combining cookie-based sessions with PickleSerializer, can be exploited if attacker have SECRET_KEY setting.` },
     { que: "",
         ans: `` },
     { que: "",
