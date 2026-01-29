@@ -1327,6 +1327,210 @@ const flashcards = [
         "OAuth client": example.com, a third-party entity that can access protected resource when permitted by resource owner.
         "authorization server": hosted by Google, allows resource owner to authorize third-party access to protected resource.
         "resource server" aka "APIs": hosted by Google, guards protected resource.` },
+    { que: "Grant Types",
+        ans: `how resource owner grants access to protected source.` },
+    { que: "Grant Types (4)",
+        ans: `Authorization Code grants: accomodate websites, mobile apps, browser-based apps.
+        Implicit grants: was recommended for mobile/browser-based app, but now abandoned.
+        Password grants: remove the need for authorization server by requiring resource owner to provide credentials through third party.
+        Client Credentials grants: apply when resource owner and third party are same entity.` },
+    { que: "Authorization Code Flow - 4 phases",
+        ans: `1. Requesting authorization.
+        2. Granting authorization.
+        3. Performing token exchange.
+        4. Accessing protected resources.` },
+    { que: "1. Requesting Authorization",
+        ans: `OAuth client requests authorization from resource owner by sending them to authorization server via link, HTTP redirect, or Javascript, directing resource owner to "authorization URL". This address of authorization form hosted by authorization server.` },
+    { que: "2. Granting Authorization",
+        ans: `resource owner grants access to OAuth client through authorization server. Resource owner grants access by submitting authorization form, and redirected to URL known as, "redirect URI".` },
+    { que: "3. Performing Token Exchange",
+        ans: `OAuth client exchanges authorization code for access token. Code is sent straight back to where it came from, the authorization server, along with OAuth client registration credentials.` },
+    { que: "4. Accessing Protected Resources",
+        ans: `OAuth client uses access token to access protected resource. This request carries access token in header. Resource server is responsible for validating access token. If token is valid, OAuth client is given access to protected resource.` },
+    { que: "📁 Ch11 SUMMARY Full Stack Python Security: Cryptography, TLS, Attack Resistance - OAuth 2",
+        ans: `You can share your data without sharing your password.
+        Authorization code flow is by far the most commonly used OAuth grant type.
+        An authorization code is exchanged for an access token.
+        Reduce risk by limiting access tokens by time and scope.
+        Scope is requested by OAuth client, defined by authorization server, enforced by resource server.` },
+    { que: "📁 Learning Advanced API Concepts",
+        ans: `https://realpython.com/python-api/#learning-advanced-api-concepts` },
+    { que: "Authentication",
+        ans: `wide range(ex: API keys, Basic Authentication, OAuth).
+        Calling API without credentials returns "401 Unauthorized" or "403 Forbidden" status code` },
+    { que: "API Keys",
+        ans: `most common level of authentication. Keys are used to identify API user/customer and trace your use of API. API keys are sent as request header or query parameter.` },
+    { que: "OAuth API",
+        ans: `used every time an app/platform has "Login With Google" or "Continue With Facebook" option.` },
+    { que: "Pagination",
+        ans: `Sending data back/forth between clients cost "bandwidth". Servers cope with multiple requests using "Pagination".
+        Pagination: splitting large amounts of data into multiple smaller pieces using "page attribute"(defines which page you're currently requesting), "size attribute"(defines size of each page).` },
+    { que: "Rate Limiting",
+        ans: `people with bad intentions abuse APIs, so use technique called "rate limiting"; restricts number of requests in a given time frame.` },
+    { que: "📁 Ch12 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Working with the OS",
+        ans: `covers:
+        Enforcing filesystem-level authorization with "os" module.
+        Creating temp files with "tempfile" module.
+        Invoking external executables with "subprocess" module
+        Resisting shell injection and command injection.` },
+    { que: "Filesystem-level authorization",
+        ans: `involes less work than application-level authorization because you don't need to enforce anything; your os does this.` },
+    { que: "Asking for permission",
+        ans: `a coding style, "easier to ask for forgiveness than permission(EAFP)", assumes preconditions are true, then catches exceptions when false.
+        EAFP is opposite coding style, "look before you leap(LBYL)".
+        EAFP is characterized by try/except statements.
+        LBYL is characterized by if/then statements.
+        EAFP is optimistic.
+        LBYL is pessimistic.` },
+    { que: "Working with temp files",
+        ans: `Use Python's native module, "tempfile".
+        tempfile.TemporaryFile function is preferred way.` },
+    { que: "Using subprocess module",
+        ans: `Python's answer to external executables.` },
+    { que: "📁 Ch12 SUMMARY Full Stack Python Security: Cryptography, TLS, Attack Resistance - Working with the OS",
+        ans: `Prefer high-level authorization utilities over low-level methods.
+        Choose between EAFP/LBYL coding styles on case-by-case.
+        Wanting to invoke external executable is different from needing to.
+        Between Python/PyPI, there is usually alternative for commands you want.
+        If you execute a command, unlikely command needs a shell.` },
+    { que: "📁 Python Security Practices You Should Maintain",
+        ans: `https://www.securecoding.com/blog/python-security-practices-you-should-maintain/` },
+    { que: "Use Recent Major Version of Python",
+        ans: `Old versions of python will no longer receive security updates.` },
+    { que: "Use Virtual Environment",
+        ans: `prevents conflict in Python modules and have same modules both on local/production environments.
+        Prevents malicious Python dependencies in projects and shipping same to production by using 'pip freeze' to generate requirements.txt.
+        To create virtual environment use Virtualenv or Pipenv.` },
+    { que: "Import Packages the Right Way",
+        ans: `"Absolute imports" specifies path of resource, while "relative import" specifies resource to be imported relative to current location of project.
+        /* Absolute import */
+        from package1 import module1
+        from package1.module2 import function1
+        /* Relative import */
+        from .some_module import some_class
+        from ..some_package import some_function` },
+    { que: "Relative Imports - Implicit v Explicit",
+        ans: `Implicit: doesn't specify resource path relative to current module.
+        Explicit: specifies exact path of module relative to current module.
+        Implicit import is disapproved/removed from Python 3.
+        Ensure using absolute import or explicit relative import:
+        from safe_module import package, function, class
+        from ..relative_module import package, function, class` },
+    { que: "String Formatting in Python",
+        ans: `use Template class:
+        from string import Template
+        name_template = Template("Hello, my name is $name.")
+        greeting = name_template.substitute(name="Tobi")` },
+    { que: "Handle Python HTTP Requests Safely",
+        ans: `building project that requires sending HTTP requests contains risks.` },
+    { que: "Look Out for Exploited/Malicious Packages",
+        ans: `Most packages are published to PyPl and serves as code repository and do not go through security reviews/checks.
+        Consider using security tools to scan Py dependencies to screen for exploted packages.` },
+    { que: "Handling Data Deserialization Safely",
+        ans: `use packages that ensures safety of data in sandbox before deserializing data. One option is use package, PyCrypto, as it securely deserializing your data and prevent running arbitrary code.
+        Same for Pickle and YAML data type. 
+        Pickle serialize/deserialize Py object structure.
+        Use PyYAML package for YAML data type.` },
+    { que: "Keep Up-To Date Open Source Vulnerabilities in Your Python Packages",
+        ans: `to prevent/rid of open source vulnerabilites is having the latest update.` },
+    { que: "🎥 Secure Programmer: Intro to Programming Standards",
+        ans: `` },
+    { que: "General Standards",
+        ans: `IEEE 610.12: Standard Glossary of Software Engineering Technology.
+        IEEE 12207: Software Life Cycle Processes.
+        IEEE 1045: Standard for Software Productivity Metrics.` },
+    { que: "Testing and Quality Standards",
+        ans: `IEEE 1008: Standard for Software Unit Testing.
+        IEEE 1012 Standard for Software Verification and Validation.
+        IEEE 1028: Standard for Software Reviews.
+        IEEE 1061: Standard for Software Quality Metrics Methodology.` },
+    { que: "Maintenance and Documentation Standards",
+        ans: `IEEE 1042: Guide to Software Configuration Management.
+        IEEE 1219: Standard for Software Maintenance.
+        IEEE 1063: Standard for Software User Documentation.` },
+    { que: "NIST SP 800-27 Life Cycle",
+        ans: `Initiation
+        Development/Acquisition
+        Implementation
+        Operation/Maintenance` },
+    { que: "ISO/IEC 15504",
+        ans: `Incomplete
+        Performed
+        Managed
+        Established
+        Predictable
+        Optimized` },
+    { que: "ISO 29110",
+        ans: `Systems and Software Life Cycle Profiles and Guidelines for Very Small Entities(VSEs):
+        Overview
+        Framework for profile preparation
+        Certification and assessment guidance
+        Profile specifications
+        Management, engineering and services delivery guidelines ` },
+    { que: "ISO Standards",
+        ans: `ISO 14598: Software Product Evaluation
+        ISO 15026: Systems and Software Integrity Levels
+        ISO 15939: Software Measurement Process` },
+    { que: "IEEE Standards",
+        ans: `IEEE 830: Recommended Practice for Software Requirements Specifications
+        IEEE 1016: Standard for Information Technology, Systems Design, Software Design, Descriptions
+        IEEE 1008: Standard for Unit Testing
+        IEEE 1219: Standard for Software Maintenance` },
+    { que: "Types of Requirements",
+        ans: `Stakeholder Requests
+        Business Rules
+        Regulatory
+        Limitations` },
+    { que: "FURPS model",
+        ans: `Functionality
+        Usability
+        Reliability
+        Performance
+        Supportability` },
+    { que: "Requirements Concepts",
+        ans: `Elicitation
+        Analysis
+        Tracing
+        Verifying` },
+    { que: "Requirements Gathering Techniques - Essential Techniques",
+        ans: `Brainstorming 
+        Focus Group
+        Observation
+        Interview
+        Prototyping
+        Reverse Engineering` },
+    { que: "Requirements Gathering Techniques - Classify Requirements",
+        ans: `Criticality
+        Rationale
+        Key Driving Requirement
+        Prioritize` },
+    { que: "Requirements Gathering Techniques - Be Alert For",
+        ans: `Dependency requirements
+        Physical environment
+        Non-functional requirements
+        All stakeholders have been consulted` },
+    { que: "Quality and Change Management - Quality Perspectives",
+        ans: `I know it when I see it: is horrible
+        Possessess desired features
+        Fitness for use
+        Conforms to requirements` },
+    { que: "Quality and Change Management - Change Management",
+        ans: `Step 1: Request for Change
+        Step 2: Change Approval Board
+        Step 3: Document` },
+    { que: "Quality and Change Management - ISO 9126",
+        ans: `Software Quality Characteristics Criteria:
+        Functionality (most important)
+        Reliability
+        Usability
+        Efficiency
+        Maintainability
+        Portability (least important)` },
+    { que: "IEEE 730: Standard for Software Quality",
+        ans: `Establish Software Quality Assurance(SQA) framework
+        SQA Planning
+        SQA Closing
+        SQA Activites/Tasks` },
     { que: "",
         ans: `` },
     { que: "",
@@ -1347,51 +1551,7 @@ const flashcards = [
         ans: `` },
     { que: "",
         ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
+    { que: "📁 Ch13 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Never Trust Input",
         ans: `` },
     { que: "",
         ans: `` },
