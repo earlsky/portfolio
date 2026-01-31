@@ -1531,27 +1531,107 @@ const flashcards = [
         SQA Planning
         SQA Closing
         SQA Activites/Tasks` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
     { que: "📁 Ch13 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Never Trust Input",
+        ans: `covers:
+        Validating Python dependencies with Pipenv
+        Parsing YAML safely with PyYAML
+        Parsing XML safely with defusedxml
+        Preventing DoS attacks, Host head attacks, open redirects, SQL injection
+        ...
+        Attacks have different forms of input: package dependencies, YAML, XML, HTTP, SQL.
+        Goals of these attacks: data corruption, privilege escalation, unauthorized data access.
+        "Input validation" is antidote for these attacks.` },
+    { que: "Package management with Pipenv",
+        ans: `Pipenv installs third-party packages from package repository(ex: PyPI). Package repositories are significant portion of attacks.
+        When Pipenv retrieves package, it hashes inbound package artifact and compares hash values, if hash values match, Pipenv assumes package is unmodified and safe to install.` },
+    { que: "YAML Remote Code Execution",
+        ans: `reminisce remote code-execution attack; attacker embeds malicious code into pickled/serialized Python object, then disguises code as cookie-based HTTP session state into a server. Server then kills itself executing the malicious code with PickleSerializer.
+        This is the same with YAML; same attack, different data format.`},
+    { que: "apply PLP to PyYAML via Loaders (4)",
+        ans: `Loaders are listed starting with least to powerful, also supports more features and carries more risk than previous one:
+        BaseLoader: supports Python objects(ex: strings, lists).
+        SafeLoader: supports Python objects and standard YAML tags.
+        FullLoader: Full YAML language support(the default).
+        UnsafeLoader: Full YAML language support and arbituary function calls.` },
+    { que: "XML Entity Expansion",
+        ans: `"Entity Delaration": allows you to define and name arbitrary data in XML document.
+        "Entitty Reference": a placeholder, allowing to embed entity in XML document.
+        Normally, XML entity contains few characters, imagine if entity contained 5000 characters.` },
+    { que: "Quadratic Blowup Attack",
+        ans: `weaponizes XML entity expansion.
+        if entity was 43 characters long, but entity was referred 10 times. Quadratic blowup reference count orders of magnitude larger.
+        Ex: if entity is 1MB, and referenced 1024 times, document will weigh 1GB.
+        This malicious input is, "memory bomb"` },
+    { que: "Billion Laughs Attack",
+        ans: `aka "exponential blowup expansion attack", similar to quadratic attack, but more effective. This attack exploits XML entity that references other entities.` },
+    { que: "Vulnerable packages to quadratic blowups / billion laughs attacks",
+        ans: `minidom, pulldom, sax, etree`},
+    { que: "Defusing memory bombs",
+        ans: `resist memory bombs with Python library, "defusedxml"` },
+    { que: "Denial of Service(DoS)",
+        ans: `designed to overwhelm system with excessive resource consumption. The resources targeted: memory, storage space, network bandwidth, CPU. Goal for DoS is to deny users access to service by compromising availability of the system.
+        Web server (ex: NGINX), or load-balancing solution (AWS Elastic Load Balancing), resist DoS attacks.` },
+    { que: "Host Header Attacks",
+        ans: `occurs when web application trusts HTTP Host Header in incoming requests and uses it to generate links, redirects, or construct URLs without proper validation. (ex: sending password reset to attacker's email)` },
+    { que: "Open Redirect Attacks",
+        ans: `Attacker wants to steal money: attacker creates impersonation of person's bank and sends email to that person, that person is redirected to attacker's impersonated bank site and victim enters log in credentials. Attacker logs in to bank and steals money.
+        Victim has been phished:
+        Phishing: arrive via email.
+        Smishing: arrive via Short Message Service(SMS).
+        Vishing: arrive via voicemail.` },
+    { que: "SQL Injection",
+        ans: `Your project relay data between user and relational databse, if there's no user input validation, pose exploitation for SQL injection.
+        Attacker use SQL injection by submitting malicious SQL code as input in a vulnerable system, which allows attackers to destroy, modify, gain unauthorized access to data.` },
+    { que: "Raw SQL Queries",
+        ans: `Django model class refers query interface by property named objects, this interface accomodates raw SQL queries with method called raw, which accepts raw SQL and returns set of model instances. Attacker can escalate user's privileges.` },
+    { que: "Database Connection Queries",
+        ans: `Django allows to execute raw SQL queries directly through database connection. Useful if your query doesn't belong to single model class, or want to execute UPDATE, INSERT, DELETE statement.` },
+    { que: "📁 Ch13 SUMMARY Full Stack Python Security: Cryptography, TLS, Attack Resistance - Never Trust Input",
+        ans: `Hashing and data integrity effectively resist package injection attacks.
+        Parsing YAML can be just as dangerous as parsing pickle.
+        XML isn't just ugly; parsing it from untrusted source can bring down a system.
+        You can resist low-level DoS attacks with your web server and load balancer.
+        You can resist high-level DoS attacks with your Web Server Gateway Interface(WSGI) or application server.
+        Open redirect attacks enable phishing scams and man-in-the-middle attacks.
+        Object-relational mapping effectively resists SQL injection.` },
+    { que: "📁 Ch14 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Site Scripting Attacks",
+        ans: `covers:
+        Validating input with forms and models.
+        Escaping special characters with template engine.
+        Restricting browser capabilities with response headers.` },
+    { que: "What is XSS",
+        ans: `attacker injects malicious code into browser of another user. 
+        Malicious code can be in HTML, CSS, JS.
+        Arrive in many vectors: body, URL, or header of HTTP request.` },
+    { que: "XSS subcategories(3)",
+        ans: `Persistent
+        Reflected
+        DOM-Based` },
+    { que: "Persistent XSS",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
         ans: `` },
     { que: "",
         ans: `` },
