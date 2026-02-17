@@ -87,65 +87,34 @@ const flashcards = [
         Tax is due when stock is sold.
         Gain is capital(long term) when held at least one year and sold at least two years after grant, otherwise, ordinary income.
         Difference between option price and fair market value(FMV) on date of exercise is add back for AMT purposes.` },
-    { que: "Restricted Securities",
-        ans: `retail investors cannot sell until having held them for certain period of time, generally 6 months.` },
-    { que: "Control Stock",
-        ans: `stock is held by control person.
-        Always has volume limits.` },
-    { que: "Control Person",
-        ans: `a corporate director, officer, large stockholder, or immediate family of any preceding residing in same home.
-        Generally referred as affiliates becuase of their unique status within issuer.` },
-    { que: "Form 144",
-        ans: `mechanism for reporting the sale of control stock / restricted stock, found in SEC Rule 144 of Securities Act of 1933.` },
-    { que: "American Depositary Receipts(ADRs)",
-        ans: `facilitate trading of foreign stocks in US markets because everything is done in English, US dollars. ADRs are bought/sold/traded in $USD, dividends are paid in $USD.
-        ADR is negotiable security that represent receipt of stock in non-US corporation. ADRs are bought/sold in US securities markets like domestic stock.` },
-    { que: "Rights of ADR Owners",
-        ans: `Most of the rights that common stockholders normally hold, such as the right to receive dividiends, also apply to ADR owners. In some, but not all, cases, there are also voting rights.
-        For exam purposes: ADRs never have preemptive rights` },
-    { que: "Currency Risk",
-        ans: `in addition to risks of ADRs, currency risk, is the possibility that an investment denominated in one currency(ex: Mexican peso) could decline if the value of that currency declines in its exchange rate with the $USD. Because ADRs represent shares of stock in companies located in foreign countries, currency exchange rates are an important consideration.` },
-    { que: "ADR - Take Note!",
-        ans: `Banks collect dividend payments, convert them into US funds for US owners, and withhold any required foreign tax payments.
-        Owners of ADRs can claim US tax credit for these withholdings.` },
-    { que: "!ADR - Test Topic Alert!",
-        ans: `Exam will want you to know ADRs are issued by domestic branches of US banks, even though they are traded in $USD, they still bear currency risk.` },
-    { que: "Investing in Foreign Markets",
-        ans: `foreign securities offer investors the potential for substantial gains, they bear a variety of risks that are not present with domestic investments. Two broad market classifications of foreign markets(Emerging/Developed)` },
-    { que: "Emerging Markets",
-        ans: `are markets in less-developed countries. Associated with:
-        Low levels of income, measured by country's "Gross Domestic Product(GDP).
-        Low levels of equity capitalization.
-        Questionable market liquidity.
-        Potential restrictions on currency conversion.
-        High volatility.
-        Prospects for economic growth and devleopment.
-        Stabilizing political/social institutions.
-        High taxes and commission costs for foreign investors.
-        Restrictions on foreign ownership and on foreign currency conversion.
-        Lower regulatory standards resulting in a lack of transparency."` },
-    { que: "Frontier Market",
-        ans: `Frontier markets are to emerging markets as emerging markets are to developed ones. Risks are extremely high.` },
-    { que: "Developed Markets",
-        ans: `associated with countries that have highly developed economies with stable political/social institutions. Characterized by:
-        Large levels of equity capitalization.
-        Low commission rates.
-        Few currency conversion restrictions.
-        Highly liquid markets with many brokerage institutions and market makers.
-        Many large capitalization securities.
-        Well-defined regulatory schemes leading to transparency similar to that enjoyed by those investing in US securities.
-        Why add foreign securities to client's portfolio:
-        Expanded potential investment universe leading to greater diversification.
-        Foreign securities sometimes outperform domestic ones.
-        Foreign securities are usually not highly correlated with domestic ones, resulting overall risk of portfolio reduced.` },
-    { que: "Risks of Investing in Foreign Markets",
+    { que: "",
         ans: `` },
-    { que: "Country Risk",
+    { que: "",
         ans: `` },
-    { que: "Exchange  Controls",
+    { que: "",
         ans: `` },
-    { que: "Foreign Countries - Withholding, Fees, Taxes",
-        ans: `foreign countries may withhold portion of dividends and capital gains for taxes. Some impose heavy fees and taxes on securities that investor must bear in addition to generally higher brokerage commissions.` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
+    { que: "",
+        ans: `` },
     { que: "",
         ans: `` },
     { que: "",

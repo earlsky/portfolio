@@ -1531,34 +1531,246 @@ const flashcards = [
         SQA Planning
         SQA Closing
         SQA Activites/Tasks` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
     { que: "📁 Ch13 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Never Trust Input",
+        ans: `covers:
+        Validating Python dependencies with Pipenv
+        Parsing YAML safely with PyYAML
+        Parsing XML safely with defusedxml
+        Preventing DoS attacks, Host head attacks, open redirects, SQL injection
+        ...
+        Attacks have different forms of input: package dependencies, YAML, XML, HTTP, SQL.
+        Goals of these attacks: data corruption, privilege escalation, unauthorized data access.
+        "Input validation" is antidote for these attacks.` },
+    { que: "Package management with Pipenv",
+        ans: `Pipenv installs third-party packages from package repository(ex: PyPI). Package repositories are significant portion of attacks.
+        When Pipenv retrieves package, it hashes inbound package artifact and compares hash values, if hash values match, Pipenv assumes package is unmodified and safe to install.` },
+    { que: "YAML Remote Code Execution",
+        ans: `reminisce remote code-execution attack; attacker embeds malicious code into pickled/serialized Python object, then disguises code as cookie-based HTTP session state into a server. Server then kills itself executing the malicious code with PickleSerializer.
+        This is the same with YAML; same attack, different data format.`},
+    { que: "apply PLP to PyYAML via Loaders (4)",
+        ans: `Loaders are listed starting with least to powerful, also supports more features and carries more risk than previous one:
+        BaseLoader: supports Python objects(ex: strings, lists).
+        SafeLoader: supports Python objects and standard YAML tags.
+        FullLoader: Full YAML language support(the default).
+        UnsafeLoader: Full YAML language support and arbituary function calls.` },
+    { que: "XML Entity Expansion",
+        ans: `"Entity Delaration": allows you to define and name arbitrary data in XML document.
+        "Entitty Reference": a placeholder, allowing to embed entity in XML document.
+        Normally, XML entity contains few characters, imagine if entity contained 5000 characters.` },
+    { que: "Quadratic Blowup Attack",
+        ans: `weaponizes XML entity expansion.
+        if entity was 43 characters long, but entity was referred 10 times. Quadratic blowup reference count orders of magnitude larger.
+        Ex: if entity is 1MB, and referenced 1024 times, document will weigh 1GB.
+        This malicious input is, "memory bomb"` },
+    { que: "Billion Laughs Attack",
+        ans: `aka "exponential blowup expansion attack", similar to quadratic attack, but more effective. This attack exploits XML entity that references other entities.` },
+    { que: "Vulnerable packages to quadratic blowups / billion laughs attacks",
+        ans: `minidom, pulldom, sax, etree`},
+    { que: "Defusing memory bombs",
+        ans: `resist memory bombs with Python library, "defusedxml"` },
+    { que: "Denial of Service(DoS)",
+        ans: `designed to overwhelm system with excessive resource consumption. The resources targeted: memory, storage space, network bandwidth, CPU. Goal for DoS is to deny users access to service by compromising availability of the system.
+        Web server (ex: NGINX), or load-balancing solution (AWS Elastic Load Balancing), resist DoS attacks.` },
+    { que: "Host Header Attacks",
+        ans: `occurs when web application trusts HTTP Host Header in incoming requests and uses it to generate links, redirects, or construct URLs without proper validation. (ex: sending password reset to attacker's email)` },
+    { que: "Open Redirect Attacks",
+        ans: `Attacker wants to steal money: attacker creates impersonation of person's bank and sends email to that person, that person is redirected to attacker's impersonated bank site and victim enters log in credentials. Attacker logs in to bank and steals money.
+        Victim has been phished:
+        Phishing: arrive via email.
+        Smishing: arrive via Short Message Service(SMS).
+        Vishing: arrive via voicemail.` },
+    { que: "SQL Injection",
+        ans: `Your project relay data between user and relational databse, if there's no user input validation, pose exploitation for SQL injection.
+        Attacker use SQL injection by submitting malicious SQL code as input in a vulnerable system, which allows attackers to destroy, modify, gain unauthorized access to data.` },
+    { que: "Raw SQL Queries",
+        ans: `Django model class refers query interface by property named objects, this interface accomodates raw SQL queries with method called raw, which accepts raw SQL and returns set of model instances. Attacker can escalate user's privileges.` },
+    { que: "Database Connection Queries",
+        ans: `Django allows to execute raw SQL queries directly through database connection. Useful if your query doesn't belong to single model class, or want to execute UPDATE, INSERT, DELETE statement.` },
+    { que: "📁 Ch13 SUMMARY Full Stack Python Security: Cryptography, TLS, Attack Resistance - Never Trust Input",
+        ans: `Hashing and data integrity effectively resist package injection attacks.
+        Parsing YAML can be just as dangerous as parsing pickle.
+        XML isn't just ugly; parsing it from untrusted source can bring down a system.
+        You can resist low-level DoS attacks with your web server and load balancer.
+        You can resist high-level DoS attacks with your Web Server Gateway Interface(WSGI) or application server.
+        Open redirect attacks enable phishing scams and man-in-the-middle attacks.
+        Object-relational mapping effectively resists SQL injection.` },
+    { que: "📁 Ch14 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Site Scripting Attacks",
+        ans: `covers:
+        Validating input with forms and models.
+        Escaping special characters with template engine.
+        Restricting browser capabilities with response headers.` },
+    { que: "What is XSS",
+        ans: `attacker injects malicious code into browser of another user. 
+        Malicious code can be in HTML, CSS, JS.
+        Arrive in many vectors: body, URL, or header of HTTP request.` },
+    { que: "XSS subcategories(3)",
+        ans: `Persistent
+        Reflected
+        DOM-Based` },
+    { que: "Persistent XSS",
+        ans: `Systems designed to share user content(ex: forums,blogs,social media sites) are prone to Persistent XSS. Attacker will lure victims to injected content via email/chat.` },
+    { que: "Reflected XSS",
+        ans: `Attacker sends malicious code in URL or HTTP header, and victim clicks on the link. The malicious code is reflected back to the victim's browser and executed.` },
+    { que: "DOM-Based XSS",
+        ans: `Attacker injects malicious code into DOM of victim's browser. The malicious code is executed in the victim's browser without being sent to the server.` },
+    { que: "Input Validation - Django messaging app:",
+        ans: `AuthenticatedMessage: Your existing model class.
+        CreateAuthenticatedMessageView: new view class.
+        authenticatedmessage_form.html: new template.` },
+    { que: "Input sanitization",
+        ans: `attempt to cleanse, or scrub data from untrusted source. Programmer scans input for malicious content, if found, is removed by modifying the input.` },
+    { que: "Escaping Output",
+        ans: `most effective XSS defense. Sites resist XSS by escaping special HTML characters. ex: < (escaped to &lt;), ' (escaped to &apos;), " (escaped to &quot;), & (escaped to &amp;).` },
+    { que: "HTTP Response Headers",
+        ans: `this layer prevent attacks and limit damage. Main idea is restricting browser capabilities.
+        3 angles:
+        Disabling JavaScript access to cookies.
+        Disabling MIME sniffing.
+        Using X-XSS-Protection header.` },
+    { que: "Disable JavaScript access to cookies",
+        ans: `Attackers attempt to access victim's session ID cookie, an XSS goal.` },
+    { que: "Disable MIME type sniffing",
+        ans: `MIME type sniffing is a browser feature that attempts to guess the content type of a resource based on its content. Disabling this feature prevents attackers from tricking browsers into executing malicious content.` },
+    { que: "X-XSS-Protection header",
+        ans: `This header enables the browser's built-in XSS protection mechanism. It can be set to '0' to disable protection, or '1' to enable it.
+        ex: X-XSS-Protection: 1; mode=block` },
+    { que: "📁 SUMMARY Ch14 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Site Scripting Attacks",
+        ans: `XSS comes in 3 flavors: Persistent, Reflected, and DOM-Based.
+        XSS isn't limited to JS; HTML/CSS are weaponized as well.
+        One layer of defense will eventually get you compromised.
+        Validate user input; don't sanitize it.
+        Escaping output is the most important layer of defense.
+        Servers use response headers to protect users by limiting browser capabilities.` },
+    { que: "📁 Validating and Sanitizing user inputs on python projects REST api",
+        ans: `https://dev.to/mrkanthaliya/validating-and-sanitizing-user-inputs-on-python-projects-rest-api-5a4` },
+    { que: "Validation",
+        ans: `User input data validation is important when developing a project. It keeps data clean and prevents malicious data being sent with requests using intercept tools like Burp Suite.
+        Python package helps in validating API request is Schema.
+        ex: from schema import Schema, Optional, And, Use` },
+    { que: "Sanitization",
+        ans: `Once user inputs are validated, data needs to be sanitized with HTML sanitizing library that escapes or strips markup and attributes (Bleach).
+        Adding sanitization helps eliminate XSS attacks.
+        ex: import Bleach
+        bleach.clean('an <script>evil()</script> example')
+        u'an &lt;script&gt;evil()&lt;/script&gt; example'` },
+    { que: "📁 Ch15 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Content Security Policy",
+        ans: `covers:
+        Composing content security policy with fetch, navigation, document directives.
+        Deploying CSP with django-csp.
+        Detecting CSP violations with reporting directives.
+        Resisting XSS and man-in-the-middle attacks.` },
+    { que: "Content Security Policy (CSP)",
+        ans: `standard that servers/browsers adhere to, to send/receive security policies. Policy restricts what browser can do with response. To protect user/server, policy restrictions are designed to prevent/mitigate web attacks.` },
+    { que: "CSP accomodates this balance with 3 directive categories:",
+        ans: `Fetch directives
+        Navigation directives
+        Document directives` },
+    { que: "Fetch Directives",
+        ans: `most commonly used. Limits how browser can fetch resources (scripts, stylesheets, images, etc) which avoid/minimize XSS attacks.` },
+    { que: "default-src directive",
+        ans: `browser falls back to default-src when doesn't receive explicit fetch directive for given content type.` },
+    { que: "script-src directive",
+        ans: `applies to JavaScript resources. Can be set to 'self', 'none', or specific domains.
+        Avoid unsafe-eval source(this permits browser to evaluate and execute JavaScript expression from string)
+        Following are potential attack vectors:
+        eval(string) function
+        new Function(string)
+        window.setTimeout(string,x)
+        window.setInterval(string,x)` },
+    { que: "style-src directive",
+        ans: `controls how browser process CSS.` },
+    { que: "img-src directive",
+        ans: `how browser fetch images. Content Delivery Networks (CDNs) are often useful for sites hosting images and static content from third-party domains.
+        Hosting static content from CDN decrease load times, cut costs, counteract traffic spikes.` },
+    { que: "📁 SUMMARY Ch15 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Content Security Policy",
+        ans: `Policies are composed of directives; directives are composed of sources.
+        Each additional source expands attack surface.
+        An origin is defined by the protocol, host, and port of URL.
+        A nonce source strikes balanace between none and unsafe-inline.
+        CSP is one of the cheapest layers of defense you can invest in.
+        Reporting directives inform you when other defense layers have failed.` },
+    { que: "📁 Ch16 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Site Request Forgery (CSRF)",
+        ans: `covers:
+        Managing session ID usage.
+        Following state management conventions.
+        Validating the Referer header.
+        Sending, receiving, verifying CSRF tokens.` },
+    { que: "Cross-Site Request Forgery (CSRF) attack",
+        ans: `airms to trick victim into sending forged request to vulnerable website. CSRF resistance distinguish a forged request from a legitimate one, via request headers, response headers, cookies, state management conventions; "defense in depth" is not optional.` },
+    { que: "What is request forgery?",
+        ans: `Request forgery is an attack where an attacker tricks a user into submitting a request they didn't intend to submit. The attacker exploits the user's authenticated session to perform unauthorized actions on their behalf.` },
+    { que: "📁 SUMMARY Ch16 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Site Request Forgery (CSRF)",
+        ans: `Secure site can differetiate intentional request from forged request.
+        None and Strict occuput opposite ends of SameSite risk spectrum.
+        Lax is a reasonable trade-off, between the risk of None and Strict.
+        Other programmers, standards bodies, browser vendors, and web frameworks agree: follow proper state management conventions.
+        Don't validate request method in function when you declare it in a class.
+        Simple "Referer" header validation and complex token validation are both effective forms of CSRF resistance.` },
+    { que: "📁 Ch17 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Origin Resource Sharing (CORS)",
+        ans: `covers:
+        Understanding the same-origin policy(SOP).
+        Sending/receiving simple CORS requests.
+        Implementing CORS with django-cors-headers.
+        Sending/receiving preflighted CORS requests.` },
+    { que: "same-origin policy (SOP)",
+        ans: `SOP is a security mechanism that restricts how web pages can make requests to other domains or subdomains. It prevents malicious websites from making unauthorized requests to a user's authenticated session on another domain.` },
+    { que: "CORS",
+        ans: `Cross-Origin Resource Sharing is a mechanism that allows web applications to make requests to resources from different origins (domains, subdomains, ports). It is implemented through HTTP headers that define which origins are allowed to access resources on the server.` },
+    { que: "CORS with django-cors-headers",
+        ans: `django-cors-headers is a Django package that helps implement CORS in Django applications. It provides middleware and settings to configure CORS headers for different origins and request types.` },
+    { que: "📁 SUMMARY Ch17 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Cross-Origin Resource Sharing (CORS)",
+        ans: `The internet would be a very dangerous place without the SOP.
+        CORS can be thought of as a way to relax the SOP.
+        Simple CORS use cases are accommodated by Access-Control-Allow-Origin.
+        The browser precedes a potentially harmful CORS request with a preflight request.
+        Host all shared resources with common URL path prefix.` },
+    { que: "📁 Ch18 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Clickjacking",
+        ans: `covers:
+        Configuring X-Frame-Options headers.
+        Configuring frame-ancestors Content Security Policy(CSP) directive.` },
+    { que: "clickjacking",
+        ans: `Clickjacking is an attack where a malicious website tricks a user into clicking on a hidden or disguised element on another website. This can lead to unauthorized actions being performed on the user's behalf.` },
+    { que: "X-Frame-Options header",
+        ans: `use to resist clickjacking. ` },
+    { que: "Content-Security-Policy header",
+        ans: `supports directive named, "frame-ancestors", a modern solution to preventing clickjacking.` },
+    { que: "📁 SUMMARY Ch18 Full Stack Python Security: Cryptography, TLS, Attack Resistance - Clickjacking",
+        ans: `same-origin policy doesn't apply to clickjacking because the request isn't cross-origin.
+        Cross-site request forgery checks cannot prevent clickjacking because the request isn't cross-site.
+        X-Frame-Options and Content-Security-Policy response headers effectively resist clickjacking.
+        X-Frame Options has been obsoleted by Content-Security-Policy.
+        Subscribe to influencers, news feeds, advisories to keep skills current.` },
+    { que: "📁 CH4: Adding Security Practices within SDLC lifecycle",
+        ans: `1. Devs must be given training on principles, methods, importance of security software programming.
+        2. They can be properly trained to check OWASP(OpenWebApplicationSecurityProject) Top 10 security risks for their web apps.
+        3. Project Managers/Architects must be place importance use of latest tech that are up-to-date.
+        4. Automation: implement automated tests in the project.` },
+    { que: "📁 Software Engineering, Security and Vulnerabilities",
         ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Capability Maturity Model Integration (CMMI)",
+        ans: `defines level of agility/effectiveness of developement solution.
+        Maturity Levels:
+        Level 1: Ad hoc: process is unpredictable, poorly controlled, and reactive.
+        L2: Repeatability: process is characterized for projects and is often reactive.
+        L3: Quantitative: process is characterized for the organization and is proactive.
+        L4: Qualitative: process is highly automated, measured and controlled.
+        L5: Optimized: all of previous level and improved further.` },
+    { que: "📁 Calling Your First API Using Python: Status Codes",
+        ans: `https://realpython.com/python-api/#status-codes` },
+    { que: "Status Code 200",
+        ans: `OK: The request was successful.` },
+    { que: "Status Code 201",
+        ans: `Created: The request was successful and a new resource was created.` },
+    { que: "Status Code 400",
+        ans: `Bad Request: The request is either wrong or missing something.` },
+    { que: "Status Code 401",
+        ans: `Unauthorized: The request requires user authentication or additional permissions.` },
+    { que: "Status Code 404",
+        ans: `Not Found: The requested resource does not exist.` },
+    { que: "Status Code 405",
+        ans: `Method Not Allowed: The endpoint doesn't allow for that specific HTTP method.` },
+    { que: "Status Code 500",
+        ans: `Internal Server Error: The server encountered an error while processing the request, or your request wasn't expected and probably broke something on the server side.` },
     { que: "",
         ans: `` },
     { que: "",
