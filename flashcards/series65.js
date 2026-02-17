@@ -88,7 +88,6 @@ const flashcards = [
         Gain is capital(long term) when held at least one year and sold at least two years after grant, otherwise, ordinary income.
         Difference between option price and fair market value(FMV) on date of exercise is add back for AMT purposes.` },
     { que: "Restricted Securities",
-<<<<<<< HEAD
         ans: `retail investors cannot sell until having held them for certain period of time, generally 6 months.` },
     { que: "Control Stock",
         ans: `stock is held by control person.
@@ -144,7 +143,6 @@ const flashcards = [
     { que: "Country Risk",
         ans: `` },
     { que: "Exchange  Controls",
-=======
         ans: `restricted from immediate resell, must be held for certain period, generally 6 months.` },
     { que: "Control Stock",
         ans: `held by "control person" (corporate director, officer, large stockholder, immediate family of any of preceding residing in same home). Generally referred to as affiliates due to unique status within issuer.` },
