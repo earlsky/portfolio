@@ -169,7 +169,6 @@ const flashcards = [
     { que: "",
         ans: `` },
     { que: "",
->>>>>>> refs/remotes/origin/main
         ans: `` },
     { que: "Foreign Countries - Withholding, Fees, Taxes",
         ans: `foreign countries may withhold portion of dividends and capital gains for taxes. Some impose heavy fees and taxes on securities that investor must bear in addition to generally higher brokerage commissions.` },
