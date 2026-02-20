@@ -127,10 +127,12 @@ const flashcards = [
     { que: `The user submits the following request to an API endpoint that requires a header:
         Which response code will the user most likely be presented with?`, 
         ans: `404 - NOT FOUND` },
-    { que: "", 
-        ans: `` },
-    { que: "", 
-        ans: `` },
+    { que: "Indicates that the server could not find the requested resource. This typically happens when the URL is incorrect or the resource does not exist on the server.", 
+        ans: `404 - NOT FOUND` },
+    { que: "401 v 403", 
+        ans: `Authentication v Authorization
+        401: focuses on invalid/missing authentication credentials.
+        403: focuses on valid authentication but insufficient authorization.` },
     { que: "", 
         ans: `` },
     { que: "", 
