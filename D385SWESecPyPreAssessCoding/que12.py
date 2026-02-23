@@ -46,7 +46,6 @@ def check_numeric_value(wg_int):
 def check_null_string (wg_string):
     
     # check if wg_string is not null return true else return false
-    return wg_string is not None
        
 if __name__ == '__main__':  
     
