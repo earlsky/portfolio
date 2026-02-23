@@ -40,6 +40,7 @@ def check_numeric_value(wg_int):
     
         #return true if numeric value is an integer, else return false.  
         #Hint: use isinstance function
+        return isinstance(wg_int, int)
 
 # verify if the string is null
 
