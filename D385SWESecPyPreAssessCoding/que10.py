@@ -31,10 +31,3 @@ class Limiter:
       # Use the following variables in your expression: time_passed, self.bucket, self.rate, and self.per 
       bucket = # Insert your expression here
       
-      if (bucket > self.rate):
-          self.bucket = self.rate
-      if (bucket < 1):
-          pass
-      else:
-          callback_fn()
-          self.bucket = bucket - 1
