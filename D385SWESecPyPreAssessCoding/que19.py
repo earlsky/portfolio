@@ -33,7 +33,4 @@ if __name__ == '__main__':
     num = int(input())
     
     # create conditional statement for range check here
-    # Start my answer here
-    if num in r: print("The number input is in the range from 1 and 10.")
-    else: print("The number input is not in the range from 1 and 10.")
-    # End my answer here
+    

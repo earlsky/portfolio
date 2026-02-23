@@ -52,8 +52,7 @@ def user(filename, user):
     
 def grant_permission(name_list, filename):
     # FIXME
-    os.chmod(filename, stat.S_IRWXU)
-
+    
     check_permission(filename)
 
 def check_permission(filename):
