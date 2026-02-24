@@ -34,7 +34,7 @@ def hash_password(pwd):
     d = hashlib.sha256(enc_pwd)
     
     # generate binary hash of password string in hexidecimal
-    hash = d.hexdigest()
+    hash = d.digest()
     
     return hash
     

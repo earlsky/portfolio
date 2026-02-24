@@ -17,8 +17,6 @@ from deserialize import deserialize
 from serialize import serialize
 
 def safe_deserialize(key, serialized_data):
-
-    new_key = generate_key(serialized_data)
     
     except Exception as error:
         print('Error:', error)
