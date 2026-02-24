@@ -187,4 +187,87 @@ const flashcards = [
     { que: `An attacker inserts malicious script(generally through input fields or url parameters not properly sanitized) that's executed by other users who visit the site.
         Users are prey to cookie theft, redirection to phishing sites, or webpage manipulation.`, 
         ans: `Cross-Site Scripting (XSS)` },
+    {que: "Python Logging",
+        ans: `logging.error(" The exception that occurred is: " + str(e))` },
+    {que: "Check Null Setting Using Assertions",
+        ans: `def multiply_numbers(x,y):
+        if x is None: 
+            print("x is None")
+            return y
+        elif y is None: 
+            print("y is None")
+            return x
+        else:
+            return x * y` },
+    {que: "Secure Code with Template Class",
+        ans: `t = Template("Hello, my name is $name.")
+        print(t.substitute(name=user.name))` },
+    {que: "Rate Limiting",
+        ans: `if (bucket > self.rate):
+            self.bucket = self.rate
+        if (bucket < 1):
+            pass
+        else:
+            callback_fn()
+            self.bucket = bucket - 1` },
+    {que: "Assertion Statement",
+        ans: `assert Temperature >= 0, "Colder than zero degrees Celsius!"` },
+    {que: "Check Data to Verify Values",
+        ans: `def check_numeric_value(wg_int):
+            return isinstance(wg_int, int)
+        def check_null_string(wg_string):
+            return wg_string is not None` },
+    {que: "Hashing",
+        ans: `d = hashlib.sha3_256(enc_pwd)
+        hash = d.hexdigest()` },
+    {que: "Validate for Deserialization",
+        ans: `new_key = generate_key(serialized_data)
+        try:
+            if key == new_key:
+                return deserialize(serialized_data)
+            else:
+                raise Exception("New key does not match old key"))` },
+    {que: "Verify Data is Valid(Numeric)",
+        ans: `zip_Code_Input = input()
+        zip_check = int(zip_Code_Input)
+        print(f'Your zip code is {zip_Code_Input}.')` },
+    {que: "Verify Data is Valid(Length)",
+        ans: `if (len(password) >= 8):
+            print("Your password is long enough.")
+        else:
+            print("Your password is too short.")` },
+    {que: "Verify Data is Valid(Range)",
+        ans: `if num in r:
+            print("String text may change")
+        else:
+            print("This string text may change")` },
+    {que: "AES Encryption",
+        ans: `encrypted_text = cipher.encrypt(plain_text.encode("utf-8"))
+        return b64encode(encrypted_text).decode("utf-8")
+        V
+        encrypted_plain_text = cipher.encrypt(plain_text.encode("utf-8"))
+        return b64encode(encrypted_plain_text).decode("utf-8")` },
+    {que: "Least Privilege Permission Levels",
+        ans: `if result:
+        os.chmod(filename, stat.S_IRWXU)
+        else:
+            os.chmod(filename, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)` },
+    {que: "Broken Object Level Authorization",
+        ans: `if(GetUserID()==ownerID):
+            print("This is the user data")
+        if(not GetUserID() == ownerID):
+            print( "You are not allowed to view this data")
+        V
+        if(alphaID()==betaID):
+            print("This is the owner data")
+        if(not alphaID() == betaID):
+            print( "You are not allowed to view this data")` },
+    {que: "",
+        ans: `` },
+    {que: "",
+        ans: `` },
+    {que: "",
+        ans: `` },
+    {que: "",
+        ans: `` },
 ];
