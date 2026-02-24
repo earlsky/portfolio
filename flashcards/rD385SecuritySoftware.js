@@ -69,7 +69,7 @@ const flashcards = [
     { que: "What does cross-origin resource sharing (CORS) allow users to do?", 
         ans: `Override same starting policy for specific resources` },
     { que: "Which protocol caches a token after it has been acquired?", 
-        ans: `MSAL` },
+        ans: `MSAL(Microsoft Authentication Library)` },
     { que: "Status Code 200", 
         ans: `OK - Your request was successful` },
     { que: "Status Code 201", 
