@@ -37,7 +37,7 @@ const flashcards = [
     { que: "Access Control Allow Origin client request to (server) www.client.url, what does server send back?", 
         ans: `ACAO client.url` },
     { que: "Which protocol caches a token after it has been acquired?", 
-        ans: `MSAL` },
+        ans: `MSAL(Microsoft Authentication Library)` },
     { que: "📁 https://quizlet.com/939052772/d385-software-security-and-testing-flash-cards/?funnelUUID=b8ba1dcc-461c-4cb6-a620-51c0f011cae3",
         ans: `📁` },
     { que: "⭐️ What is the primary defense against log injection attacks?", 
@@ -112,16 +112,45 @@ const flashcards = [
         ans: `API related errors` },
     { que: "Status code 403 is common when?", 
         ans: `NO HEADER is provided in the GET request` },
-    { que: `A security analyst is reviewing code for improper input validation.
-            Which type of input validation does this code show? **code**`, 
+    { que: `A security analyst is reviewing code for improper input validation:
+        isValidNumber = False
+        while not isValidNumber:
+            try:
+                pickedNumber = int(input("Pick a number between 1 to 10: "))
+                if pickedNumber >= 1 and pickedNumber <= 10:
+                    isValidNumber = True
+                except:
+                    print('You must enter a valid number from 1 to 10')
+                print('You picked the number ' + str(pickedNumber))
+        Which type of input validation does this code show?`, 
         ans: `Type and Range check` },
-    { que: `Consider the following penetration test: **code**
+    { que: `Consider the following penetration test:
+        import requests
+        urls = open("websites.txt", "r")
+        for url in urls:
+            url = url.strip()
+            req = requests.get(url)
+            print(url, 'report')
+        try:
+            transport_security = req.headers['Strict-Transport-Security']
+        except:
+            print('HSTS header not set properly')
         Which security vulnerability is shown?`, 
         ans: `Man-in-the-middle` },
-    { que: `Consider the following assertion statement: **code**
+    { que: `Consider the following assertion statement:
+        def authorizeAdmin(usr):
+            assert isinstance(usr, list) and usr != [], "no user found"
+            assert 'admin' in usr, "No admin found"
+            print("You are granted full access to the application")
+        If __name__ == '__main__':
+            authorizeAdmin(['user1'])
         What should be the response after running the code?`, 
         ans: `AssertionError: no admin found` },
-    { que: `Consider the following API code snippet: **code**
+    { que: `Consider the following API code snippet:
+        import requests
+        url = 'https://website.com/'
+        result = requests.get(url)
+        print(result.content.decode())
         Which status code will the server return?`, 
         ans: `403 - FORBIDDEN` },
     { que: `The user submits the following request to an API endpoint that requires a header:
