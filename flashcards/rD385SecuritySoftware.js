@@ -264,10 +264,4 @@ const flashcards = [
             print( "You are not allowed to view this data")` },
     {que: "",
         ans: `` },
-    {que: "",
-        ans: `` },
-    {que: "",
-        ans: `` },
-    {que: "",
-        ans: `` },
 ];
