@@ -158,10 +158,33 @@ const flashcards = [
         ans: `404 - NOT FOUND` },
     { que: "Indicates that the server could not find the requested resource. This typically happens when the URL is incorrect or the resource does not exist on the server.", 
         ans: `404 - NOT FOUND` },
+    { que: `Indicates that the server could not understand or process the request due to invalid syntax or bad formatting.
+        Happens due to:
+        Malformed URL, missing required parameters, incorrect data`, 
+        ans: `400 - BAD REQUEST` },
+    { que: `Indicates that the request lacks valid authentication credentials and often occurs when an API requires authentication.
+        Happens due to:
+        Missing/Invalid/Expired API key, token, session, credentials`, 
+        ans: `401 - UNAUTHORIZED` },
+    { que: `Indicates client has correct credentials but lacks permissions to access requested resource.
+        Happens due to:
+        Insufficient permissions: user role / access restrictions
+        Headers/cookies provide data which is validated for requests.`, 
+        ans: `403 - FORBIDDEN` },
+    { que: "Indicates that the server could not find requested resource. Happens when URL is incorrect or resource does not exist on the server.", 
+        ans: `404 - NOT FOUND` },
     { que: "401 v 403", 
         ans: `Authentication v Authorization
         401: focuses on invalid/missing authentication credentials.
         403: focuses on valid authentication but insufficient authorization.` },
-    { que: "", 
-        ans: `` },
+    { que: "Allows or restricts web applications running at one origin(domain) to make requests for resources hosted on a different origin.", 
+        ans: `CORS - Cross-Origin Resource Sharing` },
+    { que: "An attempt to overload a website/network, degrading performance, or making completely inacessible.", 
+        ans: `Denial of Service (DoS)` },
+    { que: `An attacker is able to insert malicious code into program, which is then executed by the system.
+        Potentially leading to unauthorized access, data breaches, or system compromise.`, 
+        ans: `Code Injection` },
+    { que: `An attacker inserts malicious script(generally through input fields or url parameters not properly sanitized) that's executed by other users who visit the site.
+        Users are prey to cookie theft, redirection to phishing sites, or webpage manipulation.`, 
+        ans: `Cross-Site Scripting (XSS)` },
 ];
