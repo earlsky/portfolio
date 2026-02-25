@@ -154,6 +154,15 @@ const flashcards = [
         Which status code will the server return?`, 
         ans: `403 - FORBIDDEN` },
     { que: `The user submits the following request to an API endpoint that requires a header:
+        import requests
+        url = 'https://api.github.com/invalid'
+        try:
+            request_response = requests.get(url)
+            request_response.raise_for_status()
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            print('Success')
         Which response code will the user most likely be presented with?`, 
         ans: `404 - NOT FOUND` },
     { que: "Indicates that the server could not find the requested resource. This typically happens when the URL is incorrect or the resource does not exist on the server.", 
