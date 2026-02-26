@@ -235,7 +235,7 @@ const flashcards = [
             if key == new_key:
                 return deserialize(serialized_data)
             else:
-                raise Exception("New key does not match old key"))` },
+                raise Exception("New key does not match old key")` },
     {que: "Verify Data is Valid(Numeric)",
         ans: `zip_Code_Input = input()
         zip_check = int(zip_Code_Input)
