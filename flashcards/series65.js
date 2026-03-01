@@ -162,24 +162,44 @@ const flashcards = [
         Indenture states the issuer's obligation to pay the investor a specific rate of interest for the use of the funds as well as many collateral pledged as security for the loan and all other pertinent details.` },
     { que: "'long-term debt' financing",
         ans: `aka debt capital, is money borrowed for minimum of 5 years, although more frequently length of time is 10-30 years.` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Structural Components of Debt Securities",
+        ans: `Negotiability
+        Specified Maturity Date
+        Payment of Interest
+        Accrued Interest: most bonds trade and "interest", meaning buyer pays sella bond's market price plus any accruied interest since the last interest payment.` },
+    { que: "Standard & Poor's Bond Ratings (pg40)",
+        ans: `AAA - highest quality
+        AA - high quality
+        A - average quality
+        BBB - good quality
+        BB - speculative grade
+        B - low grade
+        CCC - very low grade
+        CC - very low grade
+        C - lowest grade
+        D - default` },
+    { que: "Moody's Bond Ratings (pg40)",
+        ans: `Aaa - highest quality
+        Aa - high quality
+        A - average quality
+        Baa - good quality
+        Ba - speculative grade
+        B - low grade
+        Caa - very low grade
+        Ca - very low grade
+        C - lowest grade` },
+    { que: "Investment-Grade Debt",
+        ans: `bonds rated in top 4 categories (BBB / Baa and higher) are investment grade.` },
+    { que: "Nominal Yield",
+        ans: `interest stated on the face of the bond` },
+    { que: "Current Yield(CY)",
+        ans: `Return ÷ Investment` },
+    { que: "Yield to Maturity(YTM) or Basis",
+        ans: `This measurement takes into account the gain/loss the investor will have when bonds are redeemed at maturity.` },
+    { que: "Market-Driven Yield",
+        ans: `referred as YTM, because it reflects the internal rate of return(IRR) from bond investment.` },
+    { que: "Yield to Call(YTC)",
+        ans: `rate of return the bond provides from the purchase date to the call date and price. This calculation generates lower return than YTM and should be considered by investors when evaluating callable bonds trading at a premium.` },
     { que: "",
         ans: `` },
     { que: "",
