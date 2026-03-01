@@ -139,27 +139,29 @@ const flashcards = [
         Foreign securities sometimes outperform domestic ones.
         Foreign securities are usually not highly correlated with domestic ones, resulting overall risk of portfolio reduced.` },
     { que: "Risks of Investing in Foreign Markets",
-        ans: `` },
+        ans: `Country risk
+        Exchange Controls
+        Currency Risk
+        WIthholding taxes and fees` },
     { que: "Country Risk",
-        ans: `` },
+        ans: `composite of all risks of investing in a particular country. These may include political risks (ex: revolutions / military coups), structural risks (ex: confiscatory policies toward profits, capital gains, dividends).
+        Economic policies, interest rates, inflation are elements of risk of investing in emerging countries.` },
     { que: "Exchange  Controls",
-        ans: `restricted from immediate resell, must be held for certain period, generally 6 months.` },
-    { que: "Control Stock",
-        ans: `held by "control person" (corporate director, officer, large stockholder, immediate family of any of preceding residing in same home). Generally referred to as affiliates due to unique status within issuer.` },
-    { que: "Reporting Restricted/Control Stock",
-        ans: `found in SEC Rule 144 of Securities Act of 1933. To sell stock, bmust file Form 144.` },
-    { que: "",
-        ans: `` },
+        ans: `Foreign investors can also be subject to restrictions on currency conversion/movement.` },
     { que: "Foreign Countries - Withholding, Fees, Taxes",
         ans: `foreign countries may withhold portion of dividends and capital gains for taxes. Some impose heavy fees and taxes on securities that investor must bear in addition to generally higher brokerage commissions.` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "Bond",
+        ans: `the issuer's indebtedness.
+        Investor purchasing a bond is lending the issuer money for a set period of time at fixed annual interest rate.
+        Rate is referred to as "coupon" rate because, in the past, bonds were issued with detachable coupons that were presented for collection of the interest.` },
+    { que: "Municipal Bonds",
+        ans: `Issued from state/local political entities.` },
+    { que: "Bond's 'Indenture'",
+        ans: `aka "deed of trust", is a document that the terms of the loan is expressed.
+        It's the issuer's obligation to pay back specific amount of money on specific date.
+        Indenture states the issuer's obligation to pay the investor a specific rate of interest for the use of the funds as well as many collateral pledged as security for the loan and all other pertinent details.` },
+    { que: "'long-term debt' financing",
+        ans: `aka debt capital, is money borrowed for minimum of 5 years, although more frequently length of time is 10-30 years.` },
     { que: "",
         ans: `` },
     { que: "",

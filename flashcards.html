@@ -142,9 +142,9 @@
     <!-- Dropdown menu to select deck: -->
     <select id="deckSelect" onchange="loadDeck(this.value)">
       <option value="">-- Choose a Deck --</option>
-      <option value="D385SoftwareSecTest">D385 Software Security</option>
-      <option value="rD385SecuritySoftware">rD385SWSec</option>
-      <option value="series65">Series 65</option>
+      <!-- <option value="D385SoftwareSecTest">D385 Software Security</option> -->
+      <!-- <option value="rD385SecuritySoftware">rD385SWSec</option> -->
+      <option value="series65" selected>Series 65</option>
     </select>
 
     <div class="card" onclick="flipCard()">
@@ -389,6 +389,14 @@ function loadDeck(deckName) {
 }
 </script>
 
+<script>
+  // Auto-load default deck on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    const deckSelect = document.getElementById("deckSelect");
+    deckSelect.value = "series65";
+    loadDeck("series65");
+  });
+</script>
 
 </body>
 </html>
