@@ -200,10 +200,14 @@ const flashcards = [
         ans: `referred as YTM, because it reflects the internal rate of return(IRR) from bond investment.` },
     { que: "Yield to Call(YTC)",
         ans: `rate of return the bond provides from the purchase date to the call date and price. This calculation generates lower return than YTM and should be considered by investors when evaluating callable bonds trading at a premium.` },
-    { que: "",
-        ans: `` },
-    { que: "",
-        ans: `` },
+    { que: "US Treasury Bills (T-Bills)",
+        ans: `direct, short-term debt obligations of the US government.
+        Issued every week using bidding process. T-bills have maturities of 4, 13, 26, and 52 weeks.` },
+    { que: "T-bills 🔑 Key Points",
+        ans: `T-bills are always issued/traded at discount.
+        T-bills are the only Treasury security issued without a stated interest rate.
+        T-bills are highly liquid.
+        13-week (91 day) T-bills are used in market analysis as stereotypical "risk-free" investment, especially in computations that refer to "risk-free" rate.` },
     { que: "",
         ans: `` },
     { que: "",
