@@ -1,0 +1,1032 @@
+<!-- Master Prompt — Earnings Briefing Style
+
+Create a 10–15 min retail investor earnings briefing for [COMPANY] (NYSE/NASDAQ: [TICKER]) covering [QUARTER & YEAR] results released today [DATE]. Build as a single self-contained HTML file using Chart.js from cdnjs.
+Typography: Bebas Neue for the masthead H1 (large, stacked, wide letter-spacing). DM Serif Display for section headings and KPI values. JetBrains Mono for all labels, metadata, timestamps, table headers, and chart axes. DM Sans weight 300 for body copy. Import all from Google Fonts.
+Theme — Dark Mode: Background #060D1A, card surfaces #0E1E35, raised surfaces #122040. Accent colors: teal #26C6DA for section number labels, blue #42A5F5 for heading text, gold #FFB300 for highlights and milestones, green #00C853 for beats/positive, red #FF5252 for misses/negative. All borders #1A2E48. Body text #E8EDF5, secondary #A8B8CC, muted #5A7290.
+Structure — in this order:
+
+Masthead — dark navy with radial gradient glow, Bebas Neue giant H1, teal metadata line, colored badge row (green = beats, gold = milestones, blue = guidance, red = misses)
+Milestone banner (if warranted) — gold left-border, dark raised card with icon + headline
+KPI strip — 6-card grid, 1px gap border between cards, DM Serif values, mono labels, green change arrows
+Transcript — timestamped sections at 00:00, 01:00, 02:30 etc. intervals. Blue italic blockquotes with executive quotes and cite attribution. Teal callout boxes for key investor insights. Max width 760px.
+Table 1 — last 5 quarters: EPS estimate vs actual, revenue estimate vs actual, surprise delta, deliveries/key metric, stock reaction. Teal column headers on near-black header row. Alternating dark row shading. Current quarter highlighted blue-tint with left accent bar. Green/red beat/miss cells.
+Table 2 — segment/product breakdown per quarter (revenue by division, margins, operating P&L, or equivalent)
+6 Chart.js charts in this layout: two full-width bars (EPS vs estimate, Revenue vs estimate), then 2×2 grid (segment mix, key growth metric, profit/loss bar, YoY growth rate line). Dark grid #1A2E48, mono axis labels #5A7290, tooltips dark navy with border.
+Stock performance chart — interactive tabs for 1W, 3M, 6M, 1Y. Stats bar showing start, current, period high/low, 52wk high/low, market cap, analyst target. Line color green if period positive, red if negative. Annotated event dots with legend strip. Populate with real anchored price data.
+Bull case vs risks — two-column dark card layout, green/red arrow bullets
+Guidance snapshot — 6-card grid, blue DM Serif values
+Footer — dark navy, mono font, disclaimer, conversion rate if non-USD source data
+
+All figures in USD. If source data is in another currency (RMB, EUR, KRW, etc.) convert at current rate and note the rate in the footer footnote.
+Data requirements: Use real reported figures. For estimates, use analyst consensus (StreetAccount / LSEG). For stock price data, anchor to known real prices (52wk high/low, recent closes) and interpolate realistically between them. Note the earnings day reaction in the masthead badge. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oracle Q3 FY2026 Earnings Briefing</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --red: #C0392B;
+    --red-light: #E74C3C;
+    --cream: #F5F0E8;
+    --ink: #1A1A1A;
+    --mid: #4A4A4A;
+    --subtle: #8A8A8A;
+    --border: #D8D0C4;
+    --green: #1A6B3C;
+    --amber: #B8860B;
+    --rule: 2px solid var(--ink);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px 60px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red) 0%, var(--red-light) 50%, var(--red) 100%);
+  }
+  .masthead-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 14px;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .masthead h1 span { color: var(--red-light); }
+  .masthead-sub {
+    font-size: 15px;
+    color: #A8A8A8;
+    max-width: 600px;
+  }
+  .masthead-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2px;
+    padding: 6px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .badge.beat { border-color: #2ECC71; color: #2ECC71; }
+  .badge.raise { border-color: #F39C12; color: #F39C12; }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 48px 0 24px;
+    border-bottom: var(--rule);
+    margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--red);
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  /* ── STAT CARDS ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .stat-card {
+    background: var(--cream);
+    padding: 24px 20px;
+  }
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-change {
+    font-size: 13px;
+    margin-top: 6px;
+    color: var(--green);
+    font-weight: 500;
+  }
+  .stat-vs {
+    font-size: 12px;
+    color: var(--subtle);
+    margin-top: 2px;
+  }
+
+  /* ── TRANSCRIPT ── */
+  .transcript {
+    max-width: 760px;
+    margin-bottom: 64px;
+  }
+  .transcript-block {
+    margin-bottom: 28px;
+  }
+  .t-timestamp {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .t-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .transcript p {
+    font-size: 15px;
+    color: var(--mid);
+    margin-bottom: 14px;
+    line-height: 1.8;
+  }
+  .transcript blockquote {
+    border-left: 3px solid var(--red);
+    padding: 10px 20px;
+    margin: 18px 0;
+    background: rgba(192,57,43,0.04);
+  }
+  .transcript blockquote p {
+    font-style: italic;
+    font-size: 14.5px;
+    margin: 0;
+    color: var(--ink);
+  }
+  .transcript blockquote cite {
+    display: block;
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--subtle);
+    margin-top: 6px;
+    font-style: normal;
+  }
+
+  .highlight-box {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-left: 4px solid var(--red);
+  }
+  .highlight-box p {
+    color: #D8D0C4;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.7;
+  }
+  .highlight-box strong { color: #fff; }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  thead tr {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: rgba(0,0,0,0.025); }
+  tbody tr.current-q {
+    background: rgba(192,57,43,0.06) !important;
+    border-left: 3px solid var(--red);
+  }
+  td {
+    padding: 11px 16px;
+    white-space: nowrap;
+    color: var(--mid);
+  }
+  td:first-child {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .beat-cell { color: var(--green); font-weight: 600; }
+  .miss-cell { color: var(--red); font-weight: 600; }
+  .neutral-cell { color: var(--amber); font-weight: 600; }
+  .arrow-up::before { content: '▲ '; font-size: 10px; }
+  .arrow-down::before { content: '▼ '; font-size: 10px; }
+
+  /* ── CHARTS ── */
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 720px) { .charts-grid { grid-template-columns: 1fr; } }
+  .chart-box {
+    border: 1px solid var(--border);
+    padding: 24px;
+    background: #fff;
+  }
+  .chart-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 16px;
+  }
+  .chart-box canvas { max-height: 280px; }
+
+  .chart-box-wide {
+    border: 1px solid var(--border);
+    padding: 24px;
+    background: #fff;
+    margin-bottom: 32px;
+  }
+  .chart-box-wide canvas { max-height: 300px; }
+
+  /* ── RISKS / OUTLOOK ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+  .col-box {
+    border: 1px solid var(--border);
+    padding: 24px;
+  }
+  .col-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .col-box ul { list-style: none; }
+  .col-box ul li {
+    font-size: 13.5px;
+    color: var(--mid);
+    padding: 6px 0;
+    border-bottom: 1px dotted var(--border);
+    padding-left: 18px;
+    position: relative;
+  }
+  .col-box ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-size: 11px;
+    top: 7px;
+  }
+  .col-box.risk ul li::before { color: var(--red); }
+  .col-box.bull ul li::before { color: var(--green); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--subtle);
+    padding: 32px 60px;
+    margin-top: 64px;
+    font-size: 11px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.5px;
+    line-height: 1.9;
+  }
+  footer strong { color: var(--cream); }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  @media (max-width: 600px) {
+    .masthead, .container { padding-left: 20px; padding-right: 20px; }
+    footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-meta">Oracle Corporation (NYSE: ORCL) · Fiscal Q3 2026 · March 10, 2026</div>
+  <h1>Earnings<br><span>Briefing</span></h1>
+  <div class="masthead-sub">A plain-English breakdown of Oracle's Q3 FY2026 results for retail investors. Revenue beat. EPS beat. FY2027 guidance raised.</div>
+  <div class="masthead-badges">
+    <div class="badge beat">✓ EPS Beat: $1.79 vs $1.70 est.</div>
+    <div class="badge beat">✓ Revenue Beat: $17.2B vs $16.9B est.</div>
+    <div class="badge raise">↑ FY2027 Guidance Raised to $90B</div>
+    <div class="badge">Stock +8.5% After-Hours</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- KPI STRIP -->
+  <div style="padding-top: 40px;">
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total Revenue</div>
+        <div class="stat-value">$17.2B</div>
+        <div class="stat-change arrow-up">+22% YoY</div>
+        <div class="stat-vs">Est. $16.9B</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Non-GAAP EPS</div>
+        <div class="stat-value">$1.79</div>
+        <div class="stat-change arrow-up">+21% YoY</div>
+        <div class="stat-vs">Est. $1.70</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Cloud Revenue</div>
+        <div class="stat-value">$8.9B</div>
+        <div class="stat-change arrow-up">+44% YoY</div>
+        <div class="stat-vs">52% of total revenue</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Cloud Infra (IaaS)</div>
+        <div class="stat-value">$4.9B</div>
+        <div class="stat-change arrow-up">+84% YoY</div>
+        <div class="stat-vs">Accel. from +68% last Q</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">RPO Backlog</div>
+        <div class="stat-value">$553B</div>
+        <div class="stat-change arrow-up">+325% YoY</div>
+        <div class="stat-vs">+$29B from last quarter</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Op. Cash Flow (LTM)</div>
+        <div class="stat-value">$23.5B</div>
+        <div class="stat-change arrow-up">+13% YoY</div>
+        <div class="stat-vs">Last twelve months</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TRANSCRIPT ===== -->
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">10-Minute Investor Briefing — Transcript</h2>
+  </div>
+
+  <div class="transcript">
+
+    <div class="transcript-block">
+      <span class="t-timestamp">00:00 — Opening</span>
+      <div class="t-heading">Welcome & What This Quarter Means</div>
+      <p>Welcome to this retail investor briefing on Oracle's fiscal third quarter 2026 results, released today — March 10, 2026. If you own Oracle stock, are thinking about buying it, or simply want to understand what's happening in the cloud and AI infrastructure space, this transcript is for you.</p>
+      <p>The short version: Oracle had an exceptional quarter. Revenue and earnings both beat analyst expectations, cloud growth actually accelerated compared to last quarter, and management raised its long-term revenue guidance. The stock responded by jumping roughly 8.5% in after-hours trading. Let's break down why.</p>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">01:00 — Top Line Results</span>
+      <div class="t-heading">Revenue & Earnings — Both Beat Expectations</div>
+      <p>Oracle reported total quarterly revenue of <strong>$17.2 billion</strong>, up 22% from the same quarter last year. Wall Street had expected around $16.9 billion, so Oracle came in roughly $300 million above expectations — a solid beat.</p>
+      <p>On earnings per share, Oracle reported non-GAAP EPS of <strong>$1.79</strong>, beating the analyst consensus of $1.70. On a GAAP basis — which includes all accounting charges — EPS was $1.27, also up 24% year-over-year.</p>
+      <p>What makes this quarter historically significant is that it marks the first time in over 15 years where both total revenue growth and earnings-per-share growth simultaneously came in at 20% or more. That's a meaningful milestone — it signals the company isn't just growing fast at the expense of profits. Both sides of the ledger are accelerating together.</p>
+      <blockquote>
+        <p>"Q3 fiscal 2026 was an exceptional quarter with financial results that exceeded expectations. This Q3 was the first quarter in over 15 years where organic total revenue and non-GAAP earnings per share both grew at 20% or more in USD."</p>
+        <cite>— Oracle Press Release, March 10, 2026</cite>
+      </blockquote>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">02:30 — Cloud Breakdown</span>
+      <div class="t-heading">Cloud Is Now Majority of Oracle's Business</div>
+      <p>The most important driver of Oracle's growth is its cloud business, and this quarter cloud revenue hit <strong>$8.9 billion</strong> — that's 44% growth year-over-year and now represents <strong>52% of Oracle's total revenue</strong>. For the first time, cloud is officially more than half of what Oracle sells.</p>
+      <p>Within cloud, there are two main segments. The first is <strong>Software as a Service (SaaS)</strong> — these are cloud applications like Oracle's Fusion ERP, NetSuite, and HR software. SaaS brought in roughly $4 billion this quarter, growing around 10% year-over-year. Solid, but not the exciting part.</p>
+      <p>The exciting part is <strong>Infrastructure as a Service, or IaaS</strong> — Oracle Cloud Infrastructure, known as OCI. This is the business where Oracle rents computing power, particularly Nvidia GPUs, to AI companies and enterprises. IaaS revenue hit <strong>$4.9 billion</strong>, growing an astonishing <strong>84% year-over-year</strong>. Even more importantly, that's an acceleration from the 68% growth rate Oracle posted last quarter. Wall Street was worried growth might be peaking. Instead, it sped up.</p>
+      <div class="highlight-box">
+        <p><strong>Why does IaaS matter so much?</strong> Every major AI company — including OpenAI, xAI (Elon Musk's AI startup), Meta, Nvidia, and AMD — needs enormous computing power to train and run AI models. Oracle's data centers are packed with Nvidia GPUs, and these companies are paying Oracle billions to use them. AI infrastructure revenue alone grew <strong>243% year-over-year</strong> this quarter.</p>
+      </div>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">04:00 — The RPO Story</span>
+      <div class="t-heading">The $553 Billion Backlog — Oracle's Biggest Asset</div>
+      <p>If there's one number that tells the story of Oracle's future, it's the <strong>Remaining Performance Obligations</strong>, or RPO. Think of this as Oracle's order backlog — contracts already signed but not yet billed as revenue. Oracle's RPO ended the quarter at <strong>$553 billion</strong>.</p>
+      <p>To put that in perspective: $553 billion is more than 8 years' worth of Oracle's current annual revenue. It grew <strong>325% year-over-year</strong> — up from $130 billion just one year ago. It also grew $29 billion just since last quarter.</p>
+      <p>What's driving this enormous backlog? Mostly large-scale AI contracts. Oracle has signed massive multi-year deals to provide cloud infrastructure to the biggest names in AI. The company also made a specific point to reassure investors: most of these contracts don't require Oracle to raise additional capital, because customers either prepay for the computing capacity, or they supply their own GPUs and ask Oracle to run the data centers.</p>
+      <p>Multi-cloud database revenue also had a standout quarter. Oracle's database software — which now runs inside Amazon AWS, Microsoft Azure, and Google Cloud data centers — grew <strong>531% year-over-year</strong>, according to Co-CEO Clay Magouyrk on the earnings call. Oracle is now live in 33 Microsoft regions, 14 Google regions, and expanded from just 2 to 8 Amazon regions during this quarter alone.</p>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">05:30 — Notable Deals & Partnerships</span>
+      <div class="t-heading">Key Customer Wins & Partnerships This Quarter</div>
+      <p>Oracle highlighted a number of major customer wins and partnerships during the quarter. On the enterprise side, new or expanding deals include <strong>Air France-KLM, Lockheed Martin, SoftBank, and Microsoft's Activision Blizzard</strong> video game division migrating workloads to Oracle Cloud.</p>
+      <p>On the AI infrastructure side, the Abilene, Texas data center project — a massive facility Oracle is building for OpenAI — saw two buildings come fully operational this quarter, with the rest of the campus on track. Oracle pushed back firmly against media reports that it had dropped plans to expand the site, calling those reports "incorrect." The OpenAI relationship remains one of Oracle's most strategically important contracts.</p>
+      <p>Oracle also confirmed it has secured a <strong>15% stake in TikTok US</strong> as part of its strategic investments, adding another high-profile name to its ecosystem.</p>
+      <p>Larry Ellison, Oracle's founder and CTO, spoke on the call about the company's ambitions in AI-driven software:</p>
+      <blockquote>
+        <p>"Thank God we have these coding tools now that allow us to build a comprehensive set of software, agent-based software, to implement, to automate a complete ecosystem like healthcare or financial services. That's what we're doing at Oracle. That's why we think we're a disruptor."</p>
+        <cite>— Larry Ellison, Oracle Co-Founder & CTO, Q3 FY2026 Earnings Call</cite>
+      </blockquote>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">07:00 — Guidance & Outlook</span>
+      <div class="t-heading">Oracle Raises Its Long-Term Targets</div>
+      <p>Oracle provided strong forward guidance. For next quarter — Q4 FY2026 — Oracle expects total revenue to grow between 19–21% in USD terms, and cloud revenue to grow between 44–48%. Non-GAAP EPS for Q4 is projected at <strong>$1.99</strong>.</p>
+      <p>For the full fiscal year 2026, Oracle reaffirmed its revenue target of <strong>$67 billion</strong> and confirmed it expects capital expenditures of $50 billion — a massive investment in data center expansion. To fund this, Oracle raised <strong>$30 billion</strong> this quarter through investment-grade bonds and other securities, and the offering was reportedly oversubscribed (meaning investors wanted more than Oracle was selling).</p>
+      <p>Most notably, Oracle raised its <strong>fiscal year 2027 revenue guidance to $90 billion</strong>, up from the previous $89 billion target. Wall Street had only expected around $86.6 billion, so this guidance raise significantly exceeded consensus. If Oracle hits $90 billion in FY2027, that would represent roughly a 34% increase from FY2026's $67 billion target.</p>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">08:30 — The Stock Picture</span>
+      <div class="t-heading">Context: Oracle's Battered Stock vs. Its Growing Business</div>
+      <p>Oracle's stock closed today at around $151, down roughly 23% year-to-date and off more than 50% from its September 2025 peak of $344. That decline has largely been driven by investor concerns about Oracle's heavy debt load from building data centers, free cash flow that has turned negative (Oracle spent $13 billion more in capital than it generated in the last 12 months), and fears that low-margin GPU rental contracts are diluting the profitability Oracle used to enjoy from high-margin software licenses.</p>
+      <p>Tonight's results didn't erase those concerns entirely — restructuring charges doubled year-over-year to $153 million, and the legacy software license business continues to fade. But the market's after-hours reaction of +8.5% suggests investors are choosing to focus on the acceleration in cloud, the beat on both headline metrics, and the raised guidance.</p>
+      <p>For context: the average analyst price target on Oracle is around $253, implying significant upside from today's levels if the cloud growth story remains intact.</p>
+    </div>
+
+    <div class="transcript-block">
+      <span class="t-timestamp">09:30 — Summary & Key Takeaways</span>
+      <div class="t-heading">What Retail Investors Should Remember</div>
+      <p>Let's close with the four things worth keeping in mind as a retail investor after tonight's results.</p>
+      <p><strong>First</strong>, Oracle's cloud and AI infrastructure business is genuinely accelerating — not slowing down. The 84% IaaS growth rate this quarter was faster than last quarter, and the company's backlog of $553 billion gives it strong revenue visibility for years.</p>
+      <p><strong>Second</strong>, Oracle is spending enormous amounts of money to build out data centers — $50 billion in capex for this fiscal year alone. This is a bet on AI infrastructure demand being real and durable. It works if AI demand keeps growing; it's a problem if demand softens.</p>
+      <p><strong>Third</strong>, the multi-cloud database strategy is a genuine competitive differentiator. Running Oracle's database inside AWS, Azure, and Google Cloud — and growing 531% in that segment — shows Oracle is no longer siloed in its own cloud. It's threading itself into every major cloud.</p>
+      <p><strong>Fourth</strong>, the stock is still down over 50% from its peak. The business is growing fast, but the question of whether free cash flow can return to strongly positive territory — and when — remains open. Tonight's results don't fully answer that, but they do show momentum in the right direction.</p>
+      <p>Thank you for listening. The full earnings data tables and charts follow below.</p>
+    </div>
+
+  </div>
+
+  <!-- ===== EARNINGS TABLE ===== -->
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Last 5 Quarters — EPS & Revenue vs. Estimates</h2>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th>Date</th>
+          <th>Rev. Estimate</th>
+          <th>Rev. Actual</th>
+          <th>Rev. Surprise</th>
+          <th>EPS Estimate</th>
+          <th>EPS Actual</th>
+          <th>EPS Surprise</th>
+          <th>Stock React.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Q3 FY2025</td>
+          <td>Mar 10, 2025</td>
+          <td>$13.89B</td>
+          <td>$14.13B</td>
+          <td class="beat-cell arrow-up">+$0.24B</td>
+          <td>$1.41</td>
+          <td>$1.47</td>
+          <td class="beat-cell arrow-up">+$0.06</td>
+          <td>+4.9%</td>
+        </tr>
+        <tr>
+          <td>Q4 FY2025</td>
+          <td>Jun 10, 2025</td>
+          <td>$15.59B</td>
+          <td>$15.90B</td>
+          <td class="beat-cell arrow-up">+$0.31B</td>
+          <td>$1.63</td>
+          <td>$1.70</td>
+          <td class="beat-cell arrow-up">+$0.07</td>
+          <td>+5.2%</td>
+        </tr>
+        <tr>
+          <td>Q1 FY2026</td>
+          <td>Sep 9, 2025</td>
+          <td>$15.05B</td>
+          <td>$14.93B</td>
+          <td class="miss-cell arrow-down">-$0.12B</td>
+          <td>$1.49</td>
+          <td>$1.47</td>
+          <td class="neutral-cell">~In line</td>
+          <td class="beat-cell">+35.9%*</td>
+        </tr>
+        <tr>
+          <td>Q2 FY2026</td>
+          <td>Dec 10, 2025</td>
+          <td>$16.15B</td>
+          <td>$16.06B</td>
+          <td class="miss-cell arrow-down">-$0.09B</td>
+          <td>$1.64</td>
+          <td>$2.26</td>
+          <td class="beat-cell arrow-up">+$0.62†</td>
+          <td class="miss-cell">-10.8%‡</td>
+        </tr>
+        <tr class="current-q">
+          <td>Q3 FY2026 ★</td>
+          <td>Mar 10, 2026</td>
+          <td>$16.90B</td>
+          <td>$17.19B</td>
+          <td class="beat-cell arrow-up">+$0.29B</td>
+          <td>$1.70</td>
+          <td>$1.79</td>
+          <td class="beat-cell arrow-up">+$0.09</td>
+          <td class="beat-cell">+8.5% AH</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px; color:var(--subtle); margin-top:-36px; margin-bottom:48px; font-family:'IBM Plex Mono', monospace;">
+    * Q1 FY2026 stock surge driven primarily by RPO jumping 359% to $455B despite slight revenue miss. 
+    † Q2 FY2026 EPS inflated by ~$0.93 one-time gain from sale of Ampere stake. Core non-GAAP beat was smaller.
+    ‡ Q2 stock fell despite EPS beat due to $50B capex guidance raise and free cash flow concerns.
+  </p>
+
+  <!-- ===== REVENUE DETAIL TABLE ===== -->
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Revenue Breakdown by Segment — 5 Quarters</h2>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th>Total Revenue</th>
+          <th>Total Cloud</th>
+          <th>IaaS (Cloud Infra)</th>
+          <th>SaaS (Cloud Apps)</th>
+          <th>Software Rev.</th>
+          <th>IaaS Growth YoY</th>
+          <th>RPO Backlog</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Q3 FY2025</td>
+          <td>$14.13B</td>
+          <td>$6.2B</td>
+          <td>$2.7B</td>
+          <td>$3.6B</td>
+          <td>$6.1B</td>
+          <td>+49%</td>
+          <td>$130B</td>
+        </tr>
+        <tr>
+          <td>Q4 FY2025</td>
+          <td>$15.90B</td>
+          <td>$7.0B</td>
+          <td>$3.2B</td>
+          <td>$3.8B</td>
+          <td>$6.2B</td>
+          <td>+52%</td>
+          <td>$138B</td>
+        </tr>
+        <tr>
+          <td>Q1 FY2026</td>
+          <td>$14.93B</td>
+          <td>$7.2B</td>
+          <td>$3.3B</td>
+          <td>$3.8B</td>
+          <td>$5.7B</td>
+          <td>+55%</td>
+          <td>$455B</td>
+        </tr>
+        <tr>
+          <td>Q2 FY2026</td>
+          <td>$16.06B</td>
+          <td>$8.0B</td>
+          <td>$4.1B</td>
+          <td>$3.9B</td>
+          <td>$5.9B</td>
+          <td>+68%</td>
+          <td>$523B</td>
+        </tr>
+        <tr class="current-q">
+          <td>Q3 FY2026 ★</td>
+          <td>$17.19B</td>
+          <td>$8.9B</td>
+          <td>$4.9B</td>
+          <td>$4.0B</td>
+          <td>$6.1B</td>
+          <td class="beat-cell">+84%</td>
+          <td class="beat-cell">$553B</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== CHARTS ===== -->
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Visual Data — 5-Quarter Trends</h2>
+  </div>
+
+  <!-- Wide EPS chart -->
+  <div class="chart-box-wide">
+    <div class="chart-title">Non-GAAP EPS — Actual vs. Estimate (5 Quarters)</div>
+    <canvas id="epsChart"></canvas>
+  </div>
+
+  <!-- Wide Revenue chart -->
+  <div class="chart-box-wide">
+    <div class="chart-title">Total Revenue — Actual vs. Estimate (5 Quarters, $B)</div>
+    <canvas id="revChart"></canvas>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-box">
+      <div class="chart-title">Cloud Revenue vs. Software Revenue ($B)</div>
+      <canvas id="segChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">IaaS (Cloud Infrastructure) YoY Growth Rate (%)</div>
+      <canvas id="iaasChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Remaining Performance Obligations (RPO, $B)</div>
+      <canvas id="rpoChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Total Revenue Growth YoY (%) — Quarterly Trend</div>
+      <canvas id="growthChart"></canvas>
+    </div>
+  </div>
+
+  <!-- ===== RISKS & BULL CASE ===== -->
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Bull Case vs. Key Risks</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="col-box bull">
+      <h4>📈 Bull Case Arguments</h4>
+      <ul>
+        <li>IaaS growth accelerated to 84% — counters "ceiling" narrative</li>
+        <li>$553B RPO provides multi-year revenue visibility</li>
+        <li>Multi-cloud DB revenue +531% — Oracle now inside AWS, Azure, GCP</li>
+        <li>AI infrastructure revenue +243% YoY</li>
+        <li>FY2027 guidance of $90B exceeded Wall St. consensus of $86.6B</li>
+        <li>Most AI contracts self-funded by customer prepayments — no dilution needed</li>
+        <li>RPO financing deal $30B was oversubscribed — strong institutional demand</li>
+        <li>First 20%+ revenue + EPS growth quarter in 15 years</li>
+        <li>Average analyst target ~$253 vs. ~$162 current price</li>
+      </ul>
+    </div>
+    <div class="col-box risk">
+      <h4>⚠️ Key Risks to Watch</h4>
+      <ul>
+        <li>Free cash flow negative $13.2B over last 12 months due to $50B capex plan</li>
+        <li>Heavy debt load — Oracle issued $30B in new bonds this quarter</li>
+        <li>Legacy software license revenue still declining year-over-year</li>
+        <li>Restructuring charges doubled to $153M — cost pressures building</li>
+        <li>Concentrated AI revenue: heavy reliance on OpenAI and a few mega-contracts</li>
+        <li>Competition from AWS, Azure, and Google — far larger balance sheets</li>
+        <li>GPU rental margins are lower than software license margins historically</li>
+        <li>Supply chain constraints could slow data center expansion timelines</li>
+        <li>TikTok US stake introduces regulatory and geopolitical risk</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Q4 GUIDANCE ===== -->
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Q4 FY2026 Guidance Snapshot</h2>
+  </div>
+
+  <div class="stat-grid" style="margin-bottom:64px;">
+    <div class="stat-card">
+      <div class="stat-label">Q4 Total Rev. Growth</div>
+      <div class="stat-value" style="font-size:24px;">19–21%</div>
+      <div class="stat-vs">Year-over-year in USD</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Q4 Cloud Rev. Growth</div>
+      <div class="stat-value" style="font-size:24px;">44–48%</div>
+      <div class="stat-vs">Constant currency</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Q4 Non-GAAP EPS</div>
+      <div class="stat-value" style="font-size:24px;">$1.99</div>
+      <div class="stat-vs">+11% vs Q3 FY2026</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">FY2026 Full Year Rev.</div>
+      <div class="stat-value" style="font-size:24px;">$67B</div>
+      <div class="stat-vs">Reaffirmed guidance</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">FY2027 Revenue Target</div>
+      <div class="stat-value" style="font-size:24px;">$90B</div>
+      <div class="stat-vs">Raised from $89B</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">FY2026 CapEx Plan</div>
+      <div class="stat-value" style="font-size:24px;">$50B</div>
+      <div class="stat-vs">Data center build-out</div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<footer>
+  <strong>Disclaimer</strong> — This briefing is for informational purposes only and does not constitute financial advice. All figures sourced from Oracle's official Q3 FY2026 earnings release (March 10, 2026), SEC filings, and public analyst reports. Estimates from LSEG, StreetAccount, and consensus sources. Past performance is not indicative of future results.<br><br>
+  Oracle Corporation (NYSE: ORCL) · Prepared March 10, 2026 · Data current as of earnings release
+</footer>
+
+<script>
+const quarters = ['Q3 FY25', 'Q4 FY25', 'Q1 FY26', 'Q2 FY26', 'Q3 FY26'];
+const INK = '#1A1A1A';
+const RED = '#C0392B';
+const GREEN = '#1A6B3C';
+const AMBER = '#B8860B';
+const BLUE = '#2471A3';
+const BORDER = '#D8D0C4';
+
+const baseOptions = (unit='') => ({
+  responsive: true,
+  plugins: {
+    legend: { labels: { font: { family: 'IBM Plex Mono', size: 11 }, color: INK } },
+    tooltip: { titleFont: { family: 'IBM Plex Mono' }, bodyFont: { family: 'IBM Plex Sans' } }
+  },
+  scales: {
+    x: { ticks: { font: { family: 'IBM Plex Mono', size: 11 }, color: '#4A4A4A' }, grid: { color: BORDER } },
+    y: { ticks: { font: { family: 'IBM Plex Mono', size: 11 }, color: '#4A4A4A', callback: v => unit + v }, grid: { color: BORDER } }
+  }
+});
+
+// EPS Chart
+new Chart(document.getElementById('epsChart'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'EPS Estimate',
+        data: [1.41, 1.63, 1.49, 1.64, 1.70],
+        backgroundColor: 'rgba(26,26,26,0.12)',
+        borderColor: INK,
+        borderWidth: 1.5,
+      },
+      {
+        label: 'EPS Actual',
+        data: [1.47, 1.70, 1.47, 2.26, 1.79],
+        backgroundColor: [
+          'rgba(26,107,60,0.7)', 'rgba(26,107,60,0.7)',
+          'rgba(184,134,11,0.7)', 'rgba(26,107,60,0.7)',
+          'rgba(192,57,43,0.85)'
+        ],
+        borderColor: [GREEN, GREEN, AMBER, GREEN, RED],
+        borderWidth: 2,
+      }
+    ]
+  },
+  options: {
+    ...baseOptions('$'),
+    plugins: {
+      ...baseOptions().plugins,
+      annotation: {}
+    }
+  }
+});
+
+// Revenue Chart
+new Chart(document.getElementById('revChart'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'Revenue Estimate ($B)',
+        data: [13.89, 15.59, 15.05, 16.15, 16.90],
+        backgroundColor: 'rgba(26,26,26,0.12)',
+        borderColor: INK,
+        borderWidth: 1.5,
+      },
+      {
+        label: 'Revenue Actual ($B)',
+        data: [14.13, 15.90, 14.93, 16.06, 17.19],
+        backgroundColor: [
+          'rgba(26,107,60,0.7)', 'rgba(26,107,60,0.7)',
+          'rgba(184,134,11,0.7)', 'rgba(184,134,11,0.7)',
+          'rgba(192,57,43,0.85)'
+        ],
+        borderColor: [GREEN, GREEN, AMBER, AMBER, RED],
+        borderWidth: 2,
+      }
+    ]
+  },
+  options: baseOptions('$')
+});
+
+// Segment Chart
+new Chart(document.getElementById('segChart'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'Cloud Revenue ($B)',
+        data: [6.2, 7.0, 7.2, 8.0, 8.9],
+        backgroundColor: 'rgba(192,57,43,0.75)',
+        borderColor: RED,
+        borderWidth: 1.5,
+        stack: 'stack'
+      },
+      {
+        label: 'Software Rev. ($B)',
+        data: [6.1, 6.2, 5.7, 5.9, 6.1],
+        backgroundColor: 'rgba(26,26,26,0.55)',
+        borderColor: INK,
+        borderWidth: 1.5,
+        stack: 'stack'
+      }
+    ]
+  },
+  options: {
+    ...baseOptions('$'),
+    scales: {
+      ...baseOptions().scales,
+      x: { ...baseOptions().scales.x, stacked: true },
+      y: { ...baseOptions().scales.y, stacked: true, ticks: { ...baseOptions().scales.y.ticks, callback: v => '$' + v + 'B' } }
+    }
+  }
+});
+
+// IaaS Growth Chart
+new Chart(document.getElementById('iaasChart'), {
+  type: 'line',
+  data: {
+    labels: quarters,
+    datasets: [{
+      label: 'IaaS YoY Growth (%)',
+      data: [49, 52, 55, 68, 84],
+      borderColor: RED,
+      backgroundColor: 'rgba(192,57,43,0.08)',
+      borderWidth: 2.5,
+      pointBackgroundColor: RED,
+      pointRadius: 5,
+      tension: 0.3,
+      fill: true
+    }]
+  },
+  options: {
+    ...baseOptions('%'),
+    scales: {
+      ...baseOptions().scales,
+      y: { ...baseOptions().scales.y, min: 40, ticks: { ...baseOptions().scales.y.ticks, callback: v => v + '%' } }
+    }
+  }
+});
+
+// RPO Chart
+new Chart(document.getElementById('rpoChart'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [{
+      label: 'RPO ($B)',
+      data: [130, 138, 455, 523, 553],
+      backgroundColor: [
+        'rgba(26,26,26,0.4)', 'rgba(26,26,26,0.4)',
+        'rgba(192,57,43,0.55)', 'rgba(192,57,43,0.7)',
+        'rgba(192,57,43,0.9)'
+      ],
+      borderColor: [INK, INK, RED, RED, RED],
+      borderWidth: 2
+    }]
+  },
+  options: {
+    ...baseOptions('$'),
+    scales: {
+      ...baseOptions().scales,
+      y: { ...baseOptions().scales.y, ticks: { ...baseOptions().scales.y.ticks, callback: v => '$' + v + 'B' } }
+    }
+  }
+});
+
+// Growth Chart
+new Chart(document.getElementById('growthChart'), {
+  type: 'line',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'Total Revenue YoY Growth (%)',
+        data: [6, 15, 12, 14, 22],
+        borderColor: INK,
+        backgroundColor: 'rgba(26,26,26,0.07)',
+        borderWidth: 2.5,
+        pointBackgroundColor: INK,
+        pointRadius: 5,
+        tension: 0.3,
+        fill: true
+      },
+      {
+        label: 'Cloud Revenue YoY Growth (%)',
+        data: [23, 35, 28, 34, 44],
+        borderColor: RED,
+        backgroundColor: 'rgba(192,57,43,0.07)',
+        borderWidth: 2.5,
+        pointBackgroundColor: RED,
+        pointRadius: 5,
+        tension: 0.3,
+        fill: false
+      }
+    ]
+  },
+  options: {
+    ...baseOptions('%'),
+    scales: {
+      ...baseOptions().scales,
+      y: { ...baseOptions().scales.y, ticks: { ...baseOptions().scales.y.ticks, callback: v => v + '%' } }
+    }
+  }
+});
+</script>
+</body>
+</html>
