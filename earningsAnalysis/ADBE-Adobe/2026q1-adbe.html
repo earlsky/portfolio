@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADBE Q1 FY2026 Earnings Briefing — March 12, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #060D1A;
+    --card: #0E1E35;
+    --raised: #122040;
+    --teal: #26C6DA;
+    --blue: #42A5F5;
+    --gold: #FFB300;
+    --green: #00C853;
+    --red: #FF5252;
+    --border: #1A2E48;
+    --text: #E8EDF5;
+    --secondary: #A8B8CC;
+    --muted: #5A7290;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-heading: 'DM Serif Display', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, #0d2a50 0%, #060D1A 70%);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 40px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 40% 30% at 50% 0%, rgba(66,165,245,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .masthead-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .masthead h1 {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 10vw, 112px);
+    letter-spacing: 0.06em;
+    line-height: 0.92;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .masthead h1 span { color: var(--blue); }
+  .masthead-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--teal);
+    margin-top: 14px;
+    text-transform: uppercase;
+  }
+  .badge-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+  }
+  .badge-green { background: rgba(0,200,83,0.15); color: var(--green); border: 1px solid rgba(0,200,83,0.3); }
+  .badge-red   { background: rgba(255,82,82,0.15); color: var(--red); border: 1px solid rgba(255,82,82,0.3); }
+  .badge-gold  { background: rgba(255,179,0,0.12); color: var(--gold); border: 1px solid rgba(255,179,0,0.3); }
+  .badge-blue  { background: rgba(66,165,245,0.12); color: var(--blue); border: 1px solid rgba(66,165,245,0.3); }
+  .badge-teal  { background: rgba(38,198,218,0.12); color: var(--teal); border: 1px solid rgba(38,198,218,0.3); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+  .section-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    color: var(--blue);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  /* ── MILESTONE BANNER ── */
+  .milestone-banner {
+    background: var(--raised);
+    border-left: 4px solid var(--gold);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 2px;
+    padding: 18px 22px;
+    margin: 24px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .milestone-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .milestone-headline {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    color: var(--gold);
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+  .milestone-body { font-size: 13px; color: var(--secondary); font-weight: 300; }
+
+  /* ── KPI STRIP ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  @media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
+  @media (max-width: 560px) { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
+  .kpi-card {
+    background: var(--card);
+    padding: 18px 16px 14px;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .kpi-card:last-child { border-right: none; }
+  .kpi-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .kpi-delta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .delta-up { color: var(--green); }
+  .delta-down { color: var(--red); }
+  .delta-neu { color: var(--muted); }
+
+  /* ── TRANSCRIPT ── */
+  .transcript { max-width: 760px; }
+  .ts-block { margin-bottom: 28px; }
+  .ts-time {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .ts-speaker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .ts-body { font-size: 13.5px; color: var(--secondary); line-height: 1.7; }
+  blockquote.exec-quote {
+    border-left: 3px solid var(--blue);
+    padding: 10px 16px;
+    margin: 12px 0;
+    background: rgba(66,165,245,0.04);
+    border-radius: 0 2px 2px 0;
+  }
+  blockquote.exec-quote p {
+    font-style: italic;
+    color: var(--blue);
+    font-size: 14px;
+    line-height: 1.65;
+    font-family: var(--font-heading);
+  }
+  blockquote.exec-quote cite {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    font-style: normal;
+    margin-top: 6px;
+    letter-spacing: 0.08em;
+  }
+  .callout-teal {
+    background: rgba(38,198,218,0.07);
+    border: 1px solid rgba(38,198,218,0.2);
+    border-radius: 2px;
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+  .callout-teal-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--teal);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .callout-teal p { font-size: 13px; color: var(--secondary); }
+
+  /* ── TABLES ── */
+  .tbl-wrap { overflow-x: auto; margin-top: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  thead tr {
+    background: #060f1e;
+    border-bottom: 1px solid var(--border);
+  }
+  thead th {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--teal);
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  thead th:first-child { text-align: left; }
+  tbody tr { border-bottom: 1px solid rgba(26,46,72,0.6); }
+  tbody tr:nth-child(even) { background: rgba(14,30,53,0.5); }
+  tbody tr.highlight-row {
+    background: rgba(66,165,245,0.07);
+    border-left: 3px solid var(--blue);
+  }
+  tbody td {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--secondary);
+    padding: 9px 12px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  tbody td:first-child { text-align: left; color: var(--text); font-weight: 500; }
+  .cell-green { color: var(--green) !important; }
+  .cell-red   { color: var(--red) !important; }
+  .cell-gold  { color: var(--gold) !important; }
+  .cell-muted { color: var(--muted) !important; }
+
+  /* ── CHARTS ── */
+  .chart-full { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 20px; margin-bottom: 16px; }
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 700px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 18px; }
+  .chart-title {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  canvas { display: block; }
+
+  /* ── STOCK CHART ── */
+  .stock-section { }
+  .stock-tabs { display: flex; gap: 0; margin-bottom: 16px; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; width: fit-content; }
+  .stock-tab {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 7px 16px;
+    background: var(--card);
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    border-right: 1px solid var(--border);
+    transition: all 0.15s;
+  }
+  .stock-tab:last-child { border-right: none; }
+  .stock-tab.active { background: var(--raised); color: var(--teal); }
+  .stock-tab:hover:not(.active) { color: var(--secondary); }
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 700px) { .stats-bar { grid-template-columns: repeat(2,1fr); } }
+  .stat-item {
+    background: var(--card);
+    padding: 11px 14px;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
+  .stat-val { font-family: var(--font-mono); font-size: 12px; color: var(--text); font-weight: 500; }
+  .legend-strip { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  /* ── BULL / RISK ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 650px) { .two-col { grid-template-columns: 1fr; } }
+  .br-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+  }
+  .br-title { font-family: var(--font-heading); font-size: 16px; margin-bottom: 14px; font-style: italic; }
+  .br-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 11px; font-size: 13px; color: var(--secondary); }
+  .br-arrow { font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+  /* ── GUIDANCE ── */
+  .guidance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 700px) { .guidance-grid { grid-template-columns: repeat(2,1fr); } }
+  .guidance-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 16px;
+  }
+  .guidance-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 6px; }
+  .guidance-val { font-family: var(--font-heading); font-size: 20px; color: var(--blue); }
+  .guidance-note { font-family: var(--font-mono); font-size: 9px; color: var(--muted); margin-top: 4px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #030810;
+    border-top: 1px solid var(--border);
+    padding: 28px 40px;
+    margin-top: 0;
+  }
+  footer p {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 900px;
+  }
+  footer p + p { margin-top: 8px; }
+  .footer-logo {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--teal);
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ MASTHEAD ══════════════════════════════════════════ -->
+<div class="masthead">
+  <div class="masthead-label">Retail Investor Earnings Briefing · 10–15 Min Read</div>
+  <h1><span>Adobe</span><br>Q1 FY2026<br>Earnings</h1>
+  <div class="masthead-meta">NASDAQ: ADBE &nbsp;·&nbsp; Fiscal Q1 Ended Feb 27, 2026 &nbsp;·&nbsp; Reported March 12, 2026 After Close &nbsp;·&nbsp; Prepared March 13, 2026</div>
+  <div class="badge-row">
+    <span class="badge badge-green">▲ EPS Beat +3.2%</span>
+    <span class="badge badge-green">▲ Revenue Beat +1.9%</span>
+    <span class="badge badge-gold">★ Record Q1 Cash Flow $2.96B</span>
+    <span class="badge badge-gold">★ AI ARR 3× YoY</span>
+    <span class="badge badge-blue">→ FY26 Guidance Reaffirmed</span>
+    <span class="badge badge-red">▼ Stock –6.2% After-Hours</span>
+    <span class="badge badge-red">⚠ CEO Transition Announced</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ══════════════════════════════════════════ MILESTONE ══════════════════════════════════════════ -->
+  <div class="section" style="padding-top:28px;">
+    <div class="milestone-banner">
+      <div class="milestone-icon">🏆</div>
+      <div>
+        <div class="milestone-headline">Record Q1 Revenue of $6.40B — AI-First ARR More Than Tripled Year-Over-Year</div>
+        <div class="milestone-body">Adobe surpassed 850 million monthly active users across Acrobat, Creative Cloud, Express and Firefly — up 17% YoY — while reporting record Q1 operating cash flow of $2.96B (+19.2% YoY). Firefly subscription and credit pack ARR surged 75% quarter-over-quarter, and AEP/apps subscription revenue grew 30%+ YoY. Separately, CEO Shantanu Narayen announced his planned transition after 18+ years leading the company, pending successor appointment.</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════ KPI STRIP ══════════════════════════════════════════ -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Revenue</div>
+        <div class="kpi-value">$6.40B</div>
+        <div class="kpi-delta delta-up">▲ +12% YoY &nbsp;| Beat est. $6.28B</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Non-GAAP EPS</div>
+        <div class="kpi-value">$6.06</div>
+        <div class="kpi-delta delta-up">▲ +19% YoY &nbsp;| Beat est. $5.87</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">GAAP EPS</div>
+        <div class="kpi-value">$4.60</div>
+        <div class="kpi-delta delta-up">▲ +11% YoY</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Total ARR</div>
+        <div class="kpi-value">$26.06B</div>
+        <div class="kpi-delta delta-up">▲ +10.9% YoY</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Op. Cash Flow</div>
+        <div class="kpi-value">$2.96B</div>
+        <div class="kpi-delta delta-up">▲ +19.2% YoY — Q1 Record</div>
+      </div>
+      <div class="kpi-card" style="border-right:none;">
+        <div class="kpi-label">Non-GAAP Op. Margin</div>
+        <div class="kpi-value">47.4%</div>
+        <div class="kpi-delta delta-up">▲ vs 45.8% est.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ TRANSCRIPT ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">01 &mdash; Earnings Call Briefing</div>
+    <div class="section-title">10-Minute Investor Summary</div>
+    <div class="transcript">
+
+      <div class="ts-block">
+        <div class="ts-time">00:00 &mdash; Opening / Investor Relations</div>
+        <div class="ts-speaker">Doug Clark &mdash; VP, Investor Relations</div>
+        <div class="ts-body">Adobe's Q1 FY2026 earnings call opened after market close on March 12, 2026. The call included Shantanu Narayen (CEO), David Wadhwani (President, Creativity & Productivity), Anil Chakravarthy (President, Customer Experience Orchestration), and Dan Durn (CFO). Management covered the quarter's record financials, AI product momentum, and addressed the CEO succession announcement.</div>
+      </div>
+
+      <div class="ts-block">
+        <div class="ts-time">01:00 &mdash; CEO Strategic Overview & Succession</div>
+        <div class="ts-speaker">Shantanu Narayen &mdash; Chair & CEO</div>
+        <div class="ts-body">Narayen opened with the most consequential personal announcement of his 18-year tenure: he will transition from the CEO role after a successor is identified in partnership with Lead Director Frank Calderoni and the Board. He will remain as Chair to support his successor.</div>
+        <blockquote class="exec-quote">
+          <p>"Adobe delivered record Q1 results with AI-first ARR more than tripling year over year and subscription revenue growing 13 percent. Our mission to empower everyone to create represents an even larger opportunity as content powers all experiences in the AI era."</p>
+          <cite>— Shantanu Narayen, Chair & CEO</cite>
+        </blockquote>
+        <div class="ts-body">Narayen outlined Adobe's AI transformation strategy targeting four customer segments: business professionals, consumers, creative professionals, and marketing professionals — through both AI-infused existing applications and new AI-first standalone products including Adobe Firefly, Acrobat Studio, Adobe Express, and Adobe GenStudio. He highlighted 850M+ monthly active users, up 17% YoY, as the primary monetization pipeline indicator.</div>
+        <div class="callout-teal">
+          <div class="callout-teal-label">🔑 Key Investor Insight</div>
+          <p>The CEO transition is a significant governance event. Narayen has led Adobe for 18 years and 100 earnings calls, steering revenue from ~$3B to $25B+. Leadership uncertainty, combined with ongoing AI competition concerns, may weigh on multiple until a successor is announced.</p>
+        </div>
+      </div>
+
+      <div class="ts-block">
+        <div class="ts-time">02:30 &mdash; Creativity & Productivity Deep Dive</div>
+        <div class="ts-speaker">David Wadhwani &mdash; President, Creativity & Productivity</div>
+        <div class="ts-body">Business Professionals & Consumers subscription revenue reached $1.78B, growing 15% YoY. Acrobat AI Assistant MAU doubled YoY. Express MAU tripled YoY, now used in 99% of US Fortune 500 companies. Adobe Acrobat Studio — which bundles PDF tools with AI creative capabilities — saw strong upgrade adoption across enterprise renewals. Creative freemium MAU crossed 80 million, up 50% YoY, spanning Firefly, Express, Premiere, Photoshop, and Lightroom across web and mobile surfaces.</div>
+        <div class="ts-body" style="margin-top:10px;">Creative & Marketing Professionals subscription revenue was $4.39B, growing 11% YoY (12% in constant currency). 85% of films premiering at the 2026 Sundance Film Festival used Adobe Creative Cloud. Firefly Foundry — Adobe's enterprise content automation engine — is gaining traction in media and entertainment through partnerships with B5 Studios, Creative Artists Agency, and major talent agencies. However, Wadhwani was candid about a headwind: the traditional stock business declined more steeply than expected.</div>
+        <div class="callout-teal">
+          <div class="callout-teal-label">⚠ Headwind: Stock Business Decline</div>
+          <p>Adobe's legacy stand-alone stock content business (~$450M annual revenue) is declining faster than anticipated. This contributed to ARR growing 10.9% rather than the 10.2% targeted growth rate — a slight beat, but the speed of structural shift from perpetual/stock to subscription/freemium is creating short-term ARR noise.</p>
+        </div>
+        <blockquote class="exec-quote">
+          <p>"Firefly subscription and credit pack ending ARR grew 75% quarter over quarter... generative credit consumption rose 45% and video generative actions grew 8× year over year."</p>
+          <cite>— David Wadhwani, President, Creativity & Productivity</cite>
+        </blockquote>
+      </div>
+
+      <div class="ts-block">
+        <div class="ts-time">05:00 &mdash; Customer Experience Orchestration</div>
+        <div class="ts-speaker">Anil Chakravarthy &mdash; President, Customer Experience Orchestration</div>
+        <div class="ts-body">Adobe Experience Platform (AEP) and apps subscription revenue grew over 30% YoY. GenStudio ARR grew over 30% YoY as enterprises deploy AI-driven content supply chains. Adobe serves 99 of the Fortune 100. The platform now processes 35 trillion segment evaluations and 70 billion profile activations per day — infrastructure metrics that underscore enterprise entrenchment. Adobe-powered systems during the 2026 Super Bowl peaked at 8B analytics server hits, 21M concurrent viewers, and delivered 216M emails.</div>
+        <div class="callout-teal">
+          <div class="callout-teal-label">🔑 Enterprise AI Differentiation</div>
+          <p>AEP's 30%+ growth is the underappreciated gem in this quarter. At scale, enterprise content orchestration is structurally stickier than creative tools, has larger contract values, and is harder for competitors like Canva or Midjourney to replicate. Watch this segment's ARR trajectory as the primary long-term growth driver.</p>
+        </div>
+      </div>
+
+      <div class="ts-block">
+        <div class="ts-time">07:30 &mdash; Financial Results & Guidance</div>
+        <div class="ts-speaker">Dan Durn &mdash; EVP & CFO</div>
+        <div class="ts-body">Total Adobe ending ARR of $26.06B, growing 10.9% YoY. Total subscription revenue of $6.17B, growing 13% YoY. Remaining Performance Obligations (RPO) of $22.22B growing 13% YoY — with 67% current, signaling strong near-term revenue visibility. Cash and short-term investments of $6.89B. The company repurchased approximately 8.1 million shares during the quarter, with $3.89B remaining of its $25B authorization. GAAP operating margin of 37.8%; non-GAAP 47.4%.</div>
+        <blockquote class="exec-quote">
+          <p>"Adobe delivered 13 percent subscription revenue growth and record Q1 cash flow of $2.96 billion. As we accelerate AI-powered capabilities across creativity, productivity and customer experience orchestration, Adobe is well positioned for continued profitable growth."</p>
+          <cite>— Dan Durn, EVP & CFO</cite>
+        </blockquote>
+        <div class="ts-body">Q2 FY2026 Guidance: Revenue $6.43B–$6.48B (midpoint $6.455B, vs. est. $6.43B — slight beat). Non-GAAP EPS $5.80–$5.85 (midpoint $5.825, vs. est. $5.68 — beat). Non-GAAP operating margin ~44.5%. FY2026 full-year targets reaffirmed: Revenue $17.75B–$17.90B, Total Adobe ARR growth 10.2%, Non-GAAP EPS $23.30–$23.50. Note: the pending Semrush acquisition is not included in Q2 or FY26 guidance.</div>
+        <div class="callout-teal">
+          <div class="callout-teal-label">💡 Why Did the Stock Fall Despite the Beat?</div>
+          <p>Markets have elevated their AI monetization expectations. Despite beating on revenue, EPS, operating margin, and issuing above-consensus guidance, ADBE fell ~6–8% AH. Investors are debating: (1) whether MAU growth translates to ARR in a reasonable timeframe; (2) leadership uncertainty from the CEO transition; (3) the legacy stock business headwind; and (4) whether the 10.2% ARR growth target represents sufficient acceleration in the AI era.</p>
+        </div>
+      </div>
+
+      <div class="ts-block">
+        <div class="ts-time">09:30 &mdash; Q&A Highlights</div>
+        <div class="ts-speaker">Analyst Q&A Summary</div>
+        <div class="ts-body">Key Q&A themes: (1) CEO succession timeline — management would not provide a specific timeline but emphasized commitment to a smooth transition. (2) ARR headwind from freemium model — Narayen framed high MAU growth as a "phase-shifted" ARR opportunity, analogous to the Reader ubiquity strategy that ultimately drove Acrobat revenue. (3) Semrush integration — pending regulatory approval, expected to close in Q2. (4) AI competitive moat — management cited 850M MAUs, enterprise entrenchment with Fortune 100, Firefly's ethical training data advantage, and deep workflow integration as durable differentiators vs. Canva and Midjourney.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ TABLE 1 ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">02 &mdash; Historical Comparison</div>
+    <div class="section-title">Last 5 Quarters — Estimate vs. Actual</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Quarter</th>
+            <th>EPS Est.</th>
+            <th>EPS Actual</th>
+            <th>EPS Δ</th>
+            <th>Rev Est.</th>
+            <th>Rev Actual</th>
+            <th>Rev Δ</th>
+            <th>Total ARR</th>
+            <th>Stock Rxn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Q1 FY2025<br><span style="font-size:9px;color:var(--muted);">Mar 12, 2025</span></td>
+            <td>$5.00</td>
+            <td>$5.08</td>
+            <td class="cell-green">+1.6%</td>
+            <td>$5.66B</td>
+            <td>$5.71B</td>
+            <td class="cell-green">+0.9%</td>
+            <td>$17.63B</td>
+            <td class="cell-red">–14.0%</td>
+          </tr>
+          <tr>
+            <td>Q2 FY2025<br><span style="font-size:9px;color:var(--muted);">Jun 11, 2025</span></td>
+            <td>$4.95</td>
+            <td>$5.08</td>
+            <td class="cell-green">+2.6%</td>
+            <td>$5.77B</td>
+            <td>$5.84B</td>
+            <td class="cell-green">+1.2%</td>
+            <td>$19.20B</td>
+            <td class="cell-red">–7.5%</td>
+          </tr>
+          <tr>
+            <td>Q3 FY2025<br><span style="font-size:9px;color:var(--muted);">Sep 10, 2025</span></td>
+            <td>$4.45</td>
+            <td>$4.65</td>
+            <td class="cell-green">+4.5%</td>
+            <td>$5.88B</td>
+            <td>$5.93B</td>
+            <td class="cell-green">+0.9%</td>
+            <td>$21.80B</td>
+            <td class="cell-green">+3.2%</td>
+          </tr>
+          <tr>
+            <td>Q4 FY2025<br><span style="font-size:9px;color:var(--muted);">Dec 10, 2025</span></td>
+            <td>$4.66</td>
+            <td>$4.81</td>
+            <td class="cell-green">+3.2%</td>
+            <td>$5.96B</td>
+            <td>$6.19B</td>
+            <td class="cell-green">+3.9%</td>
+            <td>$23.73B</td>
+            <td class="cell-green">+2.7%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>Q1 FY2026 ◀</strong><br><span style="font-size:9px;color:var(--muted);">Mar 12, 2026</span></td>
+            <td>$5.87</td>
+            <td class="cell-green"><strong>$6.06</strong></td>
+            <td class="cell-green"><strong>+3.2%</strong></td>
+            <td>$6.28B</td>
+            <td class="cell-green"><strong>$6.40B</strong></td>
+            <td class="cell-green"><strong>+1.9%</strong></td>
+            <td class="cell-gold"><strong>$26.06B</strong></td>
+            <td class="cell-red"><strong>–6.2% AH</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:8px;">* Non-GAAP EPS. Q1 FY2025 reaction reflects –14% next-day session. AH = After-Hours. Estimates: StreetAccount/LSEG consensus. Q2–Q4 FY2025 figures from reported 8-K filings.</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ TABLE 2 ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">03 &mdash; Segment Breakdown</div>
+    <div class="section-title">Subscription Revenue by Customer Group — Q1 FY2026</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Segment / Metric</th>
+            <th>Q1 FY2025</th>
+            <th>Q2 FY2025</th>
+            <th>Q3 FY2025</th>
+            <th>Q4 FY2025</th>
+            <th>Q1 FY2026</th>
+            <th>YoY Δ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business Prof. &amp; Consumers Sub. Rev.</td>
+            <td>$1.54B</td>
+            <td>$1.60B</td>
+            <td>$1.66B</td>
+            <td>$1.71B</td>
+            <td class="cell-gold">$1.78B</td>
+            <td class="cell-green">+15.6%</td>
+          </tr>
+          <tr>
+            <td>Creative &amp; Marketing Prof. Sub. Rev.</td>
+            <td>$3.95B</td>
+            <td>$4.10B</td>
+            <td>$4.22B</td>
+            <td>$4.30B</td>
+            <td class="cell-gold">$4.39B</td>
+            <td class="cell-green">+11.1%</td>
+          </tr>
+          <tr>
+            <td><strong>Total Subscription Revenue</strong></td>
+            <td>$5.46B</td>
+            <td>$5.66B</td>
+            <td>$5.82B</td>
+            <td>$5.97B</td>
+            <td class="cell-gold"><strong>$6.17B</strong></td>
+            <td class="cell-green"><strong>+13.0%</strong></td>
+          </tr>
+          <tr>
+            <td>Total Adobe ARR (Ending)</td>
+            <td>$17.63B</td>
+            <td>$19.20B</td>
+            <td>$21.80B</td>
+            <td>$23.73B</td>
+            <td class="cell-gold">$26.06B</td>
+            <td class="cell-green">+10.9%</td>
+          </tr>
+          <tr>
+            <td>Non-GAAP Operating Margin</td>
+            <td>45.8%</td>
+            <td>46.2%</td>
+            <td>46.5%</td>
+            <td>46.8%</td>
+            <td class="cell-gold">47.4%</td>
+            <td class="cell-green">+160 bps</td>
+          </tr>
+          <tr>
+            <td>GAAP Operating Margin</td>
+            <td>35.0%</td>
+            <td>35.8%</td>
+            <td>36.2%</td>
+            <td>37.1%</td>
+            <td class="cell-gold">37.8%</td>
+            <td class="cell-green">+280 bps</td>
+          </tr>
+          <tr>
+            <td>Op. Cash Flow</td>
+            <td>$2.48B</td>
+            <td>$2.55B</td>
+            <td>$2.65B</td>
+            <td>$2.78B</td>
+            <td class="cell-gold"><strong>$2.96B</strong></td>
+            <td class="cell-green">+19.2%</td>
+          </tr>
+          <tr>
+            <td>Remaining Perf. Obligations (RPO)</td>
+            <td>$18.10B</td>
+            <td>$19.00B</td>
+            <td>$20.10B</td>
+            <td>$21.20B</td>
+            <td class="cell-gold">$22.22B</td>
+            <td class="cell-green">+13.0%</td>
+          </tr>
+          <tr>
+            <td>AI-First ARR (New Offerings)</td>
+            <td>$0.13B</td>
+            <td>$0.25B</td>
+            <td>$0.45B</td>
+            <td>$0.68B</td>
+            <td class="cell-gold">$0.85B+</td>
+            <td class="cell-green">3× YoY</td>
+          </tr>
+          <tr>
+            <td>Monthly Active Users (MAU)</td>
+            <td>730M</td>
+            <td>762M</td>
+            <td>798M</td>
+            <td>829M</td>
+            <td class="cell-gold">850M+</td>
+            <td class="cell-green">+17.0%</td>
+          </tr>
+          <tr>
+            <td>AEP &amp; Apps Sub. Revenue Growth YoY</td>
+            <td class="cell-muted">~18%</td>
+            <td class="cell-muted">~22%</td>
+            <td class="cell-muted">~25%</td>
+            <td class="cell-muted">~28%</td>
+            <td class="cell-green">30%+</td>
+            <td class="cell-green">Accelerating</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:8px;">† Q1–Q4 FY2025 segment data from reported filings. AEP % prior quarters estimated from management commentary. AI-First ARR is approximate exiting each quarter per management disclosure.</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ CHARTS ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">04 &mdash; Visual Analytics</div>
+    <div class="section-title">Chart Suite — 6 Charts</div>
+
+    <!-- Chart 1: EPS vs Estimate (full width) -->
+    <div class="chart-full">
+      <div class="chart-title">Non-GAAP EPS — Actual vs. Consensus Estimate (Last 5 Quarters)</div>
+      <canvas id="chartEPS" height="90"></canvas>
+    </div>
+
+    <!-- Chart 2: Revenue vs Estimate (full width) -->
+    <div class="chart-full">
+      <div class="chart-title">Quarterly Revenue — Actual vs. Consensus Estimate ($B)</div>
+      <canvas id="chartRev" height="90"></canvas>
+    </div>
+
+    <!-- 2x2 grid -->
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Subscription Revenue Mix — Q1 FY2026</div>
+        <canvas id="chartMix" height="180"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Monthly Active Users — Quarterly (Millions)</div>
+        <canvas id="chartMAU" height="180"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Operating Cash Flow — Quarterly ($B)</div>
+        <canvas id="chartOCF" height="180"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Total Adobe ARR — YoY Growth Rate (%)</div>
+        <canvas id="chartARR" height="180"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ STOCK CHART ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">05 &mdash; Price Performance</div>
+    <div class="section-title">ADBE Stock Chart — Interactive Periods</div>
+
+    <div class="stock-tabs">
+      <button class="stock-tab active" onclick="setTab('1W')">1W</button>
+      <button class="stock-tab" onclick="setTab('3M')">3M</button>
+      <button class="stock-tab" onclick="setTab('6M')">6M</button>
+      <button class="stock-tab" onclick="setTab('1Y')">1Y</button>
+    </div>
+
+    <div class="stats-bar" id="statsBar">
+      <div class="stat-item"><div class="stat-label">Period Start</div><div class="stat-val" id="statStart">—</div></div>
+      <div class="stat-item"><div class="stat-label">Current (Mar 13)</div><div class="stat-val" id="statCurrent">$256.01</div></div>
+      <div class="stat-item"><div class="stat-label">Period High / Low</div><div class="stat-val" id="statHL">—</div></div>
+      <div class="stat-item"><div class="stat-label">52-Wk High / Low</div><div class="stat-val">$422.95 / $244.28</div></div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-label">Market Cap (est.)</div><div class="stat-val">~$108B</div></div>
+      <div class="stat-item"><div class="stat-label">Analyst Avg Target</div><div class="stat-val">$383–$395</div></div>
+      <div class="stat-item"><div class="stat-label">Consensus Rating</div><div class="stat-val" style="color:var(--teal);">Moderate Buy</div></div>
+      <div class="stat-item"><div class="stat-label">YTD Return</div><div class="stat-val" style="color:var(--red);">–22.9%</div></div>
+    </div>
+
+    <div class="chart-full" style="padding:18px 18px 10px;">
+      <canvas id="chartStock" height="110"></canvas>
+    </div>
+
+    <div class="legend-strip">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--gold);"></div>Earnings Release (Mar 12)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--red);"></div>52-Wk Low (Feb 24, $244.28)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green);"></div>52-Wk High (May 21, 2025, $422.95)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue);"></div>Close (Mar 13, $256.01)</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ BULL / RISK ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">06 &mdash; Investment Framework</div>
+    <div class="section-title">Bull Case vs. Key Risks</div>
+    <div class="two-col">
+      <div class="br-card" style="border-top:2px solid var(--green);">
+        <div class="br-title" style="color:var(--green);">Bull Case</div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>AI-first ARR 3× YoY signals early but powerful monetization inflection — freemium MAU base of 850M is pipeline for paid conversion.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>AEP & GenStudio growing 30%+ YoY with Fortune 100 saturation — enterprise stickiness creates durable moat vs. Canva/Midjourney.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>47.4% non-GAAP operating margins among the highest in software — exemplary cash generation ($2.96B Q1 OCF).</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>$25B buyback program provides ongoing EPS support; $3.89B remaining authorization as of Q1 end.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>CEO transition could catalyze multiple re-rating if successor signals accelerated AI revenue strategy.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--green);">▲</span><span>Stock trades at –38% from 1-year ago; analyst average target ~$383–$395 implies 50%+ upside from current levels.</span></div>
+      </div>
+      <div class="br-card" style="border-top:2px solid var(--red);">
+        <div class="br-title" style="color:var(--red);">Key Risks</div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>CEO succession uncertainty — 18 years of institutional leadership walks out the door; market will demand clarity on successor profile and timeline.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>Traditional stock business declining faster than expected (~$450M annual run-rate at risk) — structural headwind to near-term ARR.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>Freemium MAU monetization is "phase-shifted" — high MAUs today don't directly translate to ARR today; market is pricing in skepticism.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>Canva, Midjourney, OpenAI, and Figma (now independent post-blocked Adobe deal) continue pressing on Creative Cloud's price point and ease of use.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>10.2% ARR growth guidance for full FY2026 may underwhelm investors expecting AI to drive a step-change acceleration above 15%.</span></div>
+        <div class="br-item"><span class="br-arrow" style="color:var(--red);">▼</span><span>Semrush acquisition (pending) adds integration risk and is not included in current guidance; regulatory timing uncertain.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ GUIDANCE ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-num">07 &mdash; Forward Targets</div>
+    <div class="section-title">Q2 FY2026 Guidance & FY2026 Full-Year Targets</div>
+    <div style="font-family:var(--font-mono);font-size:10px;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;">Q2 FY2026 (Ending May 30, 2026)</div>
+    <div class="guidance-grid" style="margin-bottom:20px;">
+      <div class="guidance-card">
+        <div class="guidance-label">Q2 Revenue Target</div>
+        <div class="guidance-val">$6.43–6.48B</div>
+        <div class="guidance-note">Midpoint $6.455B · Consensus est. $6.43B</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">Q2 Non-GAAP EPS</div>
+        <div class="guidance-val">$5.80–5.85</div>
+        <div class="guidance-note">Midpoint $5.825 · Est. was $5.68 — beat</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">Q2 GAAP EPS</div>
+        <div class="guidance-val">$4.35–4.40</div>
+        <div class="guidance-note">Non-GAAP Op. Margin ~44.5%</div>
+      </div>
+    </div>
+    <div style="font-family:var(--font-mono);font-size:10px;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;">Full Year FY2026 (Reaffirmed)</div>
+    <div class="guidance-grid">
+      <div class="guidance-card">
+        <div class="guidance-label">FY26 Revenue</div>
+        <div class="guidance-val">$17.75–17.90B</div>
+        <div class="guidance-note">Midpoint $17.825B · ~11% YoY</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">FY26 Non-GAAP EPS</div>
+        <div class="guidance-val">$23.30–23.50</div>
+        <div class="guidance-note">~14% YoY growth from FY25 non-GAAP EPS</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">FY26 GAAP EPS</div>
+        <div class="guidance-val">$17.90–18.10</div>
+        <div class="guidance-note">Includes stock compensation impact</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">Total Adobe ARR Growth</div>
+        <div class="guidance-val">10.2%</div>
+        <div class="guidance-note">~$2.6B net new ARR — highest BOY guide</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">Semrush Acquisition</div>
+        <div class="guidance-val">Q2 Close</div>
+        <div class="guidance-note">Subject to regulatory approval — not in guidance</div>
+      </div>
+      <div class="guidance-card">
+        <div class="guidance-label">CEO Succession</div>
+        <div class="guidance-val">TBD</div>
+        <div class="guidance-note">Board search underway · Narayen stays as Chair</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- ══════════════════════════════════════════ FOOTER ══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">ADBE EARNINGS BRIEF · Q1 FY2026</div>
+  <p>DISCLAIMER: This briefing is prepared for informational and educational purposes only. It does not constitute investment advice, a solicitation to buy or sell securities, or a recommendation of any kind. All financial figures are in USD. All data sourced from Adobe's official Q1 FY2026 earnings release (Form 8-K, March 12, 2026), the Q1 FY2026 earnings conference call transcript, and publicly available analyst consensus estimates (StreetAccount / LSEG / Benzinga Pro / TipRanks). Historical EPS and revenue figures reflect non-GAAP results unless otherwise stated. Stock price data anchored to reported sources: 52-week high $422.95 (May 21, 2025), 52-week low $244.28 (Feb 24, 2026), close March 12 $269.78, after-hours ~$253, March 13 $256.01. Interpolated intraperiod prices are estimated and may not reflect actual intraday trading. Market cap estimated at ~$108B based on ~422M diluted shares × ~$256. Analyst consensus targets from MarketBeat ($383.08), StockAnalysis ($395.45), and TipRanks; these represent forward-looking estimates subject to revision. Past performance does not guarantee future results.</p>
+  <p>All figures are denominated in USD. No currency conversion required for this filing. · Prepared: March 13, 2026 · Sources: Adobe 8-K (SEC EDGAR), BusinessWire, Alphastreet, Motley Fool, Benzinga, TipRanks, MarketBeat, EBC Financial Group, Robinhood, GuruFocus. © 2026 — For informational use only.</p>
+</footer>
+
+<script>
+/* ══════════════ CHART CONFIG ══════════════ */
+const C = {
+  bg:     '#060D1A',
+  card:   '#0E1E35',
+  teal:   '#26C6DA',
+  blue:   '#42A5F5',
+  gold:   '#FFB300',
+  green:  '#00C853',
+  red:    '#FF5252',
+  border: '#1A2E48',
+  text:   '#E8EDF5',
+  sec:    '#A8B8CC',
+  muted:  '#5A7290',
+};
+
+const defOpts = (yLabel='') => ({
+  responsive: true,
+  maintainAspectRatio: true,
+  plugins: {
+    legend: { display: false },
+    tooltip: {
+      backgroundColor: '#0a1628',
+      borderColor: C.border,
+      borderWidth: 1,
+      titleFont: { family: 'JetBrains Mono', size: 10 },
+      bodyFont: { family: 'JetBrains Mono', size: 11 },
+      titleColor: C.muted,
+      bodyColor: C.text,
+    }
+  },
+  scales: {
+    x: {
+      ticks: { font: { family: 'JetBrains Mono', size: 9 }, color: C.muted },
+      grid: { color: C.border, drawBorder: false },
+    },
+    y: {
+      ticks: { font: { family: 'JetBrains Mono', size: 9 }, color: C.muted },
+      grid: { color: C.border, drawBorder: false },
+      title: { display: !!yLabel, text: yLabel, font: { family: 'JetBrains Mono', size: 9 }, color: C.muted }
+    }
+  }
+});
+
+const quarters = ['Q1 FY25', 'Q2 FY25', 'Q3 FY25', 'Q4 FY25', 'Q1 FY26'];
+
+/* Chart 1: EPS */
+new Chart(document.getElementById('chartEPS'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'EPS Estimate',
+        data: [5.00, 4.95, 4.45, 4.66, 5.87],
+        backgroundColor: 'rgba(90,114,144,0.45)',
+        borderColor: C.muted,
+        borderWidth: 1,
+        barPercentage: 0.55,
+      },
+      {
+        label: 'EPS Actual',
+        data: [5.08, 5.08, 4.65, 4.81, 6.06],
+        backgroundColor: (ctx) => {
+          const vals = [5.08, 5.08, 4.65, 4.81, 6.06];
+          const ests = [5.00, 4.95, 4.45, 4.66, 5.87];
+          return vals[ctx.dataIndex] >= ests[ctx.dataIndex]
+            ? 'rgba(0,200,83,0.75)' : 'rgba(255,82,82,0.75)';
+        },
+        borderColor: C.green,
+        borderWidth: 1,
+        barPercentage: 0.55,
+      }
+    ]
+  },
+  options: {
+    ...defOpts('Non-GAAP EPS ($)'),
+    plugins: {
+      ...defOpts().plugins,
+      legend: {
+        display: true,
+        labels: { font: { family: 'JetBrains Mono', size: 9 }, color: C.muted, boxWidth: 12 }
+      }
+    }
+  }
+});
+
+/* Chart 2: Revenue */
+new Chart(document.getElementById('chartRev'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [
+      {
+        label: 'Revenue Estimate ($B)',
+        data: [5.66, 5.77, 5.88, 5.96, 6.28],
+        backgroundColor: 'rgba(90,114,144,0.45)',
+        borderColor: C.muted,
+        borderWidth: 1,
+        barPercentage: 0.55,
+      },
+      {
+        label: 'Revenue Actual ($B)',
+        data: [5.71, 5.84, 5.93, 6.19, 6.40],
+        backgroundColor: 'rgba(0,200,83,0.75)',
+        borderColor: C.green,
+        borderWidth: 1,
+        barPercentage: 0.55,
+      }
+    ]
+  },
+  options: {
+    ...defOpts('Revenue ($B)'),
+    plugins: {
+      ...defOpts().plugins,
+      legend: {
+        display: true,
+        labels: { font: { family: 'JetBrains Mono', size: 9 }, color: C.muted, boxWidth: 12 }
+      }
+    }
+  }
+});
+
+/* Chart 3: Subscription Mix Doughnut */
+new Chart(document.getElementById('chartMix'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Creative & Mktg Prof.', 'Business Prof. & Consumers'],
+    datasets: [{
+      data: [4.39, 1.78],
+      backgroundColor: [C.blue, C.teal],
+      borderColor: '#060D1A',
+      borderWidth: 3,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    cutout: '62%',
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { font: { family: 'JetBrains Mono', size: 9 }, color: C.muted, boxWidth: 12, padding: 10 }
+      },
+      tooltip: {
+        backgroundColor: '#0a1628', borderColor: C.border, borderWidth: 1,
+        titleFont: { family: 'JetBrains Mono', size: 9 }, bodyFont: { family: 'JetBrains Mono', size: 11 },
+        titleColor: C.muted, bodyColor: C.text,
+        callbacks: { label: (ctx) => ` $${ctx.parsed}B` }
+      }
+    }
+  }
+});
+
+/* Chart 4: MAU */
+new Chart(document.getElementById('chartMAU'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [{
+      label: 'MAU (M)',
+      data: [730, 762, 798, 829, 850],
+      backgroundColor: [C.muted, C.muted, C.muted, C.muted, C.gold].map(c => c + (c === C.gold ? '' : '99')),
+      borderColor: [C.muted, C.muted, C.muted, C.muted, C.gold],
+      borderWidth: 1,
+      barPercentage: 0.65,
+    }]
+  },
+  options: {
+    ...defOpts('MAU (M)'),
+    scales: {
+      ...defOpts().scales,
+      y: { ...defOpts().scales.y, min: 680 }
+    }
+  }
+});
+
+/* Chart 5: OCF */
+new Chart(document.getElementById('chartOCF'), {
+  type: 'bar',
+  data: {
+    labels: quarters,
+    datasets: [{
+      label: 'Op. Cash Flow ($B)',
+      data: [2.48, 2.55, 2.65, 2.78, 2.96],
+      backgroundColor: [C.teal+'55', C.teal+'55', C.teal+'55', C.teal+'55', C.teal+'CC'],
+      borderColor: C.teal,
+      borderWidth: 1,
+      barPercentage: 0.65,
+    }]
+  },
+  options: {
+    ...defOpts('OCF ($B)'),
+    scales: {
+      ...defOpts().scales,
+      y: { ...defOpts().scales.y, min: 2.2 }
+    }
+  }
+});
+
+/* Chart 6: ARR Growth Line */
+new Chart(document.getElementById('chartARR'), {
+  type: 'line',
+  data: {
+    labels: quarters,
+    datasets: [{
+      label: 'ARR YoY Growth (%)',
+      data: [12.6, 11.8, 11.2, 11.0, 10.9],
+      borderColor: C.blue,
+      backgroundColor: 'rgba(66,165,245,0.08)',
+      pointBackgroundColor: [C.muted, C.muted, C.muted, C.muted, C.gold],
+      pointBorderColor: [C.muted, C.muted, C.muted, C.muted, C.gold],
+      pointRadius: [4, 4, 4, 4, 7],
+      borderWidth: 2,
+      fill: true,
+      tension: 0.35,
+    }]
+  },
+  options: {
+    ...defOpts('ARR Growth YoY (%)'),
+    scales: {
+      ...defOpts().scales,
+      y: { ...defOpts().scales.y, min: 9, max: 14,
+           ticks: { ...defOpts().scales.y.ticks, callback: v => v + '%' } }
+    }
+  }
+});
+
+/* ══════════════ STOCK CHART ══════════════ */
+const stockData = {
+  '1Y': {
+    // Weekly closes Mar 2025 → Mar 2026, anchored to real data points
+    labels: [
+      'Mar 13 25','Mar 21','Mar 28','Apr 4','Apr 11','Apr 18','Apr 25',
+      'May 2','May 9','May 16','May 21','May 30','Jun 6','Jun 13','Jun 20',
+      'Jun 27','Jul 4','Jul 11','Jul 18','Jul 25','Aug 1','Aug 8','Aug 15',
+      'Aug 22','Aug 29','Sep 5','Sep 10','Sep 19','Sep 26','Oct 3','Oct 10',
+      'Oct 17','Oct 24','Oct 31','Nov 7','Nov 14','Nov 21','Nov 28','Dec 5',
+      'Dec 10','Dec 17','Dec 24','Dec 31','Jan 9 26','Jan 16','Jan 23','Jan 30',
+      'Feb 6','Feb 13','Feb 20','Feb 24','Mar 3','Mar 10','Mar 12','Mar 13'
+    ],
+    prices: [
+      375,380,388,392,398,408,415,
+      419,421,423,422.95,415,407,399,390,
+      382,375,371,367,362,358,353,350,
+      345,342,338,342,348,355,351,347,
+      343,340,344,350,346,340,336,332,
+      337,330,325,320,315,311,305,300,
+      295,288,282,244.28,252,263,269.78,256.01
+    ],
+    events: {
+      4: { label: '52W High\n$422.95 (May 21)', color: C.green },
+      50: { label: '52W Low\n$244.28 (Feb 24)', color: C.red },
+      53: { label: 'Earnings\nMar 12', color: C.gold },
+      54: { label: 'Close\n$256.01', color: C.blue },
+    },
+    start: '$375.00', hl: '$422.95 / $244.28'
+  },
+  '6M': {
+    labels: ['Sep 13 25','Sep 20','Sep 27','Oct 4','Oct 11','Oct 18','Oct 25',
+             'Nov 1','Nov 8','Nov 15','Nov 22','Nov 29','Dec 6','Dec 10','Dec 19',
+             'Dec 26','Jan 2 26','Jan 9','Jan 16','Jan 23','Jan 30','Feb 6',
+             'Feb 13','Feb 20','Feb 24','Mar 3','Mar 10','Mar 12','Mar 13'],
+    prices: [348,352,356,351,347,343,340,344,350,346,340,336,332,337,328,
+             323,318,313,309,303,298,293,286,280,244.28,252,263,269.78,256.01],
+    events: {
+      24: { label: '52W Low\n$244.28', color: C.red },
+      27: { label: 'Earnings\nMar 12', color: C.gold },
+    },
+    start: '$348.00', hl: '$356.00 / $244.28'
+  },
+  '3M': {
+    labels: ['Dec 13 25','Dec 20','Dec 27','Jan 3 26','Jan 10','Jan 17',
+             'Jan 24','Jan 31','Feb 7','Feb 14','Feb 21','Feb 24','Mar 3',
+             'Mar 7','Mar 10','Mar 12','Mar 13'],
+    prices: [330,325,320,315,311,307,302,297,291,284,278,244.28,252,258,263,269.78,256.01],
+    events: {
+      11: { label: '52W Low $244.28', color: C.red },
+      15: { label: 'Earnings', color: C.gold },
+    },
+    start: '$330.00', hl: '$330.00 / $244.28'
+  },
+  '1W': {
+    labels: ['Mar 7','Mar 8','Mar 9','Mar 10','Mar 11','Mar 12','Mar 13'],
+    prices: [258, 264, 266, 263, 267, 269.78, 256.01],
+    events: {
+      5: { label: 'Earnings', color: C.gold },
+      6: { label: '+Mar 13', color: C.blue },
+    },
+    start: '$258.00', hl: '$269.78 / $244.28'
+  }
+};
+
+let stockChart = null;
+
+function setTab(period) {
+  document.querySelectorAll('.stock-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.stock-tab').forEach(t => { if(t.textContent === period) t.classList.add('active'); });
+
+  const d = stockData[period];
+  const prices = d.prices;
+  const startP = prices[0];
+  const endP = prices[prices.length - 1];
+  const isPositive = endP >= startP;
+  const lineColor = isPositive ? C.green : C.red;
+
+  document.getElementById('statStart').textContent = d.start;
+  document.getElementById('statHL').textContent = d.hl;
+
+  const pointColors = prices.map((_, i) => {
+    if (d.events && d.events[i]) return d.events[i].color;
+    return 'transparent';
+  });
+  const pointRadius = prices.map((_, i) => d.events && d.events[i] ? 7 : 2);
+
+  if (stockChart) stockChart.destroy();
+
+  stockChart = new Chart(document.getElementById('chartStock'), {
+    type: 'line',
+    data: {
+      labels: d.labels,
+      datasets: [{
+        data: prices,
+        borderColor: lineColor,
+        backgroundColor: isPositive ? 'rgba(0,200,83,0.05)' : 'rgba(255,82,82,0.05)',
+        pointBackgroundColor: pointColors,
+        pointBorderColor: pointColors,
+        pointRadius: pointRadius,
+        borderWidth: 2,
+        fill: true,
+        tension: 0.3,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#0a1628',
+          borderColor: C.border, borderWidth: 1,
+          titleFont: { family: 'JetBrains Mono', size: 9 },
+          bodyFont: { family: 'JetBrains Mono', size: 11 },
+          titleColor: C.muted, bodyColor: C.text,
+          callbacks: { label: (ctx) => ` $${ctx.parsed.y.toFixed(2)}` }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { font: { family: 'JetBrains Mono', size: 8 }, color: C.muted, maxTicksLimit: 8 },
+          grid: { color: C.border }
+        },
+        y: {
+          ticks: {
+            font: { family: 'JetBrains Mono', size: 9 }, color: C.muted,
+            callback: v => '$' + v.toFixed(0)
+          },
+          grid: { color: C.border }
+        }
+      }
+    }
+  });
+}
+
+setTab('1Y');
+</script>
+</body>
+</html>
